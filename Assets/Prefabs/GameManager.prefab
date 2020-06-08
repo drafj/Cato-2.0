@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &333724417556587832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 333724417556587830}
+  - component: {fileID: 333724417556587831}
+  - component: {fileID: 333724417556587829}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &333724417556587830
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333724417556587832}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.6584202, y: 1.5651222, z: -0.0234375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &333724417556587831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333724417556587832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f83e1edf7c6d72a48823dbfad73a5906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOver: 0
+  pause: 0
+  spawnEnemies: 1
+  monster127: {fileID: 3301085219303801273, guid: 25dbe55798411eb44b417479e1179f31,
+    type: 3}
+  pursuerEnemy: {fileID: 502712758687633719, guid: 2f2a583178f54e843958fcd93a28b977,
+    type: 3}
+  shooterMonster: {fileID: 5027643586344865298, guid: e2f80d7e91962314a97157cf58712ee5,
+    type: 3}
+  Boss: {fileID: 0}
+  gOPusher: {fileID: 0}
+  bulletPrefab: {fileID: 4212625900781113327, guid: 48549e089930e5d48b039bee3527eaa5,
+    type: 3}
+  bulletBossPrefab: {fileID: 6781983944014712706, guid: 7be56dac5df31bb4d9429d17926ca813,
+    type: 3}
+  shotPP: {fileID: 1315859113182170770, guid: b2c296464e5377249be4436afa0e0eb4, type: 3}
+  shotEP: {fileID: 1315859113182170770, guid: 9ff9e3ab2728001428b17579fc403aea, type: 3}
+  player: {fileID: 0}
+  shield: {fileID: 7598237022814977170, guid: 4e00f083d85e82c47812f4242075d28e, type: 3}
+  ammoPrefab: {fileID: 129623526426531445, guid: c1620bd91529b1247ba81a66c7bda0e2,
+    type: 3}
+  damageCamera: {fileID: 0}
+  normalCameras: {fileID: 0}
+  deathCamera: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  flashParticles: {fileID: 180128, guid: 6586ff0f14125534cae2f5d8f04b7871, type: 3}
+  fireworksOne: {fileID: 168542, guid: 5702e2a6fea804b45b49b70d8feaf7ae, type: 3}
+  fireworksTwo: {fileID: 175238, guid: 26d069e6f78e6f8478e4dc0152bd6939, type: 3}
+  winMessage: {fileID: 0}
+  m_Joystick: {fileID: 0}
+  life: {fileID: 0}
+  food: {fileID: 0}
+  playerBulletSprite: {fileID: 21300330, guid: 2a9c8613e08e2ee45ab430bc56d0b6ec, type: 3}
+  enemyBulletSprite: {fileID: 21300292, guid: 2a9c8613e08e2ee45ab430bc56d0b6ec, type: 3}
+  bulletCollision: {fileID: 8300000, guid: 8720072ae4d7e9c42b137210e7606b03, type: 3}
+  shieldCollapse: {fileID: 8300000, guid: 56f5b6fa20679894d8658d743a03e1e4, type: 3}
+  enemyDeath: {fileID: 8300000, guid: 9ab7ac9f6e729457d8a8dfa89151ee30, type: 3}
+  playerShot: {fileID: 8300000, guid: e2a915bbc58734650bd17de4e87a001c, type: 3}
+  loseClip: {fileID: 8300000, guid: adcbbbae313cb40978e30faf82938987, type: 3}
+  ambientSound: {fileID: 0}
+  m_pooler: {fileID: 0}
+  m_enemiesStats: {fileID: 0}
+  secondGunDamage: 0.5
+  thirdGunDamage: 1
+  ammoFallVelocity: 4
+  counterToBoss: 0
+  arrivalBoss: 30
+--- !u!114 &333724417556587829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333724417556587832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 990ce7aa2c529a642b639a2bf32acf03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 0
+  life: 0
+  BossLife: 60
+  suicideMonsterVelocity: 4.5
+  suicideMonsterLife: 1.5
+  pursuerMonsterVelocity: 4
+  pursuerMonsterLife: 3
+  shooterMonsterVelocity: 2
+  shooterMonsterLife: 5
