@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public int secondAmmo;
     public int thirdAmmo;
     public int flashRange;
+    public int points;
     public float foodMeter;
     //public bool evadeColdDown;
     public bool shieldColdDown;
@@ -43,10 +44,16 @@ public class Player : MonoBehaviour
         life = 3;
         anim = GetComponent<Animator>();
         mSize = Size.Big;
+
+
     }
 
     void Start()
     {
+        points = PlayerPrefs.GetInt("Points");
+        if (GameManager.instance.points != null)
+            GameManager.instance.points.text = points + " :points ";
+
         StartCoroutine(BulletCreator());
     }
 

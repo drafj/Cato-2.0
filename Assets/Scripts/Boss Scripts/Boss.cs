@@ -7,6 +7,7 @@ public class Boss : Enemies
 {
     public float cadence;
     public int rayCounter;
+    public int shootRaysLimit;
     int raySelecTemporal;
     public Rigidbody2D rgbd;
     public List<GameObject> rays = new List<GameObject>();
@@ -40,7 +41,7 @@ public class Boss : Enemies
                 yield return new WaitForSeconds(cadence);
             }
 
-            else if(m_stage == Stage.Attacking && m_phase == Phase.SecondPhase)
+            else if(m_stage == Stage.Attacking && m_phase == Phase.SecondPhase && rayCounter <= shootRaysLimit)
             {
                 GameObject R = Instantiate(GameManager.instance.bulletBossPrefab, transform.GetChild(0).position, Quaternion.Euler(0, 0, 180));
                 R.GetComponent<BossBullet>().m_type = BossBulletTypes.R;
@@ -48,6 +49,12 @@ public class Boss : Enemies
                 GameObject L = Instantiate(GameManager.instance.bulletBossPrefab, transform.GetChild(1).position, Quaternion.Euler(0, 0, 180));
                 L.GetComponent<BossBullet>().m_type = BossBulletTypes.L;
                 yield return new WaitForSeconds(cadence);
+            }
+
+            else if (m_stage == Stage.Attacking && m_phase == Phase.SecondPhase && rayCounter >= shootRaysLimit)
+            {
+                GameManager.instance.m_pooler.SpawnRay(new Vector3(-20, -9), Quaternion.identity);
+                rayCounter = 0;
             }
             yield return null;
         }

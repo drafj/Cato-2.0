@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public FixedJoystick m_Joystick;
     public Image life;
     public Image food;
+    public Text points;
     public Sprite playerBulletSprite;
     public Sprite enemyBulletSprite;
     public AudioClip bulletCollision;

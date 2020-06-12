@@ -14,6 +14,7 @@ public class Pooler : MonoBehaviour
     public GameObject[] monster127Pool;
     public GameObject[] pursuerMonsterPool;
     public GameObject[] shooterMonsterPool;
+    public GameObject[] BossRays = new GameObject[4];
 
     void Start()
     {
@@ -41,6 +42,7 @@ public class Pooler : MonoBehaviour
         for (int i = 0; i < monster127Pool.Length; i++)
         {
             GameObject temporal = Instantiate(GameManager.instance.monster127, transform.position, Quaternion.identity);
+            temporal.GetComponent<SucideMonster>().StartS();
             temporal.SetActive(false);
             monster127Pool[i] = temporal;
         }
@@ -48,6 +50,7 @@ public class Pooler : MonoBehaviour
         for (int i = 0; i < pursuerMonsterPool.Length; i++)
         {
             GameObject temporal = Instantiate(GameManager.instance.pursuerEnemy, transform.position, Quaternion.identity);
+            temporal.GetComponent<PursuerMonster>().StarterP();
             temporal.SetActive(false);
             pursuerMonsterPool[i] = temporal;
         }
@@ -55,6 +58,7 @@ public class Pooler : MonoBehaviour
         for (int i = 0; i < shooterMonsterPool.Length; i++)
         {
             GameObject temporal = Instantiate(GameManager.instance.shooterMonster, transform.position, Quaternion.identity);
+            temporal.GetComponent<ShooterMonster>().StartShooter();
             temporal.SetActive(false);
             shooterMonsterPool[i] = temporal;
             shooterMonsterPool[i].transform.name = "n = " + i;
@@ -129,6 +133,20 @@ public class Pooler : MonoBehaviour
         for (int i = 0; i < shooterlength; i++)
         {
             shooterMonsterPool[i] = shooterMonsterPool[i + 1];
+        }
+    }
+
+    public void SpawnRay(Vector3 pos, Quaternion rot)
+    {
+        BossRays[0].transform.position = pos;
+        BossRays[0].transform.rotation = rot;
+        BossRays[0].SetActive(true);
+        BossRays[0].GetComponent<RayController>().velocity = Random.Range(15, 21);
+        BossRays[(BossRays.Length) - 1] = BossRays[0];
+
+        for (int i = 0; i < ((BossRays.Length) - 1); i++)
+        {
+            BossRays[i] = BossRays[i + 1];
         }
     }
 }

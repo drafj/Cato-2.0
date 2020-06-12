@@ -230,7 +230,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.000022963042, y: 0.267266}
   m_AnchorMax: {x: 0.43272704, y: 0.36548346}
-  m_AnchoredPosition: {x: -8.1, y: 0}
+  m_AnchoredPosition: {x: -8.099976, y: 0}
   m_SizeDelta: {x: -16.2, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &448612777
@@ -357,7 +357,6 @@ GameObject:
   - component: {fileID: 556505390}
   - component: {fileID: 556505389}
   - component: {fileID: 556505388}
-  - component: {fileID: 556505391}
   m_Layer: 5
   m_Name: Tuto
   m_TagString: Untagged
@@ -428,8 +427,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 556505391}
-        m_MethodName: TriggerEvent
+      - m_Target: {fileID: 1534120712}
+        m_MethodName: TutorialButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -508,36 +507,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556505386}
   m_CullTransparentMesh: 0
---- !u!114 &556505391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 556505386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -745406591, guid: 220224b43fc464c28bc0e8de8f54a432, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Trigger:
-    m_IsTriggerExpanded: 1
-    m_Type: 1
-    m_LifecycleEvent: 0
-    m_ApplyRules: 0
-    m_Rules:
-      m_Rules: []
-    m_TriggerBool: 0
-    m_InitTime: 5
-    m_RepeatTime: 5
-    m_Repetitions: 0
-    repetitionCount: 0
-  m_EventPayload:
-    m_IsEventExpanded: 1
-    m_StandardEventType: CustomEvent
-    m_Parameters:
-      m_Parameters: []
-    m_Name: Play the tutorial
 --- !u!1 &754552570
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,7 +652,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'POINTS: '
+  m_Text: ' POINTS: '
 --- !u!222 &863661752
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1779,10 +1748,10 @@ RectTransform:
   m_Father: {fileID: 1482503869}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: -0.22642405, y: 0.39304814}
-  m_AnchorMax: {x: 1.2264241, y: 1}
+  m_AnchorMin: {x: -0.22642407, y: 0.49754485}
+  m_AnchorMax: {x: 1.2264241, y: 1.1044967}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0.000015258789, y: 0}
+  m_SizeDelta: {x: 0.0000038146973, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1534120710
 MonoBehaviour:
@@ -1836,6 +1805,7 @@ MonoBehaviour:
   zoomCamera: {fileID: 0}
   musicToggle: {fileID: 0}
   dropdown: {fileID: 1923810605}
+  points: {fileID: 863661751}
   index: 0
   abilitiesString:
   - shield
@@ -1930,7 +1900,6 @@ GameObject:
   - component: {fileID: 1706365552}
   - component: {fileID: 1706365551}
   - component: {fileID: 1706365550}
-  - component: {fileID: 1706365549}
   m_Layer: 5
   m_Name: Points
   m_TagString: Untagged
@@ -1953,23 +1922,11 @@ RectTransform:
   m_Father: {fileID: 1482503869}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.4779604, y: 0.15280356}
-  m_AnchorMax: {x: 0.9597895, y: 0.251021}
+  m_AnchorMin: {x: 0.15746035, y: 0.38213527}
+  m_AnchorMax: {x: 0.8425395, y: 0.4803527}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -0.000015258789, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1706365549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706365547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -745406591, guid: 220224b43fc464c28bc0e8de8f54a432, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1706365550
 MonoBehaviour:
   m_ObjectHideFlags: 0

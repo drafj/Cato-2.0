@@ -93,6 +93,10 @@ public class PursuerMonster : Enemies
                     GameObject ins = Instantiate(GameManager.instance.ammoPrefab, transform.position, Quaternion.identity);
                     ins.GetComponent<Ammo>().m_fOA = FoodOrAmmo.Food;
                     break;
+                case 1:
+                    GameObject inst = Instantiate(GameManager.instance.ammoPrefab, transform.position, Quaternion.identity);
+                    inst.GetComponent<Ammo>().m_fOA = FoodOrAmmo.Points;
+                    break;
                 default:
                     break;
             }

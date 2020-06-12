@@ -9,10 +9,10 @@ public class Loading : MonoBehaviour
     public string sceneToLoad;
 
     [SerializeField]
-    private Text percentText;
+    private Text percentText = null;
 
     [SerializeField]
-    private Image progressImage;
+    private Image progressImage = null;
 
     // En cuanto se active el objeto, se inciará el cambio de escena
     void Start()

@@ -10,6 +10,7 @@ public class MenuController : MonoBehaviour
     public GameObject zoomCamera;
     public Toggle musicToggle;
     public Dropdown dropdown;
+    public Text points;
     public static int selection;
     public int index;
     public static bool blockPause;
@@ -17,6 +18,8 @@ public class MenuController : MonoBehaviour
 
     void Start()
     {
+        if (points != null)
+            points.text = " POINTS: " + PlayerPrefs.GetInt("Points");
         blockPause = false;
         abilitiesString = new List<string>() { "Shield", "Flash"};
 
@@ -58,10 +61,10 @@ public class MenuController : MonoBehaviour
         GameManager.instance.pause = false;
     }
 
-    //public void Exit()
-    //{
-    //    Application.Quit();
-    //}
+    public void Exit()
+    {
+        Application.Quit();
+    }
 
     //public void Play()
     //{

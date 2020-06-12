@@ -20,7 +20,11 @@ public class Enemies : MonoBehaviour
         
     }
 
-
+    //private void OnDisable()
+    //{
+    //    if (life <= 0)
+    //    Debug.Log("Desactivando");
+    //}
 
     public void LifeAndVelocityAsigner()
     {

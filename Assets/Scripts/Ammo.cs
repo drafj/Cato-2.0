@@ -34,6 +34,14 @@ public class Ammo : MonoBehaviour
             collision.gameObject.GetComponent<Player>().foodMeter += 0.34f;
             Destroy(gameObject);//necesito un pull de objetos :,c y me da pereza hacerlo
         }
+
+        if (collision.gameObject.GetComponent<Player>() != null && m_fOA == FoodOrAmmo.Points)
+        {
+            collision.gameObject.GetComponent<Player>().points += Random.Range(5, 15);
+            PlayerPrefs.SetInt("Points", collision.gameObject.GetComponent<Player>().points);
+            GameManager.instance.points.text = PlayerPrefs.GetInt("Points") + " :points ";
+            Destroy(gameObject);//necesito un pull de objetos :,c y me da pereza hacerlo
+        }
     }
 
     public void GoForward()
@@ -51,4 +59,4 @@ public class Ammo : MonoBehaviour
 }
 
 public enum AmmoSelection {SecondAmmo, ThirdAmmo}
-public enum FoodOrAmmo {Food, Ammo}
+public enum FoodOrAmmo {Food, Points, Ammo}

@@ -53,3 +53,9 @@ MonoBehaviour:
   monster127Pool: []
   pursuerMonsterPool: []
   shooterMonsterPool: []
+  BossRays:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

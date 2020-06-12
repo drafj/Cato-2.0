@@ -131,7 +131,7 @@ public class BossBullet : MonoBehaviour
     {
         persecution = false;
         TargetBasic();
-        rgbd.velocity = transform.up * 13;
+        rgbd.velocity = transform.up * 10;
     }
 }
 
