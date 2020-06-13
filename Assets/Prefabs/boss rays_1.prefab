@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2299197531562391181}
   - component: {fileID: 2148484299824329779}
   - component: {fileID: 7860625538922425660}
+  - component: {fileID: 4739625082596372680}
   m_Layer: 0
   m_Name: boss rays_1
   m_TagString: Untagged
@@ -96,3 +97,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 0
+--- !u!68 &4739625082596372680
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28859036143192486}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -3.9252014, y: -1.9343247}
+  - {x: -3.9534073, y: -0.59243894}
+  - {x: -11.09429, y: -0.4847147}
+  - {x: -11.066341, y: 1.8653878}
+  - {x: -1.6773344, y: 1.8412395}
+  - {x: -1.6770109, y: 0.510582}
+  - {x: 2.187045, y: 0.53409255}
+  - {x: 2.1647756, y: 1.8117877}
+  - {x: 11.130169, y: 1.7927729}
+  - {x: 11.11714, y: -0.554476}
+  - {x: 4.334428, y: -0.48472524}
+  - {x: 4.2987466, y: -1.9510231}
+  - {x: -3.929119, y: -1.9404123}
