@@ -141,7 +141,7 @@ public class Pooler : MonoBehaviour
         BossRays[0].transform.position = pos;
         BossRays[0].transform.rotation = rot;
         BossRays[0].SetActive(true);
-        BossRays[0].GetComponent<RayController>().velocity = Random.Range(15, 21);
+        BossRays[0].GetComponent<RayController>().velocity = 8;
         BossRays[(BossRays.Length) - 1] = BossRays[0];
 
         for (int i = 0; i < ((BossRays.Length) - 1); i++)

@@ -9,6 +9,7 @@ public class Boss : Enemies
     public int rayCounter;
     public int shootRaysLimit;
     int raySelecTemporal;
+    bool iterator;
     public Rigidbody2D rgbd;
     public List<GameObject> rays = new List<GameObject>();
     public List<BossBullet> m_bossList = new List<BossBullet>();
@@ -53,8 +54,12 @@ public class Boss : Enemies
 
             else if (m_stage == Stage.Attacking && m_phase == Phase.SecondPhase && rayCounter >= shootRaysLimit)
             {
-                GameManager.instance.m_pooler.SpawnRay(new Vector3(-20, -9), Quaternion.identity);
+                if (iterator)
+                GameManager.instance.m_pooler.SpawnRay(new Vector3(-45, -7.5f), Quaternion.identity);
+                else
+                GameManager.instance.m_pooler.SpawnRay(new Vector3(-45, -11.3f), Quaternion.identity);
                 rayCounter = 0;
+                iterator = !iterator;
             }
             yield return null;
         }
