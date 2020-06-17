@@ -5924,7 +5924,7 @@ MonoBehaviour:
   thirdGunDamage: 1
   ammoFallVelocity: 4
   counterToBoss: 0
-  arrivalBoss: 5
+  arrivalBoss: 30
 --- !u!4 &2685958029521773569
 Transform:
   m_ObjectHideFlags: 0
@@ -5953,7 +5953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 0
   life: 0
-  BossLife: 10
+  BossLife: 60
   suicideMonsterVelocity: 4.5
   suicideMonsterLife: 1.5
   pursuerMonsterVelocity: 4
