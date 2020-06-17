@@ -83,12 +83,6 @@ public class BossBullet : MonoBehaviour
             }
             Destroy(gameObject);
         }
-
-        if (collision.transform.tag == "Border" && GameManager.instance.Boss.GetComponent<Boss>().m_phase == Phase.SecondPhase)
-        {
-            ++GameManager.instance.Boss.GetComponent<Boss>().rayCounter;
-            Destroy(gameObject);
-        }
     }
 
     void Update()
@@ -113,8 +107,8 @@ public class BossBullet : MonoBehaviour
         else if (persecution && !GameManager.instance.gameOver && !GameManager.instance.pause && GameManager.instance.Boss.GetComponent<Boss>().m_phase == Phase.SecondPhase)
         {
             //persecution = false;
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, 90), 3 * Time.deltaTime);
-            rgbd.velocity = (transform.up * 5);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, 90), 10 * Time.deltaTime);
+            rgbd.velocity = (transform.up * 20);
         }
     }
 

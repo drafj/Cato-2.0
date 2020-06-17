@@ -47,7 +47,7 @@ public class Ammo : MonoBehaviour
     public void GoForward()
     {
         if (!GameManager.instance.pause)
-            transform.position -= transform.up * Time.fixedDeltaTime * GameManager.instance.ammoFallVelocity;
+            transform.position -= transform.up * Time.deltaTime * GameManager.instance.ammoFallVelocity;
     }
 
     void Update()

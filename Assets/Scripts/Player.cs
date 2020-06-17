@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Analytics;
 
 public class Player : MonoBehaviour
 {
@@ -217,6 +218,25 @@ public class Player : MonoBehaviour
         if (collision.gameObject.GetComponent<Enemies>() != null && life > 0 && !invencible)
         {
             GameManager.instance.StartDealDamage();
+        }
+
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<RayController>() != null)
+        {
+            life--;
+            if (life == 0)
+            {
+                Analytics.CustomEvent("Death", new Dictionary<string, object>
+                {
+                    {"death", "by boss ray"}
+                });
+            }
+            if (life > 0 && !invencible)
+                GameManager.instance.StartDealDamage();
         }
     }
 

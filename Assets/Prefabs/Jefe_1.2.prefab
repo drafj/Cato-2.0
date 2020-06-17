@@ -863,7 +863,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7878867430883211386
 Transform:
   m_ObjectHideFlags: 0
@@ -966,11 +966,12 @@ MonoBehaviour:
   cadence: 0
   rayCounter: 0
   shootRaysLimit: 3
-  rgbd: {fileID: 0}
+  rayCC: 0
+  rgbd: {fileID: 1773033120145813764}
   rays: []
-  m_bossList: []
+  m_bossBulletList: []
   m_stage: 0
-  m_phase: 1
+  m_phase: 0
   m_displacement: 0
 --- !u!50 &1773033120145813764
 Rigidbody2D:

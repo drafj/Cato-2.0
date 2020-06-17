@@ -55,7 +55,7 @@ public class Enemies : MonoBehaviour
     public void GoForward()
     {
         if (!GameManager.instance.pause)
-            transform.position -= transform.up * Time.fixedDeltaTime * velocity;
+            transform.position -= transform.up * Time.deltaTime * velocity;
     }
 
     void Update()

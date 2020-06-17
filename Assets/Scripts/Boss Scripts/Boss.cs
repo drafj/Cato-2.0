@@ -10,9 +10,10 @@ public class Boss : Enemies
     public int shootRaysLimit;
     int raySelecTemporal;
     bool iterator;
+    public bool rayCC;
     public Rigidbody2D rgbd;
     public List<GameObject> rays = new List<GameObject>();
-    public List<BossBullet> m_bossList = new List<BossBullet>();
+    public List<BossBullet> m_bossBulletList = new List<BossBullet>();
     public Stage m_stage;
     public Phase m_phase;
     public displacement m_displacement;
@@ -42,24 +43,27 @@ public class Boss : Enemies
                 yield return new WaitForSeconds(cadence);
             }
 
-            else if(m_stage == Stage.Attacking && m_phase == Phase.SecondPhase && rayCounter <= shootRaysLimit)
+            else if(m_stage == Stage.Attacking && m_phase == Phase.SecondPhase && rayCounter < shootRaysLimit)
             {
                 GameObject R = Instantiate(GameManager.instance.bulletBossPrefab, transform.GetChild(0).position, Quaternion.Euler(0, 0, 180));
                 R.GetComponent<BossBullet>().m_type = BossBulletTypes.R;
+                rayCounter++;
                 yield return new WaitForSeconds(cadence);
                 GameObject L = Instantiate(GameManager.instance.bulletBossPrefab, transform.GetChild(1).position, Quaternion.Euler(0, 0, 180));
                 L.GetComponent<BossBullet>().m_type = BossBulletTypes.L;
+                rayCounter++;
                 yield return new WaitForSeconds(cadence);
             }
 
             else if (m_stage == Stage.Attacking && m_phase == Phase.SecondPhase && rayCounter >= shootRaysLimit)
             {
-                if (iterator)
-                GameManager.instance.m_pooler.SpawnRay(new Vector3(-45, -7.5f), Quaternion.identity);
-                else
-                GameManager.instance.m_pooler.SpawnRay(new Vector3(-45, -11.3f), Quaternion.identity);
                 rayCounter = 0;
+                if (iterator)
+                GameManager.instance.m_pooler.SpawnRay(new Vector3(-30, -9f), Quaternion.identity);
+                else
+                GameManager.instance.m_pooler.SpawnRay(new Vector3(-30, -12.5f), Quaternion.identity);
                 iterator = !iterator;
+                yield return new WaitForSeconds(4);
             }
             yield return null;
         }
@@ -88,6 +92,20 @@ public class Boss : Enemies
         }
     }
 
+    private void OnEnable()
+    {
+        StartCoroutine(Aproach());
+    }
+
+    IEnumerator Aproach()
+    {
+        while (transform.position.y >= 9.5f)
+        {
+            rgbd.AddForce(transform.up * velocity);
+            yield return null;
+        }
+    }
+
     void Update()
     {
         if (life <= 0 && m_phase == Phase.FirstPhase)
@@ -98,14 +116,14 @@ public class Boss : Enemies
 
             foreach (BossBullet bullet in FindObjectsOfType<BossBullet>())
             {
-                m_bossList.Add(bullet);
+                m_bossBulletList.Add(bullet);
             }
 
-            for (int i = 0; i < m_bossList.Count; i++)
+            for (int i = 0; i < m_bossBulletList.Count; i++)
             {
-                m_bossList[i].GetComponent<BossBullet>().pushed = true;
-                m_bossList[i].GetComponent<BossBullet>().persecution = false;
-                m_bossList[i].GetComponent<BossBullet>().rgbd.AddForce(Vector2.up * -600);
+                m_bossBulletList[i].GetComponent<BossBullet>().pushed = true;
+                m_bossBulletList[i].GetComponent<BossBullet>().persecution = false;
+                m_bossBulletList[i].GetComponent<BossBullet>().rgbd.AddForce(Vector2.up * -600);
             }
         }
 
@@ -135,11 +153,11 @@ public class Boss : Enemies
 
     void BossDisplacement()
     {
-        if (transform.position.y >= 9.5f)
-        {
-            rgbd.AddForce(transform.up * velocity);
-        }
-        else if (transform.position.y <= 9.5f)
+        //if (transform.position.y >= 9.5f)
+        //{
+        //    rgbd.AddForce(transform.up * velocity);
+        //}
+        if (transform.position.y <= 9.5f)
         {
             m_stage = Stage.Attacking;
             if (transform.position.x >= 0)

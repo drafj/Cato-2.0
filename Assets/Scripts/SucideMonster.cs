@@ -20,7 +20,7 @@ public class SucideMonster : Enemies
         LifeAndVelocityAsigner();
 
         velocity = velocity == 0 ? 5 : velocity;
-        life = life == 0 ? 2 : velocity;
+        life = life == 0 ? 2 : life;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

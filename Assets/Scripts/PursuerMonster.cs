@@ -55,6 +55,11 @@ public class PursuerMonster : Enemies
             if (collision.gameObject.GetComponent<BulletController>().m_State == BulletState.ThirdBullet)
                 life -= GameManager.instance.thirdGunDamage;
         }
+
+        if (collision.transform.tag == "Border")
+        {
+            StartCoroutine("Death");
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -77,6 +82,7 @@ public class PursuerMonster : Enemies
                     });
             }
         }
+
     }
 
     IEnumerator Death()
@@ -86,7 +92,6 @@ public class PursuerMonster : Enemies
             AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);
             anim.SetBool("idle", false);
             anim.SetTrigger("death");
-            GameManager.instance.counterToBoss++;
             switch (Random.Range(0, 4))
             {
                 case 0:
@@ -102,6 +107,7 @@ public class PursuerMonster : Enemies
             }
             yield return new WaitForSeconds(0.55f);
         }
+        GameManager.instance.counterToBoss++;
         transform.position = new Vector3(1000, 1000);
         anim.SetBool("idle", true);
         anim.SetTrigger("idle");
@@ -111,7 +117,7 @@ public class PursuerMonster : Enemies
 
     void Update()
     {
-        if (life <= 0 && !dying || transform.position.y <= -20 && !dying)
+        if (life <= 0 && !dying)
         {
             dying = true;
             StartCoroutine("Death");
