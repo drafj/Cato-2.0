@@ -62,6 +62,12 @@ public class GameManager : MonoBehaviour
             Destroy(this);
 
         arrivalBoss = arrivalBoss == 0 ? 30 : arrivalBoss;
+
+        if (Player.bossPhase)
+        {
+            spawnEnemies = false;
+            counterToBoss = arrivalBoss;
+        }
     }
 
     void Start()

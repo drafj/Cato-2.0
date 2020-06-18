@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     public bool ability;
     public bool invencible;
     public bool pushed;
+    public static bool bossPhase;
     public Size mSize;
     public CanyonOrder mOrder;
     public Gunz m_Gunz;
@@ -54,7 +55,10 @@ public class Player : MonoBehaviour
         points = PlayerPrefs.GetInt("Points");
         if (GameManager.instance.points != null)
             GameManager.instance.points.text = points + " :points ";
-
+        if (GameManager.instance.Boss.activeInHierarchy)
+            bossPhase = true;
+        else
+            bossPhase = false;
         StartCoroutine(BulletCreator());
     }
 
@@ -199,7 +203,10 @@ public class Player : MonoBehaviour
 
     IEnumerator Die()
     {
-        //hacer la animacion de morir 
+        if (GameManager.instance.Boss.activeInHierarchy)
+            bossPhase = true;
+        else
+            bossPhase = false;
         anim.SetTrigger("Dead");
         GetComponent<BoxCollider2D>().enabled = false;
         AudioSource.PlayClipAtPoint(GameManager.instance.loseClip, GameManager.instance.deathCamera.transform.position);
@@ -274,10 +281,13 @@ public class Player : MonoBehaviour
                 StartCoroutine(GameManager.instance.Invencible(3));
         }
 
-        if (!pushed && GameManager.instance.Boss.GetComponent<Boss>().m_phase == Phase.SecondPhase)
+        if (GameManager.instance.Boss.GetComponent<Boss>() != null)
         {
-            pushed = true;
-            rgbd.AddForce(transform.up * -3000);
+            if (!pushed && GameManager.instance.Boss.GetComponent<Boss>().m_phase == Phase.SecondPhase)
+            {
+                pushed = true;
+                rgbd.AddForce(transform.up * -3000);
+            }
         }
 
         //if (Input.GetKeyDown(KeyCode.Space) && !evadeColdDown)

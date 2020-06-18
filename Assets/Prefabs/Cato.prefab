@@ -32,7 +32,7 @@ Transform:
   m_LocalPosition: {x: -0.47, y: -9.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1663258805705442299}
+  - {fileID: 3270552302606748853}
   - {fileID: 1663258805702435561}
   - {fileID: 1663258805838210185}
   m_Father: {fileID: 0}
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5415db34baa30b4438ff1e8d9794e5af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 10
+  velocity: 12
   life: 0
   lifeAmount: 0
   secondAmmo: 0
@@ -180,6 +180,7 @@ MonoBehaviour:
   ability: 0
   invencible: 0
   pushed: 0
+  bossPhase: 0
   mSize: 0
   mOrder: 0
   m_Gunz: 0
@@ -429,7 +430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48549e089930e5d48b039bee3527eaa5, type: 3}
---- !u!4 &1663258805705442299 stripped
+--- !u!4 &3270552302606748853 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4212625900781113314, guid: 48549e089930e5d48b039bee3527eaa5,
     type: 3}
