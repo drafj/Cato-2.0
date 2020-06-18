@@ -1,0 +1,1946 @@
+fileFormatVersion: 2
+guid: 24ea90b501d105c4e9995311bdf1a698
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8467445657005465581
+    second: Decoracion_PNG_0
+  - first:
+      213: -9115000293091675179
+    second: Decoracion_PNG_1
+  - first:
+      213: -2239119363573257185
+    second: Decoracion_PNG_2
+  - first:
+      213: 4701220541223833668
+    second: Decoracion_PNG_3
+  - first:
+      213: 1812348921863741165
+    second: Decoracion_PNG_4
+  - first:
+      213: 1153191510695384157
+    second: Decoracion_PNG_5
+  - first:
+      213: 8483216014645560791
+    second: Decoracion_PNG_6
+  - first:
+      213: -163891541973421437
+    second: Decoracion_PNG_7
+  - first:
+      213: -6362523654775520747
+    second: Decoracion_PNG_8
+  - first:
+      213: -8088623216039723192
+    second: Decoracion_PNG_9
+  - first:
+      213: -384203703393859825
+    second: Decoracion_PNG_10
+  - first:
+      213: -8068575189837032767
+    second: Decoracion_PNG_11
+  - first:
+      213: 6768285891501449714
+    second: Decoracion_PNG_12
+  - first:
+      213: 967334468980993844
+    second: Decoracion_PNG_13
+  - first:
+      213: -3640394617001153651
+    second: Decoracion_PNG_14
+  - first:
+      213: -8870308790544283041
+    second: Decoracion_PNG_15
+  - first:
+      213: -334185160932529145
+    second: Decoracion_PNG_16
+  - first:
+      213: -4031817406957316865
+    second: Decoracion_PNG_17
+  - first:
+      213: -1093345040815204261
+    second: Decoracion_PNG_18
+  - first:
+      213: -5339770368920832033
+    second: Decoracion_PNG_19
+  - first:
+      213: -8815148097946883485
+    second: Decoracion_PNG_20
+  - first:
+      213: -3343782905233584683
+    second: Decoracion_PNG_21
+  - first:
+      213: 5742645758331812599
+    second: Decoracion_PNG_22
+  - first:
+      213: 7241820708781693452
+    second: Decoracion_PNG_23
+  - first:
+      213: 6917402857440146748
+    second: Decoracion_PNG_24
+  - first:
+      213: 7081564244785006947
+    second: Decoracion_PNG_25
+  - first:
+      213: 1655235711927076142
+    second: Decoracion_PNG_26
+  - first:
+      213: 7166984609214496903
+    second: Decoracion_PNG_27
+  - first:
+      213: 4271387065442255029
+    second: Decoracion_PNG_28
+  - first:
+      213: 675614006739886606
+    second: Decoracion_PNG_29
+  - first:
+      213: 4856191268175734257
+    second: Decoracion_PNG_30
+  - first:
+      213: -3986509732788761855
+    second: Decoracion_PNG_31
+  - first:
+      213: 8119318808905130011
+    second: Decoracion_PNG_32
+  - first:
+      213: 1239476513235541550
+    second: Decoracion_PNG_33
+  - first:
+      213: -6489950594021596114
+    second: Decoracion_PNG_34
+  - first:
+      213: -6629908638387860163
+    second: Decoracion_PNG_35
+  - first:
+      213: -4898978435292006798
+    second: Decoracion_PNG_36
+  - first:
+      213: -1768165280290038966
+    second: Decoracion_PNG_37
+  - first:
+      213: 6421810662991297753
+    second: Decoracion_PNG_38
+  - first:
+      213: -1820604706844896789
+    second: Decoracion_PNG_39
+  - first:
+      213: -2613068557452177503
+    second: Decoracion_PNG_40
+  - first:
+      213: 7426225846893924011
+    second: Decoracion_PNG_41
+  - first:
+      213: 2631090389235193944
+    second: Decoracion_PNG_42
+  - first:
+      213: 250660702345998977
+    second: Decoracion_PNG_43
+  - first:
+      213: 6940247195315825273
+    second: Decoracion_PNG_44
+  - first:
+      213: 2786436173093292454
+    second: Decoracion_PNG_45
+  - first:
+      213: -4041236659795977550
+    second: Decoracion_PNG_46
+  - first:
+      213: 1267892546925393118
+    second: Decoracion_PNG_47
+  - first:
+      213: -321242323809322115
+    second: Decoracion_PNG_48
+  - first:
+      213: 5079348570269377478
+    second: Decoracion_PNG_49
+  - first:
+      213: 8722451995264742280
+    second: Decoracion_PNG_50
+  - first:
+      213: 8511464812698060855
+    second: Decoracion_PNG_51
+  - first:
+      213: 1827914499607157149
+    second: Decoracion_PNG_52
+  - first:
+      213: -5910488365305815802
+    second: Decoracion_PNG_53
+  - first:
+      213: 7725354378085547416
+    second: Decoracion_PNG_54
+  - first:
+      213: -2693704124261883945
+    second: Decoracion_PNG_55
+  - first:
+      213: -2133936438936869773
+    second: Decoracion_PNG_56
+  - first:
+      213: 4797525394774677700
+    second: Decoracion_PNG_57
+  - first:
+      213: 5156621796776300320
+    second: Decoracion_PNG_58
+  - first:
+      213: 5815836197814020752
+    second: Decoracion_PNG_59
+  - first:
+      213: 5200109915555778717
+    second: Decoracion_PNG_60
+  - first:
+      213: 4299654725835952368
+    second: Decoracion_PNG_61
+  - first:
+      213: -779958359621862450
+    second: Decoracion_PNG_62
+  - first:
+      213: -1428684709341586204
+    second: Decoracion_PNG_63
+  - first:
+      213: 7100884963846195880
+    second: Decoracion_PNG_64
+  - first:
+      213: 5110150947321667240
+    second: Decoracion_PNG_65
+  - first:
+      213: 4521538299330659484
+    second: Decoracion_PNG_66
+  - first:
+      213: -7079789806411217464
+    second: Decoracion_PNG_67
+  - first:
+      213: 2278334687850253918
+    second: Decoracion_PNG_68
+  - first:
+      213: -6607200828045516202
+    second: Decoracion_PNG_69
+  - first:
+      213: -7528142245012554906
+    second: Decoracion_PNG_70
+  - first:
+      213: -8581848581222524302
+    second: Decoracion_PNG_71
+  - first:
+      213: -6401415840545451009
+    second: Decoracion_PNG_72
+  - first:
+      213: 3258848666034536644
+    second: Decoracion_PNG_73
+  - first:
+      213: -2119070708826340178
+    second: Decoracion_PNG_74
+  - first:
+      213: 8525815762326752053
+    second: Decoracion_PNG_75
+  - first:
+      213: -3831911868698806666
+    second: Decoracion_PNG_76
+  - first:
+      213: -3402885568154620832
+    second: Decoracion_PNG_77
+  - first:
+      213: 1758999345599820976
+    second: Decoracion_PNG_78
+  - first:
+      213: 7510306152428210290
+    second: Decoracion_PNG_79
+  - first:
+      213: -7937708263286982136
+    second: Decoracion_PNG_80
+  - first:
+      213: 302058503120128339
+    second: Decoracion_PNG_81
+  - first:
+      213: -1351046945594850665
+    second: Decoracion_PNG_82
+  - first:
+      213: 8602270463849870426
+    second: Decoracion_PNG_83
+  - first:
+      213: 1259886579177847637
+    second: Decoracion_PNG_84
+  - first:
+      213: 3828990185490540893
+    second: Decoracion_PNG_85
+  - first:
+      213: 6717981679333500888
+    second: Decoracion_PNG_86
+  - first:
+      213: -7390698893044538279
+    second: Decoracion_PNG_87
+  - first:
+      213: -2369922549807425934
+    second: Decoracion_PNG_88
+  - first:
+      213: 1632057962545155749
+    second: Decoracion_PNG_89
+  - first:
+      213: 6251389221021124940
+    second: Decoracion_PNG_90
+  - first:
+      213: 6132703839492814013
+    second: Decoracion_PNG_91
+  - first:
+      213: 7215433171497836324
+    second: Decoracion_PNG_92
+  - first:
+      213: 4810114307604365705
+    second: Decoracion_PNG_93
+  - first:
+      213: -7550614092384254060
+    second: Decoracion_PNG_94
+  - first:
+      213: -8544015666456556080
+    second: Decoracion_PNG_95
+  - first:
+      213: 5204347771976091754
+    second: Decoracion_PNG_96
+  - first:
+      213: -4266720961466645841
+    second: Decoracion_PNG_97
+  - first:
+      213: 6240580420767952603
+    second: Decoracion_PNG_98
+  - first:
+      213: 7724388856298346199
+    second: Decoracion_PNG_99
+  - first:
+      213: 5354399782440814402
+    second: Decoracion_PNG_100
+  - first:
+      213: -4645498578954352122
+    second: Decoracion_PNG_101
+  - first:
+      213: 1851816059970058556
+    second: Decoracion_PNG_102
+  - first:
+      213: 4401643278584147217
+    second: Decoracion_PNG_103
+  - first:
+      213: 6274807147514567252
+    second: Decoracion_PNG_104
+  - first:
+      213: 8921132154564064638
+    second: Decoracion_PNG_105
+  - first:
+      213: 6858151029179872418
+    second: Decoracion_PNG_106
+  - first:
+      213: 5478476333879220162
+    second: Decoracion_PNG_107
+  - first:
+      213: -4397746169837244718
+    second: Decoracion_PNG_108
+  - first:
+      213: -6538544596750681686
+    second: Decoracion_PNG_109
+  - first:
+      213: 8578443193315011297
+    second: Decoracion_PNG_110
+  - first:
+      213: 5044118003409602616
+    second: Decoracion_PNG_111
+  - first:
+      213: -3613293274417867423
+    second: Decoracion_PNG_112
+  - first:
+      213: 7770944494080826215
+    second: Decoracion_PNG_113
+  - first:
+      213: 7119959862511262262
+    second: Decoracion_PNG_114
+  - first:
+      213: 574945809180558680
+    second: Decoracion_PNG_115
+  - first:
+      213: 5115263501162169852
+    second: Decoracion_PNG_116
+  - first:
+      213: -2681424989185528557
+    second: Decoracion_PNG_117
+  - first:
+      213: 2407523431196178288
+    second: Decoracion_PNG_118
+  - first:
+      213: -1701311681192613278
+    second: Decoracion_PNG_119
+  - first:
+      213: 6188894015535299605
+    second: Decoracion_PNG_120
+  - first:
+      213: 6034233578313206414
+    second: Decoracion_PNG_121
+  - first:
+      213: -4223561522307134158
+    second: Decoracion_PNG_122
+  - first:
+      213: -2922035862617698764
+    second: Decoracion_PNG_71
+  - first:
+      213: -7884388466377778932
+    second: Decoracion_PNG_72
+  - first:
+      213: 7484747236795780876
+    second: Decoracion_PNG_45
+  - first:
+      213: 4232823047522548660
+    second: Decoracion_PNG_14
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Decoracion_PNG_0
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 205
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310e34399079d7a80800000000000000
+      internalID: -8467445657005465581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_3
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 216
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4409a629c271e3140800000000000000
+      internalID: 4701220541223833668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_10
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 209
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f07c1d174c80baaf0800000000000000
+      internalID: -384203703393859825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_11
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 209
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c2db3e2d99a60090800000000000000
+      internalID: -8068575189837032767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_12
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 207
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f16b3d8828cded50800000000000000
+      internalID: 6768285891501449714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_13
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 207
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f6a9a0399ac6d00800000000000000
+      internalID: 967334468980993844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 187
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5856496a78a3d0f0800000000000000
+      internalID: -1093345040815204261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_19
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 187
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd7315a042355e5b0800000000000000
+      internalID: -5339770368920832033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_20
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 187
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a6a63728d4aa580800000000000000
+      internalID: -8815148097946883485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_21
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 187
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd478fe92f7891d0800000000000000
+      internalID: -3343782905233584683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_22
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 150
+        width: 81
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa754034e9f1bf40800000000000000
+      internalID: 5742645758331812599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_23
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 158
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0a100ad09d108460800000000000000
+      internalID: 7241820708781693452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_24
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 158
+        width: 27
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c35fdf5bf3d8fff50800000000000000
+      internalID: 6917402857440146748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_25
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 158
+        width: 64
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36984803925c64260800000000000000
+      internalID: 7081564244785006947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_26
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 148
+        width: 48
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2544f43c1498f610800000000000000
+      internalID: 1655235711927076142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 167
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7800cee978e367360800000000000000
+      internalID: 7166984609214496903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_28
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 167
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b042edb7e3074b30800000000000000
+      internalID: 4271387065442255029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_29
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 167
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e02620d0c53406900800000000000000
+      internalID: 675614006739886606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_30
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 167
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f5e7fcaa38a46340800000000000000
+      internalID: 4856191268175734257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 147
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b0d7bf4821da8c0800000000000000
+      internalID: -3986509732788761855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_32
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 147
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1020fe407d9da070800000000000000
+      internalID: 8119318808905130011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_33
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 147
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e18de5251833110800000000000000
+      internalID: 1239476513235541550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_34
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 147
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e24e189e1501fe5a0800000000000000
+      internalID: -6489950594021596114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_35
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 70
+        width: 37
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d099b5835ddf3a0800000000000000
+      internalID: -6629908638387860163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_36
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 60
+        width: 37
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 276fe1aa115530cb0800000000000000
+      internalID: -4898978435292006798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_37
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 136
+        width: 35
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4b1224bb073677e0800000000000000
+      internalID: -1768165280290038966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_38
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 136
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc796616cade1950800000000000000
+      internalID: 6421810662991297753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 124
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be11b144aa9ebb6e0800000000000000
+      internalID: -1820604706844896789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_40
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 124
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af025bddf38cbbd0800000000000000
+      internalID: -2613068557452177503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_41
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 123
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baecfe9df014f0760800000000000000
+      internalID: 7426225846893924011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_42
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 125
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 858de46d4c2838420800000000000000
+      internalID: 2631090389235193944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_43
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 79
+        width: 22
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 182bb7aa4968a7300800000000000000
+      internalID: 250660702345998977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_44
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 79
+        width: 22
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97a633a9d06b05060800000000000000
+      internalID: 6940247195315825273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_46
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 117
+        width: 44
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba13975ba4aae7c0800000000000000
+      internalID: -4041236659795977550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_47
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 124
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed47ad8cd85789110800000000000000
+      internalID: 1267892546925393118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_48
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 124
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b368afec7ba8bf0800000000000000
+      internalID: -321242323809322115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_49
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 111
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c36b45fc987d7640800000000000000
+      internalID: 5079348570269377478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_50
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 98
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 883f62c40ef5c0970800000000000000
+      internalID: 8722451995264742280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_51
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 100
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 738ca17c62cce1670800000000000000
+      internalID: 8511464812698060855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_52
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 100
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d99dedc7d8e0e5910800000000000000
+      internalID: 1827914499607157149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_53
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 111
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d1ed8952ab9fda0800000000000000
+      internalID: -5910488365305815802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_54
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 109
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d3ccd40e8f53b60800000000000000
+      internalID: 7725354378085547416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_55
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 79
+        width: 37
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df9d5fee5a0e9ad0800000000000000
+      internalID: -2693704124261883945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_56
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 105
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 374e7e76d1cb262e0800000000000000
+      internalID: -2133936438936869773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_57
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 105
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c8d57c9deb349240800000000000000
+      internalID: 4797525394774677700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_59
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a2092553006b050800000000000000
+      internalID: 5815836197814020752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_60
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 90
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9050b5ba608a2840800000000000000
+      internalID: 5200109915555778717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_61
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 91
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f0184e41317bab30800000000000000
+      internalID: 4299654725835952368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_62
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 79
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb742b11080d25f0800000000000000
+      internalID: -779958359621862450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_64
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 79
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aa07f4a0496b8260800000000000000
+      internalID: 7100884963846195880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_65
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 65
+        width: 29
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aedbbb3637eae640800000000000000
+      internalID: 5110150947321667240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_66
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 66
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c948de9802bbfbe30800000000000000
+      internalID: 4521538299330659484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_67
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 47
+        width: 16
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c58d607ea88fbd90800000000000000
+      internalID: -7079789806411217464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_68
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 47
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ec3c4d3554e9f10800000000000000
+      internalID: 2278334687850253918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_69
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 79
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6522ea47ad18e44a0800000000000000
+      internalID: -6607200828045516202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_73
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 82
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c08ebb7891c93d20800000000000000
+      internalID: 3258848666034536644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_75
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 0
+        width: 63
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b89ed9348c15670800000000000000
+      internalID: 8525815762326752053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_88
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 25
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2765a815ff75c1fd0800000000000000
+      internalID: -2369922549807425934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_89
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 30
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ae0a56e11c36a610800000000000000
+      internalID: 1632057962545155749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_90
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 28
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c498baf006561c650800000000000000
+      internalID: 6251389221021124940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_91
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 23
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db4b4a946adbb1550800000000000000
+      internalID: 6132703839492814013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_107
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 0
+        width: 57
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c7514f0335770c40800000000000000
+      internalID: 5478476333879220162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_109
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 44
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa930aaf45c6245a0800000000000000
+      internalID: -6538544596750681686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_115
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 0
+        width: 31
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8558e41da2e9af700800000000000000
+      internalID: 574945809180558680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_117
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 0
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31dadbbdd2aa9cad0800000000000000
+      internalID: -2681424989185528557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_71
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 0
+        width: 59
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e48b35dd7d277d0800000000000000
+      internalID: -2922035862617698764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_72
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 45
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c099d5e8676059290800000000000000
+      internalID: -7884388466377778932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_74
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 58
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea4887aea6c8792e0800000000000000
+      internalID: -2119070708826340178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoracion_PNG_14
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 141
+        width: 81
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bbfaa0a2220eba30800000000000000
+      internalID: 4232823047522548660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
