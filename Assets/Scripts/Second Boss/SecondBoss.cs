@@ -22,8 +22,7 @@ public class SecondBoss : MonoBehaviour
 
     public void CreateCircle()
     {
-        circle.gameObject.SetActive(true);
-        circle.transform.position = GameManager.instance.player.transform.position;
+        Instantiate(circle, GameManager.instance.player.transform.position, Quaternion.identity);
     }
 
     void Update()
