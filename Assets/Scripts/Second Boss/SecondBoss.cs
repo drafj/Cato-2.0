@@ -5,6 +5,9 @@ using UnityEngine;
 public class SecondBoss : MonoBehaviour
 {
     public GameObject circle;
+    public GameObject cameras;
+    public GameObject aimCam;
+    public GameObject blackSpace;
 
     void Start()
     {
@@ -15,8 +18,12 @@ public class SecondBoss : MonoBehaviour
     {
         while (true)
         {
+            cameras.SetActive(false);
+            aimCam.SetActive(true);
+            GameManager.instance.player.GetComponent<Player>().unleashed = true;
+            blackSpace.SetActive(true);
             CreateCircle();
-            yield return new WaitForSeconds(20);
+            yield return new WaitForSeconds(26);
         }
     }
 

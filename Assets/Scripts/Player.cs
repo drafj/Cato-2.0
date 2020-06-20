@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     public bool ability;
     public bool invencible;
     public bool pushed;
+    public bool unleashed;
     public static bool bossPhase;
     public Size mSize;
     public CanyonOrder mOrder;
@@ -340,14 +341,17 @@ public class Player : MonoBehaviour
             else
                 KeyboardMoviment();
 
-            if (transform.position.x > 6.85)
-                transform.position = new Vector3(6.85f, transform.position.y);
-            if (transform.position.x < -6.85)
-                transform.position = new Vector3(-6.85f, transform.position.y);
-            if (transform.position.y > 11.3)
-                transform.position = new Vector3(transform.position.x, 11.3f);
-            if (transform.position.y < -14)
-                transform.position = new Vector3(transform.position.x, -14f);
+            if (!unleashed)
+            {
+                if (transform.position.x > 6.85)
+                    transform.position = new Vector3(6.85f, transform.position.y);
+                if (transform.position.x < -6.85)
+                    transform.position = new Vector3(-6.85f, transform.position.y);
+                if (transform.position.y > 11.3)
+                    transform.position = new Vector3(transform.position.x, 11.3f);
+                if (transform.position.y < -14)
+                    transform.position = new Vector3(transform.position.x, -14f);
+            }
         }
     }
 
