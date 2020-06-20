@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Loading : MonoBehaviour
 {
-    public string sceneToLoad;
+    public int sceneToLoad;
 
     [SerializeField]
     private Text percentText = null;
@@ -20,11 +20,6 @@ public class Loading : MonoBehaviour
         //Iniciamos una corrutina, que es un método que se ejecuta 
         //en una línea de tiempo diferente al flujo principal del programa
         StartCoroutine(LoadScene());
-    }
-
-    public void SceneSelecter(string Scene)
-    {
-        sceneToLoad = Scene;
     }
 
     //Corrutina

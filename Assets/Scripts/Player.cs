@@ -233,7 +233,6 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<RayController>() != null)
         {
-            Debug.Log("entra");
             if (life > 0 && !invencible)
             {
                 life--;

@@ -133,6 +133,7 @@ public class Boss : Enemies
             Instantiate(GameManager.instance.fireworksOne, transform.position * new Vector2(Random.Range(-4, 5), Random.Range(-4, 5)), Quaternion.identity);
             Instantiate(GameManager.instance.fireworksTwo, transform.position * new Vector2(Random.Range(-4, 5), Random.Range(-4, 5)), Quaternion.identity);
             GameManager.instance.winMessage.SetActive(true);
+            PlayerPrefs.SetInt("actualLevel", 3);
             MenuController.blockPause = true;
             Analytics.CustomEvent("Winner", new Dictionary<string, object>
             {

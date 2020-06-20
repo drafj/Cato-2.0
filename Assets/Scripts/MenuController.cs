@@ -8,6 +8,7 @@ public class MenuController : MonoBehaviour
 {
     public GameObject menu;
     public GameObject zoomCamera;
+    public GameObject SceneToLoadGO;
     public Toggle musicToggle;
     public Dropdown dropdown;
     public Text points;
@@ -29,6 +30,9 @@ public class MenuController : MonoBehaviour
             dropdown.AddOptions(abilitiesString);
             dropdown.value = selection;
         }
+
+        if (SceneToLoadGO != null)
+        SceneToLoadGO.GetComponent<Loading>().sceneToLoad = PlayerPrefs.GetInt("actualLevel", 1);
 
         if (PlayerPrefs.HasKey("music"))
         {
@@ -66,14 +70,14 @@ public class MenuController : MonoBehaviour
         Application.Quit();
     }
 
-    //public void Play()
-    //{
-    //    SceneManager.LoadScene(1);
-    //}
-
     public void TutorialButton()
     {
         SceneManager.LoadScene(2);
+    }
+
+    public void SecondLevel()
+    {
+        SceneManager.LoadScene(3);
     }
 
     public void MusicController(bool controller)
@@ -106,11 +110,5 @@ public class MenuController : MonoBehaviour
         GameManager.instance.ambientSound.GetComponent<AudioSource>().enabled = false;
         yield return new WaitForSeconds(1.85f);
         SceneManager.LoadScene(0);
-    }
-
-
-    void Update()
-    {
-
     }
 }

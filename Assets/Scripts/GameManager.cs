@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public GameObject damageCamera;
     public GameObject normalCameras;
     public GameObject deathCamera;
+    public GameObject deathCirclesCamera;
     public GameObject pauseMenu;
     public GameObject flashParticles;
     public GameObject fireworksOne;
@@ -132,11 +133,25 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator DealDamageC()
     {
-        normalCameras.SetActive(false);
-        damageCamera.SetActive(true);
-        yield return new WaitForSeconds(0.3f);
-        damageCamera.SetActive(false);
-        normalCameras.SetActive(true);
+        if (!player.GetComponent<Player>().unleashed)
+        {
+            normalCameras.SetActive(false);
+            damageCamera.SetActive(true);
+            yield return new WaitForSeconds(0.3f);
+            damageCamera.SetActive(false);
+            normalCameras.SetActive(true);
+        }
+
+        else
+        {
+            deathCirclesCamera.SetActive(false);
+            damageCamera.SetActive(true);
+            yield return new WaitForSeconds(0.5f);
+            deathCirclesCamera.SetActive(true);
+            damageCamera.SetActive(false);
+        }
+
+
     }
 
     public void StartDealDamage()
@@ -152,7 +167,7 @@ public class GameManager : MonoBehaviour
     {
         Screen.fullScreen = true;//maldita sea esta puta linea no me sirvió xD
 
-        if (counterToBoss >= arrivalBoss)
+        if (counterToBoss >= arrivalBoss && gOPusher != null)
         {
             counterToBoss = 0;
             spawnEnemies = false;

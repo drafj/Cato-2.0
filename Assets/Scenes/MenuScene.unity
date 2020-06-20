@@ -541,7 +541,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -7.4999695, y: -0.49999237}
+  m_AnchoredPosition: {x: -7.5, y: -0.49999237}
   m_SizeDelta: {x: -35, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &754552572
@@ -1803,6 +1803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
   zoomCamera: {fileID: 0}
+  SceneToLoadGO: {fileID: 1052265225}
   musicToggle: {fileID: 0}
   dropdown: {fileID: 1923810605}
   points: {fileID: 863661751}
@@ -1811,6 +1812,7 @@ MonoBehaviour:
   - shield
   - flash
   - little
+  m_levels: 0
 --- !u!1 &1667935690
 GameObject:
   m_ObjectHideFlags: 0

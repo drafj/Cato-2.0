@@ -8,6 +8,7 @@ public class SecondBoss : MonoBehaviour
     public GameObject cameras;
     public GameObject aimCam;
     public GameObject blackSpace;
+    public Animator blackSpaceAnim;
 
     void Start()
     {
@@ -18,12 +19,13 @@ public class SecondBoss : MonoBehaviour
     {
         while (true)
         {
+            yield return new WaitForSeconds(3);
             cameras.SetActive(false);
             aimCam.SetActive(true);
             GameManager.instance.player.GetComponent<Player>().unleashed = true;
-            blackSpace.SetActive(true);
+            blackSpaceAnim.SetTrigger("enterBS");
             CreateCircle();
-            yield return new WaitForSeconds(26);
+            yield return new WaitForSeconds(27);
         }
     }
 

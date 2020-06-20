@@ -1252,6 +1252,12 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &164305341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 164305341, guid: 21aaa63760454564186935138b8b2752,
+    type: 3}
+  m_PrefabInstance: {fileID: 672982628}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &330087692
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,13 +1717,14 @@ GameObject:
   m_Component:
   - component: {fileID: 526043481}
   - component: {fileID: 526043480}
+  - component: {fileID: 526043482}
   m_Layer: 0
   m_Name: Black_Space
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &526043480
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1758,7 +1765,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 9
   m_Sprite: {fileID: 21300000, guid: cca904afac539534096d8a401479dce8, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1776,12 +1783,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526043479}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -2.2}
   m_LocalScale: {x: 63, y: 63, z: 63}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &526043482
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526043479}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 95ef0655e73a1d541b4669f44ac14f40, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &595897037
 GameObject:
   m_ObjectHideFlags: 0
@@ -2338,7 +2364,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.4228125, y: 0.920587}
   m_AnchorMax: {x: 0.99993753, y: 0.9979815}
-  m_AnchoredPosition: {x: 0.000045776367, y: 1.5200195}
+  m_AnchoredPosition: {x: 0.000061035156, y: 1.5200195}
   m_SizeDelta: {x: 0, y: -3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &646247625
@@ -2422,15 +2448,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 164305343, guid: 21aaa63760454564186935138b8b2752, type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 821655114}
+    - target: {fileID: 1749571017, guid: 21aaa63760454564186935138b8b2752, type: 3}
+      propertyPath: m_AmplitudeGain
+      value: 18.84
+      objectReference: {fileID: 0}
     - target: {fileID: 1893222343, guid: 21aaa63760454564186935138b8b2752, type: 3}
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 821655114}
-    - target: {fileID: 1628597574777969549, guid: 21aaa63760454564186935138b8b2752,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1628597575549809148, guid: 21aaa63760454564186935138b8b2752,
         type: 3}
       propertyPath: m_Name
@@ -2511,11 +2540,6 @@ PrefabInstance:
       propertyPath: m_AnimatedTarget
       value: 
       objectReference: {fileID: 821655111}
-    - target: {fileID: 1628597576458116545, guid: 21aaa63760454564186935138b8b2752,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21aaa63760454564186935138b8b2752, type: 3}
 --- !u!1 &672982629 stripped
@@ -2527,12 +2551,6 @@ GameObject:
 --- !u!1 &672982630 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1628597576458116545, guid: 21aaa63760454564186935138b8b2752,
-    type: 3}
-  m_PrefabInstance: {fileID: 672982628}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &672982631 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1628597574777969549, guid: 21aaa63760454564186935138b8b2752,
     type: 3}
   m_PrefabInstance: {fileID: 672982628}
   m_PrefabAsset: {fileID: 0}
@@ -5577,6 +5595,11 @@ PrefabInstance:
       propertyPath: blackSpace
       value: 
       objectReference: {fileID: 526043479}
+    - target: {fileID: 7787050231675774761, guid: 1560dd3bf8c09f243aac3d922a9f6b60,
+        type: 3}
+      propertyPath: blackSpaceAnim
+      value: 
+      objectReference: {fileID: 526043482}
     - target: {fileID: 7787050231675774765, guid: 1560dd3bf8c09f243aac3d922a9f6b60,
         type: 3}
       propertyPath: m_Name
@@ -5791,7 +5814,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 9
+  m_SortingOrder: 8
   m_Sprite: {fileID: 5742645758331812599, guid: 24ea90b501d105c4e9995311bdf1a698,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6338,7 +6361,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25583327, y: 0.34943715}
   m_AnchorMax: {x: 0.3036312, y: 0.41369066}
-  m_AnchoredPosition: {x: -34.800095, y: 22.195007}
+  m_AnchoredPosition: {x: -34.80004, y: 22.195007}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1829930632702570341
@@ -7401,7 +7424,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.38000003}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -12.774999}
+  m_AnchoredPosition: {x: 0, y: -12.775003}
   m_SizeDelta: {x: 0, y: 25.549}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1829930633281886386
@@ -10447,9 +10470,10 @@ MonoBehaviour:
   shield: {fileID: 7598237022814977170, guid: 4e00f083d85e82c47812f4242075d28e, type: 3}
   ammoPrefab: {fileID: 129623526426531445, guid: c1620bd91529b1247ba81a66c7bda0e2,
     type: 3}
-  damageCamera: {fileID: 672982631}
+  damageCamera: {fileID: 164305341}
   normalCameras: {fileID: 672982630}
   deathCamera: {fileID: 672982629}
+  deathCirclesCamera: {fileID: 1893222341}
   pauseMenu: {fileID: 1829930634343718665}
   flashParticles: {fileID: 180128, guid: 6586ff0f14125534cae2f5d8f04b7871, type: 3}
   fireworksOne: {fileID: 168542, guid: 5702e2a6fea804b45b49b70d8feaf7ae, type: 3}
