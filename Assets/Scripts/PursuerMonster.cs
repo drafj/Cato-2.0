@@ -110,7 +110,6 @@ public class PursuerMonster : Enemies
         GameManager.instance.counterToBoss++;
         transform.position = new Vector3(1000, 1000);
         anim.SetBool("idle", true);
-        anim.SetTrigger("idle");
         dying = false;
         gameObject.SetActive(false);
     }

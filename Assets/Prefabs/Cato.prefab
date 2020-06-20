@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1663258805614013475}
   - component: {fileID: 1663258805614013474}
   - component: {fileID: 1663258805614013479}
-  - component: {fileID: 1663258805614013478}
   - component: {fileID: 5499603500225374531}
+  - component: {fileID: 3715015624037762497}
   m_Layer: 0
   m_Name: Cato
   m_TagString: Player
@@ -127,32 +127,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &1663258805614013478
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663258805614013485}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.9}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 2.5294118, y: 3.5882354}
-    newSize: {x: 2.5294118, y: 3.5882354}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.9545455, y: 2.7727273}
-  m_EdgeRadius: 0
 --- !u!114 &5499603500225374531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +166,22 @@ MonoBehaviour:
   canyonPositions:
   - {x: 1.07, y: 1.287, z: 0}
   - {x: -1.07, y: 1.287, z: 0}
+--- !u!70 &3715015624037762497
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663258805614013485}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0063815117, y: 0.060625076}
+  m_Size: {x: 2.325202, y: 3.084093}
+  m_Direction: 0
 --- !u!1001 &1663258805705442135
 PrefabInstance:
   m_ObjectHideFlags: 0

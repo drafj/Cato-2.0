@@ -208,7 +208,7 @@ public class Player : MonoBehaviour
         else
             bossPhase = false;
         anim.SetTrigger("Dead");
-        GetComponent<BoxCollider2D>().enabled = false;
+        GetComponent<CapsuleCollider2D>().enabled = false;
         AudioSource.PlayClipAtPoint(GameManager.instance.loseClip, GameManager.instance.deathCamera.transform.position);
         GameManager.instance.ambientSound.GetComponent<AudioSource>().Stop();
         yield return new WaitForSeconds(/*segundos que demore la animacion de muerte*/4f);
@@ -226,15 +226,19 @@ public class Player : MonoBehaviour
         {
             GameManager.instance.StartDealDamage();
         }
-
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<RayController>() != null)
         {
-            life--;
+            Debug.Log("entra");
+            if (life > 0 && !invencible)
+            {
+                life--;
+                GameManager.instance.StartDealDamage();
+            }
+
             if (life == 0)
             {
                 Analytics.CustomEvent("Death", new Dictionary<string, object>
@@ -242,8 +246,6 @@ public class Player : MonoBehaviour
                     {"death", "by boss ray"}
                 });
             }
-            if (life > 0 && !invencible)
-                GameManager.instance.StartDealDamage();
         }
     }
 
@@ -325,7 +327,7 @@ public class Player : MonoBehaviour
             ability = false;
             shieldColdDown = true;
             GameObject shieldInst = Instantiate(GameManager.instance.shield, transform);
-            shieldInst.transform.localPosition = new Vector3(-0.04999998f, 1.639999f, -9.041016f);
+            shieldInst.transform.localPosition = new Vector3(0, 1.27f, -9.041016f);
         }
     }
 
@@ -333,9 +335,10 @@ public class Player : MonoBehaviour
     {
         if (!GameManager.instance.pause && !GameManager.instance.gameOver)
         {
-            JoystickMoviment();
-
-            KeyboardMoviment();
+            if (anim.GetBool("OnTouch"))
+                JoystickMoviment();
+            else
+                KeyboardMoviment();
 
             if (transform.position.x > 6.85)
                 transform.position = new Vector3(6.85f, transform.position.y);
@@ -353,6 +356,8 @@ public class Player : MonoBehaviour
         joyStickDir = GameManager.instance.m_Joystick.Direction * velocity * Time.deltaTime;
 
         rgbd.velocity += new Vector2(joyStickDir.x, joyStickDir.y);
+
+        anim.SetFloat("VelX", joyStickDir.x);
     }
 
     void KeyboardMoviment()
@@ -361,6 +366,7 @@ public class Player : MonoBehaviour
         axis = axis * velocity * Time.deltaTime;
 
         rgbd.velocity += new Vector2(axis.x, axis.y);
+        anim.SetFloat("VelX", Input.GetAxis("Horizontal"));
     }
 }
 

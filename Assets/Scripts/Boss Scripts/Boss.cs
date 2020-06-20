@@ -101,7 +101,8 @@ public class Boss : Enemies
     {
         while (transform.position.y >= 9.5f)
         {
-            rgbd.AddForce(transform.up * velocity);
+            if (!GameManager.instance.pause)
+                rgbd.AddForce(transform.up * velocity);
             yield return null;
         }
     }
@@ -125,11 +126,6 @@ public class Boss : Enemies
                 m_bossBulletList[i].GetComponent<BossBullet>().persecution = false;
                 m_bossBulletList[i].GetComponent<BossBullet>().rgbd.AddForce(Vector2.up * -600);
             }
-        }
-
-        if (rayCounter >= 8)
-        {
-            //temporal del rayo anteriormente elegido
         }
 
         else if (life <= 0 && m_phase == Phase.SecondPhase)

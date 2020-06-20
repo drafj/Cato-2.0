@@ -17,7 +17,7 @@ public class Shield : MonoBehaviour
 
     void BulletLauncher()
     {
-        GetComponent<EdgeCollider2D>().enabled = false;
+        GetComponent<CircleCollider2D>().enabled = false;
         launchingBullets = true;
         for (int i = 0; i < bullets.Count; i++)
         {

@@ -38,6 +38,7 @@ public class BulletController : MonoBehaviour
         {
             GetComponent<Animator>().enabled = false;
             GetComponent<SpriteRenderer>().sprite = GameManager.instance.enemyBulletSprite;
+            GetComponent<Renderer>().sortingOrder = 7;
             transform.rotation = Quaternion.Euler(0, 0, 180);
         }
 

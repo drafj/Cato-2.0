@@ -1,43 +1,34 @@
 fileFormatVersion: 2
-guid: 5b54b732aeb35924aa22172dfafdc100
+guid: 921e3079ed27fce4b82ede12d1af9282
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8832785097537528021
-    second: CatoTrue_0
+      213: -1969189870831347167
+    second: Bolas_De_Carne_PNG_0
   - first:
-      213: -8756551758642762833
-    second: CatoTrue_1
+      213: 420068623158264398
+    second: Bolas_De_Carne_PNG_1
   - first:
-      213: -1694322207605129660
-    second: CatoTrue_2
+      213: -2158936795277263627
+    second: Bolas_De_Carne_PNG_2
   - first:
-      213: -6896198825077291550
-    second: CatoTrue_3
+      213: -7243693283449287722
+    second: Bolas_De_Carne_PNG_3
   - first:
-      213: -74601316952882157
-    second: CatoTrue_4
+      213: -2291769875218591377
+    second: Bolas_De_Carne_PNG_4
   - first:
-      213: -1556349056300606840
-    second: CatoTrue_5
+      213: -9184087046572008819
+    second: Bolas_De_Carne_PNG_5
   - first:
-      213: 8800356929687957469
-    second: CatoTrue_6
+      213: -3171107827685889861
+    second: Bolas_De_Carne_PNG_6
   - first:
-      213: 8813535334072737389
-    second: CatoTrue_7
+      213: -2875323542034413570
+    second: Bolas_De_Carne_PNG_7
   - first:
-      213: 2802438388953350731
-    second: CatoTrue_8
-  - first:
-      213: 2573650577057322503
-    second: CatoTrue_9
-  - first:
-      213: 6445186547363074754
-    second: CatoTrue_10
-  - first:
-      213: -1569453369465446717
-    second: CatoTrue_11
+      213: 3945458917380431595
+    second: Bolas_De_Carne_PNG_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -81,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 17
+  spritePixelsToUnits: 22
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -135,253 +126,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CatoTrue_0
+      name: Bolas_De_Carne_PNG_0
       rect:
         serializedVersion: 2
-        x: 8
+        x: 10
+        y: 127
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12adcc5ee380ca4e0800000000000000
+      internalID: -1969189870831347167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bolas_De_Carne_PNG_1
+      rect:
+        serializedVersion: 2
+        x: 51
         y: 124
-        width: 43
-        height: 61
+        width: 40
+        height: 39
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d0a6148f3b549a70800000000000000
-      internalID: 8832785097537528021
+      spriteID: e42c2a8ef2264d500800000000000000
+      internalID: 420068623158264398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CatoTrue_1
+      name: Bolas_De_Carne_PNG_2
       rect:
         serializedVersion: 2
-        x: 53
-        y: 124
-        width: 43
-        height: 61
+        x: 107
+        y: 115
+        width: 38
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: faba6c8d19a7a7680800000000000000
-      internalID: -8756551758642762833
+      spriteID: 5fc7af85c6ae902e0800000000000000
+      internalID: -2158936795277263627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CatoTrue_2
+      name: Bolas_De_Carne_PNG_3
       rect:
         serializedVersion: 2
-        x: 98
-        y: 124
-        width: 43
-        height: 61
+        x: 13
+        y: 97
+        width: 18
+        height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44ef3a8ddee8c78e0800000000000000
-      internalID: -1694322207605129660
+      spriteID: 6db4f12665b397b90800000000000000
+      internalID: -7243693283449287722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CatoTrue_3
+      name: Bolas_De_Carne_PNG_4
       rect:
         serializedVersion: 2
-        x: 143
-        y: 124
-        width: 43
-        height: 61
+        x: 43
+        y: 91
+        width: 28
+        height: 28
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e54dcac4b7cb40a0800000000000000
-      internalID: -6896198825077291550
+      spriteID: f6197a8d07ff130e0800000000000000
+      internalID: -2291769875218591377
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CatoTrue_4
+      name: Bolas_De_Carne_PNG_5
       rect:
         serializedVersion: 2
-        x: 2
-        y: 62
-        width: 45
-        height: 61
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3144f3b5f76f6fef0800000000000000
-      internalID: -74601316952882157
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CatoTrue_5
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 62
-        width: 45
-        height: 61
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88a10b877ccb66ae0800000000000000
-      internalID: -1556349056300606840
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CatoTrue_6
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 62
-        width: 45
-        height: 61
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ddfa2b25006212a70800000000000000
-      internalID: 8800356929687957469
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CatoTrue_7
-      rect:
-        serializedVersion: 2
-        x: 145
-        y: 62
-        width: 45
-        height: 61
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d6e52c2b0b7ff4a70800000000000000
-      internalID: 8813535334072737389
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CatoTrue_8
-      rect:
-        serializedVersion: 2
-        x: 2
+        x: 73
         y: 0
-        width: 45
-        height: 61
+        width: 72
+        height: 114
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b428b76edd244e620800000000000000
-      internalID: 2802438388953350731
+      spriteID: d8a1fc29d719b8080800000000000000
+      internalID: -9184087046572008819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CatoTrue_9
+      name: Bolas_De_Carne_PNG_6
       rect:
         serializedVersion: 2
-        x: 50
-        y: 0
-        width: 45
-        height: 61
+        x: 4
+        y: 67
+        width: 41
+        height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7061b75609177b320800000000000000
-      internalID: 2573650577057322503
+      spriteID: bb862526b36fdf3d0800000000000000
+      internalID: -3171107827685889861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CatoTrue_10
+      name: Bolas_De_Carne_PNG_7
       rect:
         serializedVersion: 2
-        x: 99
-        y: 0
-        width: 45
-        height: 61
+        x: 48
+        y: 42
+        width: 24
+        height: 30
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c2d3ba4407e17950800000000000000
-      internalID: 6445186547363074754
+      spriteID: ef788bef87cc818d0800000000000000
+      internalID: -2875323542034413570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CatoTrue_11
+      name: Bolas_De_Carne_PNG_8
       rect:
         serializedVersion: 2
-        x: 147
+        x: 13
         y: 0
-        width: 45
-        height: 61
+        width: 30
+        height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ced87dc97e283ae0800000000000000
-      internalID: -1569453369465446717
+      spriteID: bee9b5e3bf511c630800000000000000
+      internalID: 3945458917380431595
       vertices: []
       indices: 
       edges: []
