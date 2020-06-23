@@ -52,6 +52,8 @@ public class CircleBehaviour : MonoBehaviour
 
     void UnleashPlayer()
     {
+        GameManager.instance.Boss.GetComponent<SecondBoss>().cameras.SetActive(true);
+        GameManager.instance.Boss.GetComponent<SecondBoss>().aimCam.SetActive(false);
         GameManager.instance.player.GetComponent<Player>().unleashed = false;
         GameManager.instance.Boss.GetComponent<SecondBoss>().blackSpaceAnim.SetTrigger("leaveBS");
     }
@@ -75,8 +77,6 @@ public class CircleBehaviour : MonoBehaviour
         {
             scaleVel = 0.5f;
             Invoke("UnleashPlayer", 1.4f);
-            GameManager.instance.Boss.GetComponent<SecondBoss>().cameras.SetActive(true);
-            GameManager.instance.Boss.GetComponent<SecondBoss>().aimCam.SetActive(false);
         }
         StartCoroutine(Redux());
     }

@@ -2669,35 +2669,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1663258805614013474, guid: 62f510d2b0d42ed4b9e706c6e018ce56,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: b6928c0b473a6a64fab268e95a58897e, type: 2}
-    - target: {fileID: 1663258805614013475, guid: 62f510d2b0d42ed4b9e706c6e018ce56,
-        type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1663258805614013478, guid: 62f510d2b0d42ed4b9e706c6e018ce56,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1663258805614013478, guid: 62f510d2b0d42ed4b9e706c6e018ce56,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 3.5882354
-      objectReference: {fileID: 0}
     - target: {fileID: 1663258805614013485, guid: 62f510d2b0d42ed4b9e706c6e018ce56,
         type: 3}
       propertyPath: m_Name
       value: Cato
-      objectReference: {fileID: 0}
-    - target: {fileID: 3280538346755926802, guid: 62f510d2b0d42ed4b9e706c6e018ce56,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5499603500225374531, guid: 62f510d2b0d42ed4b9e706c6e018ce56,
         type: 3}
@@ -11024,6 +10999,7 @@ MonoBehaviour:
   normalCameras: {fileID: 672982630}
   deathCamera: {fileID: 672982629}
   deathCirclesCamera: {fileID: 0}
+  deathCirclesDamCamera: {fileID: 0}
   pauseMenu: {fileID: 1829930634343718665}
   flashParticles: {fileID: 180128, guid: 6586ff0f14125534cae2f5d8f04b7871, type: 3}
   fireworksOne: {fileID: 168542, guid: 5702e2a6fea804b45b49b70d8feaf7ae, type: 3}
