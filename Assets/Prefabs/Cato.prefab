@@ -153,6 +153,7 @@ MonoBehaviour:
   ability: 0
   invencible: 0
   pushed: 0
+  unleashed: 0
   mSize: 0
   mOrder: 0
   m_Gunz: 0
@@ -164,8 +165,8 @@ MonoBehaviour:
   axis: {x: 0, y: 0}
   actualShield: {fileID: 0}
   canyonPositions:
-  - {x: 1.07, y: 1.287, z: 0}
-  - {x: -1.07, y: 1.287, z: 0}
+  - {x: 0.766, y: 1.954, z: 0}
+  - {x: -0.766, y: 1.954, z: 0}
 --- !u!70 &3715015624037762497
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -192,12 +193,12 @@ PrefabInstance:
     - target: {fileID: 4212625900781113314, guid: 48549e089930e5d48b039bee3527eaa5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.067
+      value: 0.766
       objectReference: {fileID: 0}
     - target: {fileID: 4212625900781113314, guid: 48549e089930e5d48b039bee3527eaa5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.24
+      value: 1.954
       objectReference: {fileID: 0}
     - target: {fileID: 4212625900781113314, guid: 48549e089930e5d48b039bee3527eaa5,
         type: 3}

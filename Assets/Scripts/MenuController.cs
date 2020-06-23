@@ -99,6 +99,7 @@ public class MenuController : MonoBehaviour
 
     public void BackToMenu()
     {
+        Player.bossPhase = false;
         Time.timeScale = 1;
         StartCoroutine("MenuDelay");
         zoomCamera.SetActive(true);

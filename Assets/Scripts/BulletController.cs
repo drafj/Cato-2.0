@@ -94,6 +94,19 @@ public class BulletController : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (transform.tag == "Player Bullet")
+        {
+            if (collision.transform.tag == "Enemy")
+            {
+                Instantiate(GameManager.instance.shotPP, transform.position, Quaternion.identity);
+                transform.position = new Vector3(1000, 1000);
+                gameObject.SetActive(false);
+            }
+        }
+    }
+
     void Update()
     {
 

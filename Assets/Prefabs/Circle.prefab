@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2401532897578648635}
   - component: {fileID: 2401532897578648637}
   - component: {fileID: 2401532897578648638}
+  - component: {fileID: 2667857758004840625}
   m_Layer: 0
   m_Name: Circle
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,6 +197,27 @@ PolygonCollider2D:
       - {x: 0.7166667, y: -3.1166668}
       - {x: 1.0833334, y: -3.1166668}
       - {x: 1.1500001, y: -3.016667}
+--- !u!50 &2667857758004840625
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2401532897578648634}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &3653455906684444472
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,9 +230,10 @@ GameObject:
   - component: {fileID: 4322189336666458965}
   - component: {fileID: 2608868524389772181}
   - component: {fileID: 6515914323902493557}
+  - component: {fileID: 7798147711576528764}
   m_Layer: 0
   m_Name: Circle 2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -391,6 +414,27 @@ PolygonCollider2D:
       - {x: 0.7166667, y: -3.1166668}
       - {x: 1.0833334, y: -3.1166668}
       - {x: 1.1500001, y: -3.016667}
+--- !u!50 &7798147711576528764
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3653455906684444472}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &8438921046152180703
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,9 +447,10 @@ GameObject:
   - component: {fileID: 6988526023331665327}
   - component: {fileID: 8568876797117102543}
   - component: {fileID: 1289797201759835270}
+  - component: {fileID: 1786683993439153753}
   m_Layer: 0
   m_Name: Circle 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -587,3 +632,24 @@ PolygonCollider2D:
       - {x: 0.7166667, y: -3.1166668}
       - {x: 1.0833334, y: -3.1166668}
       - {x: 1.1500001, y: -3.016667}
+--- !u!50 &1786683993439153753
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8438921046152180703}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7

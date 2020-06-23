@@ -5,11 +5,6 @@ using UnityEngine.Analytics;
 
 public class SucideMonster : Enemies
 {
-    private void Awake()
-    {
-
-    }
-
     void Start()
     {
         StartS();

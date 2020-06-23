@@ -213,7 +213,7 @@ public class Player : MonoBehaviour
         AudioSource.PlayClipAtPoint(GameManager.instance.loseClip, GameManager.instance.deathCamera.transform.position);
         GameManager.instance.ambientSound.GetComponent<AudioSource>().Stop();
         yield return new WaitForSeconds(/*segundos que demore la animacion de muerte*/4f);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(PlayerPrefs.GetInt("actualLevel", 1));
     }
 
     public void Starter()
@@ -226,6 +226,8 @@ public class Player : MonoBehaviour
         if (collision.gameObject.GetComponent<Enemies>() != null && life > 0 && !invencible)
         {
             GameManager.instance.StartDealDamage();
+            if (collision.gameObject.GetComponent<SecondBoss>() != null)
+                life--;
         }
     }
 

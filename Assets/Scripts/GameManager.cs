@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     public GameObject normalCameras;
     public GameObject deathCamera;
     public GameObject deathCirclesCamera;
+    public GameObject deathCirclesDamCamera;
     public GameObject pauseMenu;
     public GameObject flashParticles;
     public GameObject fireworksOne;
@@ -145,10 +146,10 @@ public class GameManager : MonoBehaviour
         else
         {
             deathCirclesCamera.SetActive(false);
-            damageCamera.SetActive(true);
+            deathCirclesDamCamera.SetActive(true);
             yield return new WaitForSeconds(0.5f);
             deathCirclesCamera.SetActive(true);
-            damageCamera.SetActive(false);
+            deathCirclesDamCamera.SetActive(false);
         }
 
 
@@ -165,13 +166,12 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        Screen.fullScreen = true;//maldita sea esta puta linea no me sirvió xD
-
-        if (counterToBoss >= arrivalBoss && gOPusher != null)
+        if (counterToBoss >= arrivalBoss)
         {
             counterToBoss = 0;
             spawnEnemies = false;
             Boss.SetActive(true);
+            if (gOPusher != null)
             gOPusher.SetActive(true);
         }
 

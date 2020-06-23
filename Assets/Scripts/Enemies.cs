@@ -5,20 +5,16 @@ using UnityEngine;
 public class Enemies : MonoBehaviour
 {
     [HideInInspector] public float velocity;
-    [HideInInspector] public float life;
+    /*[HideInInspector] */public float life;
 
-    public float BossLife;
+    public float firstBossLife;
+    public float secondBossLife;
     public float suicideMonsterVelocity;
     public float suicideMonsterLife;
     public float pursuerMonsterVelocity;
     public float pursuerMonsterLife;
     public float shooterMonsterVelocity;
     public float shooterMonsterLife;
-
-    void Start()
-    {
-        
-    }
 
     //private void OnDisable()
     //{
@@ -30,7 +26,12 @@ public class Enemies : MonoBehaviour
     {
         if (GetComponent<Boss>() != null)
         {
-            life = GameManager.instance.m_enemiesStats.BossLife;
+            life = GameManager.instance.m_enemiesStats.firstBossLife;
+        }
+
+        if (GetComponent<SecondBoss>() != null)
+        {
+            life = GameManager.instance.m_enemiesStats.secondBossLife;
         }
 
         if (GetComponent<PursuerMonster>() != null)

@@ -137,7 +137,7 @@ public class Boss : Enemies
             MenuController.blockPause = true;
             Analytics.CustomEvent("Winner", new Dictionary<string, object>
             {
-                {"Life", GameManager.instance.player.GetComponent<Player>().life},
+                {"first boss with Life", GameManager.instance.player.GetComponent<Player>().life},
             });
             gameObject.SetActive(false);
         }

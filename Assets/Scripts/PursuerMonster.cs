@@ -25,7 +25,7 @@ public class PursuerMonster : Enemies
         LifeAndVelocityAsigner();
 
         velocity = velocity == 0 ? 5 : velocity;
-        life = life == 0 ? 5 : velocity;
+        life = life == 0 ? 4 : velocity;
 
         StartRotation();
     }

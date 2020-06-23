@@ -2525,6 +2525,16 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 821655114}
+    - target: {fileID: 1628597576297510246, guid: 21aaa63760454564186935138b8b2752,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1628597576297510246, guid: 21aaa63760454564186935138b8b2752,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10.48
+      objectReference: {fileID: 0}
     - target: {fileID: 1628597576297510247, guid: 21aaa63760454564186935138b8b2752,
         type: 3}
       propertyPath: m_Follow
@@ -2570,12 +2580,12 @@ PrefabInstance:
     - target: {fileID: 1663258805614013472, guid: 62f510d2b0d42ed4b9e706c6e018ce56,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.26
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1663258805614013472, guid: 62f510d2b0d42ed4b9e706c6e018ce56,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.85
+      value: -10.48
       objectReference: {fileID: 0}
     - target: {fileID: 1663258805614013472, guid: 62f510d2b0d42ed4b9e706c6e018ce56,
         type: 3}
@@ -4537,7 +4547,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 9
+  m_SortingOrder: 6
   m_Sprite: {fileID: -8467445657005465581, guid: 24ea90b501d105c4e9995311bdf1a698,
     type: 3}
   m_Color: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 1}
@@ -4550,6 +4560,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1426211711 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1628597574777969549, guid: 21aaa63760454564186935138b8b2752,
+    type: 3}
+  m_PrefabInstance: {fileID: 672982628}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1522568831
 GameObject:
   m_ObjectHideFlags: 0
@@ -5600,20 +5616,30 @@ PrefabInstance:
       propertyPath: blackSpaceAnim
       value: 
       objectReference: {fileID: 526043482}
+    - target: {fileID: 7787050231675774761, guid: 1560dd3bf8c09f243aac3d922a9f6b60,
+        type: 3}
+      propertyPath: damageCam
+      value: 
+      objectReference: {fileID: 164305341}
     - target: {fileID: 7787050231675774765, guid: 1560dd3bf8c09f243aac3d922a9f6b60,
         type: 3}
       propertyPath: m_Name
       value: Second Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 7787050231675774765, guid: 1560dd3bf8c09f243aac3d922a9f6b60,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7787050231675774767, guid: 1560dd3bf8c09f243aac3d922a9f6b60,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7787050231675774767, guid: 1560dd3bf8c09f243aac3d922a9f6b60,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.73
+      value: -0.95000005
       objectReference: {fileID: 0}
     - target: {fileID: 7787050231675774767, guid: 1560dd3bf8c09f243aac3d922a9f6b60,
         type: 3}
@@ -5623,17 +5649,17 @@ PrefabInstance:
     - target: {fileID: 7787050231675774767, guid: 1560dd3bf8c09f243aac3d922a9f6b60,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7787050231675774767, guid: 1560dd3bf8c09f243aac3d922a9f6b60,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7787050231675774767, guid: 1560dd3bf8c09f243aac3d922a9f6b60,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7787050231675774767, guid: 1560dd3bf8c09f243aac3d922a9f6b60,
         type: 3}
@@ -6361,7 +6387,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25583327, y: 0.34943715}
   m_AnchorMax: {x: 0.3036312, y: 0.41369066}
-  m_AnchoredPosition: {x: -34.80004, y: 22.195007}
+  m_AnchoredPosition: {x: -34.80005, y: 22.195007}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1829930632702570341
@@ -7366,8 +7392,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 494d9d0cb0f1cbd4d92d0110b89eff39, type: 3}
-    m_FontSize: 97
+    m_Font: {fileID: 12800000, guid: ff28a5082f0c31a41a4d751d4e5e4572, type: 3}
+    m_FontSize: 73
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -7378,10 +7404,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Ganaste!!
-
-
-    Te esperamos en el beta.'
+  m_Text: GANASTE!!
 --- !u!222 &1829930633279465911
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8399,8 +8422,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 494d9d0cb0f1cbd4d92d0110b89eff39, type: 3}
-    m_FontSize: 60
+    m_Font: {fileID: 12800000, guid: ff28a5082f0c31a41a4d751d4e5e4572, type: 3}
+    m_FontSize: 43
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 6
@@ -8411,7 +8434,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Regresar al inicio
+  m_Text: REGRESAR AL INICIO
 --- !u!222 &1829930633732319437
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10451,7 +10474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOver: 0
   pause: 0
-  spawnEnemies: 0
+  spawnEnemies: 1
   monster127: {fileID: 3301085219303801273, guid: 25dbe55798411eb44b417479e1179f31,
     type: 3}
   pursuerEnemy: {fileID: 502712758687633719, guid: 2f2a583178f54e843958fcd93a28b977,
@@ -10470,10 +10493,11 @@ MonoBehaviour:
   shield: {fileID: 7598237022814977170, guid: 4e00f083d85e82c47812f4242075d28e, type: 3}
   ammoPrefab: {fileID: 129623526426531445, guid: c1620bd91529b1247ba81a66c7bda0e2,
     type: 3}
-  damageCamera: {fileID: 164305341}
+  damageCamera: {fileID: 1426211711}
   normalCameras: {fileID: 672982630}
   deathCamera: {fileID: 672982629}
   deathCirclesCamera: {fileID: 1893222341}
+  deathCirclesDamCamera: {fileID: 164305341}
   pauseMenu: {fileID: 1829930634343718665}
   flashParticles: {fileID: 180128, guid: 6586ff0f14125534cae2f5d8f04b7871, type: 3}
   fireworksOne: {fileID: 168542, guid: 5702e2a6fea804b45b49b70d8feaf7ae, type: 3}
@@ -10526,7 +10550,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 0
   life: 0
-  BossLife: 6
+  firstBossLife: 60
+  secondBossLife: 40
   suicideMonsterVelocity: 4.5
   suicideMonsterLife: 1.5
   pursuerMonsterVelocity: 4
@@ -10887,6 +10912,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menu: {fileID: 1829930634343718665}
   zoomCamera: {fileID: 672982632}
+  SceneToLoadGO: {fileID: 0}
   musicToggle: {fileID: 1829930634291470591}
   dropdown: {fileID: 0}
   points: {fileID: 0}
