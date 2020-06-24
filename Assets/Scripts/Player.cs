@@ -56,6 +56,7 @@ public class Player : MonoBehaviour
         points = PlayerPrefs.GetInt("Points");
         if (GameManager.instance.points != null)
             GameManager.instance.points.text = points + " :points ";
+
         if (GameManager.instance.Boss.activeInHierarchy)
             bossPhase = true;
         else
@@ -321,7 +322,7 @@ public class Player : MonoBehaviour
             else
             transform.Translate(axis * 30);
             Instantiate(GameManager.instance.flashParticles, transform.position + new Vector3(0, 0, -5), Quaternion.identity);
-            StartCoroutine(GameManager.instance.Invencible(1));
+            StartCoroutine(GameManager.instance.Invencible(PlayerPrefs.GetInt("flashInv", 1)));
         }
 
         if (ability && !shieldColdDown && m_abilities == Abilities.Shield && !GameManager.instance.pause && !GameManager.instance.gameOver)

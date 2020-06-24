@@ -5,14 +5,13 @@ using UnityEngine;
 public class Shield : MonoBehaviour
 {
     private List<GameObject> bullets = new List<GameObject>();
-    [SerializeField] private float destroyLimit;
+    public float destroyLimit;
     private float destructionCounter;
     private bool launchingBullets;
     
     void Start()
     {
-        if (destroyLimit == 0)
-            destroyLimit = 5;
+        destroyLimit = PlayerPrefs.GetInt("shieldTime", 5);
     }
 
     void BulletLauncher()

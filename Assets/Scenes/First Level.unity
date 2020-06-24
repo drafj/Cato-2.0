@@ -2607,6 +2607,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 672982628}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &672982633 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 164305341, guid: 21aaa63760454564186935138b8b2752,
+    type: 3}
+  m_PrefabInstance: {fileID: 672982628}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &672982634 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1893222341, guid: 21aaa63760454564186935138b8b2752,
+    type: 3}
+  m_PrefabInstance: {fileID: 672982628}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &683999551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6728,7 +6740,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.38000003}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -12.774996}
+  m_AnchoredPosition: {x: 0, y: -12.774997}
   m_SizeDelta: {x: 0, y: 25.549}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1829930632638538123
@@ -6883,7 +6895,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25583327, y: 0.34943715}
   m_AnchorMax: {x: 0.3036312, y: 0.41369066}
-  m_AnchoredPosition: {x: -34.800125, y: 22.195007}
+  m_AnchoredPosition: {x: -34.80014, y: 22.195007}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1829930632702570341
@@ -10557,7 +10569,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.38000003}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -12.774996}
+  m_AnchoredPosition: {x: 0, y: -12.774997}
   m_SizeDelta: {x: 0, y: 25.549}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1829930634497660306
@@ -10998,8 +11010,8 @@ MonoBehaviour:
   damageCamera: {fileID: 672982631}
   normalCameras: {fileID: 672982630}
   deathCamera: {fileID: 672982629}
-  deathCirclesCamera: {fileID: 0}
-  deathCirclesDamCamera: {fileID: 0}
+  deathCirclesCamera: {fileID: 672982634}
+  deathCirclesDamCamera: {fileID: 672982633}
   pauseMenu: {fileID: 1829930634343718665}
   flashParticles: {fileID: 180128, guid: 6586ff0f14125534cae2f5d8f04b7871, type: 3}
   fireworksOne: {fileID: 168542, guid: 5702e2a6fea804b45b49b70d8feaf7ae, type: 3}

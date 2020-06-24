@@ -6232,7 +6232,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.38000003}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -12.774998}
+  m_AnchoredPosition: {x: 0, y: -12.774997}
   m_SizeDelta: {x: 0, y: 25.549}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1829930632638538123
@@ -10055,7 +10055,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.38000003}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -12.774998}
+  m_AnchoredPosition: {x: 0, y: -12.774997}
   m_SizeDelta: {x: 0, y: 25.549}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1829930634497660306
@@ -10551,7 +10551,7 @@ MonoBehaviour:
   velocity: 0
   life: 0
   firstBossLife: 60
-  secondBossLife: 40
+  secondBossLife: 20
   suicideMonsterVelocity: 4.5
   suicideMonsterLife: 1.5
   pursuerMonsterVelocity: 4

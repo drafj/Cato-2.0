@@ -19,8 +19,7 @@ public class MenuController : MonoBehaviour
 
     void Start()
     {
-        if (points != null)
-            points.text = " POINTS: " + PlayerPrefs.GetInt("Points");
+        SetPoints();
         blockPause = false;
         abilitiesString = new List<string>() { "Shield", "Flash"};
 
@@ -47,6 +46,12 @@ public class MenuController : MonoBehaviour
                 musicToggle.GetComponent<Toggle>().isOn = false;
             }
         }
+    }
+
+    public void SetPoints()
+    {
+        if (points != null)
+            points.text = " POINTS: " + PlayerPrefs.GetInt("Points");
     }
 
     public void EnterPause()
