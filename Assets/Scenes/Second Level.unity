@@ -3869,7 +3869,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 6
   m_Sprite: {fileID: 7635103841438627634, guid: e5349410308a543439cb73293e8d980b,
     type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.8156863}
@@ -5840,7 +5840,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
+  m_SortingOrder: 7
   m_Sprite: {fileID: 5742645758331812599, guid: 24ea90b501d105c4e9995311bdf1a698,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6387,7 +6387,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25583327, y: 0.34943715}
   m_AnchorMax: {x: 0.3036312, y: 0.41369066}
-  m_AnchoredPosition: {x: -34.80005, y: 22.195007}
+  m_AnchoredPosition: {x: -34.800053, y: 22.195007}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1829930632702570341
@@ -10521,7 +10521,7 @@ MonoBehaviour:
   thirdGunDamage: 1
   ammoFallVelocity: 4
   counterToBoss: 0
-  arrivalBoss: 1
+  arrivalBoss: 30
 --- !u!4 &2685958029521773569
 Transform:
   m_ObjectHideFlags: 0
@@ -10551,7 +10551,7 @@ MonoBehaviour:
   velocity: 0
   life: 0
   firstBossLife: 60
-  secondBossLife: 20
+  secondBossLife: 120
   suicideMonsterVelocity: 4.5
   suicideMonsterLife: 1.5
   pursuerMonsterVelocity: 4

@@ -59,7 +59,7 @@ public class ShooterMonster : Enemies
             {
                 case 0:
                     GameObject ins = Instantiate(GameManager.instance.ammoPrefab, transform.position, Quaternion.identity);
-                        ins.GetComponent<Ammo>().m_fOA = (FoodOrAmmo) Random.Range(0, 2);
+                        ins.GetComponent<Ammo>().m_fOA = (FoodOrAmmo) Random.Range(1, 3);
                     break;
                 case 1:
                     break;

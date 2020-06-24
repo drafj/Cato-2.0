@@ -22,6 +22,11 @@ public class Loading : MonoBehaviour
         StartCoroutine(LoadScene());
     }
 
+    public void SceneSelector(int scene)
+    {
+        sceneToLoad = scene;
+    }
+
     //Corrutina
     IEnumerator LoadScene()
     {

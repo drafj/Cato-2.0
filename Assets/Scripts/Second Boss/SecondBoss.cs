@@ -10,33 +10,51 @@ public class SecondBoss : Enemies
     public GameObject aimCam;
     public GameObject damageCam;
     public GameObject blackSpace;
+    private bool ready;
     public Animator blackSpaceAnim;
 
     void Start()
     {
-        //GameManager.instance.damageCamera = damageCam;
+        ready = false;
+        transform.localScale = new Vector3(0, 0, 0);
 
         LifeAndVelocityAsigner();
+        StartCoroutine(Aproach());
         StartCoroutine(CircleCreator());
+    }
+
+    IEnumerator Aproach()
+    {
+        while (transform.localScale.y < 1)
+        {
+            transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(1.01f, 1.01f, 1.01f), Time.deltaTime);
+            yield return null;
+        }
+
+        ready = true;
     }
 
     IEnumerator CircleCreator()
     {
         while (true)
         {
-            yield return new WaitForSeconds(3);
-            cameras.SetActive(false);
-            aimCam.SetActive(true);
-            GameManager.instance.player.GetComponent<Player>().unleashed = true;
-            blackSpaceAnim.SetTrigger("enterBS");
-            CreateCircle();
-            yield return new WaitForSeconds(27);
+            if (ready)
+            {
+                yield return new WaitForSeconds(3);
+                cameras.SetActive(false);
+                aimCam.SetActive(true);
+                GameManager.instance.player.GetComponent<Player>().unleashed = true;
+                blackSpaceAnim.SetTrigger("enterBS");
+                CreateCircle();
+                yield return new WaitForSeconds(27);
+            }
+            yield return null;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.tag == "Player Bullet")
+        if (collision.transform.tag == "Player Bullet" && ready)
         {
             collision.transform.position = new Vector3(1000, 1000);
             collision.gameObject.SetActive(false);
@@ -61,10 +79,5 @@ public class SecondBoss : Enemies
     public void CreateCircle()
     {
         Instantiate(circle, GameManager.instance.player.transform.position, Quaternion.identity);
-    }
-
-    void Update()
-    {
-
     }
 }

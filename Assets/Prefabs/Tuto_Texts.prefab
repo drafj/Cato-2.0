@@ -750,8 +750,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Con este boton activas la abilidad que se selecciona en el menu principal,
-    ten en cuenta que cuando lanzas abilidades tienen un tiempo de espera para volverlas
+  m_Text: Con este boton activas la habilidad que se selecciona en el menu principal,
+    ten en cuenta que cuando lanzas habilidades tienen un tiempo de espera para volverlas
     a usar
 --- !u!1 &8733983087478190336
 GameObject:
@@ -829,4 +829,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Con este joystick mueves a Cato
+  m_Text: Con este joystick mueves a Cat Sagan

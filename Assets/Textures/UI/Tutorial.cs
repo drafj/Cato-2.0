@@ -5,12 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Tutorial : MonoBehaviour
 {
-    //public GameObject pointLife;
-    //public GameObject pointFood;
-    //public GameObject pointPause;
-    //public GameObject pointJoystick;
-    //public GameObject pointShotB;
-    //public GameObject pointAbilityB;
     int counter;
 
     public List<GameObject> arrows = new List<GameObject>();

@@ -171,15 +171,20 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void InvokeBoss()
+    {
+        Boss.SetActive(true);
+        if (gOPusher != null)
+            gOPusher.SetActive(true);
+    }
+
     void Update()
     {
         if (counterToBoss >= arrivalBoss)
         {
-            counterToBoss = 0;
             spawnEnemies = false;
-            Boss.SetActive(true);
-            if (gOPusher != null)
-            gOPusher.SetActive(true);
+            counterToBoss = 0;
+            Invoke("InvokeBoss", 3);
         }
 
         if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.D))

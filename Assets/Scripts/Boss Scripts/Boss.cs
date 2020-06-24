@@ -102,7 +102,7 @@ public class Boss : Enemies
         while (transform.position.y >= 9.5f)
         {
             if (!GameManager.instance.pause)
-                rgbd.AddForce(transform.up * velocity);
+                rgbd.AddForce(transform.up * (velocity * 50) * Time.deltaTime);
             yield return null;
         }
     }
