@@ -3748,6 +3748,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jefe_1.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7878867430883211384, guid: c6a655df0b1e4894083c1ce80da9582f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7878867430883211386, guid: c6a655df0b1e4894083c1ce80da9582f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6895,7 +6900,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25583327, y: 0.34943715}
   m_AnchorMax: {x: 0.3036312, y: 0.41369066}
-  m_AnchoredPosition: {x: -34.80014, y: 22.195007}
+  m_AnchoredPosition: {x: -34.80017, y: 22.195007}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1829930632702570341
@@ -7960,7 +7965,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.38000003}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -12.775}
+  m_AnchoredPosition: {x: 0, y: -12.775002}
   m_SizeDelta: {x: 0, y: 25.549}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1829930633281886386

@@ -142,18 +142,12 @@ public class Boss : Enemies
             gameObject.SetActive(false);
         }
 
-        //Debug.Log("fase: " + m_phase);
-
         if (!GameManager.instance.pause)
         BossDisplacement();
     }
 
     void BossDisplacement()
     {
-        //if (transform.position.y >= 9.5f)
-        //{
-        //    rgbd.AddForce(transform.up * velocity);
-        //}
         if (transform.position.y <= 9.5f)
         {
             m_stage = Stage.Attacking;

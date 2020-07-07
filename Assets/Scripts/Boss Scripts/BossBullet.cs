@@ -90,12 +90,6 @@ public class BossBullet : MonoBehaviour
         if (transform.position.y <= -16.5 || transform.position.y >= 13.5 || transform.position.x >= 17 || transform.position.x <= -17)
             Destroy(gameObject);
 
-        //if (!pushed && GameManager.instance.Boss.GetComponent<Boss>().m_phase == Phase.SecondPhase)
-        //{
-        //    pushed = true;
-        //    StartCoroutine(Push());
-        //}
-
         if (persecution && !GameManager.instance.gameOver && !GameManager.instance.pause && m_type == BossBulletTypes.R && GameManager.instance.Boss.GetComponent<Boss>().m_phase == Phase.FirstPhase)
             TargetPlayerR();
         if (persecution && !GameManager.instance.gameOver && !GameManager.instance.pause && m_type == BossBulletTypes.L && GameManager.instance.Boss.GetComponent<Boss>().m_phase == Phase.FirstPhase)
@@ -125,7 +119,7 @@ public class BossBullet : MonoBehaviour
     {
         persecution = false;
         TargetBasic();
-        rgbd.velocity = transform.up * 10;
+        rgbd.velocity = transform.up * 7;
     }
 }
 

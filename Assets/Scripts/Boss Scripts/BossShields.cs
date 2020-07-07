@@ -5,6 +5,12 @@ using UnityEngine;
 public class BossShields : MonoBehaviour
 {
     public int life;
+    private Animator anim;
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     void Start()
     {
@@ -19,6 +25,7 @@ public class BossShields : MonoBehaviour
             collision.transform.position = new Vector3(1000, 1000);
             collision.gameObject.SetActive(false);
             life--;
+            anim.SetTrigger("damage");
         }
     }
 
