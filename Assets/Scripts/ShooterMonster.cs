@@ -28,10 +28,13 @@ public class ShooterMonster : Enemies
     {
         while (true)
         {
-            if (!GameManager.instance.pause && !GameManager.instance.gameOver)
+            if (GameManager.instance != null)
             {
-                GameManager.instance.m_pooler.EBSpawner(transform.InverseTransformVector(transform.localPosition + new Vector3(0.00399971f, -1.449f, -0.0999999f)), Quaternion.identity);
-                yield return new WaitForSeconds(0.5f);
+                if (!GameManager.instance.pause && !GameManager.instance.gameOver)
+                {
+                    GameManager.instance.m_pooler.EBSpawner(transform.InverseTransformVector(transform.localPosition + new Vector3(0.00399971f, -1.449f, -0.0999999f)), Quaternion.identity);
+                    yield return new WaitForSeconds(0.5f);
+                }
             }
             yield return null;
         }

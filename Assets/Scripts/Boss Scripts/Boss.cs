@@ -89,6 +89,40 @@ public class Boss : Enemies
             collision.transform.position = new Vector3(1000, 1000);
             collision.gameObject.SetActive(false);
             life--;
+
+            if (life <= 0 && m_phase == Phase.FirstPhase)
+            {
+                if (GameManager.instance.m_pooler != null)
+                    LifeAndVelocityAsigner();
+                StartCoroutine(EnteringSecondPhase());
+                transform.GetChild(2).gameObject.SetActive(false);
+
+                foreach (BossBullet bullet in FindObjectsOfType<BossBullet>())
+                {
+                    m_bossBulletList.Add(bullet);
+                }
+
+                for (int i = 0; i < m_bossBulletList.Count; i++)
+                {
+                    m_bossBulletList[i].GetComponent<BossBullet>().pushed = true;
+                    m_bossBulletList[i].GetComponent<BossBullet>().persecution = false;
+                    m_bossBulletList[i].GetComponent<BossBullet>().rgbd.AddForce(Vector2.up * -600);
+                }
+            }
+
+            else if (life <= 0 && m_phase == Phase.SecondPhase)
+            {
+                Instantiate(GameManager.instance.fireworksOne, transform.position * new Vector2(Random.Range(-4, 5), Random.Range(-4, 5)), Quaternion.identity);
+                Instantiate(GameManager.instance.fireworksTwo, transform.position * new Vector2(Random.Range(-4, 5), Random.Range(-4, 5)), Quaternion.identity);
+                GameManager.instance.winMessage.SetActive(true);
+                PlayerPrefs.SetInt("actualLevel", 3);
+                MenuController.blockPause = true;
+                Analytics.CustomEvent("Winner", new Dictionary<string, object>
+            {
+                {"first boss with Life", GameManager.instance.player.GetComponent<Player>().life},
+            });
+                gameObject.SetActive(false);
+            }
         }
     }
 
@@ -109,39 +143,6 @@ public class Boss : Enemies
 
     void Update()
     {
-        if (life <= 0 && m_phase == Phase.FirstPhase)
-        {
-            LifeAndVelocityAsigner();
-            StartCoroutine(EnteringSecondPhase());
-            transform.GetChild(2).gameObject.SetActive(false);
-
-            foreach (BossBullet bullet in FindObjectsOfType<BossBullet>())
-            {
-                m_bossBulletList.Add(bullet);
-            }
-
-            for (int i = 0; i < m_bossBulletList.Count; i++)
-            {
-                m_bossBulletList[i].GetComponent<BossBullet>().pushed = true;
-                m_bossBulletList[i].GetComponent<BossBullet>().persecution = false;
-                m_bossBulletList[i].GetComponent<BossBullet>().rgbd.AddForce(Vector2.up * -600);
-            }
-        }
-
-        else if (life <= 0 && m_phase == Phase.SecondPhase)
-        {
-            Instantiate(GameManager.instance.fireworksOne, transform.position * new Vector2(Random.Range(-4, 5), Random.Range(-4, 5)), Quaternion.identity);
-            Instantiate(GameManager.instance.fireworksTwo, transform.position * new Vector2(Random.Range(-4, 5), Random.Range(-4, 5)), Quaternion.identity);
-            GameManager.instance.winMessage.SetActive(true);
-            PlayerPrefs.SetInt("actualLevel", 3);
-            MenuController.blockPause = true;
-            Analytics.CustomEvent("Winner", new Dictionary<string, object>
-            {
-                {"first boss with Life", GameManager.instance.player.GetComponent<Player>().life},
-            });
-            gameObject.SetActive(false);
-        }
-
         if (!GameManager.instance.pause)
         BossDisplacement();
     }

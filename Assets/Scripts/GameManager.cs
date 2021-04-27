@@ -10,12 +10,8 @@ public class GameManager : MonoBehaviour
     public bool gameOver;
     public bool pause;
     public bool spawnEnemies;
-    public GameObject monster127;
-    public GameObject pursuerEnemy;
-    public GameObject shooterMonster;
     public GameObject Boss;
     public GameObject gOPusher;
-    public GameObject bulletPrefab;
     public GameObject bulletBossPrefab;
     public GameObject shotPP;
     public GameObject shotEP;
@@ -45,7 +41,6 @@ public class GameManager : MonoBehaviour
     public AudioClip loseClip;
     public AudioSource ambientSound;
     public Pooler m_pooler;
-    public Enemies m_enemiesStats;
     public float secondGunDamage;
     public float thirdGunDamage;
     public int ammoFallVelocity;
@@ -56,8 +51,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        m_enemiesStats = GetComponent<Enemies>();
-
         if (instance == null)
             instance = this;
         else

@@ -5,6 +5,7 @@ using UnityEngine.Analytics;
 
 public class PursuerMonster : Enemies
 {
+    private GameObject player;
     private Animator anim;
     private bool dying;
     private bool isMoving;
@@ -12,6 +13,7 @@ public class PursuerMonster : Enemies
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        player = FindObjectOfType<Player>().gameObject;
         isMoving = true;
     }
 
@@ -32,14 +34,11 @@ public class PursuerMonster : Enemies
 
     void StartRotation()
     {
-        if (GameManager.instance.player != null)
-        {
-            Vector3 diff = GameManager.instance.player.transform.position - transform.position;
-            diff.Normalize();
+        Vector3 diff = player.transform.position - transform.position;
+        diff.Normalize();
 
-            float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, 0f, rot_z - -90);
-        }
+        float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, 0f, rot_z - -90);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -7,60 +7,63 @@ public class Enemies : MonoBehaviour
     [HideInInspector] public float velocity;
     /*[HideInInspector] */public float life;
 
-    public float firstBossLife;
-    public float secondBossLife;
-    public float suicideMonsterVelocity;
-    public float suicideMonsterLife;
-    public float pursuerMonsterVelocity;
-    public float pursuerMonsterLife;
-    public float shooterMonsterVelocity;
-    public float shooterMonsterLife;
-
-    //private void OnDisable()
-    //{
-    //    if (life <= 0)
-    //    Debug.Log("Desactivando");
-    //}
+    public float firstBossLife,
+    secondBossLife,
+    suicideMonsterVelocity,
+    suicideMonsterLife,
+    pursuerMonsterVelocity,
+    pursuerMonsterLife,
+    shooterMonsterVelocity,
+    shooterMonsterLife;
 
     public void LifeAndVelocityAsigner()
     {
+        Seter();
+
         if (GetComponent<Boss>() != null)
         {
-            life = GameManager.instance.m_enemiesStats.firstBossLife;
+            life = firstBossLife;
         }
 
         if (GetComponent<SecondBoss>() != null)
         {
-            life = GameManager.instance.m_enemiesStats.secondBossLife;
+            life = secondBossLife;
         }
 
         if (GetComponent<PursuerMonster>() != null)
         {
-            life = GameManager.instance.m_enemiesStats.pursuerMonsterLife;
-            velocity = GameManager.instance.m_enemiesStats.pursuerMonsterVelocity;
+            life = pursuerMonsterLife;
+            velocity = pursuerMonsterVelocity;
         }
 
         if (GetComponent<SucideMonster>() != null)
         {
-            life = GameManager.instance.m_enemiesStats.suicideMonsterLife;
-            velocity = GameManager.instance.m_enemiesStats.suicideMonsterVelocity;
+            life = suicideMonsterLife;
+            velocity = suicideMonsterVelocity;
         }
 
         if (GetComponent<ShooterMonster>() != null)
         {
-            life = GameManager.instance.m_enemiesStats.shooterMonsterLife;
-            velocity = GameManager.instance.m_enemiesStats.shooterMonsterVelocity;
+            life = shooterMonsterLife;
+            velocity = shooterMonsterVelocity;
         }
+    }
+
+    void Seter()
+    {
+        firstBossLife = firstBossLife == 0 ? 60 : firstBossLife;
+        secondBossLife = secondBossLife == 0 ? 90 : secondBossLife;
+        suicideMonsterVelocity = suicideMonsterVelocity == 0 ? 4.5f : suicideMonsterVelocity;
+        suicideMonsterLife = suicideMonsterLife == 0 ? 1.5f : suicideMonsterLife;
+        pursuerMonsterVelocity = pursuerMonsterVelocity == 0 ? 4 : pursuerMonsterVelocity;
+        pursuerMonsterLife = pursuerMonsterLife == 0 ? 3 : pursuerMonsterLife;
+        shooterMonsterVelocity = shooterMonsterVelocity == 0 ? 2 : shooterMonsterVelocity;
+        shooterMonsterLife = shooterMonsterLife == 0 ? 5 : shooterMonsterLife;
     }
 
     public void GoForward()
     {
         if (!GameManager.instance.pause)
             transform.position -= transform.up * Time.deltaTime * velocity;
-    }
-
-    void Update()
-    {
-        
     }
 }

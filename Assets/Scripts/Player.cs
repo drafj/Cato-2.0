@@ -73,38 +73,26 @@ public class Player : MonoBehaviour
                 switch (m_Gunz)
                 {
                     case Gunz.BasicGun:
-                        if (OnShooting && mSize == Size.Big)
+                        if (OnShooting)
                         {
-                            //GameObject bulletInst = null;
                             if (mOrder == CanyonOrder.Right)
                             {
                                 m_pooler.Spawner(transform.localPosition + canyonPositions[0], Quaternion.identity);
+                                mOrder = CanyonOrder.Left;
                             }
                             else
                             {
                                 m_pooler.Spawner(transform.localPosition + canyonPositions[1], Quaternion.identity);
+                                mOrder = CanyonOrder.Right;
                                 m_pooler.bulletsPool[0].GetComponent<BulletController>().StartBullet();
                             }
-                            if (mOrder == CanyonOrder.Right)
-                                mOrder = CanyonOrder.Left;
-                            else
-                                mOrder = CanyonOrder.Right;
-                            m_pooler.bulletsPool[0].transform.tag = "Player Bullet";
-                            AudioSource.PlayClipAtPoint(GameManager.instance.playerShot, Camera.main.transform.position);
-                            yield return new WaitForSeconds(0.3f);
-                        }
-                        else if (Input.GetMouseButton(0) && mSize == Size.Tiny)
-                        {
-                            GameObject bulletInst = Instantiate(GameManager.instance.bulletPrefab, transform);
-                            bulletInst.transform.localPosition = new Vector3(0.01f, 1.61f, 9);
-                            bulletInst.transform.parent = null;
-                            bulletInst.transform.tag = "Player Bullet";
+                            //m_pooler.bulletsPool[0].transform.tag = "Player Bullet";
                             AudioSource.PlayClipAtPoint(GameManager.instance.playerShot, Camera.main.transform.position);
                             yield return new WaitForSeconds(0.3f);
                         }
                         break;
                     case Gunz.SecondGun:
-                        if (OnShooting && mSize == Size.Big)
+                        if (OnShooting)
                         {
                             secondAmmo--;
                             if (mOrder == CanyonOrder.Right)
@@ -115,22 +103,13 @@ public class Player : MonoBehaviour
                                 mOrder = CanyonOrder.Left;
                             else
                                 mOrder = CanyonOrder.Right;
-                            m_pooler.bulletsPool[0].transform.tag = "Player Bullet";
-                            AudioSource.PlayClipAtPoint(GameManager.instance.playerShot, Camera.main.transform.position);
-                            yield return new WaitForSeconds(0.3f);
-                        }
-                        else if (Input.GetMouseButton(0) && mSize == Size.Tiny)
-                        {
-                            GameObject bulletInst = Instantiate(GameManager.instance.bulletPrefab, transform);
-                            bulletInst.transform.localPosition = new Vector3(0.01f, 1.61f, 9);
-                            bulletInst.transform.parent = null;
-                            bulletInst.transform.tag = "Player Bullet";
+                            //m_pooler.bulletsPool[0].transform.tag = "Player Bullet";
                             AudioSource.PlayClipAtPoint(GameManager.instance.playerShot, Camera.main.transform.position);
                             yield return new WaitForSeconds(0.3f);
                         }
                         break;
                     case Gunz.ThirdGun:
-                        if (OnShooting && mSize == Size.Big)
+                        if (OnShooting)
                         {
                             thirdAmmo -= 6;
 
@@ -139,12 +118,12 @@ public class Player : MonoBehaviour
                                 if (i < 3)
                                 {
                                     m_pooler.Spawner(transform.localPosition + canyonPositions[0], Quaternion.identity);
-                                    m_pooler.bulletsPool[0].transform.tag = "Player Bullet";
+                                    //m_pooler.bulletsPool[0].transform.tag = "Player Bullet";
                                 }
                                 else
                                 {
                                     m_pooler.Spawner(transform.localPosition + canyonPositions[1], Quaternion.identity);
-                                    m_pooler.bulletsPool[0].transform.tag = "Player Bullet";
+                                    //m_pooler.bulletsPool[0].transform.tag = "Player Bullet";
                                 }
 
                             }

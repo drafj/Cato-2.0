@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Pooler : MonoBehaviour
 {
+    [SerializeField] private GameObject bulletPrefab,
+        monster127,
+        pursuerEnemy,
+        shooterMonster;
     public int bulletslength;
     public int eBulletslength;
     public int length127;
@@ -16,7 +20,7 @@ public class Pooler : MonoBehaviour
     public GameObject[] shooterMonsterPool;
     public GameObject[] BossRays = new GameObject[4];
 
-    void Start()
+    private void Awake()
     {
         bulletsPool = new GameObject[bulletslength + 1];
         eBulletsPool = new GameObject[eBulletslength + 1];
@@ -26,7 +30,7 @@ public class Pooler : MonoBehaviour
 
         for (int i = 0; i < bulletsPool.Length; i++)
         {
-            GameObject temporal = Instantiate(GameManager.instance.bulletPrefab, transform.position, Quaternion.identity);
+            GameObject temporal = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
             temporal.SetActive(false);
             bulletsPool[i] = temporal;
             bulletsPool[i].transform.name = "bulet: " + i;
@@ -34,14 +38,14 @@ public class Pooler : MonoBehaviour
 
         for (int i = 0; i < eBulletsPool.Length; i++)
         {
-            GameObject temporal = Instantiate(GameManager.instance.bulletPrefab, transform.position, Quaternion.identity);
+            GameObject temporal = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
             temporal.SetActive(false);
             eBulletsPool[i] = temporal;
         }
 
         for (int i = 0; i < monster127Pool.Length; i++)
         {
-            GameObject temporal = Instantiate(GameManager.instance.monster127, transform.position, Quaternion.identity);
+            GameObject temporal = Instantiate(monster127, transform.position, Quaternion.identity);
             temporal.GetComponent<SucideMonster>().StartS();
             temporal.SetActive(false);
             monster127Pool[i] = temporal;
@@ -49,7 +53,7 @@ public class Pooler : MonoBehaviour
 
         for (int i = 0; i < pursuerMonsterPool.Length; i++)
         {
-            GameObject temporal = Instantiate(GameManager.instance.pursuerEnemy, transform.position, Quaternion.identity);
+            GameObject temporal = Instantiate(pursuerEnemy, transform.position, Quaternion.identity);
             temporal.GetComponent<PursuerMonster>().StarterP();
             temporal.SetActive(false);
             pursuerMonsterPool[i] = temporal;
@@ -57,7 +61,7 @@ public class Pooler : MonoBehaviour
 
         for (int i = 0; i < shooterMonsterPool.Length; i++)
         {
-            GameObject temporal = Instantiate(GameManager.instance.shooterMonster, transform.position, Quaternion.identity);
+            GameObject temporal = Instantiate(shooterMonster, transform.position, Quaternion.identity);
             temporal.GetComponent<ShooterMonster>().StartShooter();
             temporal.SetActive(false);
             shooterMonsterPool[i] = temporal;
@@ -70,6 +74,7 @@ public class Pooler : MonoBehaviour
         bulletsPool[0].transform.position = pos;
         bulletsPool[0].transform.rotation = rot;
         bulletsPool[0].SetActive(true);
+        bulletsPool[0].transform.tag = "Player Bullet";
         bulletsPool[0].GetComponent<BulletController>().StartBullet();
         bulletsPool[bulletslength] = bulletsPool[0];
 

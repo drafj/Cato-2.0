@@ -64,7 +64,7 @@ public class SucideMonster : Enemies
             AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);
             transform.position = new Vector3(1000, 1000);
             gameObject.SetActive(false);
-            if (!GameManager.instance.player.GetComponent<Player>().invencible)
+            if (!collision.gameObject.GetComponent<Player>().invencible)
             {
                 collision.gameObject.GetComponent<Player>().life = collision.gameObject.GetComponent<Player>().life - 1;
                 if (collision.gameObject.GetComponent<Player>().life == 0)
