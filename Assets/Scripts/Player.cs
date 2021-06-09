@@ -15,9 +15,9 @@ public class Player : MonoBehaviour
     public int flashRange;
     public int points;
     public float foodMeter;
-    //public bool evadeColdDown;
-    public bool shieldColdDown;
-    public bool flashColdDown;
+    [SerializeField] private bool shieldColdDown,
+    flashColdDown,
+    minimeColdown;
     public bool OnShooting;
     public bool ability;
     public bool invencible;
@@ -35,6 +35,8 @@ public class Player : MonoBehaviour
     public Vector2 axis;
     public GameObject actualShield;
     public Vector3[] canyonPositions = new Vector3[2];
+    public GameObject minime;
+    [SerializeField] private List<GameObject> minimeList = new List<GameObject>();
 
     private void Awake()
     {
@@ -48,11 +50,19 @@ public class Player : MonoBehaviour
         anim = GetComponent<Animator>();
         mSize = Size.Big;
 
-
+        for (int i = 0; i < 2; i++)
+        {
+            GameObject temporal = Instantiate(minime, new Vector3(9000, 9000, 9000), Quaternion.identity);
+            temporal.SetActive(false);
+            minimeList.Add(temporal);
+            minimeList[i].transform.name = "minime: " + (i + 1);
+        }
+        minimeList.Add(null);
     }
 
     void Start()
     {
+        //m_abilities = (Abilities)MenuController.selection;----------------descomentar para que funcione------------------------------------------
         points = PlayerPrefs.GetInt("Points");
         if (GameManager.instance.points != null)
             GameManager.instance.points.text = points + " :points ";
@@ -86,7 +96,6 @@ public class Player : MonoBehaviour
                                 mOrder = CanyonOrder.Right;
                                 m_pooler.bulletsPool[0].GetComponent<BulletController>().StartBullet();
                             }
-                            //m_pooler.bulletsPool[0].transform.tag = "Player Bullet";
                             AudioSource.PlayClipAtPoint(GameManager.instance.playerShot, Camera.main.transform.position);
                             yield return new WaitForSeconds(0.3f);
                         }
@@ -103,7 +112,6 @@ public class Player : MonoBehaviour
                                 mOrder = CanyonOrder.Left;
                             else
                                 mOrder = CanyonOrder.Right;
-                            //m_pooler.bulletsPool[0].transform.tag = "Player Bullet";
                             AudioSource.PlayClipAtPoint(GameManager.instance.playerShot, Camera.main.transform.position);
                             yield return new WaitForSeconds(0.3f);
                         }
@@ -118,12 +126,10 @@ public class Player : MonoBehaviour
                                 if (i < 3)
                                 {
                                     m_pooler.Spawner(transform.localPosition + canyonPositions[0], Quaternion.identity);
-                                    //m_pooler.bulletsPool[0].transform.tag = "Player Bullet";
                                 }
                                 else
                                 {
                                     m_pooler.Spawner(transform.localPosition + canyonPositions[1], Quaternion.identity);
-                                    //m_pooler.bulletsPool[0].transform.tag = "Player Bullet";
                                 }
 
                             }
@@ -142,34 +148,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    //IEnumerator Evade()
-    //{
-    //    if (mSize == Size.Big)
-    //    {
-    //        evadeColdDown = true;
-    //        mSize = Size.Tiny;
-    //        transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
-    //        yield return new WaitForSeconds(0.5f);
-    //        transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
-    //        yield return new WaitForSeconds(0.5f);
-    //        transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
-    //        yield return new WaitForSeconds(0.4f);
-    //        evadeColdDown = false;
-    //    }
-    //    else
-    //    {
-    //        evadeColdDown = true;
-    //        mSize = Size.Big;
-    //        transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
-    //        yield return new WaitForSeconds(0.5f);
-    //        transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
-    //        yield return new WaitForSeconds(0.5f);
-    //        transform.localScale = new Vector3(1, 1, 1);
-    //        yield return new WaitForSeconds(0.4f);
-    //        evadeColdDown = false;
-    //    }
-    //}
-
     public IEnumerator ShieldColdDown()
     {
         yield return new WaitForSeconds(3);
@@ -180,6 +158,12 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         flashColdDown = false;
+    }
+
+    IEnumerator MinimeColdown()
+    {
+        yield return new WaitForSeconds(3);
+        minimeColdown = false;
     }
 
     IEnumerator Die()
@@ -231,6 +215,21 @@ public class Player : MonoBehaviour
         }
     }
 
+    public IEnumerator MinimeSpawner(Vector3 pos, Quaternion rot)
+    {
+        minimeList[0].GetComponent<Minime>().catchable = false;
+        minimeList[0].transform.position = pos;
+        minimeList[0].transform.rotation = rot;
+        minimeList[0].SetActive(true);
+        minimeList[minimeList.Count - 1] = minimeList[0];
+        for (int i = 0; i < minimeList.Count - 1; i++)
+        {
+            minimeList[i] = minimeList[i + 1];
+            yield return new WaitForSeconds(1);
+        }
+        StartCoroutine(MinimeColdown());
+    }
+
     void Update()
     {
         if (life <= 0 && !GameManager.instance.gameOver)
@@ -274,21 +273,10 @@ public class Player : MonoBehaviour
             }
         }
 
-        //if (Input.GetKeyDown(KeyCode.Space) && !evadeColdDown)
-        //{
-        //    StartCoroutine(Evade());
-        //}
-
-        /*if (mSize == Size.Big)
-            velocity = 6;
-        else
-            velocity = 8;*/
-
         lifeAmount = life / 3;
         GameManager.instance.life.GetComponent<Image>().fillAmount = lifeAmount;
         GameManager.instance.food.GetComponent<Image>().fillAmount = foodMeter;
 
-        m_abilities = (Abilities)MenuController.selection;
 
         if (ability && !flashColdDown && m_abilities == Abilities.Flash && !GameManager.instance.pause && !GameManager.instance.gameOver || Input.GetKeyDown(KeyCode.Space) && !flashColdDown)
         {
@@ -310,6 +298,12 @@ public class Player : MonoBehaviour
             shieldColdDown = true;
             GameObject shieldInst = Instantiate(GameManager.instance.shield, transform);
             shieldInst.transform.localPosition = new Vector3(0, 1.27f, -9.041016f);
+        }
+
+        if (ability && !minimeColdown && m_abilities == Abilities.Minime && !GameManager.instance.pause && !GameManager.instance.gameOver)
+        {
+            minimeColdown = true;
+            StartCoroutine(MinimeSpawner(transform.position, Quaternion.identity));
         }
     }
 
@@ -359,7 +353,7 @@ public enum CanyonOrder {Left, Right}
 
 public enum Gunz {BasicGun, SecondGun, ThirdGun}
 
-public enum Abilities {Shield, Flash, Little}
+public enum Abilities {Shield, Flash, Minime}
 
 public enum Size
 {

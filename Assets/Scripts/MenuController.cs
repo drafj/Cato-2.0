@@ -21,7 +21,7 @@ public class MenuController : MonoBehaviour
     {
         SetPoints();
         blockPause = false;
-        abilitiesString = new List<string>() { "Shield", "Flash"};
+        abilitiesString = new List<string>() { "Shield", "Flash", "Minime"};
 
         if (dropdown != null)
         {
