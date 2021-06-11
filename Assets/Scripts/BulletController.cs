@@ -24,7 +24,7 @@ public class BulletController : MonoBehaviour
         mFlipDirection = (BulletFlipDirection)Random.Range(0, 2);
         anim = GetComponent<Animator>();
 
-        if (transform.tag == "Player Bullet")
+        if (transform.tag == "Player Bullet" && GameManager.instance != null)
         {
             if (GameManager.instance.player.GetComponent<Player>().m_Gunz == Gunz.BasicGun)
                 m_State = BulletState.NormalBullet;

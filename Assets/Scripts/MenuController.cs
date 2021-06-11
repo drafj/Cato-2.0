@@ -59,6 +59,7 @@ public class MenuController : MonoBehaviour
         if (!GameManager.instance.gameOver && !blockPause)
         {
             Time.timeScale = 0;
+            GameManager.instance.player.GetComponent<Player>().anim.enabled = false;
             GameManager.instance.pauseMenu.SetActive(true);
             GameManager.instance.pause = true;
         }
@@ -67,6 +68,7 @@ public class MenuController : MonoBehaviour
     public void ExitPause()
     {
         Time.timeScale = 1;
+        GameManager.instance.player.GetComponent<Player>().anim.enabled = true;
         GameManager.instance.pause = false;
     }
 

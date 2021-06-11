@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     [SerializeField] private bool shieldColdDown,
     flashColdDown,
     minimeColdown;
+    GameObject shieldInst;
     public bool OnShooting;
     public bool ability;
     public bool invencible;
@@ -62,7 +63,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        //m_abilities = (Abilities)MenuController.selection;----------------descomentar para que funcione------------------------------------------
+        //m_abilities = (Abilities)MenuController.selection;----------------descomentar para que funcione la seleccion de habilidad------------------------------------------
         points = PlayerPrefs.GetInt("Points");
         if (GameManager.instance.points != null)
             GameManager.instance.points.text = points + " :points ";
@@ -72,6 +73,7 @@ public class Player : MonoBehaviour
         else
             bossPhase = false;
         StartCoroutine(BulletCreator());
+        GameManager.instance.food.GetComponent<Image>().fillAmount = foodMeter;
     }
 
     IEnumerator BulletCreator()
@@ -185,6 +187,52 @@ public class Player : MonoBehaviour
         StartCoroutine("ShieldColdDown");
     }
 
+    public void UseAbility()
+    {
+        if (!flashColdDown && m_abilities == Abilities.Flash && !GameManager.instance.pause && !GameManager.instance.gameOver || Input.GetKeyDown(KeyCode.Space) && !flashColdDown)
+        {
+            flashColdDown = true;
+            StartCoroutine("FlashColdDown");
+            Instantiate(GameManager.instance.flashParticles, transform.position + new Vector3(0, 0, -5), Quaternion.identity);
+            if (anim.GetBool("OnTouch"))
+                transform.Translate(joyStickDir * 30);
+            else
+                transform.Translate(axis * 30);
+            Instantiate(GameManager.instance.flashParticles, transform.position + new Vector3(0, 0, -5), Quaternion.identity);
+            StartCoroutine(GameManager.instance.Invencible(PlayerPrefs.GetInt("flashInv", 1)));
+        }
+
+        if (!shieldColdDown && m_abilities == Abilities.Shield && !GameManager.instance.pause && !GameManager.instance.gameOver)
+        {
+            shieldColdDown = true;
+            shieldInst = Instantiate(GameManager.instance.shield, transform);
+            shieldInst.transform.localPosition = new Vector3(0, 1.27f, -9.041016f);
+        }
+        else if (shieldColdDown)
+            shieldInst.GetComponent<Shield>().BulletLauncher();
+
+        if (!minimeColdown && m_abilities == Abilities.Minime && !GameManager.instance.pause && !GameManager.instance.gameOver)
+        {
+            minimeColdown = true;
+            StartCoroutine(MinimeSpawner(transform.position, Quaternion.identity));
+        }
+    }
+
+    public void TakeFood()
+    {
+        foodMeter += 0.34f;
+        if (foodMeter >= 1)
+        {
+            foodMeter = 0;
+            if (life < 3)
+                life++;
+            else if (life == 3)
+                StartCoroutine(GameManager.instance.Invencible(3));
+        }
+
+        GameManager.instance.food.GetComponent<Image>().fillAmount = foodMeter;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.GetComponent<Enemies>() != null && life > 0 && !invencible)
@@ -192,7 +240,19 @@ public class Player : MonoBehaviour
             GameManager.instance.StartDealDamage();
             if (collision.gameObject.GetComponent<SecondBoss>() != null)
                 life--;
+
         }
+        if (life <= 0 && !invencible)
+        {
+            Analytics.CustomEvent("Death", new Dictionary<string, object>
+            {
+                {"death", "by enemie"}
+            });
+            GameManager.instance.gameOver = true;
+            StartCoroutine("Die");
+        }
+        lifeAmount = life / 3;
+        GameManager.instance.life.GetComponent<Image>().fillAmount = lifeAmount;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -205,12 +265,14 @@ public class Player : MonoBehaviour
                 GameManager.instance.StartDealDamage();
             }
 
-            if (life == 0)
+            if (life <= 0)
             {
                 Analytics.CustomEvent("Death", new Dictionary<string, object>
                 {
                     {"death", "by boss ray"}
                 });
+                GameManager.instance.gameOver = true;
+                StartCoroutine("Die");
             }
         }
     }
@@ -232,19 +294,6 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (life <= 0 && !GameManager.instance.gameOver)
-        {
-            GameManager.instance.gameOver = true;
-            StartCoroutine("Die");
-        }
-
-        if (GameManager.instance.pause)
-        {
-            anim.GetComponent<Animator>().enabled = false;
-        }
-        else
-            anim.GetComponent<Animator>().enabled = true;
-
         if (secondAmmo > 0 && thirdAmmo <= 0)
             m_Gunz = Gunz.SecondGun;
         else if (thirdAmmo > 0)
@@ -255,56 +304,14 @@ public class Player : MonoBehaviour
         if (thirdAmmo < 0)
             thirdAmmo = 0;
 
-        if (foodMeter >= 1)
-        {
-            foodMeter = 0;
-            if (life < 3)
-                life++;
-            else if (life == 3)
-                StartCoroutine(GameManager.instance.Invencible(3));
-        }
-
-        if (GameManager.instance.Boss.GetComponent<Boss>() != null)
+        /*if (GameManager.instance.Boss.GetComponent<Boss>() != null)                                    cambia esto boludo
         {
             if (!pushed && GameManager.instance.Boss.GetComponent<Boss>().m_phase == Phase.SecondPhase)
             {
                 pushed = true;
                 rgbd.AddForce(transform.up * -3000);
             }
-        }
-
-        lifeAmount = life / 3;
-        GameManager.instance.life.GetComponent<Image>().fillAmount = lifeAmount;
-        GameManager.instance.food.GetComponent<Image>().fillAmount = foodMeter;
-
-
-        if (ability && !flashColdDown && m_abilities == Abilities.Flash && !GameManager.instance.pause && !GameManager.instance.gameOver || Input.GetKeyDown(KeyCode.Space) && !flashColdDown)
-        {
-            ability = false;
-            flashColdDown = true;
-            StartCoroutine("FlashColdDown");
-            Instantiate(GameManager.instance.flashParticles, transform.position + new Vector3(0, 0, -5), Quaternion.identity);
-            if (anim.GetBool("OnTouch"))
-            transform.Translate(joyStickDir * 30);
-            else
-            transform.Translate(axis * 30);
-            Instantiate(GameManager.instance.flashParticles, transform.position + new Vector3(0, 0, -5), Quaternion.identity);
-            StartCoroutine(GameManager.instance.Invencible(PlayerPrefs.GetInt("flashInv", 1)));
-        }
-
-        if (ability && !shieldColdDown && m_abilities == Abilities.Shield && !GameManager.instance.pause && !GameManager.instance.gameOver)
-        {
-            ability = false;
-            shieldColdDown = true;
-            GameObject shieldInst = Instantiate(GameManager.instance.shield, transform);
-            shieldInst.transform.localPosition = new Vector3(0, 1.27f, -9.041016f);
-        }
-
-        if (ability && !minimeColdown && m_abilities == Abilities.Minime && !GameManager.instance.pause && !GameManager.instance.gameOver)
-        {
-            minimeColdown = true;
-            StartCoroutine(MinimeSpawner(transform.position, Quaternion.identity));
-        }
+        }*/
     }
 
     void FixedUpdate()

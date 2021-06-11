@@ -14,7 +14,7 @@ public class Shield : MonoBehaviour
         destroyLimit = PlayerPrefs.GetInt("shieldTime", 5);
     }
 
-    void BulletLauncher()
+    public void BulletLauncher()
     {
         GetComponent<CircleCollider2D>().enabled = false;
         launchingBullets = true;
@@ -29,8 +29,6 @@ public class Shield : MonoBehaviour
         bullets.Clear();
         Destroy(gameObject);
     }
-
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
-    //public ButtonType m_buttonType;
-
     public void ShotEnabler()
     {
         GameManager.instance.player.GetComponent<Player>().OnShooting = true;
@@ -15,6 +13,7 @@ public class ButtonManager : MonoBehaviour
     public void AbilityEnabler()
     {
         GameManager.instance.player.GetComponent<Player>().ability = true;
+        GameManager.instance.player.GetComponent<Player>().UseAbility();
     }
 
     public void ShotDisabler()
