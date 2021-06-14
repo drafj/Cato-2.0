@@ -25,7 +25,6 @@ public class Player : MonoBehaviour
     public bool pushed;
     public bool unleashed;
     public static bool bossPhase;
-    public Size mSize;
     public CanyonOrder mOrder;
     public Gunz m_Gunz;
     public Abilities m_abilities;
@@ -47,9 +46,8 @@ public class Player : MonoBehaviour
         if (flashRange == 0)
             flashRange = 30;
 
-        life = 3;
+        life = 100;
         anim = GetComponent<Animator>();
-        mSize = Size.Big;
 
         for (int i = 0; i < 2; i++)
         {
@@ -82,6 +80,15 @@ public class Player : MonoBehaviour
         {
             if (!GameManager.instance.pause && !GameManager.instance.gameOver)
             {
+                if (secondAmmo > 0 && thirdAmmo <= 0)
+                    m_Gunz = Gunz.SecondGun;
+                else if (thirdAmmo > 0)
+                    m_Gunz = Gunz.ThirdGun;
+                else
+                    m_Gunz = Gunz.BasicGun;
+
+                if (thirdAmmo < 0)
+                    thirdAmmo = 0;
                 switch (m_Gunz)
                 {
                     case Gunz.BasicGun:
@@ -143,7 +150,6 @@ public class Player : MonoBehaviour
                     default:
                         break;
                 }
-
             }
 
             yield return null;
@@ -168,7 +174,7 @@ public class Player : MonoBehaviour
         minimeColdown = false;
     }
 
-    IEnumerator Die()
+    public IEnumerator Die()
     {
         if (GameManager.instance.Boss.activeInHierarchy)
             bossPhase = true;
@@ -224,13 +230,28 @@ public class Player : MonoBehaviour
         if (foodMeter >= 1)
         {
             foodMeter = 0;
-            if (life < 3)
-                life++;
-            else if (life == 3)
+            if (life < 100)
+                life += 20;
+            else
                 StartCoroutine(GameManager.instance.Invencible(3));
         }
 
         GameManager.instance.food.GetComponent<Image>().fillAmount = foodMeter;
+    }
+
+    public void UpdateLife()
+    {
+        lifeAmount = life / 100;
+        GameManager.instance.life.GetComponent<Image>().fillAmount = lifeAmount;
+        if (life <= 0)
+        {
+            Analytics.CustomEvent("Death", new Dictionary<string, object>
+            {
+                {"death", "by enemy"}
+            });
+            GameManager.instance.gameOver = true;
+            StartCoroutine("Die");
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -238,21 +259,9 @@ public class Player : MonoBehaviour
         if (collision.gameObject.GetComponent<Enemies>() != null && life > 0 && !invencible)
         {
             GameManager.instance.StartDealDamage();
-            if (collision.gameObject.GetComponent<SecondBoss>() != null)
-                life--;
-
+            life -= 5;
         }
-        if (life <= 0 && !invencible)
-        {
-            Analytics.CustomEvent("Death", new Dictionary<string, object>
-            {
-                {"death", "by enemie"}
-            });
-            GameManager.instance.gameOver = true;
-            StartCoroutine("Die");
-        }
-        lifeAmount = life / 3;
-        GameManager.instance.life.GetComponent<Image>().fillAmount = lifeAmount;
+        UpdateLife();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -261,7 +270,7 @@ public class Player : MonoBehaviour
         {
             if (life > 0 && !invencible)
             {
-                life--;
+                life -= 5;
                 GameManager.instance.StartDealDamage();
             }
 
@@ -294,15 +303,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (secondAmmo > 0 && thirdAmmo <= 0)
-            m_Gunz = Gunz.SecondGun;
-        else if (thirdAmmo > 0)
-            m_Gunz = Gunz.ThirdGun;
-        else
-            m_Gunz = Gunz.BasicGun;
 
-        if (thirdAmmo < 0)
-            thirdAmmo = 0;
 
         /*if (GameManager.instance.Boss.GetComponent<Boss>() != null)                                    cambia esto boludo
         {

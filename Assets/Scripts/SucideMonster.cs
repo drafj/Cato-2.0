@@ -66,12 +66,11 @@ public class SucideMonster : Enemies
             gameObject.SetActive(false);
             if (!collision.gameObject.GetComponent<Player>().invencible)
             {
-                collision.gameObject.GetComponent<Player>().life = collision.gameObject.GetComponent<Player>().life - 1;
                 if (collision.gameObject.GetComponent<Player>().life == 0)
-                    Analytics.CustomEvent("Death", new Dictionary<string, object>
-                    {
-                        {"death", "by monster 127"}
-                    });
+                Analytics.CustomEvent("Death", new Dictionary<string, object>
+                {
+                    {"death", "by monster 127"}
+                });
             }
         }
     }

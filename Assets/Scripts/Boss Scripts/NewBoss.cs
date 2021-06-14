@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class NewBoss : MonoBehaviour
 {
+    public Rigidbody2D rgbd;
     float velocity;
-    Rigidbody2D rgbd;
     displacement m_displacement;
 
     void Start()
@@ -17,28 +17,37 @@ public class NewBoss : MonoBehaviour
     {
         if (transform.position.y <= 9.5f)
         {
-            if (transform.position.x >= 0)
+            if (transform.position.x >= 5.18f)
             {
                 m_displacement = displacement.L;
+                Debug.Log("+verificando si es mayor a 5");
             }
-            else if (transform.position.x <= -1.26f)
+            else if (transform.position.x <= -5.18f)
             {
                 m_displacement = displacement.R;
+                Debug.Log("-verificando si es menor a 5");
             }
 
             if (m_displacement == displacement.R)
             {
-                rgbd.AddForceAtPosition(transform.right * (-velocity - 15), new Vector2(0, 9.5f));
+                rgbd.AddForce(transform.right * (velocity + 15));
             }
             else if (m_displacement == displacement.L)
             {
-                rgbd.AddForceAtPosition(transform.right * (velocity + 15), new Vector2(-1.26f, 9.5f));
+                rgbd.AddForce(transform.right * (velocity - 15));
             }
         }
+        else
+            rgbd.AddForce(transform.up * (velocity - 15));
     }
 
     void Update()
     {
-        
+
+    }
+
+    private void FixedUpdate()
+    {
+        BossDisplacement();
     }
 }

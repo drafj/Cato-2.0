@@ -73,7 +73,6 @@ public class PursuerMonster : Enemies
             StartCoroutine("Death");
             if (!GameManager.instance.player.GetComponent<Player>().invencible)
             {
-                collision.gameObject.GetComponent<Player>().life = collision.gameObject.GetComponent<Player>().life - 1;
                 if (collision.gameObject.GetComponent<Player>().life == 0)
                     Analytics.CustomEvent("Death", new Dictionary<string, object>
                     {

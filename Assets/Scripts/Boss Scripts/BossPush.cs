@@ -11,7 +11,7 @@ public class BossPush : MonoBehaviour
         {
             if (!collision.gameObject.GetComponent<Player>().invencible)
             {
-                collision.gameObject.GetComponent<Player>().life--;
+                collision.gameObject.GetComponent<Player>().life -= 5;
                 GameManager.instance.StartDealDamage();
             }
             if (collision.gameObject.GetComponent<Player>().life == 0)

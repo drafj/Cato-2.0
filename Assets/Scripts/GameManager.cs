@@ -160,7 +160,7 @@ public class GameManager : MonoBehaviour
         if (!player.GetComponent<Player>().invencible)
         {
             StartCoroutine("DealDamageC");
-            StartCoroutine(Invencible(3));
+            //StartCoroutine(Invencible(3));
         }
     }
 

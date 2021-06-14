@@ -66,7 +66,7 @@ public class BulletController : MonoBehaviour
             {
                 if (!GameManager.instance.player.GetComponent<Player>().invencible)
                 {
-                    collision.gameObject.GetComponent<Player>().life--;
+                    collision.gameObject.GetComponent<Player>().life -= 5;
                     if (collision.gameObject.GetComponent<Player>().life == 0)
                     {
                         Analytics.CustomEvent("Death", new Dictionary<string, object>
@@ -75,6 +75,17 @@ public class BulletController : MonoBehaviour
                         });
                     }
                     GameManager.instance.StartDealDamage();
+                    GameManager.instance.player.GetComponent<Player>().UpdateLife();
+
+                    if (GameManager.instance.player.GetComponent<Player>().life <= 0)
+                    {
+                        Analytics.CustomEvent("Death", new Dictionary<string, object>
+                        {
+                            {"death", "by enemy bullet"}
+                        });
+                        GameManager.instance.gameOver = true;
+                        StartCoroutine(GameManager.instance.player.GetComponent<Player>().Die());
+                    }
                 }
                 Instantiate(GameManager.instance.shotEP, transform.position, Quaternion.identity);
                 transform.position = new Vector3(1000, 1000);

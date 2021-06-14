@@ -71,7 +71,7 @@ public class BossBullet : MonoBehaviour
         {
             if (!GameManager.instance.player.GetComponent<Player>().invencible && GameManager.instance.Boss.GetComponent<Boss>().life > 0 && !pushed)
             {
-                collision.gameObject.GetComponent<Player>().life = collision.gameObject.GetComponent<Player>().life - 1;
+                collision.gameObject.GetComponent<Player>().life -= 5;
                 GameManager.instance.StartDealDamage();
                 if (collision.gameObject.GetComponent<Player>().life == 0)
                 {
