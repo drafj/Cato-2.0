@@ -1493,7 +1493,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 16.42, z: -2.4296875}
   m_LocalScale: {x: 2.458976, y: 2.458976, z: 2.458976}
-  m_Children: []
+  m_Children:
+  - {fileID: 1960706488}
+  - {fileID: 1710855444}
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1510,6 +1512,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rgbd: {fileID: 353979090}
+  PursuerBulletPref: {fileID: 3711185865011367396, guid: 345d783c0bfdeb34c975089b68d99f75,
+    type: 3}
+  velocity: 0
+  cadence: 0.2
 --- !u!50 &353979090
 Rigidbody2D:
   serializedVersion: 4
@@ -5230,6 +5236,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1710855443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1710855444}
+  m_Layer: 0
+  m_Name: formas
+  m_TagString: Untagged
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1710855444
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710855443}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.2, y: -1.11, z: 0}
+  m_LocalScale: {x: 0.40667334, y: 0.40667334, z: 0.40667334}
+  m_Children: []
+  m_Father: {fileID: 353979088}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1782906842
 GameObject:
   m_ObjectHideFlags: 0
@@ -6357,6 +6393,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1960706487
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1960706488}
+  m_Layer: 0
+  m_Name: teledirigidas
+  m_TagString: Untagged
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1960706488
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960706487}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.14, y: -1.12, z: 0}
+  m_LocalScale: {x: 0.40667334, y: 0.40667334, z: 0.40667334}
+  m_Children: []
+  m_Father: {fileID: 353979088}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1962610139
 GameObject:
   m_ObjectHideFlags: 0
@@ -11161,7 +11227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOver: 0
   pause: 0
-  spawnEnemies: 1
+  spawnEnemies: 0
   Boss: {fileID: 353979086}
   gOPusher: {fileID: 1919654080}
   bulletBossPrefab: {fileID: 6781983944014712706, guid: 7be56dac5df31bb4d9429d17926ca813,

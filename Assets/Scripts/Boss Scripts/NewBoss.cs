@@ -5,27 +5,30 @@ using UnityEngine;
 public class NewBoss : MonoBehaviour
 {
     public Rigidbody2D rgbd;
-    float velocity;
+    public GameObject PursuerBulletPref;
+    public float velocity,
+          cadence;
+    bool shooting;
     displacement m_displacement;
 
     void Start()
     {
-        
+        cadence = cadence == 0 ? 0.1f : cadence;
+        StartCoroutine(Shoot());
     }
 
     void BossDisplacement()
     {
         if (transform.position.y <= 9.5f)
         {
+            shooting = true;
             if (transform.position.x >= 5.18f)
             {
                 m_displacement = displacement.L;
-                Debug.Log("+verificando si es mayor a 5");
             }
             else if (transform.position.x <= -5.18f)
             {
                 m_displacement = displacement.R;
-                Debug.Log("-verificando si es menor a 5");
             }
 
             if (m_displacement == displacement.R)
@@ -39,6 +42,19 @@ public class NewBoss : MonoBehaviour
         }
         else
             rgbd.AddForce(transform.up * (velocity - 15));
+    }
+
+    IEnumerator Shoot()
+    {
+        while (true)
+        {
+            if (shooting)
+            {
+                GameObject R = Instantiate(PursuerBulletPref, transform.GetChild(0).position, Quaternion.Euler(0, 0, -236));
+                yield return new WaitForSeconds(cadence);
+            }
+            yield return null;
+        }
     }
 
     void Update()
