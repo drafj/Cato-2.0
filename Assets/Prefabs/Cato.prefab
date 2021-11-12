@@ -142,21 +142,10 @@ MonoBehaviour:
   velocity: 12
   life: 0
   lifeAmount: 0
-  secondAmmo: 0
-  thirdAmmo: 0
   flashRange: 0
-  points: 0
-  foodMeter: 0
-  shieldColdDown: 0
-  flashColdDown: 0
   OnShooting: 0
-  ability: 0
-  invencible: 0
-  pushed: 0
-  unleashed: 0
-  mSize: 0
-  mOrder: 0
-  m_Gunz: 0
+  PrimaryWeapon: 0
+  gunz: 2
   m_abilities: 0
   anim: {fileID: 1663258805614013474}
   rgbd: {fileID: 1663258805614013479}
@@ -167,7 +156,9 @@ MonoBehaviour:
   canyonPositions:
   - {x: 0.766, y: 1.954, z: 0}
   - {x: -0.766, y: 1.954, z: 0}
+  - {x: 0, y: 2, z: 0}
   minime: {fileID: 8911716245586808426, guid: ac7077e73c8e5da42af53af7fd0c314c, type: 3}
+  minimeList: []
 --- !u!70 &3715015624037762497
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -194,12 +185,12 @@ PrefabInstance:
     - target: {fileID: 4212625900781113314, guid: 48549e089930e5d48b039bee3527eaa5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.766
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4212625900781113314, guid: 48549e089930e5d48b039bee3527eaa5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.954
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4212625900781113314, guid: 48549e089930e5d48b039bee3527eaa5,
         type: 3}

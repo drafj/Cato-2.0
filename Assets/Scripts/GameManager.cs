@@ -118,25 +118,25 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator DealDamageC()
     {
-            normalCameras.SetActive(false);
-            damageCamera.SetActive(true);
-            yield return new WaitForSeconds(0.3f);
-            damageCamera.SetActive(false);
-            normalCameras.SetActive(true);
+        normalCameras.SetActive(false);
+        damageCamera.SetActive(true);
+        yield return new WaitForSeconds(0.35f);
+        damageCamera.SetActive(false);
+        normalCameras.SetActive(true);
 
-            deathCirclesCamera.SetActive(false);
-            deathCirclesDamCamera.SetActive(true);
-            yield return new WaitForSeconds(0.5f);
-            deathCirclesCamera.SetActive(true);
-            deathCirclesDamCamera.SetActive(false);
+        //deathCirclesCamera.SetActive(false);
+        //deathCirclesDamCamera.SetActive(true);
+        //yield return new WaitForSeconds(0.5f);
+        //deathCirclesCamera.SetActive(true);
+        //deathCirclesDamCamera.SetActive(false);
 
-            normalCameras.SetActive(true);
-            deathCirclesCamera.SetActive(false);
+        //normalCameras.SetActive(true);
+        //deathCirclesCamera.SetActive(false);
     }
 
     public void StartDealDamage()
     {
-            StartCoroutine("DealDamageC");
+         StartCoroutine("DealDamageC");
     }
 
     public void InvokeBoss()

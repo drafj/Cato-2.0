@@ -20,17 +20,20 @@ public class Player : MonoBehaviour
     pushed,
     unleashed;
     [HideInInspector] 
-    public bool OnShooting;
+    public bool OnShooting,
+        PrimaryWeapon;
     public static bool bossPhase;
     private CanyonOrder mOrder;
+    public Gunz gunz;
     public Abilities m_abilities;
+    public List<string> config = new List<string>();
     public Animator anim;
     public Rigidbody2D rgbd;
     public Pooler m_pooler;
     public Vector2 joyStickDir;
     public Vector2 axis;
     public GameObject actualShield;
-    public Vector3[] canyonPositions = new Vector3[2];
+    public Vector3[] canyonPositions = new Vector3[3];
     public GameObject minime;
     [SerializeField] private List<GameObject> minimeList = new List<GameObject>();
 
@@ -40,10 +43,11 @@ public class Player : MonoBehaviour
             velocity = 6;
 
         if (flashRange == 0)
-            flashRange = 30;
+            flashRange = 20;
 
         life = 100;
         anim = GetComponent<Animator>();
+        PrimaryWeapon = true;
 
         for (int i = 0; i < 2; i++)
         {
@@ -58,6 +62,10 @@ public class Player : MonoBehaviour
     void Start()
     {
         m_abilities = (Abilities)MenuController.selection;//----------------descomentar para que funcione la seleccion de habilidad------------------------------------------
+        config.Add(PlayerPrefs.GetString("Primary","PIERCING"));
+        config.Add(PlayerPrefs.GetString("Secondary", "LASER"));
+
+        gunz = (Gunz)System.Enum.Parse(typeof(Gunz), GameManager.instance.player.GetComponent<Player>().config[0]);
 
         if (GameManager.instance.Boss.activeInHierarchy)
             bossPhase = true;
@@ -72,19 +80,27 @@ public class Player : MonoBehaviour
         {
             if (!GameManager.instance.pause && !GameManager.instance.gameOver && OnShooting)
             {
-                if (mOrder == CanyonOrder.Right)
+                switch (gunz)
                 {
-                    m_pooler.Spawner(transform.localPosition + canyonPositions[0], Quaternion.identity);
-                    mOrder = CanyonOrder.Left;
+                    case Gunz.PIERCING:
+                        Shoot();
+                        yield return new WaitForSeconds(0.3f);
+                        break;
+                    case Gunz.LASER:
+                        Shoot();
+                        yield return new WaitForSeconds(0.45f);
+                        break;
+                    case Gunz.PLASMA:
+                        Shoot("Single");
+                        yield return new WaitForSeconds(0.8f);
+                        break;
+                    case Gunz.VENOM:
+                        Shoot();
+                        yield return new WaitForSeconds(0.2f);
+                        break;
+                    default:
+                        break;
                 }
-                else
-                {
-                    m_pooler.Spawner(transform.localPosition + canyonPositions[1], Quaternion.identity);
-                    mOrder = CanyonOrder.Right;
-                    m_pooler.bulletsPool[0].GetComponent<BulletController>().StartBullet();
-                }
-                AudioSource.PlayClipAtPoint(GameManager.instance.playerShot, Camera.main.transform.position);
-                yield return new WaitForSeconds(0.3f);
             }
             yield return null;
         }
@@ -122,6 +138,31 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene(PlayerPrefs.GetInt("actualLevel", 1));
     }
 
+    public IEnumerator MinimeSpawner(Vector3 pos, Quaternion rot)
+    {
+        minimeList[0].GetComponent<Minime>().catchable = false;
+        minimeList[0].transform.position = pos;
+        minimeList[0].transform.rotation = rot;
+        minimeList[0].SetActive(true);
+        minimeList[minimeList.Count - 1] = minimeList[0];
+        for (int i = 0; i < minimeList.Count - 1; i++)
+        {
+            minimeList[i] = minimeList[i + 1];
+            yield return new WaitForSeconds(1);
+        }
+        StartCoroutine(MinimeColdown());
+    }
+
+    public IEnumerator Invencible(float time)
+    {
+        time = time == 0 ? 3 : time;
+        anim.SetBool("Damage", true);
+        invencible = true;
+        yield return new WaitForSeconds(time);
+        anim.SetBool("Damage", false);
+        invencible = false;
+    }
+
     public void Starter()
     {
         StartCoroutine("ShieldColdDown");
@@ -137,6 +178,31 @@ public class Player : MonoBehaviour
         life = _life;
     }
 
+    private void Shoot(string type = "Double")
+    {
+        if (type == "Double")
+        {
+            if (mOrder == CanyonOrder.Right)
+            {
+                m_pooler.Spawner(transform.localPosition + canyonPositions[0], Quaternion.identity);
+                mOrder = CanyonOrder.Left;
+                m_pooler.bulletsPool[0].GetComponent<BulletController>().StartBullet();
+            }
+            else
+            {
+                m_pooler.Spawner(transform.localPosition + canyonPositions[1], Quaternion.identity);
+                mOrder = CanyonOrder.Right;
+                m_pooler.bulletsPool[0].GetComponent<BulletController>().StartBullet();
+            }
+        }
+        else
+        {
+            m_pooler.Spawner(transform.localPosition + canyonPositions[2], Quaternion.identity);
+            m_pooler.bulletsPool[0].GetComponent<BulletController>().StartBullet();
+        }
+        AudioSource.PlayClipAtPoint(GameManager.instance.playerShot, Camera.main.transform.position);
+    }
+
     public void UseAbility()
     {
         if (!flashColdDown && m_abilities == Abilities.Flash && !GameManager.instance.pause && !GameManager.instance.gameOver || Input.GetKeyDown(KeyCode.Space) && !flashColdDown)
@@ -149,7 +215,7 @@ public class Player : MonoBehaviour
             else
                 transform.Translate(axis * 30);
             Instantiate(GameManager.instance.flashParticles, transform.position + new Vector3(0, 0, -5), Quaternion.identity);
-            StartCoroutine(Invencible(PlayerPrefs.GetFloat("flashInv", 0.4f)));
+            StartCoroutine(Invencible(PlayerPrefs.GetFloat("flashInv", 0.3f)));
         }
 
         if (!shieldColdDown && m_abilities == Abilities.Shield && !GameManager.instance.pause && !GameManager.instance.gameOver)
@@ -166,16 +232,6 @@ public class Player : MonoBehaviour
             minimeColdown = true;
             StartCoroutine(MinimeSpawner(transform.position, Quaternion.identity));
         }
-    }
-
-    public IEnumerator Invencible(float time)
-    {
-        time = time == 0 ? 3 : time;
-        anim.SetBool("Damage", true);
-        invencible = true;
-        yield return new WaitForSeconds(time);
-        anim.SetBool("Damage", false);
-        invencible = false;
     }
 
     /*public void TakeFood()
@@ -240,21 +296,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    public IEnumerator MinimeSpawner(Vector3 pos, Quaternion rot)
-    {
-        minimeList[0].GetComponent<Minime>().catchable = false;
-        minimeList[0].transform.position = pos;
-        minimeList[0].transform.rotation = rot;
-        minimeList[0].SetActive(true);
-        minimeList[minimeList.Count - 1] = minimeList[0];
-        for (int i = 0; i < minimeList.Count - 1; i++)
-        {
-            minimeList[i] = minimeList[i + 1];
-            yield return new WaitForSeconds(1);
-        }
-        StartCoroutine(MinimeColdown());
-    }
-
     void Update()
     {
 
@@ -310,12 +351,6 @@ public class Player : MonoBehaviour
 
 public enum CanyonOrder {Left, Right}
 
-public enum Gunz {BasicGun, SecondGun, ThirdGun}
+public enum Gunz { PIERCING, LASER, PLASMA, VENOM }
 
 public enum Abilities {Shield, Flash, Minime}
-
-public enum Size
-{
-    Big,
-    Tiny
-}

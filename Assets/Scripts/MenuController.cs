@@ -11,17 +11,28 @@ public class MenuController : MonoBehaviour
     public GameObject SceneToLoadGO;
     public Toggle musicToggle;
     public Dropdown dropdown;
+    public Dropdown primaryDropdown;
+    public Dropdown secondaryDropdown;
     public Text points;
     public static int selection;
     public int index;
     public static bool blockPause;
+    public bool firstValueChaged;
     public List<string> abilitiesString;
+    public List<string> gunListReference;
+    public List<string> primary;
+    public List<string> secondary;
+    [SerializeField] private Dropdown.OptionData tempValue;
+
 
     void Start()
     {
         SetPoints();
         blockPause = false;
         abilitiesString = new List<string>() { "Shield", "Flash", "Minime"};
+        gunListReference = new List<string>() { "PIERCING", "LASER", "PLASMA", "VENOM" };
+        primary = new List<string>();
+        secondary = new List<string>();
 
         if (dropdown != null)
         {
@@ -46,6 +57,58 @@ public class MenuController : MonoBehaviour
                 musicToggle.GetComponent<Toggle>().isOn = false;
             }
         }
+    }
+
+    public void GunSelection(int type = 1)
+    {
+        if (!firstValueChaged)
+        {
+            firstValueChaged = true;
+            if (type == 1)
+            {
+                tempValue = secondaryDropdown.options[secondaryDropdown.value];
+                secondaryDropdown.ClearOptions();
+                secondary.Clear();
+                for (int i = 0; i < gunListReference.Count; i++)
+                {
+                    if (gunListReference[i] != primaryDropdown.transform.GetChild(0).GetComponent<Text>().text)
+                        secondary.Add(gunListReference[i]);
+                }
+                secondaryDropdown.AddOptions(secondary);
+                for (int i = 0; i < secondaryDropdown.options.Count; i++)
+                {
+                    if (secondaryDropdown.options[i].text == tempValue.text)
+                        secondaryDropdown.value = i;
+                }
+            }
+            else
+            {
+                tempValue = primaryDropdown.options[primaryDropdown.value];
+                primaryDropdown.ClearOptions();
+                primary.Clear();
+                for (int i = 0; i < gunListReference.Count; i++)///                               comparar si el label del primer dropdown es igual al del segundo dropdown
+                {
+                    if (gunListReference[i] != secondaryDropdown.transform.GetChild(0).GetComponent<Text>().text)
+                        primary.Add(gunListReference[i]);
+                }
+                primaryDropdown.AddOptions(primary);
+                for (int i = 0; i < primaryDropdown.options.Count; i++)
+                {
+                    if (primaryDropdown.options[i].text == tempValue.text)
+                        primaryDropdown.value = i;
+                }
+            }
+        }
+        else
+        {
+            firstValueChaged = false;
+        }
+    }
+
+    public void GunsSelected()
+    {
+        PlayerPrefs.SetString("Primary", primaryDropdown.transform.GetChild(0).GetComponent<Text>().text);
+        PlayerPrefs.SetString("Secondary", secondaryDropdown.transform.GetChild(0).GetComponent<Text>().text);
     }
 
     public void SetPoints()
@@ -80,11 +143,6 @@ public class MenuController : MonoBehaviour
     public void TutorialButton()
     {
         SceneManager.LoadScene(2);
-    }
-
-    public void SecondLevel()
-    {
-        SceneManager.LoadScene(3);
     }
 
     public void MusicController(bool controller)

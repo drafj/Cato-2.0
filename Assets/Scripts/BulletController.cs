@@ -136,29 +136,7 @@ public class BulletController : MonoBehaviour
     {
         transform.position += transform.up * 15 * Time.fixedDeltaTime;
 
-        GameObject enemyCloser = null;
-        enemyDistance = 50;
 
-        foreach (var enemy in FindObjectsOfType<Enemies>())
-        {
-            Vector3 temporalUbication = enemy.transform.position;
-            float temporalDistance = (temporalUbication - transform.position).magnitude;
-
-            if (temporalDistance < enemyDistance && enemy.GetComponent<GameManager>() == null)
-            {
-                enemyDistance = temporalDistance;
-                enemyCloser = enemy.gameObject;
-            }
-        }
-
-        if (enemyCloser != null)
-        {
-            Vector3 diff = enemyCloser.transform.position - transform.position;
-            diff.Normalize();
-
-            float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
-        }
         
     }
 
@@ -173,3 +151,29 @@ public class BulletController : MonoBehaviour
 public enum BulletFlipDirection {Right, Left }
 
 public enum BulletState {NormalBullet, SecondBullet, ThirdBullet }
+
+
+/*-------------------------------------------------------------------------------perseguir enemigo---------------------------------------------------------
+GameObject enemyCloser = null;
+enemyDistance = 50;
+
+foreach (var enemy in FindObjectsOfType<Enemies>())
+{
+    Vector3 temporalUbication = enemy.transform.position;
+    float temporalDistance = (temporalUbication - transform.position).magnitude;
+
+    if (temporalDistance < enemyDistance && enemy.GetComponent<GameManager>() == null)
+    {
+        enemyDistance = temporalDistance;
+        enemyCloser = enemy.gameObject;
+    }
+}
+
+if (enemyCloser != null)
+{
+    Vector3 diff = enemyCloser.transform.position - transform.position;
+    diff.Normalize();
+
+    float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+    transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
+}*/

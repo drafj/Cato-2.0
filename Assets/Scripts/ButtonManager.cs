@@ -20,6 +20,16 @@ public class ButtonManager : MonoBehaviour
         GameManager.instance.player.GetComponent<Player>().OnShooting = false;
     }
 
+    public void ChangeGun()
+    {
+        if (GameManager.instance.player.GetComponent<Player>().gunz == (Gunz)System.Enum.Parse(typeof(Gunz), GameManager.instance.player.GetComponent<Player>().config[0]))
+        {
+            GameManager.instance.player.GetComponent<Player>().gunz = (Gunz)System.Enum.Parse(typeof(Gunz), GameManager.instance.player.GetComponent<Player>().config[1]);
+        }
+        else
+            GameManager.instance.player.GetComponent<Player>().gunz = (Gunz)System.Enum.Parse(typeof(Gunz), GameManager.instance.player.GetComponent<Player>().config[0]);
+    }
+
 
 
 
