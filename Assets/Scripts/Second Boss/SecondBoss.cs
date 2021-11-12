@@ -43,7 +43,7 @@ public class SecondBoss : Enemies
                 yield return new WaitForSeconds(3);
                 cameras.SetActive(false);
                 aimCam.SetActive(true);
-                GameManager.instance.player.GetComponent<Player>().unleashed = true;
+                //GameManager.instance.player.GetComponent<Player>().unleashed = true;
                 blackSpaceAnim.SetTrigger("enterBS");
                 CreateCircle();
                 yield return new WaitForSeconds(27);
@@ -67,10 +67,10 @@ public class SecondBoss : Enemies
                 GameManager.instance.winMessage.SetActive(true);
                 PlayerPrefs.SetInt("actualLevel", 1);
                 MenuController.blockPause = true;
-                Analytics.CustomEvent("Winner", new Dictionary<string, object>
+                /*Analytics.CustomEvent("Winner", new Dictionary<string, object>
                 {
                     {"second boss with Life", GameManager.instance.player.GetComponent<Player>().life},
-                });
+                });*/
                 gameObject.SetActive(false);
             }
         }

@@ -69,18 +69,18 @@ public class BossBullet : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Player>() != null)
         {
-            if (!GameManager.instance.player.GetComponent<Player>().invencible && GameManager.instance.Boss.GetComponent<Boss>().life > 0 && !pushed)
+            /*if (!GameManager.instance.player.GetComponent<Player>().invencible && GameManager.instance.Boss.GetComponent<Boss>().life > 0 && !pushed)
             {
                 collision.gameObject.GetComponent<Player>().life -= 5;
                 GameManager.instance.StartDealDamage();
-                if (collision.gameObject.GetComponent<Player>().life == 0)
+                if (collision.gameObject.GetComponent<Player>().life == 0)-------------------- debería de ir en el player ---------------------------------
                 {
                     Analytics.CustomEvent("Death", new Dictionary<string, object>
                         {
                             {"death", "by a boss 01 bullet"}
                         });
                 }
-            }
+            }*/
             Destroy(gameObject);
         }
     }

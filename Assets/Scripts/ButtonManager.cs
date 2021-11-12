@@ -12,7 +12,6 @@ public class ButtonManager : MonoBehaviour
 
     public void AbilityEnabler()
     {
-        GameManager.instance.player.GetComponent<Player>().ability = true;
         GameManager.instance.player.GetComponent<Player>().UseAbility();
     }
 
@@ -21,10 +20,6 @@ public class ButtonManager : MonoBehaviour
         GameManager.instance.player.GetComponent<Player>().OnShooting = false;
     }
 
-    public void AbilityDisabler()
-    {
-        GameManager.instance.player.GetComponent<Player>().ability = false;
-    }
 
 
 

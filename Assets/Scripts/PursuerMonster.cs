@@ -71,14 +71,6 @@ public class PursuerMonster : Enemies
             dying = true;
             GetComponent<CapsuleCollider2D>().enabled = false;
             StartCoroutine("Death");
-            if (!GameManager.instance.player.GetComponent<Player>().invencible)
-            {
-                if (collision.gameObject.GetComponent<Player>().life == 0)
-                    Analytics.CustomEvent("Death", new Dictionary<string, object>
-                    {
-                        {"death", "by pursuer monster"}
-                    });
-            }
         }
 
     }
@@ -90,19 +82,6 @@ public class PursuerMonster : Enemies
             AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);
             anim.SetBool("idle", false);
             anim.SetTrigger("death");
-            switch (Random.Range(0, 4))
-            {
-                case 0:
-                    GameObject ins = Instantiate(GameManager.instance.ammoPrefab, transform.position, Quaternion.identity);
-                    ins.GetComponent<Ammo>().m_fOA = FoodOrAmmo.Food;
-                    break;
-                case 1:
-                    GameObject inst = Instantiate(GameManager.instance.ammoPrefab, transform.position, Quaternion.identity);
-                    inst.GetComponent<Ammo>().m_fOA = FoodOrAmmo.Points;
-                    break;
-                default:
-                    break;
-            }
             yield return new WaitForSeconds(0.55f);
         }
         GameManager.instance.counterToBoss++;

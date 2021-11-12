@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Trucoxd : MonoBehaviour
 {
-    public int counter;
+   /* public int counter;
 
     public void CounterPlus()
     {
@@ -18,5 +18,5 @@ public class Trucoxd : MonoBehaviour
             counter = 0;
             GameManager.instance.player.GetComponent<Player>().thirdAmmo = 999999;
         }
-    }
+    }*/
 }

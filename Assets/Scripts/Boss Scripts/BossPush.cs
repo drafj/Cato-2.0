@@ -9,18 +9,18 @@ public class BossPush : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Player>() != null)
         {
-            if (!collision.gameObject.GetComponent<Player>().invencible)
+            /*if (!collision.gameObject.GetComponent<Player>().invencible)
             {
                 collision.gameObject.GetComponent<Player>().life -= 5;
                 GameManager.instance.StartDealDamage();
             }
-            if (collision.gameObject.GetComponent<Player>().life == 0)
+            if (collision.gameObject.GetComponent<Player>().life == 0)------------------------- esto debería ir en player -------------------------------------
             {
                 Analytics.CustomEvent("Death", new Dictionary<string, object>
                         {
                             {"death", "Pushed by boss 01"}
                         });
-            }
+            }*/
             collision.gameObject.GetComponent<Player>().rgbd.AddForce(transform.up * -5000);
         }
     }

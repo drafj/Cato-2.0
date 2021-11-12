@@ -13,26 +13,11 @@ public class BulletController : MonoBehaviour
     public BulletFlipDirection mFlipDirection;
     public BulletState m_State;
 
-    void Start()
-    {
-
-    }
-
     public void StartBullet()
     {
         onCourse = true;
         mFlipDirection = (BulletFlipDirection)Random.Range(0, 2);
         anim = GetComponent<Animator>();
-
-        if (transform.tag == "Player Bullet" && GameManager.instance != null)
-        {
-            if (GameManager.instance.player.GetComponent<Player>().m_Gunz == Gunz.BasicGun)
-                m_State = BulletState.NormalBullet;
-            else if (GameManager.instance.player.GetComponent<Player>().m_Gunz == Gunz.SecondGun)
-                m_State = BulletState.SecondBullet;
-            else
-                m_State = BulletState.ThirdBullet;
-        }
 
         if (transform.tag == "Enemy Bullet")
         {
@@ -40,11 +25,6 @@ public class BulletController : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = GameManager.instance.enemyBulletSprite;
             GetComponent<Renderer>().sortingOrder = 7;
             transform.rotation = Quaternion.Euler(0, 0, 180);
-        }
-
-        if (m_State == BulletState.ThirdBullet)
-        {
-            limitRotations = Quaternion.Euler(0, 0, Random.Range(-20, 20));
         }
     }
 
@@ -64,28 +44,15 @@ public class BulletController : MonoBehaviour
         {
             if (collision.transform.tag == "Player")
             {
-                if (!GameManager.instance.player.GetComponent<Player>().invencible)
-                {
-                    collision.gameObject.GetComponent<Player>().life -= 5;
-                    if (collision.gameObject.GetComponent<Player>().life == 0)
-                    {
-                        Analytics.CustomEvent("Death", new Dictionary<string, object>
-                        {
-                            {"death", "by shooter monster"}
-                        });
-                    }
-                    GameManager.instance.StartDealDamage();
-                    GameManager.instance.player.GetComponent<Player>().UpdateLife();
+                Player m_player = collision.gameObject.GetComponent<Player>();
+                m_player.SetLife(m_player.GetLife() - 5);
+                GameManager.instance.StartDealDamage();
+                GameManager.instance.player.GetComponent<Player>().UpdateLife();
 
-                    if (GameManager.instance.player.GetComponent<Player>().life <= 0)
-                    {
-                        Analytics.CustomEvent("Death", new Dictionary<string, object>
-                        {
-                            {"death", "by enemy bullet"}
-                        });
-                        GameManager.instance.gameOver = true;
-                        StartCoroutine(GameManager.instance.player.GetComponent<Player>().Die());
-                    }
+                if (m_player.GetLife() <= 0)
+                {
+                    GameManager.instance.gameOver = true;
+                    StartCoroutine(GameManager.instance.player.GetComponent<Player>().Die());
                 }
                 Instantiate(GameManager.instance.shotEP, transform.position, Quaternion.identity);
                 transform.position = new Vector3(1000, 1000);

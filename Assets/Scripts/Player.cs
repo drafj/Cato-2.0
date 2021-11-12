@@ -7,26 +7,22 @@ using UnityEngine.Analytics;
 
 public class Player : MonoBehaviour
 {
-    public float velocity;
-    public float life;
-    public float lifeAmount;
-    public int secondAmmo;
-    public int thirdAmmo;
-    public int flashRange;
-    public int points;
-    public float foodMeter;
-    [SerializeField] private bool shieldColdDown,
+    [SerializeField]
+    private float velocity,
+    life,
+    lifeAmount;
+    [SerializeField] private int flashRange;
+    private bool shieldColdDown,
     flashColdDown,
     minimeColdown;
-    GameObject shieldInst;
+    private bool
+    invencible,
+    pushed,
+    unleashed;
+    [HideInInspector] 
     public bool OnShooting;
-    public bool ability;
-    public bool invencible;
-    public bool pushed;
-    public bool unleashed;
     public static bool bossPhase;
-    public CanyonOrder mOrder;
-    public Gunz m_Gunz;
+    private CanyonOrder mOrder;
     public Abilities m_abilities;
     public Animator anim;
     public Rigidbody2D rgbd;
@@ -61,97 +57,35 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        //m_abilities = (Abilities)MenuController.selection;----------------descomentar para que funcione la seleccion de habilidad------------------------------------------
-        points = PlayerPrefs.GetInt("Points");
-        if (GameManager.instance.points != null)
-            GameManager.instance.points.text = points + " :points ";
+        m_abilities = (Abilities)MenuController.selection;//----------------descomentar para que funcione la seleccion de habilidad------------------------------------------
 
         if (GameManager.instance.Boss.activeInHierarchy)
             bossPhase = true;
         else
             bossPhase = false;
         StartCoroutine(BulletCreator());
-        GameManager.instance.food.GetComponent<Image>().fillAmount = foodMeter;
     }
 
     IEnumerator BulletCreator()
     {
         while (true)
         {
-            if (!GameManager.instance.pause && !GameManager.instance.gameOver)
+            if (!GameManager.instance.pause && !GameManager.instance.gameOver && OnShooting)
             {
-                if (secondAmmo > 0 && thirdAmmo <= 0)
-                    m_Gunz = Gunz.SecondGun;
-                else if (thirdAmmo > 0)
-                    m_Gunz = Gunz.ThirdGun;
-                else
-                    m_Gunz = Gunz.BasicGun;
-
-                if (thirdAmmo < 0)
-                    thirdAmmo = 0;
-                switch (m_Gunz)
+                if (mOrder == CanyonOrder.Right)
                 {
-                    case Gunz.BasicGun:
-                        if (OnShooting)
-                        {
-                            if (mOrder == CanyonOrder.Right)
-                            {
-                                m_pooler.Spawner(transform.localPosition + canyonPositions[0], Quaternion.identity);
-                                mOrder = CanyonOrder.Left;
-                            }
-                            else
-                            {
-                                m_pooler.Spawner(transform.localPosition + canyonPositions[1], Quaternion.identity);
-                                mOrder = CanyonOrder.Right;
-                                m_pooler.bulletsPool[0].GetComponent<BulletController>().StartBullet();
-                            }
-                            AudioSource.PlayClipAtPoint(GameManager.instance.playerShot, Camera.main.transform.position);
-                            yield return new WaitForSeconds(0.3f);
-                        }
-                        break;
-                    case Gunz.SecondGun:
-                        if (OnShooting)
-                        {
-                            secondAmmo--;
-                            if (mOrder == CanyonOrder.Right)
-                                m_pooler.Spawner(transform.localPosition + canyonPositions[0], Quaternion.identity);
-                            else
-                                m_pooler.Spawner(transform.localPosition + canyonPositions[1], Quaternion.identity);
-                            if (mOrder == CanyonOrder.Right)
-                                mOrder = CanyonOrder.Left;
-                            else
-                                mOrder = CanyonOrder.Right;
-                            AudioSource.PlayClipAtPoint(GameManager.instance.playerShot, Camera.main.transform.position);
-                            yield return new WaitForSeconds(0.3f);
-                        }
-                        break;
-                    case Gunz.ThirdGun:
-                        if (OnShooting)
-                        {
-                            thirdAmmo -= 6;
-
-                            for (int i = 0; i < 6; i++)
-                            {
-                                if (i < 3)
-                                {
-                                    m_pooler.Spawner(transform.localPosition + canyonPositions[0], Quaternion.identity);
-                                }
-                                else
-                                {
-                                    m_pooler.Spawner(transform.localPosition + canyonPositions[1], Quaternion.identity);
-                                }
-
-                            }
-
-                            AudioSource.PlayClipAtPoint(GameManager.instance.playerShot, Camera.main.transform.position);
-                            yield return new WaitForSeconds(0.3f);
-                        }
-                        break;
-                    default:
-                        break;
+                    m_pooler.Spawner(transform.localPosition + canyonPositions[0], Quaternion.identity);
+                    mOrder = CanyonOrder.Left;
                 }
+                else
+                {
+                    m_pooler.Spawner(transform.localPosition + canyonPositions[1], Quaternion.identity);
+                    mOrder = CanyonOrder.Right;
+                    m_pooler.bulletsPool[0].GetComponent<BulletController>().StartBullet();
+                }
+                AudioSource.PlayClipAtPoint(GameManager.instance.playerShot, Camera.main.transform.position);
+                yield return new WaitForSeconds(0.3f);
             }
-
             yield return null;
         }
     }
@@ -193,6 +127,16 @@ public class Player : MonoBehaviour
         StartCoroutine("ShieldColdDown");
     }
 
+    public float GetLife()
+    {
+        return life;
+    }
+
+    public void SetLife(float _life)
+    {
+        life = _life;
+    }
+
     public void UseAbility()
     {
         if (!flashColdDown && m_abilities == Abilities.Flash && !GameManager.instance.pause && !GameManager.instance.gameOver || Input.GetKeyDown(KeyCode.Space) && !flashColdDown)
@@ -205,17 +149,17 @@ public class Player : MonoBehaviour
             else
                 transform.Translate(axis * 30);
             Instantiate(GameManager.instance.flashParticles, transform.position + new Vector3(0, 0, -5), Quaternion.identity);
-            StartCoroutine(GameManager.instance.Invencible(PlayerPrefs.GetInt("flashInv", 1)));
+            StartCoroutine(Invencible(PlayerPrefs.GetFloat("flashInv", 0.4f)));
         }
 
         if (!shieldColdDown && m_abilities == Abilities.Shield && !GameManager.instance.pause && !GameManager.instance.gameOver)
         {
             shieldColdDown = true;
-            shieldInst = Instantiate(GameManager.instance.shield, transform);
-            shieldInst.transform.localPosition = new Vector3(0, 1.27f, -9.041016f);
+            actualShield = Instantiate(GameManager.instance.shield, transform);
+            actualShield.transform.localPosition = new Vector3(0, 1.27f, -9.041016f);
         }
         else if (shieldColdDown)
-            shieldInst.GetComponent<Shield>().BulletLauncher();
+            actualShield.GetComponent<Shield>().BulletLauncher();
 
         if (!minimeColdown && m_abilities == Abilities.Minime && !GameManager.instance.pause && !GameManager.instance.gameOver)
         {
@@ -224,7 +168,17 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void TakeFood()
+    public IEnumerator Invencible(float time)
+    {
+        time = time == 0 ? 3 : time;
+        anim.SetBool("Damage", true);
+        invencible = true;
+        yield return new WaitForSeconds(time);
+        anim.SetBool("Damage", false);
+        invencible = false;
+    }
+
+    /*public void TakeFood()
     {
         foodMeter += 0.34f;
         if (foodMeter >= 1)
@@ -237,7 +191,7 @@ public class Player : MonoBehaviour
         }
 
         GameManager.instance.food.GetComponent<Image>().fillAmount = foodMeter;
-    }
+    }*/
 
     public void UpdateLife()
     {
@@ -324,17 +278,14 @@ public class Player : MonoBehaviour
             else
                 KeyboardMoviment();
 
-            if (!unleashed)
-            {
-                if (transform.position.x > 6.85)
-                    transform.position = new Vector3(6.85f, transform.position.y);
-                if (transform.position.x < -6.85)
-                    transform.position = new Vector3(-6.85f, transform.position.y);
-                if (transform.position.y > 11.3)
-                    transform.position = new Vector3(transform.position.x, 11.3f);
-                if (transform.position.y < -14)
-                    transform.position = new Vector3(transform.position.x, -14f);
-            }
+            if (transform.position.x > 6.85)
+                transform.position = new Vector3(6.85f, transform.position.y);
+            if (transform.position.x < -6.85)
+                transform.position = new Vector3(-6.85f, transform.position.y);
+            if (transform.position.y > 11.3)
+                transform.position = new Vector3(transform.position.x, 11.3f);
+            if (transform.position.y < -14)
+                transform.position = new Vector3(transform.position.x, -14f);
         }
     }
 

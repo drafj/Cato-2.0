@@ -116,52 +116,27 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public IEnumerator Invencible(float time)
-    {
-        if (time <= 0)
-            time = 3;
-        player.GetComponent<Player>().anim.SetBool("Damage", true);
-        player.GetComponent<Player>().invencible = true;
-        yield return new WaitForSeconds(time);
-        player.GetComponent<Player>().anim.SetBool("Damage", false);
-        player.GetComponent<Player>().invencible = false;
-    }
-
     public IEnumerator DealDamageC()
     {
-        if (!player.GetComponent<Player>().unleashed)
-        {
             normalCameras.SetActive(false);
             damageCamera.SetActive(true);
             yield return new WaitForSeconds(0.3f);
             damageCamera.SetActive(false);
             normalCameras.SetActive(true);
-        }
 
-        else
-        {
             deathCirclesCamera.SetActive(false);
             deathCirclesDamCamera.SetActive(true);
             yield return new WaitForSeconds(0.5f);
             deathCirclesCamera.SetActive(true);
             deathCirclesDamCamera.SetActive(false);
-        }
 
-        if (!player.GetComponent<Player>().unleashed)
-        {
             normalCameras.SetActive(true);
             deathCirclesCamera.SetActive(false);
-        }
-
     }
 
     public void StartDealDamage()
     {
-        if (!player.GetComponent<Player>().invencible)
-        {
             StartCoroutine("DealDamageC");
-            //StartCoroutine(Invencible(3));
-        }
     }
 
     public void InvokeBoss()

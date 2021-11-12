@@ -55,9 +55,8 @@ public class Shield : MonoBehaviour
         if (!GameManager.instance.pause && !GameManager.instance.gameOver)
         destructionCounter += Time.deltaTime;
 
-        if (GameManager.instance.player.GetComponent<Player>().ability || destructionCounter >= destroyLimit)
+        if (destructionCounter >= destroyLimit)
         {
-            GameManager.instance.player.GetComponent<Player>().ability = false;
             BulletLauncher();
         }
     }
