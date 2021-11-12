@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ammo : MonoBehaviour
 {
-    public FoodOrAmmo m_fOA;
+    /*public FoodOrAmmo m_fOA;
     AmmoSelection m_ammoSelection;
 
     private void Awake()
@@ -58,7 +58,7 @@ public class Ammo : MonoBehaviour
         GoForward();
         if (transform.position.y <= -16)
             Destroy(gameObject);
-    }
+    }*/
 }
 
 public enum AmmoSelection {SecondAmmo, ThirdAmmo}

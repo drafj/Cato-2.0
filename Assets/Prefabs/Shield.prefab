@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 7598237022814977174}
   - component: {fileID: 3284497078042911331}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47da82b05f6d8f449b197101f468718b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyLimit: 0
+  destroyLimit: 3
 --- !u!50 &7598237022814977174
 Rigidbody2D:
   serializedVersion: 4

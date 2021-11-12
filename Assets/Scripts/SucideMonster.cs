@@ -35,15 +35,6 @@ public class SucideMonster : Enemies
             {
                 AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);
                 GameManager.instance.counterToBoss++;
-                switch (Random.Range(0, 4))
-                {
-                    case 0:
-                        GameObject ins = Instantiate(GameManager.instance.ammoPrefab, transform.position, Quaternion.identity);
-                        ins.GetComponent<Ammo>().m_fOA = (FoodOrAmmo) Random.Range(0, 2);
-                        break;
-                    default:
-                        break;
-                }
                 transform.position = new Vector3(1000, 1000);
                 gameObject.SetActive(false);
             }
@@ -64,14 +55,6 @@ public class SucideMonster : Enemies
             AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);
             transform.position = new Vector3(1000, 1000);
             gameObject.SetActive(false);
-            if (!collision.gameObject.GetComponent<Player>().invencible)
-            {
-                if (collision.gameObject.GetComponent<Player>().life == 0)
-                Analytics.CustomEvent("Death", new Dictionary<string, object>
-                {
-                    {"death", "by monster 127"}
-                });
-            }
         }
     }
 

@@ -54,7 +54,7 @@ public class CircleBehaviour : MonoBehaviour
     {
         GameManager.instance.Boss.GetComponent<SecondBoss>().cameras.SetActive(true);
         GameManager.instance.Boss.GetComponent<SecondBoss>().aimCam.SetActive(false);
-        GameManager.instance.player.GetComponent<Player>().unleashed = false;
+        //GameManager.instance.player.GetComponent<Player>().unleashed = false;
         GameManager.instance.Boss.GetComponent<SecondBoss>().blackSpaceAnim.SetTrigger("leaveBS");
     }
 
@@ -81,7 +81,7 @@ public class CircleBehaviour : MonoBehaviour
         StartCoroutine(Redux());
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    /*private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.GetComponent<Player>() != null)
         {
@@ -99,7 +99,7 @@ public class CircleBehaviour : MonoBehaviour
                 });
             }
         }
-    } 
+    } */
     void Update()
     {
         if (finalRoll)

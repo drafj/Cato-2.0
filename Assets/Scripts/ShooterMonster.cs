@@ -58,17 +58,6 @@ public class ShooterMonster : Enemies
         {
             AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);
             GameManager.instance.counterToBoss++;
-            switch (Random.Range(0, 2))
-            {
-                case 0:
-                    GameObject ins = Instantiate(GameManager.instance.ammoPrefab, transform.position, Quaternion.identity);
-                        ins.GetComponent<Ammo>().m_fOA = (FoodOrAmmo) Random.Range(1, 3);
-                    break;
-                case 1:
-                    break;
-                default:
-                    break;
-            }
             transform.position = new Vector3(1000, 1000);
             gameObject.SetActive(false);
         }

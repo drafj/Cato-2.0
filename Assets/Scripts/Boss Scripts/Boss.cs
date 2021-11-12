@@ -117,10 +117,10 @@ public class Boss : Enemies
                 GameManager.instance.winMessage.SetActive(true);
                 PlayerPrefs.SetInt("actualLevel", 3);
                 MenuController.blockPause = true;
-                Analytics.CustomEvent("Winner", new Dictionary<string, object>
+                /*Analytics.CustomEvent("Winner", new Dictionary<string, object>
             {
                 {"first boss with Life", GameManager.instance.player.GetComponent<Player>().life},
-            });
+            });*/
                 gameObject.SetActive(false);
             }
         }

@@ -34,8 +34,6 @@ public class BossShields : MonoBehaviour
         if (life <= 0 && GameManager.instance.Boss.GetComponent<Boss>().m_phase == Phase.FirstPhase)
         {
             life = 41;
-            GameObject ins = Instantiate(GameManager.instance.ammoPrefab, transform.position, Quaternion.identity);
-            ins.GetComponent<Ammo>().m_fOA = FoodOrAmmo.Food;
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<Collider2D>().enabled = false;
         }
@@ -47,8 +45,6 @@ public class BossShields : MonoBehaviour
         }
         else if (life <= 0 && GameManager.instance.Boss.GetComponent<Boss>().m_phase == Phase.SecondPhase)
         {
-            GameObject ins = Instantiate(GameManager.instance.ammoPrefab, transform.position, Quaternion.identity);
-            ins.GetComponent<Ammo>().m_fOA = FoodOrAmmo.Food;
             Destroy(gameObject);
         }
     }
