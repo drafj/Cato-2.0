@@ -7,7 +7,7 @@ public class ButtonManager : MonoBehaviour
 {
     public void ShotEnabler()
     {
-        GameManager.instance.player.GetComponent<Player>().OnShooting = true;
+        GameManager.instance.player.GetComponent<Player>().onShooting = true;
     }
 
     public void AbilityEnabler()
@@ -17,7 +17,7 @@ public class ButtonManager : MonoBehaviour
 
     public void ShotDisabler()
     {
-        GameManager.instance.player.GetComponent<Player>().OnShooting = false;
+        GameManager.instance.player.GetComponent<Player>().onShooting = false;
     }
 
     public void ChangeGun()

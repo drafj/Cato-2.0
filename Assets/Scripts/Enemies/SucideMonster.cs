@@ -22,14 +22,7 @@ public class SucideMonster : Enemies
     {
         if (collision.gameObject.transform.tag == "Player Bullet")
         {
-            if (collision.gameObject.GetComponent<BulletController>().m_State == BulletState.NormalBullet)
-                life -= 1;
-
-            if (collision.gameObject.GetComponent<BulletController>().m_State == BulletState.SecondBullet)
-                life -= GameManager.instance.secondGunDamage;
-
-            if (collision.gameObject.GetComponent<BulletController>().m_State == BulletState.ThirdBullet)
-                life -= GameManager.instance.thirdGunDamage;
+            life -= 1;
 
             if (life <= 0)
             {

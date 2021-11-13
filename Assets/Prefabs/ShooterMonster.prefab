@@ -77,15 +77,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604c8927788b6e44aa48da9465f85d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velReference: 4
+  lifeReference: 5
   velocity: 0
   life: 0
-  BossLife: 0
-  suicideMonsterVelocity: 0
-  suicideMonsterLife: 0
-  pursuerMonsterVelocity: 0
-  pursuerMonsterLife: 0
-  shooterMonsterVelocity: 0
-  shooterMonsterLife: 0
 --- !u!50 &587214753719279671
 Rigidbody2D:
   serializedVersion: 4

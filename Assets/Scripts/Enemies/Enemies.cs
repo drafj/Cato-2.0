@@ -4,23 +4,25 @@ using UnityEngine;
 
 public class Enemies : MonoBehaviour
 {
+    [SerializeField] private float velReference,
+        lifeReference;
     [HideInInspector] public float velocity;
-    /*[HideInInspector] */public float life;
+    [HideInInspector] public float life;
 
-    public float firstBossLife,
+    /*public float firstBossLife,
     secondBossLife,
     suicideMonsterVelocity,
     suicideMonsterLife,
     pursuerMonsterVelocity,
     pursuerMonsterLife,
     shooterMonsterVelocity,
-    shooterMonsterLife;
+    shooterMonsterLife;*/
 
-    public void LifeAndVelocityAsigner()
+    /*public void LifeAndVelocityAsigner()
     {
         Seter();
 
-        if (GetComponent<Boss>() != null)
+        /*if (GetComponent<Boss>() != null)
         {
             life = firstBossLife;
         }
@@ -47,18 +49,20 @@ public class Enemies : MonoBehaviour
             life = shooterMonsterLife;
             velocity = shooterMonsterVelocity;
         }
-    }
+    }*/
 
-    void Seter()
+    public void LifeAndVelocityAsigner()
     {
-        firstBossLife = firstBossLife == 0 ? 60 : firstBossLife;
+        life = lifeReference;
+        velocity = velReference;
+        /*firstBossLife = firstBossLife == 0 ? 60 : firstBossLife;
         secondBossLife = secondBossLife == 0 ? 90 : secondBossLife;
         suicideMonsterVelocity = suicideMonsterVelocity == 0 ? 4.5f : suicideMonsterVelocity;
         suicideMonsterLife = suicideMonsterLife == 0 ? 1.5f : suicideMonsterLife;
         pursuerMonsterVelocity = pursuerMonsterVelocity == 0 ? 4 : pursuerMonsterVelocity;
         pursuerMonsterLife = pursuerMonsterLife == 0 ? 3 : pursuerMonsterLife;
         shooterMonsterVelocity = shooterMonsterVelocity == 0 ? 2 : shooterMonsterVelocity;
-        shooterMonsterLife = shooterMonsterLife == 0 ? 5 : shooterMonsterLife;
+        shooterMonsterLife = shooterMonsterLife == 0 ? 5 : shooterMonsterLife;*/
     }
 
     public void GoForward()

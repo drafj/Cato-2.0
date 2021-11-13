@@ -44,14 +44,7 @@ public class ShooterMonster : Enemies
     {
         if (collision.transform.tag == "Player Bullet")
         {
-            if (collision.gameObject.GetComponent<BulletController>().m_State == BulletState.NormalBullet)
                 life -= 1;
-
-            if (collision.gameObject.GetComponent<BulletController>().m_State == BulletState.SecondBullet)
-                life -= GameManager.instance.secondGunDamage;
-
-            if (collision.gameObject.GetComponent<BulletController>().m_State == BulletState.ThirdBullet)
-                life -= GameManager.instance.thirdGunDamage;
         }
 
         if (life <= 0)

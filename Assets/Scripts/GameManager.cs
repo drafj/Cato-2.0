@@ -41,9 +41,6 @@ public class GameManager : MonoBehaviour
     public AudioClip loseClip;
     public AudioSource ambientSound;
     public Pooler m_pooler;
-    public float secondGunDamage;
-    public float thirdGunDamage;
-    public int ammoFallVelocity;
     public int counterToBoss;
     public int arrivalBoss;
     private int enemyChooser;

@@ -1014,16 +1014,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d7ac779900f24b974e28fb425375a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velReference: 5
+  lifeReference: 65
   velocity: 0
   life: 0
-  firstBossLife: 0
-  secondBossLife: 0
-  suicideMonsterVelocity: 0
-  suicideMonsterLife: 0
-  pursuerMonsterVelocity: 0
-  pursuerMonsterLife: 0
-  shooterMonsterVelocity: 0
-  shooterMonsterLife: 0
   cadence: 0
   rayCounter: 0
   shootRaysLimit: 3

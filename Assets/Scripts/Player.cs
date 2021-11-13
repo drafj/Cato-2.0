@@ -20,8 +20,9 @@ public class Player : MonoBehaviour
     pushed,
     unleashed;
     [HideInInspector] 
-    public bool OnShooting,
-        PrimaryWeapon;
+    public bool onShooting,
+        primaryWeapon,
+        silenced;
     public static bool bossPhase;
     private CanyonOrder mOrder;
     public Gunz gunz;
@@ -47,7 +48,7 @@ public class Player : MonoBehaviour
 
         life = 100;
         anim = GetComponent<Animator>();
-        PrimaryWeapon = true;
+        primaryWeapon = true;
 
         for (int i = 0; i < 2; i++)
         {
@@ -78,7 +79,7 @@ public class Player : MonoBehaviour
     {
         while (true)
         {
-            if (!GameManager.instance.pause && !GameManager.instance.gameOver && OnShooting)
+            if (!GameManager.instance.pause && !GameManager.instance.gameOver && onShooting)
             {
                 switch (gunz)
                 {
@@ -163,6 +164,20 @@ public class Player : MonoBehaviour
         invencible = false;
     }
 
+    public void SilenceStarter()
+    {
+        StartCoroutine(Silence());
+    }
+
+    public IEnumerator Silence()
+    {
+        silenced = true;
+        Debug.Log("silenciado");
+        yield return new WaitForSeconds(5f);
+        Debug.Log("desilenciado");
+        silenced = false;
+    }
+
     public void Starter()
     {
         StartCoroutine("ShieldColdDown");
@@ -205,32 +220,35 @@ public class Player : MonoBehaviour
 
     public void UseAbility()
     {
-        if (!flashColdDown && m_abilities == Abilities.Flash && !GameManager.instance.pause && !GameManager.instance.gameOver || Input.GetKeyDown(KeyCode.Space) && !flashColdDown)
+        if (!silenced)
         {
-            flashColdDown = true;
-            StartCoroutine("FlashColdDown");
-            Instantiate(GameManager.instance.flashParticles, transform.position + new Vector3(0, 0, -5), Quaternion.identity);
-            if (anim.GetBool("OnTouch"))
-                transform.Translate(joyStickDir * 30);
-            else
-                transform.Translate(axis * 30);
-            Instantiate(GameManager.instance.flashParticles, transform.position + new Vector3(0, 0, -5), Quaternion.identity);
-            StartCoroutine(Invencible(PlayerPrefs.GetFloat("flashInv", 0.3f)));
-        }
+            if (!flashColdDown && m_abilities == Abilities.Flash && !GameManager.instance.pause && !GameManager.instance.gameOver || Input.GetKeyDown(KeyCode.Space) && !flashColdDown)
+            {
+                flashColdDown = true;
+                StartCoroutine("FlashColdDown");
+                Instantiate(GameManager.instance.flashParticles, transform.position + new Vector3(0, 0, -5), Quaternion.identity);
+                if (anim.GetBool("OnTouch"))
+                    transform.Translate(joyStickDir * 30);
+                else
+                    transform.Translate(axis * 30);
+                Instantiate(GameManager.instance.flashParticles, transform.position + new Vector3(0, 0, -5), Quaternion.identity);
+                StartCoroutine(Invencible(PlayerPrefs.GetFloat("flashInv", 0.3f)));
+            }
 
-        if (!shieldColdDown && m_abilities == Abilities.Shield && !GameManager.instance.pause && !GameManager.instance.gameOver)
-        {
-            shieldColdDown = true;
-            actualShield = Instantiate(GameManager.instance.shield, transform);
-            actualShield.transform.localPosition = new Vector3(0, 1.27f, -9.041016f);
-        }
-        else if (shieldColdDown)
-            actualShield.GetComponent<Shield>().BulletLauncher();
+            if (!shieldColdDown && m_abilities == Abilities.Shield && !GameManager.instance.pause && !GameManager.instance.gameOver)
+            {
+                shieldColdDown = true;
+                actualShield = Instantiate(GameManager.instance.shield, transform);
+                actualShield.transform.localPosition = new Vector3(0, 1.27f, -9.041016f);
+            }
+            else if (shieldColdDown)
+                actualShield.GetComponent<Shield>().BulletLauncher();
 
-        if (!minimeColdown && m_abilities == Abilities.Minime && !GameManager.instance.pause && !GameManager.instance.gameOver)
-        {
-            minimeColdown = true;
-            StartCoroutine(MinimeSpawner(transform.position, Quaternion.identity));
+            if (!minimeColdown && m_abilities == Abilities.Minime && !GameManager.instance.pause && !GameManager.instance.gameOver)
+            {
+                minimeColdown = true;
+                StartCoroutine(MinimeSpawner(transform.position, Quaternion.identity));
+            }
         }
     }
 

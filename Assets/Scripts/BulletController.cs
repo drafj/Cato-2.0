@@ -11,7 +11,6 @@ public class BulletController : MonoBehaviour
     private Animator anim;
     public Quaternion limitRotations;
     public BulletFlipDirection mFlipDirection;
-    public BulletState m_State;
 
     public void StartBullet()
     {
@@ -100,20 +99,7 @@ public class BulletController : MonoBehaviour
 
         if (!GameManager.instance.pause)
         {
-            switch (m_State)
-            {
-                case BulletState.NormalBullet:
-                    NormalBullet();
-                    break;
-                case BulletState.SecondBullet:
-                    SecondBullet();
-                    break;
-                case BulletState.ThirdBullet:
-                    ThirdBullet();
-                    break;
-                default:
-                    break;
-            }
+            NormalBullet();
         }
 
 
@@ -131,28 +117,9 @@ public class BulletController : MonoBehaviour
         if (onCourse)
         transform.position += transform.up * 15 * Time.fixedDeltaTime;
     }
-
-    void SecondBullet()
-    {
-        transform.position += transform.up * 15 * Time.fixedDeltaTime;
-
-
-        
-    }
-
-    void ThirdBullet()
-    {
-        transform.position += transform.up * 15 * Time.fixedDeltaTime;
-
-        transform.rotation = limitRotations;
-    }
 }
 
 public enum BulletFlipDirection {Right, Left }
-
-public enum BulletState {NormalBullet, SecondBullet, ThirdBullet }
-
-
 /*-------------------------------------------------------------------------------perseguir enemigo---------------------------------------------------------
 GameObject enemyCloser = null;
 enemyDistance = 50;

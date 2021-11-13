@@ -27,7 +27,7 @@ public class PursuerMonster : Enemies
         LifeAndVelocityAsigner();
 
         velocity = velocity == 0 ? 5 : velocity;
-        life = life == 0 ? 4 : velocity;
+        life = life == 0 ? 4 : life;
 
         StartRotation();
     }
@@ -45,14 +45,7 @@ public class PursuerMonster : Enemies
     {
         if (collision.transform.tag == "Player Bullet")
         {
-            if (collision.gameObject.GetComponent<BulletController>().m_State == BulletState.NormalBullet)
-                life -= 1;
-
-            if (collision.gameObject.GetComponent<BulletController>().m_State == BulletState.SecondBullet)
-                life -= GameManager.instance.secondGunDamage;
-
-            if (collision.gameObject.GetComponent<BulletController>().m_State == BulletState.ThirdBullet)
-                life -= GameManager.instance.thirdGunDamage;
+             life -= 1;
         }
 
         if (collision.transform.tag == "Border")

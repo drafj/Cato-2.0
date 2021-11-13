@@ -154,12 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b36b283ad5da394d99af20aaa86b2ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velReference: 5
+  lifeReference: 4
   velocity: 0
   life: 0
-  BossLife: 0
-  suicideMonsterVelocity: 0
-  suicideMonsterLife: 0
-  pursuerMonsterVelocity: 0
-  pursuerMonsterLife: 0
-  shooterMonsterVelocity: 0
-  shooterMonsterLife: 0
