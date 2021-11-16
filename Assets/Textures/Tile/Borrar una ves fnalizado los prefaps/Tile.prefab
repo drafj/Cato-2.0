@@ -41,6 +41,15 @@ Tilemap:
   m_GameObject: {fileID: 5772464345906225627}
   m_Enabled: 1
   m_Tiles:
+  - first: {x: 66, y: -18, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 351
+      m_TileSpriteIndex: 338
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
   - first: {x: 51, y: -17, z: 0}
     second:
       serializedVersion: 2
@@ -262,15 +271,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 352
       m_TileSpriteIndex: 339
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
-  - first: {x: 62, y: -16, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 351
-      m_TileSpriteIndex: 338
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3345,8 +3345,8 @@ Tilemap:
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -11, y: -17, z: 0}
-  m_Size: {x: 79, y: 36, z: 1}
+  m_Origin: {x: -11, y: -18, z: 0}
+  m_Size: {x: 79, y: 37, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
