@@ -1,0 +1,482 @@
+fileFormatVersion: 2
+guid: a441d8605c880064396f00e34e243c14
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5649517142966079689
+    second: Corazon_Death_0
+  - first:
+      213: -287723732665071309
+    second: Corazon_Death_1
+  - first:
+      213: 1629474211857081948
+    second: Corazon_Death_2
+  - first:
+      213: 8153159170270777359
+    second: Corazon_Death_3
+  - first:
+      213: 8423892002702858562
+    second: Corazon_Death_4
+  - first:
+      213: -4295778257143580908
+    second: Corazon_Death_5
+  - first:
+      213: -4177543725998746817
+    second: Corazon_Death_6
+  - first:
+      213: 7740328815240714326
+    second: Corazon_Death_7
+  - first:
+      213: 7994579490292807889
+    second: Corazon_Death_8
+  - first:
+      213: 1036411171446848221
+    second: Corazon_Death_9
+  - first:
+      213: 2523393344828405426
+    second: Corazon_Death_10
+  - first:
+      213: -3751414466975895102
+    second: Corazon_Death_11
+  - first:
+      213: 2518498879404257275
+    second: Corazon_Death_12
+  - first:
+      213: 8741782080266182739
+    second: Corazon_Death_13
+  - first:
+      213: -236046014364301
+    second: Corazon_Death_14
+  - first:
+      213: -3864685477392776648
+    second: Corazon_Death_15
+  - first:
+      213: -8709399478423943456
+    second: Corazon_Death_16
+  - first:
+      213: -9186129316834309029
+    second: Corazon_Death_17
+  - first:
+      213: -2360094199209921099
+    second: Corazon_Death_18
+  - first:
+      213: 8450641542532111661
+    second: Corazon_Death_19
+  - first:
+      213: -4841349599764814351
+    second: Corazon_Death_20
+  - first:
+      213: -6945774794341259488
+    second: Corazon_Death_21
+  - first:
+      213: 4712220552499501705
+    second: Corazon_Death_22
+  - first:
+      213: -5006107578180186655
+    second: Corazon_Death_23
+  - first:
+      213: -8525304501351611821
+    second: Corazon_Death_24
+  - first:
+      213: -7118937739083431916
+    second: Corazon_Death_25
+  - first:
+      213: -3462273210583961012
+    second: Corazon_Death_26
+  - first:
+      213: -1756716560504287665
+    second: Corazon_Death_27
+  - first:
+      213: 8149001865163520246
+    second: Corazon_Death_28
+  - first:
+      213: 6396515082103731132
+    second: Corazon_Death_29
+  - first:
+      213: 201431317046027394
+    second: Corazon_Death_30
+  - first:
+      213: 2092968192091350410
+    second: Corazon_Death_31
+  - first:
+      213: 6501566500138648525
+    second: Corazon_Death_32
+  - first:
+      213: 2112896444210191831
+    second: Corazon_Death_33
+  - first:
+      213: -1711552802306565493
+    second: Corazon_Death_34
+  - first:
+      213: -7981995015321384576
+    second: Corazon_Death_35
+  - first:
+      213: 7631014851633716632
+    second: Corazon_Death_36
+  - first:
+      213: 5018179853556389103
+    second: Corazon_Death_37
+  - first:
+      213: -3404722796715927380
+    second: Corazon_Death_38
+  - first:
+      213: 508554188197870227
+    second: Corazon_Death_39
+  - first:
+      213: 1949684990024114676
+    second: Corazon_Death_6
+  - first:
+      213: 4090404194218983832
+    second: Corazon_Death_7
+  - first:
+      213: -8100332078429221349
+    second: Corazon_Death_8
+  - first:
+      213: -6358268136069548538
+    second: Corazon_Death_9
+  - first:
+      213: -8504455937813185934
+    second: Corazon_Death_10
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Corazon_Death_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3
+        width: 105
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73fe6054712e891b0800000000000000
+      internalID: -5649517142966079689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Death_1
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 3
+        width: 107
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3398c012accc10cf0800000000000000
+      internalID: -287723732665071309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Death_2
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 3
+        width: 111
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c56a660992e0d9610800000000000000
+      internalID: 1629474211857081948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Death_3
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 3
+        width: 109
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00553d6117d52170800000000000000
+      internalID: 8153159170270777359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Death_4
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 3
+        width: 108
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2499b5f052da7e470800000000000000
+      internalID: 8423892002702858562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Death_5
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 38
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4173c156f645264c0800000000000000
+      internalID: -4295778257143580908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Death_6
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 37
+        width: 54
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f16c462b2cae0b10800000000000000
+      internalID: 1949684990024114676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Death_7
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 35
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 891c03851f804c830800000000000000
+      internalID: 4090404194218983832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Death_8
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 35
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1e468e54e6d59f80800000000000000
+      internalID: -8100332078429221349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Death_9
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 33
+        width: 62
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 606b3ea51d4e2c7a0800000000000000
+      internalID: -6358268136069548538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Death_10
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 33
+        width: 64
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27afea2126a1af980800000000000000
+      internalID: -8504455937813185934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

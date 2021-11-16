@@ -1,0 +1,4532 @@
+fileFormatVersion: 2
+guid: 65d214278c3a22743b573a3c9a052c6b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3959616195718793947
+    second: Real_Tile_0
+  - first:
+      213: 4441366765709861673
+    second: Real_Tile_1
+  - first:
+      213: -8930429038446359161
+    second: Real_Tile_2
+  - first:
+      213: -7369795978475756374
+    second: Real_Tile_3
+  - first:
+      213: 1207120826621560064
+    second: Real_Tile_4
+  - first:
+      213: -3035399407493480966
+    second: Real_Tile_5
+  - first:
+      213: -3943692041955019504
+    second: Real_Tile_6
+  - first:
+      213: 8900669181400427822
+    second: Real_Tile_7
+  - first:
+      213: 3749441047271578971
+    second: Real_Tile_8
+  - first:
+      213: -5513183985874781038
+    second: Real_Tile_9
+  - first:
+      213: 6485614607596186321
+    second: Real_Tile_10
+  - first:
+      213: -320278121981493793
+    second: Real_Tile_11
+  - first:
+      213: 4313741107310880950
+    second: Real_Tile_12
+  - first:
+      213: 8981229047115966802
+    second: Real_Tile_13
+  - first:
+      213: -3381768296282155772
+    second: Real_Tile_14
+  - first:
+      213: -79464195994498511
+    second: Real_Tile_15
+  - first:
+      213: 8948736594647280290
+    second: Real_Tile_16
+  - first:
+      213: -1954607798137930591
+    second: Real_Tile_17
+  - first:
+      213: 8195455156118311095
+    second: Real_Tile_18
+  - first:
+      213: 8347332875221308376
+    second: Real_Tile_19
+  - first:
+      213: 4416457722243653982
+    second: Real_Tile_20
+  - first:
+      213: 5934882174788939970
+    second: Real_Tile_21
+  - first:
+      213: 5888042431119675341
+    second: Real_Tile_22
+  - first:
+      213: -3663885683093292101
+    second: Real_Tile_23
+  - first:
+      213: -1627372844067024551
+    second: Real_Tile_24
+  - first:
+      213: 4076354689871073680
+    second: Real_Tile_25
+  - first:
+      213: -2309279330062220539
+    second: Real_Tile_26
+  - first:
+      213: -1726695382189296603
+    second: Real_Tile_27
+  - first:
+      213: -2432294243762683680
+    second: Real_Tile_28
+  - first:
+      213: -436748552504963234
+    second: Real_Tile_29
+  - first:
+      213: 7378834227135204653
+    second: Real_Tile_30
+  - first:
+      213: -3993196038831746271
+    second: Real_Tile_31
+  - first:
+      213: 6357615653246495907
+    second: Real_Tile_32
+  - first:
+      213: -69113394557950792
+    second: Real_Tile_33
+  - first:
+      213: -8800187335614201389
+    second: Real_Tile_34
+  - first:
+      213: -5772013435140177324
+    second: Real_Tile_35
+  - first:
+      213: -498242169411722434
+    second: Real_Tile_36
+  - first:
+      213: -4512388082965624614
+    second: Real_Tile_37
+  - first:
+      213: 5128077420623070507
+    second: Real_Tile_38
+  - first:
+      213: 7450533255785154066
+    second: Real_Tile_39
+  - first:
+      213: 3115859635393549033
+    second: Real_Tile_40
+  - first:
+      213: 1797256818321204584
+    second: Real_Tile_41
+  - first:
+      213: -4768536581029544282
+    second: Real_Tile_42
+  - first:
+      213: -103214854839605016
+    second: Real_Tile_43
+  - first:
+      213: 1164779898997903129
+    second: Real_Tile_44
+  - first:
+      213: -5691559534058359067
+    second: Real_Tile_45
+  - first:
+      213: 1512601924389784312
+    second: Real_Tile_46
+  - first:
+      213: -956267516750622859
+    second: Real_Tile_47
+  - first:
+      213: -5827981243057813338
+    second: Real_Tile_48
+  - first:
+      213: 4795075786883906479
+    second: Real_Tile_49
+  - first:
+      213: -8238619337369052586
+    second: Real_Tile_50
+  - first:
+      213: 435172046471335095
+    second: Real_Tile_51
+  - first:
+      213: 615205919174189938
+    second: Real_Tile_52
+  - first:
+      213: 43912714443391109
+    second: Real_Tile_53
+  - first:
+      213: -9114773293606502396
+    second: Real_Tile_54
+  - first:
+      213: -8666817138968042860
+    second: Real_Tile_55
+  - first:
+      213: 8659045974742523837
+    second: Real_Tile_56
+  - first:
+      213: -2637374555851787176
+    second: Real_Tile_57
+  - first:
+      213: -1497344804053363161
+    second: Real_Tile_58
+  - first:
+      213: 7711914858600228099
+    second: Real_Tile_59
+  - first:
+      213: -589816338621708709
+    second: Real_Tile_60
+  - first:
+      213: -7513855846721674824
+    second: Real_Tile_61
+  - first:
+      213: -5035334517596737995
+    second: Real_Tile_62
+  - first:
+      213: -771276239079991057
+    second: Real_Tile_63
+  - first:
+      213: 4907756711227367614
+    second: Real_Tile_64
+  - first:
+      213: -2628270361058662558
+    second: Real_Tile_65
+  - first:
+      213: -6553423115142617758
+    second: Real_Tile_66
+  - first:
+      213: 7897877016864245881
+    second: Real_Tile_67
+  - first:
+      213: -134242152606324818
+    second: Real_Tile_68
+  - first:
+      213: 8896038585628655718
+    second: Real_Tile_69
+  - first:
+      213: 4608900347109357205
+    second: Real_Tile_70
+  - first:
+      213: -8727862986775781143
+    second: Real_Tile_71
+  - first:
+      213: 2327313573973979375
+    second: Real_Tile_72
+  - first:
+      213: 2984331802074662947
+    second: Real_Tile_73
+  - first:
+      213: -2749145427359325601
+    second: Real_Tile_74
+  - first:
+      213: -1110950921355493093
+    second: Real_Tile_75
+  - first:
+      213: 7198035917567093613
+    second: Real_Tile_76
+  - first:
+      213: -4333487932914544583
+    second: Real_Tile_77
+  - first:
+      213: -95378663544572623
+    second: Real_Tile_78
+  - first:
+      213: 3361334991833503092
+    second: Real_Tile_79
+  - first:
+      213: -9031625767271254851
+    second: Real_Tile_80
+  - first:
+      213: -2858698999966817164
+    second: Real_Tile_81
+  - first:
+      213: -6488622933620302556
+    second: Real_Tile_82
+  - first:
+      213: -5404253746235266933
+    second: Real_Tile_83
+  - first:
+      213: 5082649937594482821
+    second: Real_Tile_84
+  - first:
+      213: -9220434098878969396
+    second: Real_Tile_85
+  - first:
+      213: 3167672581760289049
+    second: Real_Tile_86
+  - first:
+      213: -9134969626886328199
+    second: Real_Tile_87
+  - first:
+      213: 8027269355684674912
+    second: Real_Tile_88
+  - first:
+      213: 511425446926563324
+    second: Real_Tile_89
+  - first:
+      213: -913042358535406563
+    second: Real_Tile_90
+  - first:
+      213: 4593822743187338256
+    second: Real_Tile_91
+  - first:
+      213: 6233685107637249146
+    second: Real_Tile_92
+  - first:
+      213: -864497977155201440
+    second: Real_Tile_93
+  - first:
+      213: -8408084721959134316
+    second: Real_Tile_94
+  - first:
+      213: -6257910672497216011
+    second: Real_Tile_95
+  - first:
+      213: 5348368668916717313
+    second: Real_Tile_96
+  - first:
+      213: 6562886192106809933
+    second: Real_Tile_97
+  - first:
+      213: -9076110223580255622
+    second: Real_Tile_98
+  - first:
+      213: -6321019234759094126
+    second: Real_Tile_99
+  - first:
+      213: -6024293009190258083
+    second: Real_Tile_100
+  - first:
+      213: -6511983635320898780
+    second: Real_Tile_101
+  - first:
+      213: -838315478383178555
+    second: Real_Tile_102
+  - first:
+      213: 3813166151356932410
+    second: Real_Tile_103
+  - first:
+      213: -2959073249068003023
+    second: Real_Tile_104
+  - first:
+      213: -8153081627916492000
+    second: Real_Tile_105
+  - first:
+      213: -2276598818005171206
+    second: Real_Tile_106
+  - first:
+      213: -1363821135320175083
+    second: Real_Tile_107
+  - first:
+      213: -5669133940541757510
+    second: Real_Tile_108
+  - first:
+      213: 7216885416431348060
+    second: Real_Tile_109
+  - first:
+      213: -7780239180839906349
+    second: Real_Tile_110
+  - first:
+      213: -2631578101725380733
+    second: Real_Tile_111
+  - first:
+      213: -6027862005735630317
+    second: Real_Tile_112
+  - first:
+      213: -1260958842065277271
+    second: Real_Tile_113
+  - first:
+      213: 7047382441658291824
+    second: Real_Tile_114
+  - first:
+      213: 6306939226894043680
+    second: Real_Tile_115
+  - first:
+      213: -5672036345486145754
+    second: Real_Tile_116
+  - first:
+      213: -8019553249175847368
+    second: Real_Tile_117
+  - first:
+      213: 6748286278221472036
+    second: Real_Tile_118
+  - first:
+      213: -8798525161377789090
+    second: Real_Tile_119
+  - first:
+      213: -2583674815178892913
+    second: Real_Tile_120
+  - first:
+      213: 6249346523640928442
+    second: Real_Tile_121
+  - first:
+      213: 8010361189343000067
+    second: Real_Tile_122
+  - first:
+      213: -1852369116075772855
+    second: Real_Tile_123
+  - first:
+      213: 5395609665715016324
+    second: Real_Tile_124
+  - first:
+      213: -3354621568805292202
+    second: Real_Tile_125
+  - first:
+      213: 3791082869631813099
+    second: Real_Tile_126
+  - first:
+      213: -2639092262923563623
+    second: Real_Tile_127
+  - first:
+      213: -8921220528722574151
+    second: Real_Tile_128
+  - first:
+      213: -196221802870889203
+    second: Real_Tile_129
+  - first:
+      213: 1839398788311126602
+    second: Real_Tile_130
+  - first:
+      213: -6656184583902546560
+    second: Real_Tile_131
+  - first:
+      213: 7550003138536152806
+    second: Real_Tile_132
+  - first:
+      213: -5579364812764220215
+    second: Real_Tile_133
+  - first:
+      213: 1951886689899327519
+    second: Real_Tile_134
+  - first:
+      213: 9205797708655103929
+    second: Real_Tile_135
+  - first:
+      213: 9044842489898788740
+    second: Real_Tile_136
+  - first:
+      213: 6029112415168863719
+    second: Real_Tile_137
+  - first:
+      213: -59599968208271277
+    second: Real_Tile_138
+  - first:
+      213: -7726114755615340815
+    second: Real_Tile_139
+  - first:
+      213: 6027158269247527710
+    second: Real_Tile_140
+  - first:
+      213: -5167067069836395631
+    second: Real_Tile_141
+  - first:
+      213: 6174698675410740362
+    second: Real_Tile_142
+  - first:
+      213: 2333633400119693103
+    second: Real_Tile_143
+  - first:
+      213: 5612392989711705095
+    second: Real_Tile_144
+  - first:
+      213: -3004907680754333506
+    second: Real_Tile_145
+  - first:
+      213: -3467545546902862633
+    second: Real_Tile_146
+  - first:
+      213: -1087607511292293331
+    second: Real_Tile_147
+  - first:
+      213: -2410435855883237590
+    second: Real_Tile_148
+  - first:
+      213: 3664430654529503590
+    second: Real_Tile_149
+  - first:
+      213: 2139773643588742365
+    second: Real_Tile_150
+  - first:
+      213: -4460213515879414817
+    second: Real_Tile_151
+  - first:
+      213: -760622415929027281
+    second: Real_Tile_152
+  - first:
+      213: -7379241593776886584
+    second: Real_Tile_153
+  - first:
+      213: 4921969887748945441
+    second: Real_Tile_154
+  - first:
+      213: -6870014599137948038
+    second: Real_Tile_155
+  - first:
+      213: -6847271600820778833
+    second: Real_Tile_156
+  - first:
+      213: -3330477759124171953
+    second: Real_Tile_157
+  - first:
+      213: 8933770660909355854
+    second: Real_Tile_158
+  - first:
+      213: -7889473470935397005
+    second: Real_Tile_159
+  - first:
+      213: 1812352185329051050
+    second: Real_Tile_160
+  - first:
+      213: -6608955695773507794
+    second: Real_Tile_161
+  - first:
+      213: 1124961211486413311
+    second: Real_Tile_162
+  - first:
+      213: -5277384856765194164
+    second: Real_Tile_163
+  - first:
+      213: 8156035523314049584
+    second: Real_Tile_164
+  - first:
+      213: -644741493350484210
+    second: Real_Tile_165
+  - first:
+      213: -2340903808222926396
+    second: Real_Tile_166
+  - first:
+      213: 235980810717872717
+    second: Real_Tile_167
+  - first:
+      213: 3990329574191900772
+    second: Real_Tile_168
+  - first:
+      213: -8345652887484754002
+    second: Real_Tile_169
+  - first:
+      213: 7618607590567873320
+    second: Real_Tile_170
+  - first:
+      213: 4882699504663322529
+    second: Real_Tile_171
+  - first:
+      213: -6067161560166743094
+    second: Real_Tile_172
+  - first:
+      213: 5842690545019769778
+    second: Real_Tile_173
+  - first:
+      213: -7756372455539741849
+    second: Real_Tile_174
+  - first:
+      213: -3608285359318164638
+    second: Real_Tile_175
+  - first:
+      213: 2569510536305945619
+    second: Real_Tile_176
+  - first:
+      213: -918582467514593046
+    second: Real_Tile_177
+  - first:
+      213: 3458729834556615750
+    second: Real_Tile_178
+  - first:
+      213: -1195191509617123331
+    second: Real_Tile_179
+  - first:
+      213: 2698683282920011029
+    second: Real_Tile_180
+  - first:
+      213: -2658276285212378866
+    second: Real_Tile_181
+  - first:
+      213: 79971573323742425
+    second: Real_Tile_182
+  - first:
+      213: -4439649682416722023
+    second: Real_Tile_183
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 22
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Real_Tile_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 276
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdac3b873f163f630800000000000000
+      internalID: 3959616195718793947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_1
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 276
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 923ac53ca87e2ad30800000000000000
+      internalID: 4441366765709861673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_2
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 276
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d429fda1eb01480800000000000000
+      internalID: -8930429038446359161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_3
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 276
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa4a9dbba9939b990800000000000000
+      internalID: -7369795978475756374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_4
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 276
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00501c70ffd80c010800000000000000
+      internalID: 1207120826621560064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_5
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 276
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd7be4325810e5d0800000000000000
+      internalID: -3035399407493480966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_6
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 276
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0157cbf7bf03549c0800000000000000
+      internalID: -3943692041955019504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_7
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 276
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2da3a47677858b70800000000000000
+      internalID: 8900669181400427822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_8
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 276
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d14e064c0b80430800000000000000
+      internalID: 3749441047271578971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_9
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 276
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29cbf8cff5c3d73b0800000000000000
+      internalID: -5513183985874781038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_10
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 276
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1daead39f18810a50800000000000000
+      internalID: 6485614607596186321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_11
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 276
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fddb6f5beb42e8bf0800000000000000
+      internalID: -320278121981493793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_12
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 276
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b8e3429eac7ddb30800000000000000
+      internalID: 4313741107310880950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_13
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 276
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25964c7db3cb3ac70800000000000000
+      internalID: 8981229047115966802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_14
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 276
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4059c63e6ab8111d0800000000000000
+      internalID: -3381768296282155772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_15
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 276
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ac2691cbfa5eef0800000000000000
+      internalID: -79464195994498511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_16
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 276
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa6d78358c403c70800000000000000
+      internalID: 8948736594647280290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_17
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 276
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1acb7c44096dfd4e0800000000000000
+      internalID: -1954607798137930591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_18
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 276
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b053190b0b1cb170800000000000000
+      internalID: 8195455156118311095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 253
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d39181260fa7d370800000000000000
+      internalID: 8347332875221308376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_20
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 253
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e512dd326e86a4d30800000000000000
+      internalID: 4416457722243653982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_21
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 253
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c0b714c4efec5250800000000000000
+      internalID: 5934882174788939970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_22
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 253
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcfc059156786b150800000000000000
+      internalID: 5888042431119675341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_23
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 253
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbbb5912263472dc0800000000000000
+      internalID: -3663885683093292101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_24
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 253
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 951944045096a69e0800000000000000
+      internalID: -1627372844067024551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_25
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 253
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09153443efe129830800000000000000
+      internalID: 4076354689871073680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_26
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 253
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5034d743faac3ffd0800000000000000
+      internalID: -2309279330062220539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_27
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 253
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 524bc45c2bb8908e0800000000000000
+      internalID: -1726695382189296603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_28
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 253
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e04c4ba541ce3ed0800000000000000
+      internalID: -2432294243762683680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_29
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 253
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f86c7618b50f9f0800000000000000
+      internalID: -436748552504963234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_30
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 253
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d43e482a2e66660800000000000000
+      internalID: 7378834227135204653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_31
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 253
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123dfea0c515598c0800000000000000
+      internalID: -3993196038831746271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_32
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 253
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ac6836a0c9ca3850800000000000000
+      internalID: 6357615653246495907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_33
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 253
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b4e62cdbb57a0ff0800000000000000
+      internalID: -69113394557950792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_34
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 253
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d103df5e347fd580800000000000000
+      internalID: -8800187335614201389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_35
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 253
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45200b7bc50b5efa0800000000000000
+      internalID: -5772013435140177324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_36
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 253
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3328100363e519f0800000000000000
+      internalID: -498242169411722434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_37
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 253
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad8c02a32f6c061c0800000000000000
+      internalID: -4512388082965624614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2580fc8e379a2740800000000000000
+      internalID: 5128077420623070507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_39
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2160f42858c956760800000000000000
+      internalID: 7450533255785154066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_40
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e25c9174d1cd3b20800000000000000
+      internalID: 3115859635393549033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_41
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8652f22dd8321f810800000000000000
+      internalID: 1797256818321204584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_42
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae374d8e31c2ddb0800000000000000
+      internalID: -4768536581029544282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_43
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e8edb9e2ae419ef0800000000000000
+      internalID: -103214854839605016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_44
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f094995212a2010800000000000000
+      internalID: 1164779898997903129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_45
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6b67a42c48301b0800000000000000
+      internalID: -5691559534058359067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_46
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa43d5af67ddf410800000000000000
+      internalID: 1512601924389784312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_47
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f85d192c7aab2f0800000000000000
+      internalID: -956267516750622859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_48
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a846e9ffe9de1fa0800000000000000
+      internalID: -5827981243057813338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_49
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fabba44d5088b8240800000000000000
+      internalID: 4795075786883906479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_50
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a147cdc5b8aad80800000000000000
+      internalID: -8238619337369052586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_51
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bc8a1eabaa0a0600800000000000000
+      internalID: 435172046471335095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_52
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27368142686a98800800000000000000
+      internalID: 615205919174189938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_53
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 580858191620c9000800000000000000
+      internalID: 43912714443391109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_54
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4000e5a4bf1d18180800000000000000
+      internalID: -9114773293606502396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_55
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 492ea8a1bb749b780800000000000000
+      internalID: -8666817138968042860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_56
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbfdd4abf6c1b2870800000000000000
+      internalID: 8659045974742523837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 207
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 854fcca90d9266bd0800000000000000
+      internalID: -2637374555851787176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_58
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 207
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7265f1085dc583be0800000000000000
+      internalID: -1497344804053363161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_59
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 207
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3056ce454b9360b60800000000000000
+      internalID: 7711914858600228099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_60
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 207
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b564bbd3a2d80d7f0800000000000000
+      internalID: -589816338621708709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_61
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 207
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b1a9a2eaeb69b790800000000000000
+      internalID: -7513855846721674824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_62
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 207
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53e22614fe5ee1ab0800000000000000
+      internalID: -5035334517596737995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_63
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 207
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe810f1d850eb45f0800000000000000
+      internalID: -771276239079991057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_64
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 207
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb02fb8f9badb1440800000000000000
+      internalID: 4907756711227367614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_65
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 207
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26729632802868bd0800000000000000
+      internalID: -2628270361058662558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_66
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 207
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2652717f5609d05a0800000000000000
+      internalID: -6553423115142617758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_67
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 207
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9784ae55d45ea9d60800000000000000
+      internalID: 7897877016864245881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_68
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 207
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea724043973132ef0800000000000000
+      internalID: -134242152606324818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_69
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 207
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 660809cd5f3157b70800000000000000
+      internalID: 8896038585628655718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_70
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 207
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 596b0aa527a16ff30800000000000000
+      internalID: 4608900347109357205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_71
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 207
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e023f01bd660e680800000000000000
+      internalID: -8727862986775781143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_72
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 207
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0f9a96d574c4020800000000000000
+      internalID: 2327313573973979375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_73
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 207
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 328cf8a56f97a6920800000000000000
+      internalID: 2984331802074662947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_74
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 184
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f52ab56acc219d9d0800000000000000
+      internalID: -2749145427359325601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_75
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 184
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1186b9e50c1590f0800000000000000
+      internalID: -1110950921355493093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_76
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 184
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6be61bb78f84e360800000000000000
+      internalID: 7198035917567093613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_77
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 184
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 930df205fab5cd3c0800000000000000
+      internalID: -4333487932914544583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_78
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 184
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13536406c952daef0800000000000000
+      internalID: -95378663544572623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_79
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 184
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 475935fad5cd5ae20800000000000000
+      internalID: 3361334991833503092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_80
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 184
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db4388d573839a280800000000000000
+      internalID: -9031625767271254851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_81
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 184
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 474a633d76cd358d0800000000000000
+      internalID: -2858698999966817164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_82
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 184
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ddb10f1d7c3f5a0800000000000000
+      internalID: -6488622933620302556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_83
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 184
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b88a29bc9db3005b0800000000000000
+      internalID: -5404253746235266933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_84
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 184
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5800bff6033398640800000000000000
+      internalID: 5082649937594482821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_85
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 184
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc98b6df9007a0080800000000000000
+      internalID: -9220434098878969396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_86
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 184
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91901981e65d5fb20800000000000000
+      internalID: 3167672581760289049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_87
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 184
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970357306811a3180800000000000000
+      internalID: -9134969626886328199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_88
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 184
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06db6fdd2f6966f60800000000000000
+      internalID: 8027269355684674912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_89
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 184
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7372dfbb2f81700800000000000000
+      internalID: 511425446926563324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_90
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 184
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1cbc9affc83453f0800000000000000
+      internalID: -913042358535406563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_91
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 184
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 014bac0227980cf30800000000000000
+      internalID: 4593822743187338256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_92
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 184
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a746c52f39f728650800000000000000
+      internalID: 6233685107637249146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_93
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 161
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 066de9a8bafa004f0800000000000000
+      internalID: -864497977155201440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_94
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 161
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49b9c3a4e7b705b80800000000000000
+      internalID: -8408084721959134316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_95
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 161
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f57da1366f6729a0800000000000000
+      internalID: -6257910672497216011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_96
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 161
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1071c9ea7f8393a40800000000000000
+      internalID: 5348368668916717313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_97
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 161
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4aa7d5583e041b50800000000000000
+      internalID: 6562886192106809933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_98
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 161
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a2535c6dd2b0280800000000000000
+      internalID: -9076110223580255622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_99
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 161
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 290d5c50f7a3748a0800000000000000
+      internalID: -6321019234759094126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_100
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 161
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a785c1d69656ca0800000000000000
+      internalID: -6024293009190258083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_101
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 161
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42b7a89b269c0a5a0800000000000000
+      internalID: -6511983635320898780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_102
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 161
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc42459384bd54f0800000000000000
+      internalID: -838315478383178555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_103
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 161
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a316c2169661be430800000000000000
+      internalID: 3813166151356932410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_104
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 161
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 131d0fcce824fe6d0800000000000000
+      internalID: -2959073249068003023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_105
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 161
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023264fc47f6ade80800000000000000
+      internalID: -8153081627916492000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_106
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 161
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af34abcdf65e760e0800000000000000
+      internalID: -2276598818005171206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_107
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 161
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51e221c37ebb21de0800000000000000
+      internalID: -1363821135320175083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_108
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 162
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7e5e9a7b03351b0800000000000000
+      internalID: -5669133940541757510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_109
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 162
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c59661fac07872460800000000000000
+      internalID: 7216885416431348060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_110
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 162
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d3167ebfa9070490800000000000000
+      internalID: -7780239180839906349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_111
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 138
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f36ffb8a1ca7bd0800000000000000
+      internalID: -2631578101725380733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_112
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 138
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31add09517bb85ca0800000000000000
+      internalID: -6027862005735630317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_113
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 138
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aeaf4e2d9c208ee0800000000000000
+      internalID: -1260958842065277271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_114
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 138
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0761e57fdf45dc160800000000000000
+      internalID: 7047382441658291824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_115
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 138
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a0ffeafcfb68750800000000000000
+      internalID: 6306939226894043680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_116
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 138
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 627813adef0e841b0800000000000000
+      internalID: -5672036345486145754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_117
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 138
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83e3b8d2fc2d4b090800000000000000
+      internalID: -8019553249175847368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_118
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 138
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 421a808bd9ab6ad50800000000000000
+      internalID: 6748286278221472036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_119
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 138
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b8db87bfb55e580800000000000000
+      internalID: -8798525161377789090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_120
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 138
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f89932ac171f42cd0800000000000000
+      internalID: -2583674815178892913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_121
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 138
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab890f38d832ab650800000000000000
+      internalID: 6249346523640928442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_122
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 138
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3067d5d9f058a2f60800000000000000
+      internalID: 8010361189343000067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_123
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 138
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 944366b6a101b46e0800000000000000
+      internalID: -1852369116075772855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_124
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 138
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4829b9f576e01ea40800000000000000
+      internalID: 5395609665715016324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_125
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 138
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6573f7be47df171d0800000000000000
+      internalID: -3354621568805292202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_126
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 138
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be5097ea8c1ac9430800000000000000
+      internalID: 3791082869631813099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_127
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 115
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d85f2c19f006bd0800000000000000
+      internalID: -2639092262923563623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_128
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 115
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b4819e1235713480800000000000000
+      internalID: -8921220528722574151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_129
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 115
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05a1b65f41e64df0800000000000000
+      internalID: -196221802870889203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_130
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 115
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a429191d37bd68910800000000000000
+      internalID: 1839398788311126602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_131
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 115
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 085be0d036b70a3a0800000000000000
+      internalID: -6656184583902546560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_132
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 115
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ee18855adff6c860800000000000000
+      internalID: 7550003138536152806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_133
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 115
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c4ffd6734d1292b0800000000000000
+      internalID: -5579364812764220215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_134
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 115
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1033495a9e761b10800000000000000
+      internalID: 1951886689899327519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_135
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 115
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf0e7add3091cf70800000000000000
+      internalID: 9205797708655103929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_136
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 115
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487e6cba25cb58d70800000000000000
+      internalID: 9044842489898788740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_137
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 115
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ed99094cc5bba350800000000000000
+      internalID: 6029112415168863719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_138
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 115
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358425a05224c2ff0800000000000000
+      internalID: -59599968208271277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_139
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 115
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f6c4a1809357c490800000000000000
+      internalID: -7726114755615340815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_140
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 115
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b9e8b3384c4a350800000000000000
+      internalID: 6027158269247527710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_141
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 115
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b78c350e3ea48b0800000000000000
+      internalID: -5167067069836395631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_142
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 115
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a84aee6fabfe0b550800000000000000
+      internalID: 6174698675410740362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_143
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 92
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2f0f1a963bb26020800000000000000
+      internalID: 2333633400119693103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_144
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 92
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 704a8ab30b933ed40800000000000000
+      internalID: 5612392989711705095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_145
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 92
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb88bc1926c6c46d0800000000000000
+      internalID: -3004907680754333506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_146
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 92
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d40e5a62bdc0efc0800000000000000
+      internalID: -3467545546902862633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_147
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 92
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f406a1bba08e0f0800000000000000
+      internalID: -1087607511292293331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_148
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 92
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2707303c596c8ed0800000000000000
+      internalID: -2410435855883237590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_149
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 92
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661884be34caad230800000000000000
+      internalID: 3664430654529503590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_150
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 92
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddca9d5bac002bd10800000000000000
+      internalID: 2139773643588742365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_151
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 92
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd38c9340732a12c0800000000000000
+      internalID: -4460213515879414817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_152
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 92
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f25d95251f9b175f0800000000000000
+      internalID: -760622415929027281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_153
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 92
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc242b0edaa79990800000000000000
+      internalID: -7379241593776886584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_154
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 92
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126f17209895e4440800000000000000
+      internalID: 4921969887748945441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_155
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 92
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7e82a8fe1ec8a0a0800000000000000
+      internalID: -6870014599137948038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_156
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 92
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa80578e1ca99f0a0800000000000000
+      internalID: -6847271600820778833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_157
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 69
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f43901baf14c7c1d0800000000000000
+      internalID: -3330477759124171953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_158
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 69
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e431f4c35112bfb70800000000000000
+      internalID: 8933770660909355854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_159
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 69
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d070cada5f28290800000000000000
+      internalID: -7889473470935397005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_160
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 69
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa5e076d5b4c62910800000000000000
+      internalID: 1812352185329051050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_161
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 69
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2f10297fc54844a0800000000000000
+      internalID: -6608955695773507794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_162
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 69
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff1adb4f24aac9f00800000000000000
+      internalID: 1124961211486413311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_163
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 69
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c402c7dfe66f2c6b0800000000000000
+      internalID: -5277384856765194164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_164
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 69
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 032e99e881f003170800000000000000
+      internalID: 8156035523314049584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_165
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 69
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e07b3ec170b6d07f0800000000000000
+      internalID: -644741493350484210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_166
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 69
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c963899360738fd0800000000000000
+      internalID: -2340903808222926396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_167
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 69
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d42c5ac0c4f564300800000000000000
+      internalID: 235980810717872717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_168
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 69
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468a1762b9f706730800000000000000
+      internalID: 3990329574191900772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_169
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 69
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea712ce7ae84e2c80800000000000000
+      internalID: -8345652887484754002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_170
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 69
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82b84ee0d3bbab960800000000000000
+      internalID: 7618607590567873320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_171
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 46
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1afde607455d2c340800000000000000
+      internalID: 4882699504663322529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_172
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 46
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac34b5bc4bc1dcba0800000000000000
+      internalID: -6067161560166743094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_173
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 46
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3df644818651150800000000000000
+      internalID: 5842690545019769778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_174
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 46
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76bede1c854db5490800000000000000
+      internalID: -7756372455539741849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_175
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 46
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b199d459bccedc0800000000000000
+      internalID: -3608285359318164638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_176
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 46
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31ca32b083cb8a320800000000000000
+      internalID: 2569510536305945619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_177
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 46
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae014e6dc1a8043f0800000000000000
+      internalID: -918582467514593046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_178
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 46
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ceaca9570efff20800000000000000
+      internalID: 3458729834556615750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_179
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 46
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff55b687a3d96fe0800000000000000
+      internalID: -1195191509617123331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_180
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 46
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5157bb7c526a37520800000000000000
+      internalID: 2698683282920011029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_181
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 46
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0932118dc7eb1bd0800000000000000
+      internalID: -2658276285212378866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_182
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 46
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc3714e8bd1c1100800000000000000
+      internalID: 79971573323742425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Real_Tile_183
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 46
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f1068d2223362c0800000000000000
+      internalID: -4439649682416722023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
