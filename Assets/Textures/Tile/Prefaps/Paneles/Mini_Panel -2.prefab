@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 7614141049676331327}
   - component: {fileID: 5626273673323628670}
   m_Layer: 0
-  m_Name: Sombra -2
+  m_Name: Sombra -3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -235,7 +235,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -3
   m_Sprite: {fileID: -7763350494385769991, guid: e5349410308a543439cb73293e8d980b,
     type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
