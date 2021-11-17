@@ -9,7 +9,8 @@ public class Heart : Enemies
     [SerializeField] private Transform rightCanon;
     [SerializeField] private BulletsPooler bulletsPooler;
     [SerializeField] private Rigidbody2D rgbd;
-    [HideInInspector] public int counterToMoveAgain;
+    [HideInInspector] public int counterToMoveAgain,
+        counterToRay;
     private bool stopMoving,
         pursuerRot,
         dontShoot;
@@ -70,6 +71,11 @@ public class Heart : Enemies
             life += 5;
             yield return new WaitForSeconds(0.2f);
         }
+    }
+
+    public void IncapacitatingBeam()
+    {
+        GameManager.instance.player.GetComponent<Player>().SilenceStarter();
     }
 
     public void Stop()

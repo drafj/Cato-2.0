@@ -17,9 +17,19 @@ public class MiniHeart : Bullet
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out Heart heart) || collision.TryGetComponent(out Player player))
+        Heart boss = target.parent.GetComponent<Heart>();
+        if (collision.TryGetComponent(out Heart heart))
         {
-            Heart boss = target.parent.GetComponent<Heart>();
+            boss.counterToMoveAgain++;
+            boss.counterToRay++;
+            if (boss.counterToRay >= 2)
+                //lanzar rayo
+            if (boss.counterToMoveAgain >= 4)
+                boss.Continue();
+            Destroy(gameObject);
+        }
+        else if (collision.TryGetComponent(out Player player))
+        {
             boss.counterToMoveAgain++;
             if (boss.counterToMoveAgain >= 4)
                 boss.Continue();
