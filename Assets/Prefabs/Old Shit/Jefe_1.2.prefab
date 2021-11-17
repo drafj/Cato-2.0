@@ -1015,7 +1015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velReference: 5
-  lifeReference: 65
+  lifeReference: 85
   velocity: 0
   life: 0
   cadence: 0

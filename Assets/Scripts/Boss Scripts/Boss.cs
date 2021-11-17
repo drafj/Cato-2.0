@@ -175,4 +175,4 @@ public class Boss : Enemies
 
 public enum Stage {Approaching, Attacking}
 public enum Phase {FirstPhase, SecondPhase}
-public enum displacement {R, L};
+public enum displacement { R, L };

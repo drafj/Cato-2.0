@@ -241,7 +241,7 @@ public class Player : MonoBehaviour
                 actualShield = Instantiate(GameManager.instance.shield, transform);
                 actualShield.transform.localPosition = new Vector3(0, 1.27f, -9.041016f);
             }
-            else if (shieldColdDown)
+            else if (shieldColdDown && actualShield != null)
                 actualShield.GetComponent<Shield>().BulletLauncher();
 
             if (!minimeColdown && m_abilities == Abilities.Minime && !GameManager.instance.pause && !GameManager.instance.gameOver)
