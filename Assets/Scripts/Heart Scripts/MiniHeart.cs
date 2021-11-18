@@ -13,6 +13,7 @@ public class MiniHeart : Bullet
     {
         target = GameObject.Find("MiniHeartTarget").transform;
         Aim(target.position);
+        transform.GetChild(0).rotation = GameManager.instance.transform.rotation;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,9 +24,15 @@ public class MiniHeart : Bullet
             boss.counterToMoveAgain++;
             boss.counterToRay++;
             if (boss.counterToRay >= 2)
-                //lanzar rayo
+            {
+                boss.counterToRay = 0;
+                boss.IncapacitatingBeam();
+            }
             if (boss.counterToMoveAgain >= 4)
+            {
+                boss.counterToRay = 0;
                 boss.Continue();
+            }
             Destroy(gameObject);
         }
         else if (collision.TryGetComponent(out Player player))

@@ -4,23 +4,75 @@ using UnityEngine;
 
 public class Heart : Enemies
 {
-    [SerializeField] private GameObject miniHearPref;
-    [SerializeField] private Transform leftCanon;
-    [SerializeField] private Transform rightCanon;
+    [SerializeField] private GameObject miniHearPref,
+        rayPref,
+        chargedBulletPref,
+        leftHeart,
+        rightHeart,
+        shieldParticle;
+    [SerializeField] private GameObject[] shields = new GameObject[4];
+    [SerializeField] private Transform leftCannon,
+        rightCannon,
+        rayCannon;
     [SerializeField] private BulletsPooler bulletsPooler;
     [SerializeField] private Rigidbody2D rgbd;
+    [SerializeField] private Animator anim;
     [HideInInspector] public int counterToMoveAgain,
         counterToRay;
+    private int actualShield = 0;
+    private GameObject actualChargedB = null;
     private bool stopMoving,
         pursuerRot,
-        dontShoot;
+        dontShoot,
+        healing;
 
     void Start()
     {
         LifeAndVelocityAsigner();
-        //Continue();
+        Continue();
         StartCoroutine(Shoot());
-        StartCoroutine(HeartAttack());
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.TryGetComponent(out BulletController bullet))
+        {
+            if (!healing)
+            {
+                life -= 55;
+                if (life <= 0)
+                {
+                    if (actualShield < 4)
+                    {
+                        LifeAndVelocityAsigner();
+                        shields[actualShield].SetActive(false);
+                        actualShield++;
+                        if (actualShield < 4)
+                        shields[actualShield].SetActive(true);
+                    }
+                    else
+                    {
+                        leftCannon.parent.gameObject.SetActive(false);
+                        rightCannon.parent.gameObject.SetActive(false);
+                        dontShoot = true;
+                        Stop();
+                        anim.SetTrigger("Death");
+                    }
+                }
+            }
+            else
+            {
+                if (actualChargedB == null)
+                { 
+                    actualChargedB = Instantiate(chargedBulletPref, transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    if (actualChargedB.GetComponent<ChargedBullet>().stage == ChargedBS.Chase)
+                    actualChargedB.transform.localScale += new Vector3(0.2f, 0.2f, 0);
+                }
+            }
+        }
     }
 
     IEnumerator Shoot()
@@ -30,11 +82,12 @@ public class Heart : Enemies
             if (!dontShoot)
             {
                 if (pursuerRot)
-                    StartCoroutine(ShootPursuer(leftCanon.position, Quaternion.Euler(0, 0, 135)));
+                    StartCoroutine(ShootPursuer(leftCannon.position, Quaternion.Euler(0, 0, 135)));
                 else
-                    StartCoroutine(ShootPursuer(leftCanon.position, Quaternion.Euler(0, 0, -135)));
+                    StartCoroutine(ShootPursuer(leftCannon.position, Quaternion.Euler(0, 0, -135)));
                 yield return new WaitForSeconds(2f);
-                bulletsPooler.SpawnShapeB(rightCanon.position, Quaternion.identity);
+                if (!dontShoot)
+                bulletsPooler.SpawnShapeB(rightCannon.position, Quaternion.identity);
                 yield return new WaitForSeconds(2f);
                 pursuerRot = !pursuerRot;
             }
@@ -66,15 +119,51 @@ public class Heart : Enemies
 
     IEnumerator Heal()
     {
-        for (int i = 0; i < 10; i++)
+        Invoke(nameof(StopHealing), 10);
+        Stop();
+        leftHeart.SetActive(true);
+        rightHeart.SetActive(true);
+        shieldParticle.SetActive(true);
+        healing = true;
+        dontShoot = true;
+        while (true)
         {
-            life += 5;
+            if (healing)
+            {
+                life += 5;
+            }
+            else
+            {
+                leftHeart.SetActive(false);
+                rightHeart.SetActive(false);
+                shieldParticle.SetActive(false);
+                if (actualChargedB != null)
+                    actualChargedB.GetComponent<ChargedBullet>().ChargeStarter();
+                dontShoot = false;
+                Continue();
+                break;
+            }
             yield return new WaitForSeconds(0.2f);
         }
+        dontShoot = false;
+    }
+
+    public void CheckIfStopHeal()
+    {
+        if (!leftHeart.activeSelf && !rightHeart.activeSelf)
+        {
+            healing = false;
+        }
+    }
+
+    void StopHealing()
+    {
+        healing = false;
     }
 
     public void IncapacitatingBeam()
     {
+        Instantiate(rayPref, rayCannon.position, Quaternion.identity);
         GameManager.instance.player.GetComponent<Player>().SilenceStarter();
     }
 
@@ -88,9 +177,14 @@ public class Heart : Enemies
     {
         stopMoving = false;
         if (direction == "right")
-        rgbd.AddForce(transform.right * velocity * Time.deltaTime);
+        rgbd.AddForce(transform.right * velocity * Time.fixedDeltaTime);
         else
-        rgbd.AddForce(transform.right * -velocity * Time.deltaTime);
+        rgbd.AddForce(transform.right * -velocity * Time.fixedDeltaTime);
+    }
+
+    public void Death()
+    {
+        gameObject.SetActive(false);
     }
 
     private void FixedUpdate()
@@ -103,19 +197,23 @@ public class Heart : Enemies
     {
         if (transform.position.x >= 3f)
         {
-            rgbd.AddForce(transform.right * -velocity * Time.deltaTime);
+            rgbd.AddForce(transform.right * -velocity * Time.fixedDeltaTime);
         }
         else if (transform.position.x <= -3f)
         {
-            rgbd.AddForce(transform.right * velocity * Time.deltaTime);
+            rgbd.AddForce(transform.right * velocity * Time.fixedDeltaTime);
         }
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            //Stop();
+            StartCoroutine(HeartAttack());
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            StartCoroutine(Heal());
         }
     }
 }

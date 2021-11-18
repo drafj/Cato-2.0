@@ -8,6 +8,10 @@ public class ShapeBullet : Bullet
 
     private void OnEnable()
     {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).gameObject.SetActive(true);
+        }
         Aim(GameManager.instance.player.transform.position);
     }
 

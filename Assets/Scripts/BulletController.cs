@@ -5,11 +5,9 @@ using UnityEngine.Analytics;
 
 public class BulletController : MonoBehaviour
 {
-    public float enemyDistance = 50;
     public bool onCourse;
     public bool flip;
     private Animator anim;
-    public Quaternion limitRotations;
     public BulletFlipDirection mFlipDirection;
 
     public void StartBullet()
@@ -29,17 +27,14 @@ public class BulletController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (transform.tag == "Player Bullet")
+        if (collision.TryGetComponent(out Enemies enemies) || collision.TryGetComponent(out HeartHealer heartHealer))
         {
-            if (collision.transform.tag == "Enemy")
-            {
-                Instantiate(GameManager.instance.shotPP, transform.position, Quaternion.identity);
-                transform.position = new Vector3(1000, 1000);
-                gameObject.SetActive(false);
-            }
+            Instantiate(GameManager.instance.shotPP, transform.position, Quaternion.identity);
+            transform.position = new Vector3(1000, 1000);
+            gameObject.SetActive(false);
         }
 
-        if (transform.tag == "Enemy Bullet")
+        /*if (transform.tag == "Enemy Bullet")
         {
             if (collision.transform.tag == "Player")
             {
@@ -57,46 +52,17 @@ public class BulletController : MonoBehaviour
                 transform.position = new Vector3(1000, 1000);
                 gameObject.SetActive(false);
             }
-        }
+        }*/
 
         if (collision.transform.tag == "Border")
         {
             transform.position = new Vector2(1000, 1000);
             gameObject.SetActive(false);
         }
-
-        else if (collision.transform.tag == "Border" && transform.tag == "Enemy Bullet")
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (transform.tag == "Player Bullet")
-        {
-            if (collision.transform.tag == "Enemy")
-            {
-                Instantiate(GameManager.instance.shotPP, transform.position, Quaternion.identity);
-                transform.position = new Vector3(1000, 1000);
-                gameObject.SetActive(false);
-            }
-        }
-    }
-
-    void Update()
-    {
-
-        /*if (GameManager.instance.pause && transform.tag == "Player Bullet")
-            anim.GetComponent<Animator>().enabled = false;
-        else if (transform.tag == "Player Bullet")
-            anim.GetComponent<Animator>().enabled = true;*/
     }
 
     void FixedUpdate()
     {
-        //Debug.Log(transform.rotation);
-
         if (!GameManager.instance.pause)
         {
             NormalBullet();
@@ -135,12 +101,4 @@ foreach (var enemy in FindObjectsOfType<Enemies>())
         enemyCloser = enemy.gameObject;
     }
 }
-
-if (enemyCloser != null)
-{
-    Vector3 diff = enemyCloser.transform.position - transform.position;
-    diff.Normalize();
-
-    float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-    transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
-}*/
+*/

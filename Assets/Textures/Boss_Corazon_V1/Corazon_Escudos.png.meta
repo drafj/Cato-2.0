@@ -1,7 +1,82 @@
 fileFormatVersion: 2
 guid: bd6480593b590c349a6d9b3751ddfae2
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7311495763589594372
+    second: Corazon_Escudos_0
+  - first:
+      213: -6081014672551009610
+    second: Corazon_Escudos_1
+  - first:
+      213: -6119471646133582613
+    second: Corazon_Escudos_2
+  - first:
+      213: -2522923702324263554
+    second: Corazon_Escudos_3
+  - first:
+      213: -6927655134729590313
+    second: Corazon_Escudos_4
+  - first:
+      213: 579304439264427142
+    second: Corazon_Escudos_5
+  - first:
+      213: 9010685713480070547
+    second: Corazon_Escudos_6
+  - first:
+      213: -8605812348449334362
+    second: Corazon_Escudos_7
+  - first:
+      213: -3792831574057790246
+    second: Corazon_Escudos_8
+  - first:
+      213: -854089276689444827
+    second: Corazon_Escudos_9
+  - first:
+      213: 268800285546609216
+    second: Corazon_Escudos_10
+  - first:
+      213: -4032077966269803006
+    second: Corazon_Escudos_11
+  - first:
+      213: 2627069394662784734
+    second: Corazon_Escudos_12
+  - first:
+      213: -855863302153114825
+    second: Corazon_Escudos_13
+  - first:
+      213: -6415554128398381788
+    second: Corazon_Escudos_14
+  - first:
+      213: -8175647226528933234
+    second: Corazon_Escudos_15
+  - first:
+      213: -5413234754779136642
+    second: Corazon_Escudos_16
+  - first:
+      213: -8731977795263569567
+    second: Corazon_Escudos_17
+  - first:
+      213: -6807216111050072642
+    second: Corazon_Escudos_18
+  - first:
+      213: 1505061173144561776
+    second: Corazon_Escudos_19
+  - first:
+      213: -6850803295667025831
+    second: Corazon_Escudos_20
+  - first:
+      213: 6155397858238014785
+    second: Corazon_Escudos_21
+  - first:
+      213: -8329452611948227700
+    second: Corazon_Escudos_22
+  - first:
+      213: -6896921073778832925
+    second: Corazon_Escudos_23
+  - first:
+      213: 6570302388554752722
+    second: Corazon_Escudos_24
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -31,7 +106,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,12 +115,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,7 +184,427 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Corazon_Escudos_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 126
+        width: 99
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40df785b8a6a77560800000000000000
+      internalID: 7311495763589594372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Escudos_1
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 134
+        width: 51
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b2a8a8bf55eb9ba0800000000000000
+      internalID: -6081014672551009610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Escudos_2
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 134
+        width: 51
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be4022fc5f4431ba0800000000000000
+      internalID: -6119471646133582613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Escudos_3
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 107
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e758c8f7246ccfcd0800000000000000
+      internalID: -2522923702324263554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Escudos_4
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 64
+        width: 50
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d92808fb560cdf90800000000000000
+      internalID: -6927655134729590313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Escudos_6
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 46
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395baae6ae26c0d70800000000000000
+      internalID: 9010685713480070547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Escudos_7
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 76
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6abd10fb343029880800000000000000
+      internalID: -8605812348449334362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Escudos_8
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 74
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad4566757c72d5bc0800000000000000
+      internalID: -3792831574057790246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Escudos_12
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 65
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edefc2512b9357420800000000000000
+      internalID: 2627069394662784734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Escudos_13
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 53
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73beeda7cdc5f14f0800000000000000
+      internalID: -855863302153114825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Escudos_15
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 49
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ad5d5f9244a8e80800000000000000
+      internalID: -8175647226528933234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Escudos_16
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 47
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7d379bcba350e4b0800000000000000
+      internalID: -5413234754779136642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Escudos_17
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 38
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16167be8578c1d680800000000000000
+      internalID: -8731977795263569567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Escudos_18
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 42
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd5b8f5309e781a0800000000000000
+      internalID: -6807216111050072642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Escudos_19
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 43
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 078a38ea92d03e410800000000000000
+      internalID: 1505061173144561776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Escudos_20
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 35
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95801bf13be0de0a0800000000000000
+      internalID: -6850803295667025831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Escudos_21
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 26
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1452a774dbd5c6550800000000000000
+      internalID: 6155397858238014785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Escudos_22
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 29
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8350631bf6d76c80800000000000000
+      internalID: -8329452611948227700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Escudos_23
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 12
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9c18923d63940a0800000000000000
+      internalID: -6896921073778832925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corazon_Escudos_24
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 12
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d2e4b026376e2b50800000000000000
+      internalID: 6570302388554752722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

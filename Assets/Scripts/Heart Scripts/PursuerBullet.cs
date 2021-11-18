@@ -6,6 +6,14 @@ public class PursuerBullet : Bullet
 {
     [SerializeField] private Rigidbody2D rgbd;
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.TryGetComponent(out Player player))
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
     void ChasePlayer()
     {
         if (GameManager.instance.player.transform.position.y < transform.position.y)
