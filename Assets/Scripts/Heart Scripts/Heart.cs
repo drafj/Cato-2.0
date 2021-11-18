@@ -23,8 +23,8 @@ public class Heart : Enemies
     private GameObject actualChargedB = null;
     private bool stopMoving,
         pursuerRot,
-        dontShoot,
-        healing;
+        dontShoot;
+    public bool healing;
 
     void Start()
     {
@@ -39,7 +39,12 @@ public class Heart : Enemies
         {
             if (!healing)
             {
-                life -= 55;
+                life -= 5;
+                if (life == 40)
+                {
+                    if (Random.Range(0, 2) == 1)
+                    StartCoroutine(Heal());
+                }
                 if (life <= 0)
                 {
                     if (actualShield < 4)
@@ -49,6 +54,11 @@ public class Heart : Enemies
                         actualShield++;
                         if (actualShield < 4)
                         shields[actualShield].SetActive(true);
+                        else
+                        {
+                            StartCoroutine(Heal());
+                            StartCoroutine(StartingHeartAttack());
+                        }
                     }
                     else
                     {
@@ -130,7 +140,8 @@ public class Heart : Enemies
         {
             if (healing)
             {
-                life += 5;
+                if (life <= 78)
+                life += 2;
             }
             else
             {
@@ -148,15 +159,24 @@ public class Heart : Enemies
         dontShoot = false;
     }
 
-    public void CheckIfStopHeal()
+    IEnumerator StartingHeartAttack()
     {
-        if (!leftHeart.activeSelf && !rightHeart.activeSelf)
+        while (true)
         {
-            healing = false;
+            StartCoroutine(HeartAttack());
+            yield return new WaitForSeconds(15);
         }
     }
 
-    void StopHealing()
+    public void CheckIfStopHeal()
+    {
+        if (!leftHeart.activeSelf || !rightHeart.activeSelf)
+        {
+            StopHealing();
+        }
+    }
+
+    public void StopHealing()
     {
         healing = false;
     }
@@ -209,11 +229,11 @@ public class Heart : Enemies
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            StartCoroutine(HeartAttack());
+            CheckIfStopHeal();
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            StartCoroutine(Heal());
+            // ...
         }
     }
 }

@@ -15,6 +15,11 @@ public class ChargedBullet : Bullet
         {
             StartCoroutine(Die());
         }
+
+        if (collision.CompareTag("Border"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void ChargeStarter()

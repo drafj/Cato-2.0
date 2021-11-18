@@ -273,10 +273,6 @@ public class Player : MonoBehaviour
         GameManager.instance.life.GetComponent<Image>().fillAmount = lifeAmount;
         if (life <= 0)
         {
-            Analytics.CustomEvent("Death", new Dictionary<string, object>
-            {
-                {"death", "by enemy"}
-            });
             GameManager.instance.gameOver = true;
             StartCoroutine("Die");
         }
@@ -294,20 +290,17 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<RayController>() != null)
+        if (collision.CompareTag("Enemy Bullet"))
         {
             if (life > 0 && !invencible)
             {
                 life -= 5;
+                UpdateLife();
                 GameManager.instance.StartDealDamage();
             }
 
             if (life <= 0)
             {
-                Analytics.CustomEvent("Death", new Dictionary<string, object>
-                {
-                    {"death", "by boss ray"}
-                });
                 GameManager.instance.gameOver = true;
                 StartCoroutine("Die");
             }
