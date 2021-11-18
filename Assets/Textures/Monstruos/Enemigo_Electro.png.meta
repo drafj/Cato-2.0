@@ -14,6 +14,15 @@ TextureImporter:
   - first:
       213: -8516921196839220444
     second: Enemigo_Electro_3
+  - first:
+      213: -4441979880015709588
+    second: Enemigo_Electro_1
+  - first:
+      213: 249916416436052292
+    second: Enemigo_Electro_2
+  - first:
+      213: -6269114324317014827
+    second: Enemigo_Electro_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -114,10 +123,10 @@ TextureImporter:
       name: Enemigo_Electro_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 5
-        width: 37
-        height: 60
+        x: 6
+        y: 3
+        width: 41
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,10 +144,10 @@ TextureImporter:
       name: Enemigo_Electro_1
       rect:
         serializedVersion: 2
-        x: 79
-        y: 5
-        width: 37
-        height: 60
+        x: 77
+        y: 3
+        width: 41
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,8 +155,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 403086ac14ab43f70800000000000000
-      internalID: 9166155933337256708
+      spriteID: c6a3b3075daea52c0800000000000000
+      internalID: -4441979880015709588
       vertices: []
       indices: 
       edges: []
@@ -156,10 +165,10 @@ TextureImporter:
       name: Enemigo_Electro_2
       rect:
         serializedVersion: 2
-        x: 149
-        y: 5
-        width: 37
-        height: 60
+        x: 148
+        y: 3
+        width: 41
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +176,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 431d84f7364e12540800000000000000
-      internalID: 4981513778836853044
+      spriteID: 441a53918a1e77300800000000000000
+      internalID: 249916416436052292
       vertices: []
       indices: 
       edges: []
@@ -177,10 +186,10 @@ TextureImporter:
       name: Enemigo_Electro_3
       rect:
         serializedVersion: 2
-        x: 220
-        y: 5
-        width: 37
-        height: 60
+        x: 219
+        y: 3
+        width: 41
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,8 +197,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42b476acb41ddc980800000000000000
-      internalID: -8516921196839220444
+      spriteID: 5d475cabcb1aff8a0800000000000000
+      internalID: -6269114324317014827
       vertices: []
       indices: 
       edges: []
