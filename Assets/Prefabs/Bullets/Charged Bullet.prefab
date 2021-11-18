@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4345802808822914133}
   - component: {fileID: 4345802808822914132}
   - component: {fileID: 4345802808822914138}
+  - component: {fileID: 7211699621943328948}
   m_Layer: 0
   m_Name: Charged Bullet
   m_TagString: Enemy Bullet
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingOrder: 22
   m_Sprite: {fileID: -6943209464772664900, guid: 5a05e1cab21028c419ded40210295bea,
     type: 3}
-  m_Color: {r: 1, g: 0.84147406, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.9233861, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -136,3 +137,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rgbd: {fileID: 4345802808822914133}
   stage: 0
+--- !u!95 &7211699621943328948
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4345802808822914129}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7f9ffa2404f4b95479588be49592f8d7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
