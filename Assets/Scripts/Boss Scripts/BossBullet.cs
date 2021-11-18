@@ -5,7 +5,7 @@ using UnityEngine.Analytics;
 
 public class BossBullet : MonoBehaviour
 {
-    public bool persecution;
+    /*public bool persecution;
     public bool pushed;
     public Rigidbody2D rgbd;
     public BossBulletTypes m_type;
@@ -80,7 +80,7 @@ public class BossBullet : MonoBehaviour
                             {"death", "by a boss 01 bullet"}
                         });
                 }
-            }*/
+            }
             Destroy(gameObject);
         }
     }
@@ -120,7 +120,7 @@ public class BossBullet : MonoBehaviour
         persecution = false;
         TargetBasic();
         rgbd.velocity = transform.up * 7;
-    }
+    }*/
 }
 
 public enum BossBulletTypes {R, L}

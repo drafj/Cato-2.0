@@ -56,7 +56,6 @@ public class Heart : Enemies
                         shields[actualShield].SetActive(true);
                         else
                         {
-                            StartCoroutine(Heal());
                             StartCoroutine(StartingHeartAttack());
                         }
                     }

@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class Pooler : MonoBehaviour
 {
-    [SerializeField] private GameObject bulletPrefab,
+    [SerializeField] private GameObject bulletPrefab1,
+        bulletPrefab2,
         monster127,
         pursuerEnemy,
         shooterMonster;
-    public int bulletslength;
+    public int bulletslength1;
+    public int bulletslength2;
     public int eBulletslength;
     public int length127;
     public int pursuerlength;
     public int shooterlength;
-    public GameObject[] bulletsPool;
+    public GameObject[] bulletsPool1;
+    public GameObject[] bulletsPool2;
     public GameObject[] eBulletsPool;
     public GameObject[] monster127Pool;
     public GameObject[] pursuerMonsterPool;
@@ -22,23 +25,32 @@ public class Pooler : MonoBehaviour
 
     private void Awake()
     {
-        bulletsPool = new GameObject[bulletslength + 1];
+        bulletsPool1 = new GameObject[bulletslength1 + 1];
+        bulletsPool2 = new GameObject[bulletslength2 + 1];
         eBulletsPool = new GameObject[eBulletslength + 1];
         monster127Pool = new GameObject[length127 + 1];
         pursuerMonsterPool = new GameObject[pursuerlength + 1];
         shooterMonsterPool = new GameObject[shooterlength + 1];
 
-        for (int i = 0; i < bulletsPool.Length; i++)
+        for (int i = 0; i < bulletsPool1.Length; i++)
         {
-            GameObject temporal = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            GameObject temporal = Instantiate(bulletPrefab1, transform.position, Quaternion.identity);
             temporal.SetActive(false);
-            bulletsPool[i] = temporal;
-            bulletsPool[i].transform.name = "bulet: " + i;
+            bulletsPool1[i] = temporal;
+            bulletsPool1[i].transform.name = "bulet: " + i;
+        }
+
+        for (int i = 0; i < bulletsPool2.Length; i++)
+        {
+            GameObject temporal = Instantiate(bulletPrefab2, transform.position, Quaternion.identity);
+            temporal.SetActive(false);
+            bulletsPool2[i] = temporal;
+            bulletsPool2[i].transform.name = "bulet: " + i;
         }
 
         for (int i = 0; i < eBulletsPool.Length; i++)
         {
-            GameObject temporal = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            GameObject temporal = Instantiate(bulletPrefab1, transform.position, Quaternion.identity);
             temporal.SetActive(false);
             eBulletsPool[i] = temporal;
         }
@@ -69,18 +81,31 @@ public class Pooler : MonoBehaviour
         }
     }
 
-    public void Spawner(Vector3 pos, Quaternion rot)
+    public void PrimaryShoot(Vector3 pos, Quaternion rot)
     {
-        bulletsPool[0].transform.position = pos;
-        bulletsPool[0].transform.rotation = rot;
-        bulletsPool[0].SetActive(true);
-        bulletsPool[0].transform.tag = "Player Bullet";
-        bulletsPool[0].GetComponent<BulletController>().StartBullet();
-        bulletsPool[bulletslength] = bulletsPool[0];
+        bulletsPool1[0].transform.position = pos;
+        bulletsPool1[0].transform.rotation = rot;
+        bulletsPool1[0].SetActive(true);
+        bulletsPool1[0].GetComponent<BulletController>().StartBullet();
+        bulletsPool1[bulletslength1] = bulletsPool1[0];
 
-        for (int i = 0; i < bulletslength; i++)
+        for (int i = 0; i < bulletslength1; i++)
         {
-            bulletsPool[i] = bulletsPool[i + 1];
+            bulletsPool1[i] = bulletsPool1[i + 1];
+        }
+    }
+
+    public void SecondaryShoot(Vector3 pos, Quaternion rot)
+    {
+        bulletsPool2[0].transform.position = pos;
+        bulletsPool2[0].transform.rotation = rot;
+        bulletsPool2[0].SetActive(true);
+        bulletsPool2[0].GetComponent<BulletController>().StartBullet();
+        bulletsPool2[bulletslength2] = bulletsPool2[0];
+
+        for (int i = 0; i < bulletslength2; i++)
+        {
+            bulletsPool2[i] = bulletsPool2[i + 1];
         }
     }
 

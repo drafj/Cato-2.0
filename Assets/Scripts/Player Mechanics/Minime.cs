@@ -13,10 +13,6 @@ public class Minime : MonoBehaviour
         mPool = FindObjectOfType<Pooler>();
     }
 
-    void Start()
-    {
-    }
-
     private void OnEnable()
     {
         catchable = false;
@@ -43,10 +39,10 @@ public class Minime : MonoBehaviour
     {
         while (true)
         {
-            if (mPool.bulletsPool.Length != 0)
+            if (mPool.bulletsPool1.Length != 0 && mPool.bulletsPool2.Length != 0)
             {
                 Vector3 pos = transform.GetChild(0).position;
-                mPool.Spawner(pos, transform.rotation);
+                mPool.PrimaryShoot(pos, transform.rotation);
                 yield return new WaitForSeconds(cadence);
             }
             else

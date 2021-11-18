@@ -1774,47 +1774,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7056270002371304926, guid: 854cb914e04497e40b8dce1fc4170abb,
         type: 3}
-      propertyPath: BossRays.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7056270002371304926, guid: 854cb914e04497e40b8dce1fc4170abb,
-        type: 3}
-      propertyPath: BossRays.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7056270002371304926, guid: 854cb914e04497e40b8dce1fc4170abb,
-        type: 3}
-      propertyPath: BossRays.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7056270002371304926, guid: 854cb914e04497e40b8dce1fc4170abb,
-        type: 3}
-      propertyPath: BossRays.Array.data[3]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7056270002371304926, guid: 854cb914e04497e40b8dce1fc4170abb,
-        type: 3}
-      propertyPath: bulletPrefab
+      propertyPath: bulletPrefab2
       value: 
       objectReference: {fileID: 4212625900781113327, guid: 48549e089930e5d48b039bee3527eaa5,
         type: 3}
     - target: {fileID: 7056270002371304926, guid: 854cb914e04497e40b8dce1fc4170abb,
         type: 3}
-      propertyPath: monster127
+      propertyPath: bulletPrefab1
       value: 
-      objectReference: {fileID: 3301085219303801273, guid: 25dbe55798411eb44b417479e1179f31,
-        type: 3}
-    - target: {fileID: 7056270002371304926, guid: 854cb914e04497e40b8dce1fc4170abb,
-        type: 3}
-      propertyPath: pursuerEnemy
-      value: 
-      objectReference: {fileID: 502712758687633719, guid: 2f2a583178f54e843958fcd93a28b977,
-        type: 3}
-    - target: {fileID: 7056270002371304926, guid: 854cb914e04497e40b8dce1fc4170abb,
-        type: 3}
-      propertyPath: shooterMonster
-      value: 
-      objectReference: {fileID: 5027643586344865298, guid: e2f80d7e91962314a97157cf58712ee5,
+      objectReference: {fileID: 6395556455410904316, guid: c7ec7777db9fac1409dc52b2798b540a,
         type: 3}
     - target: {fileID: 7056270002371304927, guid: 854cb914e04497e40b8dce1fc4170abb,
         type: 3}
@@ -7158,12 +7126,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7439a37c1defda141829d17d3a90bcbf, type: 3}
---- !u!1 &1919654080 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2712601897108102205, guid: 7439a37c1defda141829d17d3a90bcbf,
-    type: 3}
-  m_PrefabInstance: {fileID: 1919654079}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1923368199
 GameObject:
   m_ObjectHideFlags: 0
@@ -12149,15 +12111,9 @@ MonoBehaviour:
   pause: 0
   spawnEnemies: 1
   Boss: {fileID: 94631277}
-  gOPusher: {fileID: 1919654080}
-  bulletBossPrefab: {fileID: 6781983944014712706, guid: 7be56dac5df31bb4d9429d17926ca813,
-    type: 3}
   shotPP: {fileID: 1315859113182170770, guid: b2c296464e5377249be4436afa0e0eb4, type: 3}
-  shotEP: {fileID: 1315859113182170770, guid: 9ff9e3ab2728001428b17579fc403aea, type: 3}
   player: {fileID: 821655108}
   shield: {fileID: 7598237022814977170, guid: 4e00f083d85e82c47812f4242075d28e, type: 3}
-  ammoPrefab: {fileID: 129623526426531445, guid: c1620bd91529b1247ba81a66c7bda0e2,
-    type: 3}
   damageCamera: {fileID: 672982631}
   normalCameras: {fileID: 672982630}
   deathCamera: {fileID: 672982629}
@@ -12168,12 +12124,13 @@ MonoBehaviour:
   fireworksOne: {fileID: 168542, guid: 5702e2a6fea804b45b49b70d8feaf7ae, type: 3}
   fireworksTwo: {fileID: 175238, guid: 26d069e6f78e6f8478e4dc0152bd6939, type: 3}
   winMessage: {fileID: 1829930634155129875}
+  BulletsPref:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   m_Joystick: {fileID: 3585977295790425373}
   life: {fileID: 1829930633314331228}
-  food: {fileID: 1829930632794607005}
-  points: {fileID: 646247626}
-  playerBulletSprite: {fileID: 21300000, guid: 0372b3ee5b0c49d45bf21dfc4597d9f5, type: 3}
-  enemyBulletSprite: {fileID: 21300000, guid: 69acc09ad13cc9842a751faed1962881, type: 3}
   bulletCollision: {fileID: 8300000, guid: 8720072ae4d7e9c42b137210e7606b03, type: 3}
   shieldCollapse: {fileID: 8300000, guid: 56f5b6fa20679894d8658d743a03e1e4, type: 3}
   enemyDeath: {fileID: 8300000, guid: 9ab7ac9f6e729457d8a8dfa89151ee30, type: 3}

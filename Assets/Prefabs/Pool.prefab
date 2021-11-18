@@ -43,12 +43,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72cb800300a40234d8d82a87f5e43d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletslength: 40
+  bulletPrefab1: {fileID: 4212625900781113327, guid: 48549e089930e5d48b039bee3527eaa5,
+    type: 3}
+  bulletPrefab2: {fileID: 4212625900781113327, guid: 48549e089930e5d48b039bee3527eaa5,
+    type: 3}
+  monster127: {fileID: 3301085219303801273, guid: 25dbe55798411eb44b417479e1179f31,
+    type: 3}
+  pursuerEnemy: {fileID: 502712758687633719, guid: 2f2a583178f54e843958fcd93a28b977,
+    type: 3}
+  shooterMonster: {fileID: 5027643586344865298, guid: e2f80d7e91962314a97157cf58712ee5,
+    type: 3}
+  bulletslength1: 15
+  bulletslength2: 15
   eBulletslength: 35
   length127: 10
   pursuerlength: 10
   shooterlength: 10
-  bulletsPool: []
+  bulletsPool1: []
+  bulletsPool2: []
   eBulletsPool: []
   monster127Pool: []
   pursuerMonsterPool: []

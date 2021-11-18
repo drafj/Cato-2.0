@@ -9,16 +9,14 @@ public class Player : MonoBehaviour
 {
     [SerializeField]
     private float velocity,
-    life,
-    lifeAmount;
+        life,
+        lifeAmount;
     [SerializeField] private int flashRange;
     private bool shieldColdDown,
-    flashColdDown,
-    minimeColdown;
+        flashColdDown,
+        minimeColdown;
     private bool
-    invencible,
-    pushed,
-    unleashed;
+        invencible;
     [HideInInspector] 
     public bool onShooting,
         primaryWeapon,
@@ -84,19 +82,31 @@ public class Player : MonoBehaviour
                 switch (gunz)
                 {
                     case Gunz.PIERCING:
-                        Shoot();
+                        if (config[0] == "PIERCING")
+                            Shoot("Primary");
+                        else
+                            Shoot("Secondary");
                         yield return new WaitForSeconds(0.3f);
                         break;
                     case Gunz.LASER:
-                        Shoot();
+                        if (config[0] == "LASER")
+                            Shoot("Primary");
+                        else
+                            Shoot("Secondary");
                         yield return new WaitForSeconds(0.45f);
                         break;
                     case Gunz.PLASMA:
-                        Shoot("Single");
+                        if (config[0] == "PLASMA")
+                            Shoot("Primary", "Single");
+                        else
+                            Shoot("Secondary", "Single");
                         yield return new WaitForSeconds(0.8f);
                         break;
                     case Gunz.VENOM:
-                        Shoot();
+                        if (config[0] == "VENOM")
+                            Shoot("Primary");
+                        else
+                            Shoot("Secondary");
                         yield return new WaitForSeconds(0.2f);
                         break;
                     default:
@@ -193,27 +203,53 @@ public class Player : MonoBehaviour
         life = _life;
     }
 
-    private void Shoot(string type = "Double")
+    private void Shoot(string bullet, string type = "Double")
     {
-        if (type == "Double")
+        if (bullet == "Primary")
         {
-            if (mOrder == CanyonOrder.Right)
+            if (type == "Double")
             {
-                m_pooler.Spawner(transform.localPosition + canyonPositions[0], Quaternion.identity);
-                mOrder = CanyonOrder.Left;
-                m_pooler.bulletsPool[0].GetComponent<BulletController>().StartBullet();
+                if (mOrder == CanyonOrder.Right)
+                {
+                    m_pooler.PrimaryShoot(transform.localPosition + canyonPositions[0], Quaternion.identity);
+                    mOrder = CanyonOrder.Left;
+                    m_pooler.bulletsPool1[0].GetComponent<BulletController>().StartBullet();
+                }
+                else
+                {
+                    m_pooler.PrimaryShoot(transform.localPosition + canyonPositions[1], Quaternion.identity);
+                    mOrder = CanyonOrder.Right;
+                    m_pooler.bulletsPool1[0].GetComponent<BulletController>().StartBullet();
+                }
             }
             else
             {
-                m_pooler.Spawner(transform.localPosition + canyonPositions[1], Quaternion.identity);
-                mOrder = CanyonOrder.Right;
-                m_pooler.bulletsPool[0].GetComponent<BulletController>().StartBullet();
+                m_pooler.PrimaryShoot(transform.localPosition + canyonPositions[2], Quaternion.identity);
+                m_pooler.bulletsPool1[0].GetComponent<BulletController>().StartBullet();
             }
         }
         else
         {
-            m_pooler.Spawner(transform.localPosition + canyonPositions[2], Quaternion.identity);
-            m_pooler.bulletsPool[0].GetComponent<BulletController>().StartBullet();
+            if (type == "Double")
+            {
+                if (mOrder == CanyonOrder.Right)
+                {
+                    m_pooler.SecondaryShoot(transform.localPosition + canyonPositions[0], Quaternion.identity);
+                    mOrder = CanyonOrder.Left;
+                    m_pooler.bulletsPool2[0].GetComponent<BulletController>().StartBullet();
+                }
+                else
+                {
+                    m_pooler.SecondaryShoot(transform.localPosition + canyonPositions[1], Quaternion.identity);
+                    mOrder = CanyonOrder.Right;
+                    m_pooler.bulletsPool2[0].GetComponent<BulletController>().StartBullet();
+                }
+            }
+            else
+            {
+                m_pooler.SecondaryShoot(transform.localPosition + canyonPositions[2], Quaternion.identity);
+                m_pooler.bulletsPool2[0].GetComponent<BulletController>().StartBullet();
+            }
         }
         AudioSource.PlayClipAtPoint(GameManager.instance.playerShot, Camera.main.transform.position);
     }

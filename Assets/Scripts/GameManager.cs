@@ -11,13 +11,9 @@ public class GameManager : MonoBehaviour
     public bool pause;
     public bool spawnEnemies;
     public GameObject Boss;
-    public GameObject gOPusher;
-    public GameObject bulletBossPrefab;
     public GameObject shotPP;
-    public GameObject shotEP;
     public GameObject player;
     public GameObject shield;
-    public GameObject ammoPrefab;
     public GameObject damageCamera;
     public GameObject normalCameras;
     public GameObject deathCamera;
@@ -28,12 +24,9 @@ public class GameManager : MonoBehaviour
     public GameObject fireworksOne;
     public GameObject fireworksTwo;
     public GameObject winMessage;
+    public GameObject[] BulletsPref;
     public FixedJoystick m_Joystick;
     public Image life;
-    public Image food;
-    public Text points;
-    public Sprite playerBulletSprite;
-    public Sprite enemyBulletSprite;
     public AudioClip bulletCollision;
     public AudioClip shieldCollapse;
     public AudioClip enemyDeath;
@@ -139,8 +132,6 @@ public class GameManager : MonoBehaviour
     public void InvokeBoss()
     {
         Boss.SetActive(true);
-        if (gOPusher != null)
-            gOPusher.SetActive(true);
     }
 
     void Update()

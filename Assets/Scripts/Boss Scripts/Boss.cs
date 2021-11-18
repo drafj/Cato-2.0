@@ -5,7 +5,7 @@ using UnityEngine.Analytics;
 
 public class Boss : Enemies
 {
-    public float cadence;
+    /*public float cadence;
     public int rayCounter;
     public int shootRaysLimit;
     int raySelecTemporal;
@@ -120,7 +120,7 @@ public class Boss : Enemies
                 /*Analytics.CustomEvent("Winner", new Dictionary<string, object>
             {
                 {"first boss with Life", GameManager.instance.player.GetComponent<Player>().life},
-            });*/
+            });
                 gameObject.SetActive(false);
             }
         }
@@ -170,7 +170,7 @@ public class Boss : Enemies
                 rgbd.AddForceAtPosition(transform.right * (velocity + 15), new Vector2(-1.26f, 9.5f));
             }
         }
-    }
+    }*/
 }
 
 public enum Stage {Approaching, Attacking}

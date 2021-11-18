@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossShields : MonoBehaviour
 {
-    public int life;
+    /*public int life;
     private Animator anim;
 
     private void Awake()
@@ -47,5 +47,5 @@ public class BossShields : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
+    }*/
 }

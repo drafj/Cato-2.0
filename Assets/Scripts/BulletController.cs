@@ -15,14 +15,6 @@ public class BulletController : MonoBehaviour
         onCourse = true;
         mFlipDirection = (BulletFlipDirection)Random.Range(0, 2);
         anim = GetComponent<Animator>();
-
-        if (transform.tag == "Enemy Bullet")
-        {
-            GetComponent<Animator>().enabled = false;
-            GetComponent<SpriteRenderer>().sprite = GameManager.instance.enemyBulletSprite;
-            GetComponent<Renderer>().sortingOrder = 7;
-            transform.rotation = Quaternion.Euler(0, 0, 180);
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
