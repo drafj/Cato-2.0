@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour
     public GameObject fireworksOne;
     public GameObject fireworksTwo;
     public GameObject winMessage;
-    public GameObject[] BulletsPref;
     public FixedJoystick m_Joystick;
     public Image life;
     public AudioClip bulletCollision;

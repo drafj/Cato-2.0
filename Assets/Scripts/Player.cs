@@ -38,6 +38,11 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        config.Add(PlayerPrefs.GetString("Primary", "PIERCING"));
+        config.Add(PlayerPrefs.GetString("Secondary", "LASER"));
+
+        CreateBullets();
+
         if (velocity == 0)
             velocity = 6;
 
@@ -61,8 +66,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         m_abilities = (Abilities)MenuController.selection;//----------------descomentar para que funcione la seleccion de habilidad------------------------------------------
-        config.Add(PlayerPrefs.GetString("Primary","PIERCING"));
-        config.Add(PlayerPrefs.GetString("Secondary", "LASER"));
 
         gunz = (Gunz)System.Enum.Parse(typeof(Gunz), GameManager.instance.player.GetComponent<Player>().config[0]);
 
@@ -288,6 +291,72 @@ public class Player : MonoBehaviour
         }
     }
 
+    void CreateBullets()
+    {
+        m_pooler.bulletsPool1 = new GameObject[m_pooler.bulletslength1 + 1];
+        m_pooler.bulletsPool2 = new GameObject[m_pooler.bulletslength2 + 1];
+
+        for (int i = 0; i < m_pooler.bulletsPool1.Length; i++)
+        {
+            GameObject temporal = null;
+            switch (config[0])
+            {
+                case "PIERCING":
+                    Debug.Log("se creo PIERCING");
+                    temporal = Instantiate(m_pooler.BulletsPref[0], transform.position, Quaternion.identity);
+                    break;
+                case "LASER":
+                    Debug.Log("se creo LASER");
+                    temporal = Instantiate(m_pooler.BulletsPref[1], transform.position, Quaternion.identity);
+                    break;
+                case "PLASMA":
+                    Debug.Log("se creo PLASMA");
+                    temporal = Instantiate(m_pooler.BulletsPref[2], transform.position, Quaternion.identity);
+                    break;
+                case "VENOM":
+                    Debug.Log("se creo VENOM");
+                    temporal = Instantiate(m_pooler.BulletsPref[3], transform.position, Quaternion.identity);
+                    break;
+                default:
+                    temporal = Instantiate(m_pooler.BulletsPref[0], transform.position, Quaternion.identity);
+                    break;
+            }
+            temporal.SetActive(false);
+            m_pooler.bulletsPool1[i] = temporal;
+            m_pooler.bulletsPool1[i].transform.name = "bulet: " + i;
+        }
+
+        for (int i = 0; i < m_pooler.bulletsPool2.Length; i++)
+        {
+            GameObject temporal = null;
+            switch (config[1])
+            {
+                case "PIERCING":
+                    Debug.Log("se creo PIERCING");
+                    temporal = Instantiate(m_pooler.BulletsPref[0], transform.position, Quaternion.identity);
+                    break;
+                case "LASER":
+                    Debug.Log("se creo LASER");
+                    temporal = Instantiate(m_pooler.BulletsPref[1], transform.position, Quaternion.identity);
+                    break;
+                case "PLASMA":
+                    Debug.Log("se creo PLASMA");
+                    temporal = Instantiate(m_pooler.BulletsPref[2], transform.position, Quaternion.identity);
+                    break;
+                case "VENOM":
+                    Debug.Log("se creo VENOM");
+                    temporal = Instantiate(m_pooler.BulletsPref[3], transform.position, Quaternion.identity);
+                    break;
+                default:
+                    Debug.Log("se creo DEFAULT");
+                    temporal = Instantiate(m_pooler.BulletsPref[0], transform.position, Quaternion.identity);
+                    break;
+            }
+            temporal.SetActive(false);
+            m_pooler.bulletsPool2[i] = temporal;
+            m_pooler.bulletsPool2[i].transform.name = "bulet: " + i;
+        }
+    }
     /*public void TakeFood()
     {
         foodMeter += 0.34f;

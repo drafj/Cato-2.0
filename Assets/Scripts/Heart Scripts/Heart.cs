@@ -39,7 +39,21 @@ public class Heart : Enemies
         {
             if (!healing)
             {
-                life -= 5;
+                switch (bullet.gunz)
+                {
+                    case Gunz.PIERCING:
+                        life -= 5;
+                        break;
+                    case Gunz.LASER:
+                        life -= 3;
+                        break;
+                    case Gunz.PLASMA:
+                        life -= 7;
+                        break;
+                    case Gunz.VENOM:
+                        life -= 1;
+                        break;
+                }
                 if (life == 40)
                 {
                     if (Random.Range(0, 2) == 1)

@@ -12124,11 +12124,6 @@ MonoBehaviour:
   fireworksOne: {fileID: 168542, guid: 5702e2a6fea804b45b49b70d8feaf7ae, type: 3}
   fireworksTwo: {fileID: 175238, guid: 26d069e6f78e6f8478e4dc0152bd6939, type: 3}
   winMessage: {fileID: 1829930634155129875}
-  BulletsPref:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   m_Joystick: {fileID: 3585977295790425373}
   life: {fileID: 1829930633314331228}
   bulletCollision: {fileID: 8300000, guid: 8720072ae4d7e9c42b137210e7606b03, type: 3}

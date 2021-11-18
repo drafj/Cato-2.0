@@ -9,6 +9,7 @@ public class BulletController : MonoBehaviour
     public bool flip;
     private Animator anim;
     public BulletFlipDirection mFlipDirection;
+    public Gunz gunz;
 
     public void StartBullet()
     {

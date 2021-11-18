@@ -20,9 +20,24 @@ public class SucideMonster : Enemies
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.transform.tag == "Player Bullet")
+        if (collision.TryGetComponent(out BulletController bullet))
         {
-            life -= 1;
+            switch (bullet.gunz)
+            {
+                case Gunz.PIERCING:
+                    life -= 5;
+                    break;
+                case Gunz.LASER:
+                    life -= 3;
+                    break;
+                case Gunz.PLASMA:
+                    life -= 7;
+                    break;
+                case Gunz.VENOM:
+                    life -= 1;
+                    break;
+            }
+        
 
             if (life <= 0)
             {

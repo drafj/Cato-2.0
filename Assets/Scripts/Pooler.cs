@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Pooler : MonoBehaviour
 {
-    [SerializeField] private GameObject bulletPrefab1,
-        bulletPrefab2,
-        monster127,
+    [SerializeField] private GameObject monster127,
         pursuerEnemy,
         shooterMonster;
+    public GameObject[] BulletsPref;
     public int bulletslength1;
     public int bulletslength2;
     public int eBulletslength;
@@ -25,32 +24,14 @@ public class Pooler : MonoBehaviour
 
     private void Awake()
     {
-        bulletsPool1 = new GameObject[bulletslength1 + 1];
-        bulletsPool2 = new GameObject[bulletslength2 + 1];
         eBulletsPool = new GameObject[eBulletslength + 1];
         monster127Pool = new GameObject[length127 + 1];
         pursuerMonsterPool = new GameObject[pursuerlength + 1];
         shooterMonsterPool = new GameObject[shooterlength + 1];
 
-        for (int i = 0; i < bulletsPool1.Length; i++)
-        {
-            GameObject temporal = Instantiate(bulletPrefab1, transform.position, Quaternion.identity);
-            temporal.SetActive(false);
-            bulletsPool1[i] = temporal;
-            bulletsPool1[i].transform.name = "bulet: " + i;
-        }
-
-        for (int i = 0; i < bulletsPool2.Length; i++)
-        {
-            GameObject temporal = Instantiate(bulletPrefab2, transform.position, Quaternion.identity);
-            temporal.SetActive(false);
-            bulletsPool2[i] = temporal;
-            bulletsPool2[i].transform.name = "bulet: " + i;
-        }
-
         for (int i = 0; i < eBulletsPool.Length; i++)
         {
-            GameObject temporal = Instantiate(bulletPrefab1, transform.position, Quaternion.identity);
+            GameObject temporal = Instantiate(BulletsPref[0], transform.position, Quaternion.identity);
             temporal.SetActive(false);
             eBulletsPool[i] = temporal;
         }
