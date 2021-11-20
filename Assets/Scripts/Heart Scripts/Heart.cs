@@ -54,7 +54,7 @@ public class Heart : Enemies
                         life -= 7;
                         break;
                     case Gunz.VENOM:
-                        life -= 1;
+                        life -= 1f;
                         Poison();
                         break;
                 }

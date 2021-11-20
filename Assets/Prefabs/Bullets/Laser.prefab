@@ -118,7 +118,7 @@ MonoBehaviour:
   onCourse: 0
   flip: 0
   mFlipDirection: 0
-  gunz: 0
+  gunz: 1
 --- !u!58 &8721822262957175676
 CircleCollider2D:
   m_ObjectHideFlags: 0

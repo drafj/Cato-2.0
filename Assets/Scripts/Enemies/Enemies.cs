@@ -38,6 +38,7 @@ public class Enemies : MonoBehaviour
     IEnumerator PoisonCR()
     {
         poisonCD = true;
+        Debug.Log("poisoned!!");
         for (int i = 0; i < 20; i++)
         {
             life -= 2;
@@ -46,6 +47,7 @@ public class Enemies : MonoBehaviour
             yield return new WaitForSeconds(0.4f);
         }
         yield return new WaitForSeconds(4f);
+        Debug.Log("unpoisoned!!");
         poisonMeter = 0;
         poisonCD = false;
     }
