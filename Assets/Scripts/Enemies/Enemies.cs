@@ -4,52 +4,14 @@ using UnityEngine;
 
 public class Enemies : MonoBehaviour
 {
-    [SerializeField] private float velReference,
+    public float velReference,
         lifeReference;
     [HideInInspector] public float velocity;
     [HideInInspector] public float life;
-
-    /*public float firstBossLife,
-    secondBossLife,
-    suicideMonsterVelocity,
-    suicideMonsterLife,
-    pursuerMonsterVelocity,
-    pursuerMonsterLife,
-    shooterMonsterVelocity,
-    shooterMonsterLife;*/
-
-    /*public void LifeAndVelocityAsigner()
-    {
-        Seter();
-
-        /*if (GetComponent<Boss>() != null)
-        {
-            life = firstBossLife;
-        }
-
-        if (GetComponent<SecondBoss>() != null)
-        {
-            life = secondBossLife;
-        }
-
-        if (GetComponent<PursuerMonster>() != null)
-        {
-            life = pursuerMonsterLife;
-            velocity = pursuerMonsterVelocity;
-        }
-
-        if (GetComponent<SucideMonster>() != null)
-        {
-            life = suicideMonsterLife;
-            velocity = suicideMonsterVelocity;
-        }
-
-        if (GetComponent<ShooterMonster>() != null)
-        {
-            life = shooterMonsterLife;
-            velocity = shooterMonsterVelocity;
-        }
-    }*/
+    [HideInInspector] public int poisonMeter;
+    [HideInInspector] public bool poisonCD,
+        armor,
+        shield;
 
     public void LifeAndVelocityAsigner()
     {
@@ -63,6 +25,29 @@ public class Enemies : MonoBehaviour
         pursuerMonsterLife = pursuerMonsterLife == 0 ? 3 : pursuerMonsterLife;
         shooterMonsterVelocity = shooterMonsterVelocity == 0 ? 2 : shooterMonsterVelocity;
         shooterMonsterLife = shooterMonsterLife == 0 ? 5 : shooterMonsterLife;*/
+    }
+
+    public void Poison()
+    {
+        if (!poisonCD && poisonMeter >= 50)
+            StartCoroutine(PoisonCR());
+        else if (!poisonCD)
+            poisonMeter++;
+    }
+
+    IEnumerator PoisonCR()
+    {
+        poisonCD = true;
+        for (int i = 0; i < 20; i++)
+        {
+            life -= 2;
+            if (TryGetComponent(out Heart heart))
+                heart.SetHealth();
+            yield return new WaitForSeconds(0.4f);
+        }
+        yield return new WaitForSeconds(4f);
+        poisonMeter = 0;
+        poisonCD = false;
     }
 
     public void GoForward()

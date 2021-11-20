@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
     public Vector3[] canyonPositions = new Vector3[3];
     public GameObject minime;
     [SerializeField] private List<GameObject> minimeList = new List<GameObject>();
+    private int silenceCounter;
 
     private void Awake()
     {
@@ -184,11 +185,15 @@ public class Player : MonoBehaviour
 
     public IEnumerator Silence()
     {
+        silenceCounter++;
         silenced = true;
         Debug.Log("silenciado");
         yield return new WaitForSeconds(5f);
-        Debug.Log("desilenciado");
-        silenced = false;
+        if (silenceCounter <= 1)
+        {
+            Debug.Log("desilenciado");
+            silenced = false;
+        }
     }
 
     public void Starter()

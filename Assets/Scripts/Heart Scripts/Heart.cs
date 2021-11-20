@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Heart : Enemies
 {
@@ -10,6 +11,7 @@ public class Heart : Enemies
         leftHeart,
         rightHeart,
         shieldParticle;
+    [SerializeField] private Slider HealthBar;
     [SerializeField] private GameObject[] shields = new GameObject[4];
     [SerializeField] private Transform leftCannon,
         rightCannon,
@@ -29,6 +31,7 @@ public class Heart : Enemies
     void Start()
     {
         LifeAndVelocityAsigner();
+        SetMaxHealth();
         Continue();
         StartCoroutine(Shoot());
     }
@@ -52,6 +55,7 @@ public class Heart : Enemies
                         break;
                     case Gunz.VENOM:
                         life -= 1;
+                        Poison();
                         break;
                 }
                 if (life == 40)
@@ -95,6 +99,7 @@ public class Heart : Enemies
                     actualChargedB.transform.localScale += new Vector3(0.2f, 0.2f, 0);
                 }
             }
+            SetHealth();
         }
     }
 
@@ -167,6 +172,7 @@ public class Heart : Enemies
                 Continue();
                 break;
             }
+            SetHealth();
             yield return new WaitForSeconds(0.2f);
         }
         dontShoot = false;
@@ -192,6 +198,17 @@ public class Heart : Enemies
     public void StopHealing()
     {
         healing = false;
+    }
+
+    void SetMaxHealth()
+    {
+        HealthBar.maxValue = lifeReference;
+        HealthBar.value = life;
+    }
+
+    public void SetHealth()
+    {
+        HealthBar.value = life;
     }
 
     public void IncapacitatingBeam()
@@ -242,7 +259,7 @@ public class Heart : Enemies
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            CheckIfStopHeal();
+            //CheckIfStopHeal();
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
