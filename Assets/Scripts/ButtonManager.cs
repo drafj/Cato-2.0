@@ -5,6 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
+    [SerializeField]
+    private Sprite
+        piercing,
+        laser,
+        plasma,
+        venom;
+
+    private void Start()
+    {
+        SetCannonSprites(0);
+    }
+
     public void ShotEnabler()
     {
         GameManager.instance.player.GetComponent<Player>().onShooting = true;
@@ -22,15 +34,55 @@ public class ButtonManager : MonoBehaviour
 
     public void ChangeGun()
     {
-        if (GameManager.instance.player.GetComponent<Player>().gunz == (Gunz)System.Enum.Parse(typeof(Gunz), GameManager.instance.player.GetComponent<Player>().config[0]))
+        Player player = GameManager.instance.player.GetComponent<Player>();
+        if (player.gunz == (Gunz)System.Enum.Parse(typeof(Gunz), player.config[0]))
         {
-            GameManager.instance.player.GetComponent<Player>().gunz = (Gunz)System.Enum.Parse(typeof(Gunz), GameManager.instance.player.GetComponent<Player>().config[1]);
+            player.gunz = (Gunz)System.Enum.Parse(typeof(Gunz), player.config[1]);
+            SetCannonSprites(1);
         }
         else
-            GameManager.instance.player.GetComponent<Player>().gunz = (Gunz)System.Enum.Parse(typeof(Gunz), GameManager.instance.player.GetComponent<Player>().config[0]);
+        {
+            player.gunz = (Gunz)System.Enum.Parse(typeof(Gunz), player.config[0]);
+            SetCannonSprites(0);
+        }
     }
 
+    public void SetCannonSprites(int chose)
+    {
+        Player player = GameManager.instance.player.GetComponent<Player>();
+        if (player.config[chose] == "PLASMA")
+        {
+            player.rCAnim.gameObject.SetActive(false);
+            player.lCAnim.gameObject.SetActive(false);
+            player.mCAnim.gameObject.SetActive(true);
+        }
+        else
+        {
+            player.rCAnim.gameObject.SetActive(true);
+            player.lCAnim.gameObject.SetActive(true);
+            player.mCAnim.gameObject.SetActive(false);
+        }
 
+        if (player.config[chose] == "PIERCING")
+        {
+            player.rCAnim.GetComponent<SpriteRenderer>().sprite = piercing;
+            player.lCAnim.GetComponent<SpriteRenderer>().sprite = piercing;
+        }
+        else if (player.config[chose] == "LASER")
+        {
+            player.rCAnim.GetComponent<SpriteRenderer>().sprite = laser;
+            player.lCAnim.GetComponent<SpriteRenderer>().sprite = laser;
+        }
+        else if (player.config[chose] == "PLASMA")
+        {
+            player.mCAnim.GetComponent<SpriteRenderer>().sprite = plasma;
+        }
+        else if (player.config[chose] == "VENOM")
+        {
+            player.rCAnim.GetComponent<SpriteRenderer>().sprite = venom;
+            player.lCAnim.GetComponent<SpriteRenderer>().sprite = venom;
+        }
+    }
 
 
     /*IEnumerator ShootEnabler()

@@ -26,7 +26,10 @@ public class Player : MonoBehaviour
     public Gunz gunz;
     public Abilities m_abilities;
     public List<string> config = new List<string>();
-    public Animator anim;
+    public Animator anim,
+        rCAnim,
+        lCAnim,
+        mCAnim;
     public Rigidbody2D rgbd;
     public Pooler m_pooler;
     public Vector2 joyStickDir;
@@ -41,6 +44,18 @@ public class Player : MonoBehaviour
     {
         config.Add(PlayerPrefs.GetString("Primary", "PIERCING"));
         config.Add(PlayerPrefs.GetString("Secondary", "LASER"));
+        if (config[0] == "PLASMA")
+        {
+            rCAnim.gameObject.SetActive(false);
+            lCAnim.gameObject.SetActive(false);
+            mCAnim.gameObject.SetActive(true);
+        }
+        else
+        {
+            rCAnim.gameObject.SetActive(true);
+            lCAnim.gameObject.SetActive(true);
+            mCAnim.gameObject.SetActive(false);
+        }
 
         CreateBullets();
 
@@ -217,22 +232,31 @@ public class Player : MonoBehaviour
         {
             if (type == "Double")
             {
+                rCAnim.gameObject.SetActive(true);
+                lCAnim.gameObject.SetActive(true);
+                mCAnim.gameObject.SetActive(false);
                 if (mOrder == CanyonOrder.Right)
                 {
                     m_pooler.PrimaryShoot(transform.localPosition + canyonPositions[0], Quaternion.identity);
+                    rCAnim.SetTrigger("Piercing");
                     mOrder = CanyonOrder.Left;
                     m_pooler.bulletsPool1[0].GetComponent<BulletController>().StartBullet();
                 }
                 else
                 {
                     m_pooler.PrimaryShoot(transform.localPosition + canyonPositions[1], Quaternion.identity);
+                    lCAnim.SetTrigger("Piercing");
                     mOrder = CanyonOrder.Right;
                     m_pooler.bulletsPool1[0].GetComponent<BulletController>().StartBullet();
                 }
             }
             else
             {
+                rCAnim.gameObject.SetActive(false);
+                lCAnim.gameObject.SetActive(false);
+                mCAnim.gameObject.SetActive(true);
                 m_pooler.PrimaryShoot(transform.localPosition + canyonPositions[2], Quaternion.identity);
+                mCAnim.SetTrigger("Shoot");
                 m_pooler.bulletsPool1[0].GetComponent<BulletController>().StartBullet();
             }
         }
@@ -240,22 +264,31 @@ public class Player : MonoBehaviour
         {
             if (type == "Double")
             {
+                rCAnim.gameObject.SetActive(true);
+                lCAnim.gameObject.SetActive(true);
+                mCAnim.gameObject.SetActive(false);
                 if (mOrder == CanyonOrder.Right)
                 {
                     m_pooler.SecondaryShoot(transform.localPosition + canyonPositions[0], Quaternion.identity);
+                    rCAnim.SetTrigger("Piercing");
                     mOrder = CanyonOrder.Left;
                     m_pooler.bulletsPool2[0].GetComponent<BulletController>().StartBullet();
                 }
                 else
                 {
                     m_pooler.SecondaryShoot(transform.localPosition + canyonPositions[1], Quaternion.identity);
+                    lCAnim.SetTrigger("Piercing");
                     mOrder = CanyonOrder.Right;
                     m_pooler.bulletsPool2[0].GetComponent<BulletController>().StartBullet();
                 }
             }
             else
             {
+                rCAnim.gameObject.SetActive(false);
+                lCAnim.gameObject.SetActive(false);
+                mCAnim.gameObject.SetActive(true);
                 m_pooler.SecondaryShoot(transform.localPosition + canyonPositions[2], Quaternion.identity);
+                mCAnim.SetTrigger("Shoot");
                 m_pooler.bulletsPool2[0].GetComponent<BulletController>().StartBullet();
             }
         }
