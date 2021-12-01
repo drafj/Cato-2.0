@@ -228,69 +228,49 @@ public class Player : MonoBehaviour
 
     private void Shoot(string bullet, string type = "Double")
     {
-        if (bullet == "Primary")
+        if (type == "Double")
         {
-            if (type == "Double")
+            rCAnim.gameObject.SetActive(true);
+            lCAnim.gameObject.SetActive(true);
+            mCAnim.gameObject.SetActive(false);
+            if (mOrder == CanyonOrder.Right)
             {
-                rCAnim.gameObject.SetActive(true);
-                lCAnim.gameObject.SetActive(true);
-                mCAnim.gameObject.SetActive(false);
-                if (mOrder == CanyonOrder.Right)
-                {
-                    m_pooler.PrimaryShoot(transform.localPosition + canyonPositions[0], Quaternion.identity);
-                    rCAnim.SetTrigger("Piercing");
-                    mOrder = CanyonOrder.Left;
-                    m_pooler.bulletsPool1[0].GetComponent<BulletController>().StartBullet();
-                }
+                if (bullet == "Primary")
+                m_pooler.PrimaryShoot(transform.localPosition + canyonPositions[0], Quaternion.identity);
                 else
-                {
-                    m_pooler.PrimaryShoot(transform.localPosition + canyonPositions[1], Quaternion.identity);
-                    lCAnim.SetTrigger("Piercing");
-                    mOrder = CanyonOrder.Right;
-                    m_pooler.bulletsPool1[0].GetComponent<BulletController>().StartBullet();
-                }
+                m_pooler.SecondaryShoot(transform.localPosition + canyonPositions[0], Quaternion.identity);
+                if (gunz == Gunz.VENOM)
+                rCAnim.SetTrigger("Venom");
+                else
+                rCAnim.SetTrigger("Piercing");
+                mOrder = CanyonOrder.Left;
+                m_pooler.bulletsPool1[0].GetComponent<BulletController>().StartBullet();
             }
             else
             {
-                rCAnim.gameObject.SetActive(false);
-                lCAnim.gameObject.SetActive(false);
-                mCAnim.gameObject.SetActive(true);
-                m_pooler.PrimaryShoot(transform.localPosition + canyonPositions[2], Quaternion.identity);
-                mCAnim.SetTrigger("Shoot");
+                if (bullet == "Primary")
+                m_pooler.PrimaryShoot(transform.localPosition + canyonPositions[1], Quaternion.identity);
+                else
+                m_pooler.SecondaryShoot(transform.localPosition + canyonPositions[1], Quaternion.identity);
+                if (gunz == Gunz.VENOM)
+                lCAnim.SetTrigger("Venom");
+                else
+                lCAnim.SetTrigger("Piercing");
+                mOrder = CanyonOrder.Right;
                 m_pooler.bulletsPool1[0].GetComponent<BulletController>().StartBullet();
             }
         }
         else
         {
-            if (type == "Double")
-            {
-                rCAnim.gameObject.SetActive(true);
-                lCAnim.gameObject.SetActive(true);
-                mCAnim.gameObject.SetActive(false);
-                if (mOrder == CanyonOrder.Right)
-                {
-                    m_pooler.SecondaryShoot(transform.localPosition + canyonPositions[0], Quaternion.identity);
-                    rCAnim.SetTrigger("Piercing");
-                    mOrder = CanyonOrder.Left;
-                    m_pooler.bulletsPool2[0].GetComponent<BulletController>().StartBullet();
-                }
-                else
-                {
-                    m_pooler.SecondaryShoot(transform.localPosition + canyonPositions[1], Quaternion.identity);
-                    lCAnim.SetTrigger("Piercing");
-                    mOrder = CanyonOrder.Right;
-                    m_pooler.bulletsPool2[0].GetComponent<BulletController>().StartBullet();
-                }
-            }
+            rCAnim.gameObject.SetActive(false);
+            lCAnim.gameObject.SetActive(false);
+            mCAnim.gameObject.SetActive(true);
+            if (bullet == "Primary")
+            m_pooler.PrimaryShoot(transform.localPosition + canyonPositions[2], Quaternion.identity);
             else
-            {
-                rCAnim.gameObject.SetActive(false);
-                lCAnim.gameObject.SetActive(false);
-                mCAnim.gameObject.SetActive(true);
-                m_pooler.SecondaryShoot(transform.localPosition + canyonPositions[2], Quaternion.identity);
-                mCAnim.SetTrigger("Shoot");
-                m_pooler.bulletsPool2[0].GetComponent<BulletController>().StartBullet();
-            }
+            m_pooler.SecondaryShoot(transform.localPosition + canyonPositions[2], Quaternion.identity);
+            mCAnim.SetTrigger("Shoot");
+            m_pooler.bulletsPool1[0].GetComponent<BulletController>().StartBullet();
         }
         AudioSource.PlayClipAtPoint(GameManager.instance.playerShot, Camera.main.transform.position);
     }

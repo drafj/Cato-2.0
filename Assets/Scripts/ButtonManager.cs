@@ -81,6 +81,7 @@ public class ButtonManager : MonoBehaviour
         {
             player.rCAnim.GetComponent<SpriteRenderer>().sprite = venom;
             player.lCAnim.GetComponent<SpriteRenderer>().sprite = venom;
+            player.lCAnim.GetComponent<SpriteRenderer>().flipX = true;
         }
     }
 
