@@ -22,6 +22,11 @@ public class PursuerMonster : Enemies
         StarterP();
     }
 
+    private void OnEnable()
+    {
+        StarterP();
+    }
+
     public void StarterP()
     {
         LifeAndVelocityAsigner();

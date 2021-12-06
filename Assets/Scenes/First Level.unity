@@ -1272,7 +1272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &94631278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12143,7 +12143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOver: 0
   pause: 0
-  spawnEnemies: 0
+  spawnEnemies: 1
   Boss: {fileID: 94631277}
   shotPP: {fileID: 1315859113182170770, guid: b2c296464e5377249be4436afa0e0eb4, type: 3}
   player: {fileID: 821655108}
@@ -12177,7 +12177,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2685958029521773583}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6584202, y: 1.5651222, z: -0.0234375}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12193,6 +12193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2685958029521773569}
   - component: {fileID: 2685958029521773568}
+  - component: {fileID: 2685958029521773584}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -12200,6 +12201,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2685958029521773584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2685958029521773583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d40bf7d96c439e48ad697be605699b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electroPref: {fileID: 269630998414737226, guid: 23c215a7a21fef74d8a3ea6567eceb9d,
+    type: 3}
+  electroRange: 5
 --- !u!61 &2961240464196102173
 BoxCollider2D:
   m_ObjectHideFlags: 0

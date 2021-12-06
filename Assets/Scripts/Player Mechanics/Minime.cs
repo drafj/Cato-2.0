@@ -39,7 +39,7 @@ public class Minime : MonoBehaviour
     {
         while (true)
         {
-            if (mPool.bulletsPool1.Length != 0 && mPool.bulletsPool2.Length != 0)
+            if (mPool.bulletsPool1.Count != 0 && mPool.bulletsPool2.Count != 0)
             {
                 Vector3 pos = transform.GetChild(0).position;
                 mPool.PrimaryShoot(pos, transform.rotation);
