@@ -202,11 +202,9 @@ public class Player : MonoBehaviour
     {
         silenceCounter++;
         silenced = true;
-        Debug.Log("silenciado");
         yield return new WaitForSeconds(5f);
         if (silenceCounter <= 1)
         {
-            Debug.Log("desilenciado");
             silenced = false;
         }
     }
@@ -244,7 +242,7 @@ public class Player : MonoBehaviour
                 else
                 rCAnim.SetTrigger("Piercing");
                 mOrder = CanyonOrder.Left;
-                m_pooler.bulletsPool1[0].GetComponent<BulletController>().StartBullet();
+                //m_pooler.bulletsPool1[0].GetComponent<BulletController>().StartBullet();
             }
             else
             {
@@ -257,7 +255,7 @@ public class Player : MonoBehaviour
                 else
                 lCAnim.SetTrigger("Piercing");
                 mOrder = CanyonOrder.Right;
-                m_pooler.bulletsPool1[0].GetComponent<BulletController>().StartBullet();
+                //m_pooler.bulletsPool1[0].GetComponent<BulletController>().StartBullet();
             }
         }
         else
@@ -270,7 +268,7 @@ public class Player : MonoBehaviour
             else
             m_pooler.SecondaryShoot(transform.localPosition + canyonPositions[2], Quaternion.identity);
             mCAnim.SetTrigger("Shoot");
-            m_pooler.bulletsPool1[0].GetComponent<BulletController>().StartBullet();
+            //m_pooler.bulletsPool1[0].GetComponent<BulletController>().StartBullet();
         }
         AudioSource.PlayClipAtPoint(GameManager.instance.playerShot, Camera.main.transform.position);
     }
@@ -311,28 +309,21 @@ public class Player : MonoBehaviour
 
     void CreateBullets()
     {
-        m_pooler.bulletsPool1 = new GameObject[m_pooler.bulletslength1 + 1];
-        m_pooler.bulletsPool2 = new GameObject[m_pooler.bulletslength2 + 1];
-
-        for (int i = 0; i < m_pooler.bulletsPool1.Length; i++)
+        for (int i = 0; i < m_pooler.bulletslength1; i++)
         {
             GameObject temporal = null;
             switch (config[0])
             {
                 case "PIERCING":
-                    Debug.Log("se creo PIERCING");
                     temporal = Instantiate(m_pooler.BulletsPref[0], transform.position, Quaternion.identity);
                     break;
                 case "LASER":
-                    Debug.Log("se creo LASER");
                     temporal = Instantiate(m_pooler.BulletsPref[1], transform.position, Quaternion.identity);
                     break;
                 case "PLASMA":
-                    Debug.Log("se creo PLASMA");
                     temporal = Instantiate(m_pooler.BulletsPref[2], transform.position, Quaternion.identity);
                     break;
                 case "VENOM":
-                    Debug.Log("se creo VENOM");
                     temporal = Instantiate(m_pooler.BulletsPref[3], transform.position, Quaternion.identity);
                     break;
                 default:
@@ -340,39 +331,34 @@ public class Player : MonoBehaviour
                     break;
             }
             temporal.SetActive(false);
-            m_pooler.bulletsPool1[i] = temporal;
-            m_pooler.bulletsPool1[i].transform.name = "bulet: " + i;
+            temporal.transform.name = "bulet: " + i;
+            m_pooler.bulletsPool1.Enqueue(temporal);
         }
 
-        for (int i = 0; i < m_pooler.bulletsPool2.Length; i++)
+        for (int i = 0; i < m_pooler.bulletslength2; i++)
         {
             GameObject temporal = null;
             switch (config[1])
             {
                 case "PIERCING":
-                    Debug.Log("se creo PIERCING");
                     temporal = Instantiate(m_pooler.BulletsPref[0], transform.position, Quaternion.identity);
                     break;
                 case "LASER":
-                    Debug.Log("se creo LASER");
                     temporal = Instantiate(m_pooler.BulletsPref[1], transform.position, Quaternion.identity);
                     break;
                 case "PLASMA":
-                    Debug.Log("se creo PLASMA");
                     temporal = Instantiate(m_pooler.BulletsPref[2], transform.position, Quaternion.identity);
                     break;
                 case "VENOM":
-                    Debug.Log("se creo VENOM");
                     temporal = Instantiate(m_pooler.BulletsPref[3], transform.position, Quaternion.identity);
                     break;
                 default:
-                    Debug.Log("se creo DEFAULT");
                     temporal = Instantiate(m_pooler.BulletsPref[0], transform.position, Quaternion.identity);
                     break;
             }
             temporal.SetActive(false);
-            m_pooler.bulletsPool2[i] = temporal;
-            m_pooler.bulletsPool2[i].transform.name = "bulet: " + i;
+            temporal.transform.name = "bulet: " + i;
+            m_pooler.bulletsPool2.Enqueue(temporal);
         }
     }
     /*public void TakeFood()

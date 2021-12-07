@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class ShooterMonster : Enemies
 {
-    private void Awake()
-    {
-
-    }
-
     void Start()
     {
-        //StartShooter();
+        StartShooter();
+    }
+
+    private void OnEnable()
+    {
+        StartShooter();
     }
 
     public void StartShooter()
@@ -21,7 +21,7 @@ public class ShooterMonster : Enemies
         velocity = velocity == 0 ? 4 : velocity;
         life = life == 0 ? 5 : life;
 
-        StartCoroutine("Shooter");
+        //StartCoroutine("Shooter");
     }
 
     IEnumerator Shooter()
@@ -85,11 +85,6 @@ public class ShooterMonster : Enemies
             transform.position = new Vector3(1000, 1000);
             gameObject.SetActive(false);
         }
-    }
-
-    void Update()
-    {
-
     }
 
     private void FixedUpdate()

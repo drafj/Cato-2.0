@@ -10,6 +10,11 @@ public class SucideMonster : Enemies
         StartS();
     }
 
+    private void OnEnable()
+    {
+        StartS();
+    }
+
     public void StartS()
     {
         LifeAndVelocityAsigner();

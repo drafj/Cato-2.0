@@ -182,9 +182,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velReference: 4
-  lifeReference: 4
+  lifeReference: 15
   velocity: 0
   life: 0
+  poisonMeter: 0
+  poisonCD: 0
+  armor: 0
+  shield: 0
 --- !u!58 &5788318871787750209
 CircleCollider2D:
   m_ObjectHideFlags: 0

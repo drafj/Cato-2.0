@@ -14,150 +14,101 @@ public class Pooler : MonoBehaviour
     public int length127;
     public int pursuerlength;
     public int shooterlength;
-    public GameObject[] bulletsPool1;
-    public GameObject[] bulletsPool2;
-    public GameObject[] eBulletsPool;
-    public GameObject[] monster127Pool;
-    public GameObject[] pursuerMonsterPool;
-    public GameObject[] shooterMonsterPool;
-    public GameObject[] BossRays = new GameObject[4];
+    public Queue<GameObject> bulletsPool1 = new Queue<GameObject>();
+    public Queue<GameObject> bulletsPool2 = new Queue<GameObject>();
+    private Queue<GameObject> eBulletsPool = new Queue<GameObject>();
+    private Queue<GameObject> monster127Pool = new Queue<GameObject>();
+    private Queue<GameObject> pursuerMonsterPool = new Queue<GameObject>();
+    private Queue<GameObject> shooterMonsterPool = new Queue<GameObject>();
 
     private void Awake()
     {
-        eBulletsPool = new GameObject[eBulletslength + 1];
-        monster127Pool = new GameObject[length127 + 1];
-        pursuerMonsterPool = new GameObject[pursuerlength + 1];
-        shooterMonsterPool = new GameObject[shooterlength + 1];
-
-        for (int i = 0; i < eBulletsPool.Length; i++)
+        for (int i = 0; i < eBulletslength; i++)
         {
-            GameObject temporal = Instantiate(BulletsPref[0], transform.position, Quaternion.identity);
-            temporal.SetActive(false);
-            eBulletsPool[i] = temporal;
+            GameObject temp = Instantiate(BulletsPref[0], transform.position, Quaternion.identity);
+            temp.SetActive(false);
+            eBulletsPool.Enqueue(temp);
         }
 
-        for (int i = 0; i < monster127Pool.Length; i++)
+        for (int i = 0; i < length127; i++)
         {
-            GameObject temporal = Instantiate(monster127, transform.position, Quaternion.identity);
-            temporal.GetComponent<SucideMonster>().StartS();
-            temporal.SetActive(false);
-            monster127Pool[i] = temporal;
+            GameObject temp = Instantiate(monster127, transform.position, Quaternion.identity);
+            temp.SetActive(false);
+            monster127Pool.Enqueue(temp);
         }
 
-        for (int i = 0; i < pursuerMonsterPool.Length; i++)
+        for (int i = 0; i < pursuerlength; i++)
         {
-            GameObject temporal = Instantiate(pursuerEnemy, transform.position, Quaternion.identity);
-            temporal.GetComponent<PursuerMonster>().StarterP();
-            temporal.SetActive(false);
-            pursuerMonsterPool[i] = temporal;
+            GameObject temp = Instantiate(pursuerEnemy, transform.position, Quaternion.identity);
+            temp.SetActive(false);
+            pursuerMonsterPool.Enqueue(temp);
         }
 
-        for (int i = 0; i < shooterMonsterPool.Length; i++)
+        for (int i = 0; i < shooterlength; i++)
         {
-            GameObject temporal = Instantiate(shooterMonster, transform.position, Quaternion.identity);
-            temporal.GetComponent<ShooterMonster>().StartShooter();
-            temporal.SetActive(false);
-            shooterMonsterPool[i] = temporal;
-            shooterMonsterPool[i].transform.name = "n = " + i;
+            GameObject temp = Instantiate(shooterMonster, transform.position, Quaternion.identity);
+            temp.SetActive(false);
+            shooterMonsterPool.Enqueue(temp);
         }
     }
 
     public void PrimaryShoot(Vector3 pos, Quaternion rot)
     {
-        bulletsPool1[0].transform.position = pos;
-        bulletsPool1[0].transform.rotation = rot;
-        bulletsPool1[0].SetActive(true);
-        bulletsPool1[0].GetComponent<BulletController>().StartBullet();
-        bulletsPool1[bulletslength1] = bulletsPool1[0];
-
-        for (int i = 0; i < bulletslength1; i++)
-        {
-            bulletsPool1[i] = bulletsPool1[i + 1];
-        }
+        GameObject temp = bulletsPool1.Peek();
+        temp.transform.position = pos;
+        temp.transform.rotation = rot;
+        temp.SetActive(true);
+        bulletsPool1.Dequeue();
+        bulletsPool1.Enqueue(temp);
     }
 
     public void SecondaryShoot(Vector3 pos, Quaternion rot)
     {
-        bulletsPool2[0].transform.position = pos;
-        bulletsPool2[0].transform.rotation = rot;
-        bulletsPool2[0].SetActive(true);
-        bulletsPool2[0].GetComponent<BulletController>().StartBullet();
-        bulletsPool2[bulletslength2] = bulletsPool2[0];
-
-        for (int i = 0; i < bulletslength2; i++)
-        {
-            bulletsPool2[i] = bulletsPool2[i + 1];
-        }
+        GameObject temp = bulletsPool2.Peek();
+        temp.transform.position = pos;
+        temp.transform.rotation = rot;
+        temp.SetActive(true);
+        bulletsPool2.Dequeue();
+        bulletsPool2.Enqueue(temp);
     }
 
     public void EBSpawner(Vector3 pos, Quaternion rot)
     {
-        eBulletsPool[0].transform.position = pos;
-        eBulletsPool[0].transform.rotation = rot;
-        eBulletsPool[0].SetActive(true);
-        eBulletsPool[0].transform.tag = "Enemy Bullet";
-        eBulletsPool[0].GetComponent<BulletController>().StartBullet();
-        eBulletsPool[eBulletslength] = eBulletsPool[0];
-
-        for (int i = 0; i < eBulletslength; i++)
-        {
-            eBulletsPool[i] = eBulletsPool[i + 1];
-        }
+        GameObject temp = eBulletsPool.Peek();
+        temp.transform.position = pos;
+        temp.transform.rotation = rot;
+        temp.SetActive(true);
+        eBulletsPool.Dequeue();
+        eBulletsPool.Enqueue(temp);
     }
 
     public void Spawner127(Vector3 pos, Quaternion rot)
     {
-        monster127Pool[0].transform.position = pos;
-        monster127Pool[0].transform.rotation = rot;
-        monster127Pool[0].SetActive(true);
-        monster127Pool[0].GetComponent<SucideMonster>().StartS();
-        monster127Pool[length127] = monster127Pool[0];
-
-        for (int i = 0; i < length127; i++)
-        {
-            monster127Pool[i] = monster127Pool[i + 1];
-        }
+        GameObject temp = monster127Pool.Peek();
+        temp.transform.position = pos;
+        temp.transform.rotation = rot;
+        temp.SetActive(true);
+        monster127Pool.Dequeue();
+        monster127Pool.Enqueue(temp);
     }
 
     public void PursuerSpawner(Vector3 pos, Quaternion rot)
     {
-        pursuerMonsterPool[0].transform.position = pos;
-        pursuerMonsterPool[0].transform.rotation = rot;
-        pursuerMonsterPool[0].SetActive(true);
-        pursuerMonsterPool[0].GetComponent<PursuerMonster>().StarterP();
-        pursuerMonsterPool[pursuerlength] = pursuerMonsterPool[0];
-
-        for (int i = 0; i < pursuerlength; i++)
-        {
-            pursuerMonsterPool[i] = pursuerMonsterPool[i + 1];
-        }
+        GameObject temp = pursuerMonsterPool.Peek();
+        temp.transform.position = pos;
+        temp.transform.rotation = rot;
+        temp.SetActive(true);
+        pursuerMonsterPool.Dequeue();
+        pursuerMonsterPool.Enqueue(temp);
     }
 
     public void ShooterSpawner(Vector3 pos, Quaternion rot)
     {
-        shooterMonsterPool[0].transform.position = pos;
-        shooterMonsterPool[0].transform.rotation = rot;
-        shooterMonsterPool[0].SetActive(true);
-        shooterMonsterPool[0].GetComponent<ShooterMonster>().StartShooter();
-        shooterMonsterPool[shooterlength] = shooterMonsterPool[0];
-
-        for (int i = 0; i < shooterlength; i++)
-        {
-            shooterMonsterPool[i] = shooterMonsterPool[i + 1];
-        }
-    }
-
-    public void SpawnRay(Vector3 pos, Quaternion rot)
-    {
-        BossRays[0].transform.position = pos;
-        BossRays[0].transform.rotation = rot;
-        BossRays[0].SetActive(true);
-        BossRays[0].GetComponent<RayController>().velocity = 6;
-        BossRays[(BossRays.Length) - 1] = BossRays[0];
-
-        for (int i = 0; i < ((BossRays.Length) - 1); i++)
-        {
-            BossRays[i] = BossRays[i + 1];
-        }
+        GameObject temp = shooterMonsterPool.Peek();
+        temp.transform.position = pos;
+        temp.transform.rotation = rot;
+        temp.SetActive(true);
+        shooterMonsterPool.Dequeue();
+        shooterMonsterPool.Enqueue(temp);
     }
 }

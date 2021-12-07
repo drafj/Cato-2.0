@@ -11,6 +11,11 @@ public class BulletController : MonoBehaviour
     public BulletFlipDirection mFlipDirection;
     public Gunz gunz;
 
+    private void OnEnable()
+    {
+        StartBullet();
+    }
+
     public void StartBullet()
     {
         onCourse = true;

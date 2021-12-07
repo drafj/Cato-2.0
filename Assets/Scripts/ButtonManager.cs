@@ -35,15 +35,18 @@ public class ButtonManager : MonoBehaviour
     public void ChangeGun()
     {
         Player player = GameManager.instance.player.GetComponent<Player>();
-        if (player.gunz == (Gunz)System.Enum.Parse(typeof(Gunz), player.config[0]))
+        if (!player.silenced)
         {
-            player.gunz = (Gunz)System.Enum.Parse(typeof(Gunz), player.config[1]);
-            SetCannonSprites(1);
-        }
-        else
-        {
-            player.gunz = (Gunz)System.Enum.Parse(typeof(Gunz), player.config[0]);
-            SetCannonSprites(0);
+            if (player.gunz == (Gunz)System.Enum.Parse(typeof(Gunz), player.config[0]))
+            {
+                player.gunz = (Gunz)System.Enum.Parse(typeof(Gunz), player.config[1]);
+                SetCannonSprites(1);
+            }
+            else
+            {
+                player.gunz = (Gunz)System.Enum.Parse(typeof(Gunz), player.config[0]);
+                SetCannonSprites(0);
+            }
         }
     }
 
