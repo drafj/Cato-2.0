@@ -44,21 +44,7 @@ public class ShooterMonster : Enemies
     {
         if (collision.TryGetComponent(out BulletController bullet))
         {
-            switch (bullet.gunz)
-            {
-                case Gunz.PIERCING:
-                    life -= 5;
-                    break;
-                case Gunz.LASER:
-                    life -= 3;
-                    break;
-                case Gunz.PLASMA:
-                    life -= 7;
-                    break;
-                case Gunz.VENOM:
-                    life -= 1;
-                    break;
-            }
+            TakeDamage(bullet);
         }
 
         if (life <= 0)

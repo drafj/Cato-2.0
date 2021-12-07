@@ -27,6 +27,32 @@ public class Enemies : MonoBehaviour
         shooterMonsterLife = shooterMonsterLife == 0 ? 5 : shooterMonsterLife;*/
     }
 
+    public void TakeDamage(BulletController bullet)
+    {
+        switch (bullet.gunz)
+        {
+            case Gunz.PIERCING:
+                life -= 5;
+                break;
+            case Gunz.LASER:
+                if (shield)
+                life -= 10;
+                else
+                life -= 3;
+                break;
+            case Gunz.PLASMA:
+                if (armor)
+                life -= 12;
+                else
+                life -= 7;
+                break;
+            case Gunz.VENOM:
+                life -= 1f;
+                Poison();
+                break;
+        }
+    }
+
     public void Poison()
     {
         if (!poisonCD && poisonMeter >= 50)
