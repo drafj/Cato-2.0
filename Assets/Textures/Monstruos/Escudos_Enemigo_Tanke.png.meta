@@ -1,16 +1,25 @@
 fileFormatVersion: 2
-guid: f68802cf810afa64989bf23ebc562151
+guid: 90c485abdb3dcd143a6e07c5d195d568
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6365856846184052674
-    second: Enemigo_Arpia_0
+      213: 4076741947736133287
+    second: Escudos_Enemigo_Tanke_0
   - first:
-      213: 7217636054074554838
-    second: Enemigo_Arpia_1
+      213: -5445932752647768401
+    second: Escudos_Enemigo_Tanke_1
   - first:
-      213: -3754972390716888396
-    second: Enemigo_Arpia_2
+      213: -5798724875686771572
+    second: Escudos_Enemigo_Tanke_2
+  - first:
+      213: -4696495081506824845
+    second: Escudos_Enemigo_Tanke_0
+  - first:
+      213: 4991752493626593219
+    second: Escudos_Enemigo_Tanke_1
+  - first:
+      213: -5910535260809987028
+    second: Escudos_Enemigo_Tanke_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -108,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Enemigo_Arpia_0
+      name: Escudos_Enemigo_Tanke_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 3
-        width: 48
-        height: 40
+        x: 11
+        y: 29
+        width: 18
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c7f9c7e211185850800000000000000
-      internalID: 6365856846184052674
+      spriteID: 37d9a614b92b2deb0800000000000000
+      internalID: -4696495081506824845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemigo_Arpia_1
+      name: Escudos_Enemigo_Tanke_1
       rect:
         serializedVersion: 2
-        x: 89
-        y: 3
-        width: 38
-        height: 40
+        x: 32
+        y: 29
+        width: 25
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d97a2120c13a2460800000000000000
-      internalID: 7217636054074554838
+      spriteID: 3cf884d0274464540800000000000000
+      internalID: 4991752493626593219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemigo_Arpia_2
+      name: Escudos_Enemigo_Tanke_2
       rect:
         serializedVersion: 2
-        x: 159
-        y: 3
-        width: 46
-        height: 40
+        x: 18
+        y: 6
+        width: 41
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4baabed5188a3ebc0800000000000000
-      internalID: -3754972390716888396
+      spriteID: c2cfff2ee7f89fda0800000000000000
+      internalID: -5910535260809987028
       vertices: []
       indices: 
       edges: []
