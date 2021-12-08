@@ -43,9 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72cb800300a40234d8d82a87f5e43d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monster127: {fileID: 3301085219303801273, guid: 25dbe55798411eb44b417479e1179f31,
-    type: 3}
-  pursuerEnemy: {fileID: 5788318871787750213, guid: 698a5dee956e386408ee42b720c9f849,
+  electro: {fileID: 269630998414737226, guid: 23c215a7a21fef74d8a3ea6567eceb9d, type: 3}
+  tankEnemy: {fileID: 5788318871787750213, guid: 698a5dee956e386408ee42b720c9f849,
     type: 3}
   shooterMonster: {fileID: 5027643586344865298, guid: e2f80d7e91962314a97157cf58712ee5,
     type: 3}
@@ -56,7 +55,7 @@ MonoBehaviour:
   - {fileID: 910807058098881355, guid: 22347f9aec7d1c746b6d551d861cca2d, type: 3}
   bulletslength1: 15
   bulletslength2: 15
-  eBulletslength: 35
-  length127: 10
-  pursuerlength: 10
-  shooterlength: 10
+  eBulletslength: 0
+  electroLength: 6
+  tankLength: 6
+  shooterLength: 6

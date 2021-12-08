@@ -13,18 +13,10 @@ public class Enemies : MonoBehaviour
         armor,
         shield;
 
-    public void LifeAndVelocityAsigner()
+    public virtual void LifeAndVelocityAsigner()
     {
         life = lifeReference;
         velocity = velReference;
-        /*firstBossLife = firstBossLife == 0 ? 60 : firstBossLife;
-        secondBossLife = secondBossLife == 0 ? 90 : secondBossLife;
-        suicideMonsterVelocity = suicideMonsterVelocity == 0 ? 4.5f : suicideMonsterVelocity;
-        suicideMonsterLife = suicideMonsterLife == 0 ? 1.5f : suicideMonsterLife;
-        pursuerMonsterVelocity = pursuerMonsterVelocity == 0 ? 4 : pursuerMonsterVelocity;
-        pursuerMonsterLife = pursuerMonsterLife == 0 ? 3 : pursuerMonsterLife;
-        shooterMonsterVelocity = shooterMonsterVelocity == 0 ? 2 : shooterMonsterVelocity;
-        shooterMonsterLife = shooterMonsterLife == 0 ? 5 : shooterMonsterLife;*/
     }
 
     public void TakeDamage(BulletController bullet)
@@ -32,21 +24,29 @@ public class Enemies : MonoBehaviour
         switch (bullet.gunz)
         {
             case Gunz.PIERCING:
+                if (!armor && !shield)
                 life -= 5;
+                else
+                life -= 1;
                 break;
             case Gunz.LASER:
-                if (shield)
+                if (shield && !armor)
                 life -= 10;
+                else if (armor)
+                life -= 1;
                 else
                 life -= 3;
                 break;
             case Gunz.PLASMA:
-                if (armor)
+                if (armor && !shield)
                 life -= 12;
+                else if (shield)
+                life -= 3;
                 else
                 life -= 7;
                 break;
             case Gunz.VENOM:
+                if (!shield && !armor)
                 life -= 1f;
                 Poison();
                 break;

@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class Pooler : MonoBehaviour
 {
-    [SerializeField] private GameObject monster127,
-        pursuerEnemy,
+    [SerializeField] private GameObject electro,
+        tankEnemy,
         shooterMonster;
     public GameObject[] BulletsPref;
     public int bulletslength1;
     public int bulletslength2;
     public int eBulletslength;
-    public int length127;
-    public int pursuerlength;
-    public int shooterlength;
+    public int electroLength;
+    public int tankLength;
+    public int shooterLength;
     public Queue<GameObject> bulletsPool1 = new Queue<GameObject>();
     public Queue<GameObject> bulletsPool2 = new Queue<GameObject>();
     private Queue<GameObject> eBulletsPool = new Queue<GameObject>();
-    private Queue<GameObject> monster127Pool = new Queue<GameObject>();
-    private Queue<GameObject> pursuerMonsterPool = new Queue<GameObject>();
+    private Queue<GameObject> electroPool = new Queue<GameObject>();
+    private Queue<GameObject> tankPool = new Queue<GameObject>();
     private Queue<GameObject> shooterMonsterPool = new Queue<GameObject>();
 
     private void Awake()
@@ -30,21 +30,21 @@ public class Pooler : MonoBehaviour
             eBulletsPool.Enqueue(temp);
         }
 
-        for (int i = 0; i < length127; i++)
+        for (int i = 0; i < electroLength; i++)
         {
-            GameObject temp = Instantiate(monster127, transform.position, Quaternion.identity);
+            GameObject temp = Instantiate(electro, transform.position, Quaternion.identity);
             temp.SetActive(false);
-            monster127Pool.Enqueue(temp);
+            electroPool.Enqueue(temp);
         }
 
-        for (int i = 0; i < pursuerlength; i++)
+        for (int i = 0; i < tankLength; i++)
         {
-            GameObject temp = Instantiate(pursuerEnemy, transform.position, Quaternion.identity);
+            GameObject temp = Instantiate(tankEnemy, transform.position, Quaternion.identity);
             temp.SetActive(false);
-            pursuerMonsterPool.Enqueue(temp);
+            tankPool.Enqueue(temp);
         }
 
-        for (int i = 0; i < shooterlength; i++)
+        for (int i = 0; i < shooterLength; i++)
         {
             GameObject temp = Instantiate(shooterMonster, transform.position, Quaternion.identity);
             temp.SetActive(false);
@@ -84,22 +84,22 @@ public class Pooler : MonoBehaviour
 
     public void Spawner127(Vector3 pos, Quaternion rot)
     {
-        GameObject temp = monster127Pool.Peek();
+        GameObject temp = electroPool.Peek();
         temp.transform.position = pos;
         temp.transform.rotation = rot;
         temp.SetActive(true);
-        monster127Pool.Dequeue();
-        monster127Pool.Enqueue(temp);
+        electroPool.Dequeue();
+        electroPool.Enqueue(temp);
     }
 
     public void PursuerSpawner(Vector3 pos, Quaternion rot)
     {
-        GameObject temp = pursuerMonsterPool.Peek();
+        GameObject temp = tankPool.Peek();
         temp.transform.position = pos;
         temp.transform.rotation = rot;
         temp.SetActive(true);
-        pursuerMonsterPool.Dequeue();
-        pursuerMonsterPool.Enqueue(temp);
+        tankPool.Dequeue();
+        tankPool.Enqueue(temp);
     }
 
     public void ShooterSpawner(Vector3 pos, Quaternion rot)

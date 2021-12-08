@@ -5,8 +5,14 @@ using UnityEngine;
 public class Tank : Enemies
 {
     private int actualShield;
+    private Collider2D _collider;
 
     void Start()
+    {
+        LifeAndVelocityAsigner();
+    }
+
+    private void OnEnable()
     {
         LifeAndVelocityAsigner();
     }
@@ -15,47 +21,36 @@ public class Tank : Enemies
     {
         if (collision.TryGetComponent(out BulletController bullet))
         {
-            switch (bullet.gunz)
-            {
-                case Gunz.PIERCING:
-                    life -= 5;
-                    break;
-                case Gunz.LASER:
-                    life -= 3;
-                    break;
-                case Gunz.PLASMA:
-                    life -= 7;
-                    break;
-                case Gunz.VENOM:
-                    life -= 1;
-                    break;
-            }
+            TakeDamage(bullet);
 
             if (actualShield <= 2)
             {
                 if (actualShield == 0 && life * 100 / lifeReference <= 70)
                 {
-                    Debug.Log("vida: " + life);
                     transform.GetChild(actualShield).gameObject.SetActive(false);
                     actualShield++;
                 }
                 else if (actualShield == 1 && life * 100 / lifeReference <= 40)
                 {
-                    Debug.Log("vida: " + life);
                     transform.GetChild(actualShield).gameObject.SetActive(false);
                     actualShield++;
                 }
                 else if (actualShield == 2 && life * 100 / lifeReference <= 10)
                 {
-                    Debug.Log("vida: " + life);
                     transform.GetChild(actualShield).gameObject.SetActive(false);
                     actualShield++;
+                    armor = false;
                 }
             }
 
             if (life <= 0)
             {
                 GetComponent<Animator>().SetTrigger("Death");
+                _collider.enabled = false;
+                for (int i = 0; i < 3; i++)
+                {
+                    transform.GetChild(i).gameObject.SetActive(false);
+                }
             }
         }
 
@@ -83,6 +78,18 @@ public class Tank : Enemies
         GameManager.instance.counterToBoss++;
         transform.position = new Vector3(1000, 1000);
         gameObject.SetActive(false);
+    }
+
+    public override void LifeAndVelocityAsigner()
+    {
+        base.LifeAndVelocityAsigner();
+        _collider = GetComponent<Collider2D>();
+        _collider.enabled = true;
+        armor = true;
+        for (int i = 0; i < 3; i++)
+        {
+            transform.GetChild(i).gameObject.SetActive(true);
+        }
     }
 
     void Update()

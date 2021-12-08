@@ -207,6 +207,7 @@ public class Player : MonoBehaviour
         {
             silenced = false;
         }
+        silenceCounter--;
     }
 
     public void Starter()

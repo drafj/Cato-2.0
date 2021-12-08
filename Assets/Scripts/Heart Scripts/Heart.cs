@@ -30,6 +30,7 @@ public class Heart : Enemies
 
     void Start()
     {
+        armor = true;
         LifeAndVelocityAsigner();
         SetMaxHealth();
         Continue();
@@ -59,6 +60,7 @@ public class Heart : Enemies
                         shields[actualShield].SetActive(true);
                         else
                         {
+                            armor = false;
                             StartCoroutine(StartingHeartAttack());
                         }
                     }
