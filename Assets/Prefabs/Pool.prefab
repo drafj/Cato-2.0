@@ -46,7 +46,7 @@ MonoBehaviour:
   electro: {fileID: 269630998414737226, guid: 23c215a7a21fef74d8a3ea6567eceb9d, type: 3}
   tankEnemy: {fileID: 5788318871787750213, guid: 698a5dee956e386408ee42b720c9f849,
     type: 3}
-  shooterMonster: {fileID: 5027643586344865298, guid: e2f80d7e91962314a97157cf58712ee5,
+  shooterMonster: {fileID: 6355101069975712534, guid: bb689cf96f523904cbf956a7a1ed9784,
     type: 3}
   BulletsPref:
   - {fileID: 4212625900781113327, guid: 48549e089930e5d48b039bee3527eaa5, type: 3}

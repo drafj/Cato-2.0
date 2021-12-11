@@ -102,7 +102,7 @@ public class Pooler : MonoBehaviour
         tankPool.Enqueue(temp);
     }
 
-    public void ShooterSpawner(Vector3 pos, Quaternion rot)
+    public void MissileSpawner(Vector3 pos, Quaternion rot)
     {
         GameObject temp = shooterMonsterPool.Peek();
         temp.transform.position = pos;

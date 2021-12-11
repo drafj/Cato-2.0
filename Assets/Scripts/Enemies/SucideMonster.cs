@@ -47,7 +47,7 @@ public class SucideMonster : Enemies
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<Player>() != null)
+        if (collision.gameObject.TryGetComponent(out Player player))
         {
             AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);
             transform.position = new Vector3(1000, 1000);

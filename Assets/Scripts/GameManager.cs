@@ -36,7 +36,6 @@ public class GameManager : MonoBehaviour
     public int counterToBoss;
     public int arrivalBoss;
     private int enemyChooser;
-    private int enemyCounter = 0;
 
     private void Awake()
     {
@@ -67,39 +66,20 @@ public class GameManager : MonoBehaviour
         {
             if (!pause)
             {
-                if (enemyCounter < 2)
+                enemyChooser = Random.Range(0, 3);
+                switch (enemyChooser)
                 {
-                    enemyCounter++;
-                    enemyChooser = Random.Range(0, 2);
-                    switch (enemyChooser)
-                    {
-                        case 0:
-                            m_pooler.Spawner127(new Vector3(Random.Range(-7.18f, 7.18f), 14.76f, -5), Quaternion.identity);
-                            break;
-                        case 1:
-                            m_pooler.PursuerSpawner(new Vector3(Random.Range(-7.18f, 7.18f), 14.76f, -5), Quaternion.identity);
-                            break;
-                    }
-                    yield return new WaitForSeconds(1.5f);
+                    case 0:
+                        m_pooler.Spawner127(new Vector3(Random.Range(-7.18f, 7.18f), 14.76f, -5), Quaternion.identity);
+                        break;
+                    case 1:
+                        m_pooler.PursuerSpawner(new Vector3(Random.Range(-7.18f, 7.18f), 14.76f, -5), Quaternion.identity);
+                        break;
+                    case 2:
+                        m_pooler.MissileSpawner(new Vector3(Random.Range(-7.18f, 7.18f), 14.76f, -5), Quaternion.identity);
+                        break;
                 }
-                else
-                {
-                    enemyCounter = 0;
-                    enemyChooser = Random.Range(0, 3);
-                    switch (enemyChooser)
-                    {
-                        case 0:
-                            m_pooler.Spawner127(new Vector3(Random.Range(-7.18f, 7.18f), 14.76f, -5), Quaternion.identity);
-                            break;
-                        case 1:
-                            m_pooler.PursuerSpawner(new Vector3(Random.Range(-7.18f, 7.18f), 14.76f, -5), Quaternion.identity);
-                            break;
-                        case 2:
-                            m_pooler.ShooterSpawner(new Vector3(Random.Range(-7.18f, 7.18f), 14.76f, -5), Quaternion.identity);
-                            break;
-                    }
-                    yield return new WaitForSeconds(1.5f);
-                }
+                yield return new WaitForSeconds(1.5f);
             }
             yield return null;
         }
