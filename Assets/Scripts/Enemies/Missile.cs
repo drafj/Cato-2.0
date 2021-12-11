@@ -26,7 +26,7 @@ public class Missile : Enemies
             if (life <= 0)
             {
                 anim.SetTrigger("Death");
-                _collider
+                _collider.enabled = false;
             }
         }
 
@@ -43,7 +43,9 @@ public class Missile : Enemies
     {
         if (collision.gameObject.TryGetComponent(out Player player))
         {
+            life = 0;
             anim.SetTrigger("Death");
+            _collider.enabled = false;
         }
     }
 
@@ -59,6 +61,8 @@ public class Missile : Enemies
     public override void LifeAndVelocityAsigner()
     {
         base.LifeAndVelocityAsigner();
+        _collider = GetComponent<Collider2D>();
+        _collider.enabled = true;
         warning.transform.parent = null;
         warning.transform.position = new Vector2(transform.position.x, 11.5f);
     }
