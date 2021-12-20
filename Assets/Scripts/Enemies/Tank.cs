@@ -66,9 +66,12 @@ public class Tank : Enemies
     {
         if (collision.gameObject.GetComponent<Player>() != null)
         {
-            AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);
-            transform.position = new Vector3(1000, 1000);
-            gameObject.SetActive(false);
+            GetComponent<Animator>().SetTrigger("Death");
+            _collider.enabled = false;
+            for (int i = 0; i < 3; i++)
+            {
+                transform.GetChild(i).gameObject.SetActive(false);
+            }
         }
     }
 
