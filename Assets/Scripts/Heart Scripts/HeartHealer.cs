@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class HeartHealer : MonoBehaviour
 {
-    [SerializeField] private int lifeRef;
+    [SerializeField] private int lifeRef = 0;
+    [SerializeField] private Animator anim = new Animator();
     private int life;
 
     private void OnEnable()
@@ -20,8 +21,14 @@ public class HeartHealer : MonoBehaviour
             if (life <= 0)
             {
                 transform.parent.GetComponent<Heart>().CheckIfStopHeal();
-                gameObject.SetActive(false);
+                anim.SetTrigger("Death");
             }
         }
+    }
+
+    public void Die()
+    {
+        transform.parent.GetComponent<Heart>().CheckIfStopHealAbility();
+        gameObject.SetActive(false);
     }
 }

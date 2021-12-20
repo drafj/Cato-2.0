@@ -27,6 +27,7 @@ public class Heart : Enemies
         pursuerRot,
         dontShoot;
     public bool healing;
+    public bool stopHealAbility;
 
     void Start()
     {
@@ -45,7 +46,7 @@ public class Heart : Enemies
             if (!healing)
             {
                 TakeDamage(bullet);
-                if (life <= 40)
+                if (life <= (lifeReference / 2))
                 {
                     if (Random.Range(0, 2) == 1)
                     StartCoroutine(Heal());
@@ -138,6 +139,7 @@ public class Heart : Enemies
 
     IEnumerator Heal()
     {
+        stopHealAbility = false;
         Invoke(nameof(StopHealing), 10);
         Stop();
         leftHeart.SetActive(true);
@@ -152,10 +154,8 @@ public class Heart : Enemies
                 if (life <= 78)
                 life += 2;
             }
-            else
+            else if (stopHealAbility)
             {
-                leftHeart.SetActive(false);
-                rightHeart.SetActive(false);
                 shieldParticle.SetActive(false);
                 if (actualChargedB != null)
                     actualChargedB.GetComponent<ChargedBullet>().ChargeStarter();
@@ -183,6 +183,14 @@ public class Heart : Enemies
         if (!leftHeart.activeSelf || !rightHeart.activeSelf)
         {
             StopHealing();
+        }
+    }
+
+    public void CheckIfStopHealAbility()
+    {
+        if (!leftHeart.activeSelf || !rightHeart.activeSelf)
+        {
+            stopHealAbility = true;
         }
     }
 
@@ -218,9 +226,9 @@ public class Heart : Enemies
     {
         stopMoving = false;
         if (direction == "right")
-        rgbd.AddForce(transform.right * velocity * Time.fixedDeltaTime);
+            rgbd.AddForce(transform.right * velocity * Time.fixedDeltaTime);
         else
-        rgbd.AddForce(transform.right * -velocity * Time.fixedDeltaTime);
+            rgbd.AddForce(transform.right * -velocity * Time.fixedDeltaTime);
     }
 
     public void Death()
@@ -244,18 +252,6 @@ public class Heart : Enemies
         else if (transform.position.x <= -3f)
         {
             rgbd.AddForce(transform.right * velocity * Time.fixedDeltaTime);
-        }
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            //CheckIfStopHeal();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            // ...
         }
     }
 }
