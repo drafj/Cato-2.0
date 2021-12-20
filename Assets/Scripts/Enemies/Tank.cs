@@ -97,7 +97,6 @@ public class Tank : Enemies
 
     void Update()
     {
-        if (life > 0)
         GoForward();
     }
 }
