@@ -11,7 +11,7 @@ public class Heart : Enemies
         leftHeart,
         rightHeart,
         shieldParticle;
-    [SerializeField] private Slider HealthBar;
+    [SerializeField] private Slider healthBar;
     [SerializeField] private GameObject[] shields = new GameObject[4];
     [SerializeField] private Transform leftCannon,
         rightCannon,
@@ -30,6 +30,7 @@ public class Heart : Enemies
 
     void Start()
     {
+        healthBar.gameObject.SetActive(true);
         armor = true;
         LifeAndVelocityAsigner();
         SetMaxHealth();
@@ -57,10 +58,13 @@ public class Heart : Enemies
                         shields[actualShield].SetActive(false);
                         actualShield++;
                         if (actualShield < 4)
-                        shields[actualShield].SetActive(true);
+                        {
+                            shields[actualShield].SetActive(true);
+                            if (actualShield == 3)
+                                armor = false;
+                        }
                         else
                         {
-                            armor = false;
                             StartCoroutine(StartingHeartAttack());
                         }
                     }
@@ -189,13 +193,13 @@ public class Heart : Enemies
 
     void SetMaxHealth()
     {
-        HealthBar.maxValue = lifeReference;
-        HealthBar.value = life;
+        healthBar.maxValue = lifeReference;
+        healthBar.value = life;
     }
 
     public void SetHealth()
     {
-        HealthBar.value = life;
+        healthBar.value = life;
     }
 
     public void IncapacitatingBeam()
@@ -221,6 +225,7 @@ public class Heart : Enemies
 
     public void Death()
     {
+        healthBar.gameObject.SetActive(false);
         gameObject.SetActive(false);
     }
 
