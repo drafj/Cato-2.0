@@ -45,7 +45,7 @@ public class Heart : Enemies
             if (!healing)
             {
                 TakeDamage(bullet);
-                if (life == 40)
+                if (life <= 40)
                 {
                     if (Random.Range(0, 2) == 1)
                     StartCoroutine(Heal());

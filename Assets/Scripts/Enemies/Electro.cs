@@ -68,7 +68,6 @@ public class Electro : Enemies
 
     void Update()
     {
-        if (life > 0)
         GoForward();
     }
 }
