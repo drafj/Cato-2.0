@@ -61,6 +61,14 @@ public class Enemies : MonoBehaviour
             poisonMeter++;
     }
 
+    public virtual void Die()
+    {
+        AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);
+        GameManager.instance.counterToBoss++;
+        transform.position = new Vector3(1000, 1000);
+        gameObject.SetActive(false);
+    }
+
     IEnumerator PoisonCR()
     {
         poisonCD = true;

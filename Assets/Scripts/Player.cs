@@ -193,11 +193,6 @@ public class Player : MonoBehaviour
         invencible = false;
     }
 
-    public void SilenceStarter()
-    {
-        StartCoroutine(Silence());
-    }
-
     public IEnumerator Silence()
     {
         silenceCounter++;
@@ -208,6 +203,11 @@ public class Player : MonoBehaviour
             silenced = false;
         }
         silenceCounter--;
+    }
+
+    public void SilenceStarter()
+    {
+        StartCoroutine(Silence());
     }
 
     public void Starter()
@@ -223,6 +223,13 @@ public class Player : MonoBehaviour
     public void SetLife(float _life)
     {
         life = _life;
+    }
+
+    public void TakeDamage(int damage = 5)
+    {
+        life -= damage;
+        UpdateLife();
+        GameManager.instance.StartDealDamage();
     }
 
     private void Shoot(string bullet, string type = "Double")
@@ -362,20 +369,6 @@ public class Player : MonoBehaviour
             m_pooler.bulletsPool2.Enqueue(temporal);
         }
     }
-    /*public void TakeFood()
-    {
-        foodMeter += 0.34f;
-        if (foodMeter >= 1)
-        {
-            foodMeter = 0;
-            if (life < 100)
-                life += 20;
-            else
-                StartCoroutine(GameManager.instance.Invencible(3));
-        }
-
-        GameManager.instance.food.GetComponent<Image>().fillAmount = foodMeter;
-    }*/
 
     public void UpdateLife()
     {
@@ -392,10 +385,8 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Enemies>() != null && life > 0 && !invencible)
         {
-            GameManager.instance.StartDealDamage();
-            life -= 5;
+            TakeDamage();
         }
-        UpdateLife();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -404,9 +395,7 @@ public class Player : MonoBehaviour
         {
             if (life > 0 && !invencible)
             {
-                life -= 5;
-                UpdateLife();
-                GameManager.instance.StartDealDamage();
+                TakeDamage();
             }
 
             if (life <= 0)
@@ -415,20 +404,6 @@ public class Player : MonoBehaviour
                 StartCoroutine("Die");
             }
         }
-    }
-
-    void Update()
-    {
-
-
-        /*if (GameManager.instance.Boss.GetComponent<Boss>() != null)                                    cambia esto boludo
-        {
-            if (!pushed && GameManager.instance.Boss.GetComponent<Boss>().m_phase == Phase.SecondPhase)
-            {
-                pushed = true;
-                rgbd.AddForce(transform.up * -3000);
-            }
-        }*/
     }
 
     void FixedUpdate()

@@ -49,13 +49,10 @@ public class Missile : Enemies
         }
     }
 
-    public void Die()
+    public override void Die()
     {
-        AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);
+        base.Die();
         warning.transform.parent = transform;
-        GameManager.instance.counterToBoss++;
-        transform.position = new Vector3(1000, 1000);
-        gameObject.SetActive(false);
     }
 
     public override void LifeAndVelocityAsigner()

@@ -42,8 +42,9 @@ public class Bomb : Enemies
     void PlayerIsClose()
     {
         Vector3 distance = transform.position - GameManager.instance.player.transform.position;
-        if (distance.magnitude <= 6)
+        if (distance.magnitude <= 9)
         {
+            _collider.enabled = false;
             placeToExplote = GameManager.instance.player.transform.position;
             chasing = true;
             StartCoroutine(Explote());
@@ -54,8 +55,19 @@ public class Bomb : Enemies
     {
         while (true)
         {
-            Debug.Log("exploting");
             transform.position = Vector3.Lerp(transform.position, placeToExplote, (velocity / 3) * Time.fixedDeltaTime);
+            Vector3 distance = transform.position - placeToExplote;
+            if (distance.magnitude <= 4)
+            {
+                _collider.enabled = false;
+                anim.SetTrigger("Death");
+                distance = transform.position - GameManager.instance.player.transform.position;
+                if (distance.magnitude <= 6)
+                {
+                    GameManager.instance.player.GetComponent<Player>().TakeDamage();
+                }
+                break;
+            }
             yield return new WaitForFixedUpdate();
         }
     }
@@ -74,11 +86,14 @@ public class Bomb : Enemies
     private void FixedUpdate()
     {
         if (!chasing)
-        GoForward();
+            GoForward();
     }
 
     private void OnDrawGizmos()
     {
+        Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, 6);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, 3);
     }
 }
