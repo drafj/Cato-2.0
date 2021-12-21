@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Tank : Enemies
 {
+    [SerializeField] private Collider2D _collider;
     private int actualShield;
-    private Collider2D _collider;
 
     void Start()
     {
@@ -86,7 +86,6 @@ public class Tank : Enemies
     public override void LifeAndVelocityAsigner()
     {
         base.LifeAndVelocityAsigner();
-        _collider = GetComponent<Collider2D>();
         _collider.enabled = true;
         armor = true;
         for (int i = 0; i < 3; i++)

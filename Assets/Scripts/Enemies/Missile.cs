@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Missile : Enemies
 {
-    [SerializeField] private GameObject warning;
-    [SerializeField] private Animator anim;
-    private Collider2D _collider;
+    [SerializeField] private GameObject warning = null;
+    [SerializeField] private Animator anim = null;
+    [SerializeField] private Collider2D _collider = null;
 
     void Start()
     {
@@ -61,13 +61,12 @@ public class Missile : Enemies
     public override void LifeAndVelocityAsigner()
     {
         base.LifeAndVelocityAsigner();
-        _collider = GetComponent<Collider2D>();
         _collider.enabled = true;
         warning.transform.parent = null;
         warning.transform.position = new Vector2(transform.position.x, 11.5f);
     }
 
-    void Update()
+    private void FixedUpdate()
     {
         GoForward();
     }

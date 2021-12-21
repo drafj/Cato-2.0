@@ -28,6 +28,7 @@ public class Heart : Enemies
         dontShoot;
     public bool healing;
     public bool stopHealAbility;
+    public bool alreadyHealed;
 
     void Start()
     {
@@ -46,15 +47,17 @@ public class Heart : Enemies
             if (!healing)
             {
                 TakeDamage(bullet);
-                if (life <= (lifeReference / 2))
+                if (life <= (lifeReference / 2) && !alreadyHealed)
                 {
                     if (Random.Range(0, 2) == 1)
                     StartCoroutine(Heal());
+                    alreadyHealed = true;
                 }
                 if (life <= 0)
                 {
                     if (actualShield < 4)
                     {
+                        alreadyHealed = false;
                         LifeAndVelocityAsigner();
                         shields[actualShield].SetActive(false);
                         actualShield++;

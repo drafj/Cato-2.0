@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4216381335797228472}
   - component: {fileID: 4216381335797228473}
   - component: {fileID: 4216381335797228454}
+  - component: {fileID: 421112397334897481}
+  - component: {fileID: 5091574409686774683}
   m_Layer: 0
   m_Name: Enemigo_Bomba
   m_TagString: Untagged
@@ -103,6 +105,44 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &421112397334897481
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4216381335797228455}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.002592206, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.546486
+--- !u!114 &5091574409686774683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4216381335797228455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6979509de41fd8e47befb215e12c08ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velReference: 5
+  lifeReference: 10
+  velocity: 0
+  life: 0
+  poisonMeter: 0
+  poisonCD: 0
+  armor: 0
+  shield: 0
+  anim: {fileID: 4216381335797228454}
+  _collider: {fileID: 421112397334897481}
 --- !u!1001 &6097717241015097207
 PrefabInstance:
   m_ObjectHideFlags: 0

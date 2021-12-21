@@ -129,6 +129,7 @@ MonoBehaviour:
   shield: 0
   warning: {fileID: 9195631685222069470}
   anim: {fileID: 6355101069975712529}
+  _collider: {fileID: 6517373661651665695}
 --- !u!50 &6355101069975712541
 Rigidbody2D:
   serializedVersion: 4

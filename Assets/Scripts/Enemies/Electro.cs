@@ -5,7 +5,7 @@ using UnityEngine;
 public class Electro : Enemies
 {
     [SerializeField] private Animator anim;
-    private Collider2D _collider;
+    [SerializeField] private Collider2D _collider;
 
     void Start()
     {
@@ -61,7 +61,6 @@ public class Electro : Enemies
     {
         base.LifeAndVelocityAsigner();
         transform.GetChild(0).gameObject.SetActive(true);
-        _collider = GetComponent<Collider2D>();
         _collider.enabled = true;
         shield = true;
     }

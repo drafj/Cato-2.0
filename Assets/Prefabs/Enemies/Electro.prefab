@@ -146,6 +146,7 @@ MonoBehaviour:
   armor: 0
   shield: 0
   anim: {fileID: 554650865421862315}
+  _collider: {fileID: 269630998414737230}
 --- !u!95 &554650865421862315
 Animator:
   serializedVersion: 3
