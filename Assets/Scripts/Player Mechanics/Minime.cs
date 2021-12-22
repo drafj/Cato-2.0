@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Minime : MonoBehaviour
 {
-    [SerializeField] private float cadence;
-    [SerializeField] private Pooler mPool;
+    [SerializeField] private float cadence = 0;
+    [SerializeField] private Pooler mPool = null;
     [HideInInspector] public bool catchable;
 
     private void Awake()

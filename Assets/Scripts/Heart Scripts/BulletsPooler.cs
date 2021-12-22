@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BulletsPooler : MonoBehaviour
 {
-    [SerializeField] private GameObject pursuerBulletPref;
-    [SerializeField] private int pursuerBulletLenth;
+    [SerializeField] private GameObject pursuerBulletPref = null;
+    [SerializeField] private int pursuerBulletLenth = 0;
     [SerializeField] private Queue<GameObject> pursuerBullets = new Queue<GameObject>();
-    [SerializeField] private GameObject shapeBulletPref;
-    [SerializeField] private int shapeBulletLenth;
+    [SerializeField] private GameObject shapeBulletPref = null;
+    [SerializeField] private int shapeBulletLenth = 0;
     [SerializeField] private Queue<GameObject> shapeBullets = new Queue<GameObject>();
     void Awake()
     {

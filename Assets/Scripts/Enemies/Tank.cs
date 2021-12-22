@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Tank : Enemies
 {
-    [SerializeField] private Collider2D _collider;
+    [SerializeField] private Collider2D _collider = null;
     private int actualShield;
 
     void Start()

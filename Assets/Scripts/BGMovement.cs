@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class BGMovement : MonoBehaviour
 {
-    [SerializeField] private float velocity;
-    [SerializeField] private Background background;
-    [SerializeField] private Transform pos;
-    private int borderTouches;
+    [SerializeField] private float velocity = 0;
+    [SerializeField] private Background background = null;
+    [SerializeField] private Transform pos = null;
+    private int borderTouches = 0;
 
     private void Start()
     {

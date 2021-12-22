@@ -14,13 +14,13 @@ public class Player : MonoBehaviour
     [SerializeField] private int flashRange;
     private bool shieldColdDown,
         flashColdDown,
-        minimeColdown;
-    private bool
+        minimeColdown,
         invencible;
     [HideInInspector] 
     public bool onShooting,
         primaryWeapon,
-        silenced;
+        silenced,
+        inmobilized;
     public static bool bossPhase;
     private CanyonOrder mOrder;
     public Gunz gunz;
@@ -408,22 +408,25 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!GameManager.instance.pause && !GameManager.instance.gameOver)
+        if (!GameManager.instance.pause && !GameManager.instance.gameOver && !inmobilized)
         {
             if (anim.GetBool("OnTouch"))
                 JoystickMoviment();
             else
                 KeyboardMoviment();
-
-            if (transform.position.x > 6.85)
-                transform.position = new Vector3(6.85f, transform.position.y);
-            if (transform.position.x < -6.85)
-                transform.position = new Vector3(-6.85f, transform.position.y);
-            if (transform.position.y > 11.3)
-                transform.position = new Vector3(transform.position.x, 11.3f);
-            if (transform.position.y < -14)
-                transform.position = new Vector3(transform.position.x, -14f);
         }
+    }
+
+    private void Update()
+    {
+        if (transform.position.x > 6.85)
+            transform.position = new Vector3(6.85f, transform.position.y);
+        if (transform.position.x < -6.85)
+            transform.position = new Vector3(-6.85f, transform.position.y);
+        if (transform.position.y > 11.3)
+            transform.position = new Vector3(transform.position.x, 11.3f);
+        if (transform.position.y < -14)
+            transform.position = new Vector3(transform.position.x, -14f);
     }
 
     public void JoystickMoviment()

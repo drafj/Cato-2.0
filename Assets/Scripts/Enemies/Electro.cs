@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Electro : Enemies
 {
-    [SerializeField] private Animator anim;
-    [SerializeField] private Collider2D _collider;
+    [SerializeField] private Animator anim = null;
+    [SerializeField] private Collider2D _collider = null;
 
     void Start()
     {

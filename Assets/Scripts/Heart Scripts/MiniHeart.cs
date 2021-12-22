@@ -5,7 +5,6 @@ using UnityEngine;
 public class MiniHeart : Bullet
 {
     [SerializeField] private float velocity = 0;
-    [SerializeField] private float life = 30;
     [SerializeField] private Rigidbody2D rgbd = null;
     [SerializeField] private Transform target = null;
 

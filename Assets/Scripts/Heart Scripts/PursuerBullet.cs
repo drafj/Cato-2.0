@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PursuerBullet : Bullet
 {
-    [SerializeField] private Rigidbody2D rgbd;
+    [SerializeField] private Rigidbody2D rgbd = null;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

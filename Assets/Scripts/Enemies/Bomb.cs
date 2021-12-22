@@ -39,6 +39,19 @@ public class Bomb : Enemies
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.TryGetComponent(out BulletController bullet))
+        {
+            TakeDamage(bullet);
+            if (life <= 0)
+            {
+                anim.SetTrigger("Death");
+                _collider.enabled = false;
+            }
+        }
+    }
+
     void PlayerIsClose()
     {
         Vector3 distance = transform.position - GameManager.instance.player.transform.position;
@@ -57,12 +70,12 @@ public class Bomb : Enemies
         {
             transform.position = Vector3.Lerp(transform.position, placeToExplote, (velocity / 3) * Time.fixedDeltaTime);
             Vector3 distance = transform.position - placeToExplote;
-            if (distance.magnitude <= 4)
+            if (distance.magnitude <= 2)
             {
                 _collider.enabled = false;
                 anim.SetTrigger("Death");
                 distance = transform.position - GameManager.instance.player.transform.position;
-                if (distance.magnitude <= 6)
+                if (distance.magnitude <= 3)
                 {
                     GameManager.instance.player.GetComponent<Player>().TakeDamage();
                 }
@@ -76,6 +89,7 @@ public class Bomb : Enemies
     {
         base.LifeAndVelocityAsigner();
         _collider.enabled = true;
+        chasing = false;
     }
 
     private void Update()
@@ -90,11 +104,11 @@ public class Bomb : Enemies
             GoForward();
     }
 
-    private void OnDrawGizmos()
+    /*private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, 6);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, 3);
-    }
+    }*/
 }

@@ -5,11 +5,12 @@ using UnityEngine;
 public class Pooler : MonoBehaviour
 {
     [SerializeField]
-    private GameObject electro,
-        tankEnemy,
-        bomb,
-        missile,
-        big;
+    private GameObject electro = null,
+        tankEnemy = null,
+        bomb = null,
+        missile = null,
+        big = null,
+        harpy = null;
     public GameObject[] BulletsPref;
     public int bulletslength1;
     public int bulletslength2;
@@ -18,6 +19,7 @@ public class Pooler : MonoBehaviour
     public int missileLength;
     public int bombLength;
     public int bigLength;
+    public int harpyLength;
     public Queue<GameObject> bulletsPool1 = new Queue<GameObject>();
     public Queue<GameObject> bulletsPool2 = new Queue<GameObject>();
     private Queue<GameObject> electroPool = new Queue<GameObject>();
@@ -25,6 +27,7 @@ public class Pooler : MonoBehaviour
     private Queue<GameObject> missilePool = new Queue<GameObject>();
     private Queue<GameObject> bombPool = new Queue<GameObject>();
     private Queue<GameObject> bigPool = new Queue<GameObject>();
+    private Queue<GameObject> harpyPool = new Queue<GameObject>();
 
     private void Awake()
     {
@@ -61,6 +64,13 @@ public class Pooler : MonoBehaviour
             GameObject temp = Instantiate(big, transform.position, Quaternion.identity);
             temp.SetActive(false);
             bigPool.Enqueue(temp);
+        }
+
+        for (int i = 0; i < harpyLength; i++)
+        {
+            GameObject temp = Instantiate(harpy, transform.position, Quaternion.identity);
+            temp.SetActive(false);
+            harpyPool.Enqueue(temp);
         }
     }
 
@@ -124,16 +134,27 @@ public class Pooler : MonoBehaviour
         bigPool.Enqueue(temp);
     }
 
-    public void BombSpawner(Vector3 pos, Quaternion rot)
+    public void BombSpawner(Vector3 pos, Quaternion rot, int vel = 5)
     {
         if (bombPool.Count > 0)
         {
             GameObject temp = bombPool.Peek();
+            temp.GetComponent<Bomb>().velReference = vel;
             temp.transform.position = pos;
             temp.transform.rotation = rot;
             temp.SetActive(true);
             bombPool.Dequeue();
             bombPool.Enqueue(temp);
         }
+    }
+
+    public void HarpySpawner(Vector3 pos, Quaternion rot)
+    {
+        GameObject temp = harpyPool.Peek();
+        temp.transform.position = pos;
+        temp.transform.rotation = rot;
+        temp.SetActive(true);
+        harpyPool.Dequeue();
+        harpyPool.Enqueue(temp);
     }
 }

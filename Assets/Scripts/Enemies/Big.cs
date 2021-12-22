@@ -65,7 +65,7 @@ public class Big : Enemies
             yield return new WaitForSeconds(cadence);
             if (life <= 0)
                 break;
-            ePool.BombSpawner(gap.transform.position, Quaternion.identity);
+            ePool.BombSpawner(gap.transform.position, Quaternion.identity, 7);
             yield return new WaitForSeconds(cadence);
         }
     }

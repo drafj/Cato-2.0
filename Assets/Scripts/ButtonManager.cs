@@ -7,10 +7,10 @@ public class ButtonManager : MonoBehaviour
 {
     [SerializeField]
     private Sprite
-        piercing,
-        laser,
-        plasma,
-        venom;
+        piercing = null,
+        laser = null,
+        plasma = null,
+        venom = null;
 
     private void Start()
     {

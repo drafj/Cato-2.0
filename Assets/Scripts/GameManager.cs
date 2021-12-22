@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
         {
             if (!pause)
             {
-                enemyChooser = Random.Range(0, 5);
+                enemyChooser = Random.Range(0, 6);
                 switch (enemyChooser)
                 {
                     case 0:
@@ -83,6 +83,9 @@ public class GameManager : MonoBehaviour
                         break;
                     case 4:
                         m_pooler.BigSpawner(new Vector3(Random.Range(-7.18f, 7.18f), 14.76f, -5), Quaternion.identity);
+                        break;
+                    case 5:
+                        m_pooler.HarpySpawner(new Vector3(Random.Range(-7.18f, 7.18f), 14.76f, -5), Quaternion.identity);
                         break;
                 }
                 yield return new WaitForSeconds(1.5f);

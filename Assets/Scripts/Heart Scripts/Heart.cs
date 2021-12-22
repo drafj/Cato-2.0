@@ -5,27 +5,27 @@ using UnityEngine.UI;
 
 public class Heart : Enemies
 {
-    [SerializeField] private GameObject miniHearPref,
-        rayPref,
-        chargedBulletPref,
-        leftHeart,
-        rightHeart,
-        shieldParticle;
-    [SerializeField] private Slider healthBar;
+    [SerializeField] private GameObject miniHearPref = null,
+        rayPref = null,
+        chargedBulletPref = null,
+        leftHeart = null,
+        rightHeart = null,
+        shieldParticle = null;
+    [SerializeField] private Slider healthBar = null;
     [SerializeField] private GameObject[] shields = new GameObject[4];
-    [SerializeField] private Transform leftCannon,
-        rightCannon,
-        rayCannon;
-    [SerializeField] private BulletsPooler bulletsPooler;
-    [SerializeField] private Rigidbody2D rgbd;
-    [SerializeField] private Animator anim;
+    [SerializeField] private Transform leftCannon = null,
+        rightCannon = null,
+        rayCannon = null;
+    [SerializeField] private BulletsPooler bulletsPooler = null;
+    [SerializeField] private Rigidbody2D rgbd = null;
+    [SerializeField] private Animator anim = null;
     [HideInInspector] public int counterToMoveAgain,
         counterToRay;
     private int actualShield = 0;
     private GameObject actualChargedB = null;
-    private bool stopMoving,
-        pursuerRot,
-        dontShoot;
+    private bool stopMoving = false,
+        pursuerRot = false,
+        dontShoot = false;
     public bool healing;
     public bool stopHealAbility;
     public bool alreadyHealed;

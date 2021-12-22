@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ray : Bullet
 {
-    [SerializeField] private float velocity;
+    [SerializeField] private float velocity = 0;
     void Start()
     {
         Destroy(gameObject, 0.35f);

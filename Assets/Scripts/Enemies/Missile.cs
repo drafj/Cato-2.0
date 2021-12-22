@@ -7,6 +7,7 @@ public class Missile : Enemies
     [SerializeField] private GameObject warning = null;
     [SerializeField] private Animator anim = null;
     [SerializeField] private Collider2D _collider = null;
+    private bool goDown = false;
 
     void Start()
     {
@@ -16,20 +17,11 @@ public class Missile : Enemies
     private void OnEnable()
     {
         LifeAndVelocityAsigner();
+        Invoke(nameof(GoDown), 2);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out BulletController bullet))
-        {
-            TakeDamage(bullet);
-            if (life <= 0)
-            {
-                anim.SetTrigger("Death");
-                _collider.enabled = false;
-            }
-        }
-
         if (collision.transform.tag == "Border")
         {
             warning.transform.parent = transform;
@@ -51,8 +43,14 @@ public class Missile : Enemies
     public override void Die()
     {
         base.Die();
-        warning.transform.parent = transform;
         _collider.enabled = true;
+    }
+
+    void GoDown()
+    {
+        goDown = true;
+        warning.transform.parent = transform;
+        warning.SetActive(false);
     }
 
     public override void LifeAndVelocityAsigner()
@@ -61,10 +59,13 @@ public class Missile : Enemies
         _collider.enabled = true;
         warning.transform.parent = null;
         warning.transform.position = new Vector2(transform.position.x, 11.5f);
+        warning.SetActive(true);
+        goDown = false;
     }
 
     private void FixedUpdate()
     {
+        if (goDown)
         GoForward();
     }
 }
