@@ -6,59 +6,54 @@ public class BulletsPooler : MonoBehaviour
 {
     [SerializeField] private GameObject pursuerBulletPref;
     [SerializeField] private int pursuerBulletLenth;
-    [SerializeField] private GameObject[] pursuerBullets;
+    [SerializeField] private Queue<GameObject> pursuerBullets = new Queue<GameObject>();
     [SerializeField] private GameObject shapeBulletPref;
     [SerializeField] private int shapeBulletLenth;
-    [SerializeField] private GameObject[] shapeBullets;
+    [SerializeField] private Queue<GameObject> shapeBullets = new Queue<GameObject>();
     void Awake()
     {
-        pursuerBullets = new GameObject[pursuerBulletLenth + 1];
-        shapeBullets = new GameObject[shapeBulletLenth + 1];
 
-        for (int i = 0; i < pursuerBullets.Length; i++)
+        for (int i = 0; i < pursuerBulletLenth; i++)
         {
             GameObject temporal = Instantiate(pursuerBulletPref, transform.position, Quaternion.identity);
             temporal.SetActive(false);
-            pursuerBullets[i] = temporal;
+            pursuerBullets.Enqueue(temporal);
         }
 
-        for (int i = 0; i < shapeBullets.Length; i++)
+        for (int i = 0; i < shapeBulletLenth; i++)
         {
             GameObject temporal = Instantiate(shapeBulletPref, transform.position, Quaternion.identity);
             temporal.SetActive(false);
-            shapeBullets[i] = temporal;
+            shapeBullets.Enqueue(temporal);
         }
     }
 
     public void SpawnPursuerB(Vector3 pos, Quaternion rot)
     {
-        if (pursuerBullets[0].gameObject.activeSelf)
-            pursuerBullets[0].SetActive(false);
-
-        pursuerBullets[0].transform.position = pos;
-        pursuerBullets[0].transform.rotation = rot;
-        pursuerBullets[0].SetActive(true);
-        pursuerBullets[pursuerBulletLenth] = pursuerBullets[0];
-
-        for (int i = 0; i < pursuerBulletLenth; i++)
+        if (pursuerBullets.Count > 0)
         {
-            pursuerBullets[i] = pursuerBullets[i + 1];
+            GameObject temp = pursuerBullets.Peek();
+            if (temp.activeSelf)
+                temp.SetActive(false);
+
+            temp.transform.position = pos;
+            temp.transform.rotation = rot;
+            temp.SetActive(true);
+            pursuerBullets.Dequeue();
+            pursuerBullets.Enqueue(temp);
         }
     }
 
     public void SpawnShapeB(Vector3 pos, Quaternion rot)
     {
-        if (shapeBullets[0].gameObject.activeSelf)
-            shapeBullets[0].SetActive(false);
+        GameObject temp = shapeBullets.Peek();
+        if (temp.activeSelf)
+            temp.SetActive(false);
 
-        shapeBullets[0].transform.position = pos;
-        shapeBullets[0].transform.rotation = rot;
-        shapeBullets[0].SetActive(true);
-        shapeBullets[shapeBulletLenth] = shapeBullets[0];
-
-        for (int i = 0; i < shapeBulletLenth; i++)
-        {
-            shapeBullets[i] = shapeBullets[i + 1];
-        }
+        temp.transform.position = pos;
+        temp.transform.rotation = rot;
+        temp.SetActive(true);
+        shapeBullets.Dequeue();
+        shapeBullets.Enqueue(temp);
     }
 }

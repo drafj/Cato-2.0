@@ -75,6 +75,7 @@ public class Bomb : Enemies
     public override void LifeAndVelocityAsigner()
     {
         base.LifeAndVelocityAsigner();
+        _collider.enabled = true;
     }
 
     private void Update()

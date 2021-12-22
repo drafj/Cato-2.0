@@ -47,8 +47,8 @@ MonoBehaviour:
   tankEnemy: {fileID: 5788318871787750213, guid: 698a5dee956e386408ee42b720c9f849,
     type: 3}
   bomb: {fileID: 4216381335797228455, guid: 15cdc1b3c3f8d0f4a94feac53d0a4565, type: 3}
-  shooterMonster: {fileID: 6355101069975712534, guid: bb689cf96f523904cbf956a7a1ed9784,
-    type: 3}
+  missile: {fileID: 6355101069975712534, guid: bb689cf96f523904cbf956a7a1ed9784, type: 3}
+  big: {fileID: 9122307409212044691, guid: 562e5b80d3be09c48a7e8f9ff3661dc6, type: 3}
   BulletsPref:
   - {fileID: 4212625900781113327, guid: 48549e089930e5d48b039bee3527eaa5, type: 3}
   - {fileID: 7635161479487333820, guid: c0a07cddc38c0184e873341d61c341cc, type: 3}
@@ -56,8 +56,8 @@ MonoBehaviour:
   - {fileID: 910807058098881355, guid: 22347f9aec7d1c746b6d551d861cca2d, type: 3}
   bulletslength1: 15
   bulletslength2: 15
-  eBulletslength: 0
   electroLength: 6
   tankLength: 6
-  shooterLength: 6
-  bombLength: 6
+  missileLength: 6
+  bombLength: 10
+  bigLength: 6

@@ -143,7 +143,7 @@ public class Heart : Enemies
     IEnumerator Heal()
     {
         stopHealAbility = false;
-        Invoke(nameof(StopHealing), 10);
+        Invoke(nameof(StopHealAbility), 10);
         Stop();
         leftHeart.SetActive(true);
         rightHeart.SetActive(true);
@@ -162,6 +162,8 @@ public class Heart : Enemies
                 shieldParticle.SetActive(false);
                 if (actualChargedB != null)
                     actualChargedB.GetComponent<ChargedBullet>().ChargeStarter();
+                leftHeart.SetActive(false);
+                rightHeart.SetActive(false);
                 dontShoot = false;
                 Continue();
                 break;
@@ -195,6 +197,12 @@ public class Heart : Enemies
         {
             stopHealAbility = true;
         }
+    }
+
+    void StopHealAbility()
+    {
+        healing = false;
+        stopHealAbility = true;
     }
 
     public void StopHealing()

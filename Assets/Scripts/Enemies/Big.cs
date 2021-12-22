@@ -2,11 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Missile : Enemies
+public class Big : Enemies
 {
-    [SerializeField] private GameObject warning = null;
     [SerializeField] private Animator anim = null;
     [SerializeField] private Collider2D _collider = null;
+    [SerializeField] private GameObject gap = null;
+    [SerializeField] private float cadence = 0;
+    private BulletsPooler bPool = null;
+    private Pooler ePool = null;
+
+    private void Awake()
+    {
+        bPool = FindObjectOfType<BulletsPooler>();
+        ePool = FindObjectOfType<Pooler>();
+    }
 
     void Start()
     {
@@ -16,6 +25,7 @@ public class Missile : Enemies
     private void OnEnable()
     {
         LifeAndVelocityAsigner();
+        StartCoroutine(StartShooting());
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -32,7 +42,6 @@ public class Missile : Enemies
 
         if (collision.transform.tag == "Border")
         {
-            warning.transform.parent = transform;
             GameManager.instance.counterToBoss++;
             transform.position = new Vector3(1000, 1000);
             gameObject.SetActive(false);
@@ -48,19 +57,23 @@ public class Missile : Enemies
         }
     }
 
-    public override void Die()
+    IEnumerator StartShooting()
     {
-        base.Die();
-        warning.transform.parent = transform;
-        _collider.enabled = true;
+        while (life > 0)
+        {
+            bPool.SpawnPursuerB(gap.transform.position, Quaternion.Euler(0, 0, 180));
+            yield return new WaitForSeconds(cadence);
+            if (life <= 0)
+                break;
+            ePool.BombSpawner(gap.transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(cadence);
+        }
     }
 
     public override void LifeAndVelocityAsigner()
     {
         base.LifeAndVelocityAsigner();
         _collider.enabled = true;
-        warning.transform.parent = null;
-        warning.transform.position = new Vector2(transform.position.x, 11.5f);
     }
 
     private void FixedUpdate()

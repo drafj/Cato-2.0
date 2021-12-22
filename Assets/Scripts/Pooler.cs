@@ -4,35 +4,30 @@ using UnityEngine;
 
 public class Pooler : MonoBehaviour
 {
-    [SerializeField] private GameObject electro,
+    [SerializeField]
+    private GameObject electro,
         tankEnemy,
         bomb,
-        shooterMonster;
+        missile,
+        big;
     public GameObject[] BulletsPref;
     public int bulletslength1;
     public int bulletslength2;
-    public int eBulletslength;
     public int electroLength;
     public int tankLength;
-    public int shooterLength;
+    public int missileLength;
     public int bombLength;
+    public int bigLength;
     public Queue<GameObject> bulletsPool1 = new Queue<GameObject>();
     public Queue<GameObject> bulletsPool2 = new Queue<GameObject>();
-    private Queue<GameObject> eBulletsPool = new Queue<GameObject>();
     private Queue<GameObject> electroPool = new Queue<GameObject>();
     private Queue<GameObject> tankPool = new Queue<GameObject>();
-    private Queue<GameObject> shooterMonsterPool = new Queue<GameObject>();
+    private Queue<GameObject> missilePool = new Queue<GameObject>();
     private Queue<GameObject> bombPool = new Queue<GameObject>();
+    private Queue<GameObject> bigPool = new Queue<GameObject>();
 
     private void Awake()
     {
-        for (int i = 0; i < eBulletslength; i++)
-        {
-            GameObject temp = Instantiate(BulletsPref[0], transform.position, Quaternion.identity);
-            temp.SetActive(false);
-            eBulletsPool.Enqueue(temp);
-        }
-
         for (int i = 0; i < electroLength; i++)
         {
             GameObject temp = Instantiate(electro, transform.position, Quaternion.identity);
@@ -47,11 +42,11 @@ public class Pooler : MonoBehaviour
             tankPool.Enqueue(temp);
         }
 
-        for (int i = 0; i < shooterLength; i++)
+        for (int i = 0; i < missileLength; i++)
         {
-            GameObject temp = Instantiate(shooterMonster, transform.position, Quaternion.identity);
+            GameObject temp = Instantiate(missile, transform.position, Quaternion.identity);
             temp.SetActive(false);
-            shooterMonsterPool.Enqueue(temp);
+            missilePool.Enqueue(temp);
         }
 
         for (int i = 0; i < bombLength; i++)
@@ -59,6 +54,13 @@ public class Pooler : MonoBehaviour
             GameObject temp = Instantiate(bomb, transform.position, Quaternion.identity);
             temp.SetActive(false);
             bombPool.Enqueue(temp);
+        }
+
+        for (int i = 0; i < bigLength; i++)
+        {
+            GameObject temp = Instantiate(big, transform.position, Quaternion.identity);
+            temp.SetActive(false);
+            bigPool.Enqueue(temp);
         }
     }
 
@@ -80,16 +82,6 @@ public class Pooler : MonoBehaviour
         temp.SetActive(true);
         bulletsPool2.Dequeue();
         bulletsPool2.Enqueue(temp);
-    }
-
-    public void EBSpawner(Vector3 pos, Quaternion rot)
-    {
-        GameObject temp = eBulletsPool.Peek();
-        temp.transform.position = pos;
-        temp.transform.rotation = rot;
-        temp.SetActive(true);
-        eBulletsPool.Dequeue();
-        eBulletsPool.Enqueue(temp);
     }
 
     public void Spawner127(Vector3 pos, Quaternion rot)
@@ -114,21 +106,34 @@ public class Pooler : MonoBehaviour
 
     public void MissileSpawner(Vector3 pos, Quaternion rot)
     {
-        GameObject temp = shooterMonsterPool.Peek();
+        GameObject temp = missilePool.Peek();
         temp.transform.position = pos;
         temp.transform.rotation = rot;
         temp.SetActive(true);
-        shooterMonsterPool.Dequeue();
-        shooterMonsterPool.Enqueue(temp);
+        missilePool.Dequeue();
+        missilePool.Enqueue(temp);
+    }
+
+    public void BigSpawner(Vector3 pos, Quaternion rot)
+    {
+        GameObject temp = bigPool.Peek();
+        temp.transform.position = pos;
+        temp.transform.rotation = rot;
+        temp.SetActive(true);
+        bigPool.Dequeue();
+        bigPool.Enqueue(temp);
     }
 
     public void BombSpawner(Vector3 pos, Quaternion rot)
     {
-        GameObject temp = bombPool.Peek();
-        temp.transform.position = pos;
-        temp.transform.rotation = rot;
-        temp.SetActive(true);
-        bombPool.Dequeue();
-        bombPool.Enqueue(temp);
+        if (bombPool.Count > 0)
+        {
+            GameObject temp = bombPool.Peek();
+            temp.transform.position = pos;
+            temp.transform.rotation = rot;
+            temp.SetActive(true);
+            bombPool.Dequeue();
+            bombPool.Enqueue(temp);
+        }
     }
 }

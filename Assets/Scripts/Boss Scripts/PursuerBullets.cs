@@ -20,9 +20,10 @@ public class PursuerBullets : MonoBehaviour
         Invoke("SwitchState", 3);
     }
 
-    void SwitchState()
+    public void SwitchState()
     {
-        myState = myState == BulletPState.Spinning ? BulletPState.Following : BulletPState.Spinning;
+        myState = BulletPState.Following;
+        //myState = myState == BulletPState.Spinning ? BulletPState.Following : BulletPState.Spinning;
     }
 
     void JustSpin()

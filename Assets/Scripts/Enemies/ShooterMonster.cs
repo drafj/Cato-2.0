@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShooterMonster : Enemies
 {
-    void Start()
+  /*  void Start()
     {
         StartShooter();
     }
@@ -76,5 +76,5 @@ public class ShooterMonster : Enemies
     private void FixedUpdate()
     {
         GoForward();
-    }
+    }*/
 }
