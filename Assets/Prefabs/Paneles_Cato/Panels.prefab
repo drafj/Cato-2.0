@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5433040443110218439}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.025, y: -0.512, z: 0}
+  m_LocalPosition: {x: -0.025, y: -0.294, z: 0}
   m_LocalScale: {x: 0.99087596, y: 0.5351472, z: 0.55824}
   m_Children: []
   m_Father: {fileID: 1468736381898010697}
@@ -92,6 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1468736381898010697}
   - component: {fileID: 900704860473178169}
+  - component: {fileID: 217046833874140734}
   m_Layer: 0
   m_Name: Panels
   m_TagString: Untagged
@@ -165,3 +166,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &217046833874140734
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8646577437535798224}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ea468c6efb4fc4b4db4c82b3e1eeae5f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
