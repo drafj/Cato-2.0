@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class Minime : MonoBehaviour
 {
-    [SerializeField] private float cadence = 0;
-    [SerializeField] private Pooler mPool = null;
+    [SerializeField] private BulletsPooler mPool = null;
+    [SerializeField] private Transform gap = null;
     [HideInInspector] public bool catchable;
 
     private void Awake()
     {
-        mPool = FindObjectOfType<Pooler>();
+        mPool = FindObjectOfType<BulletsPooler>();
     }
 
     private void OnEnable()
     {
         catchable = false;
-        StartCoroutine(Shoot());
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -35,18 +34,11 @@ public class Minime : MonoBehaviour
         }
     }
 
-    IEnumerator Shoot()
+    public void Shoot()
     {
-        while (true)
+        if (mPool.QueueFilled())
         {
-            if (mPool.bulletsPool1.Count != 0 && mPool.bulletsPool2.Count != 0)
-            {
-                Vector3 pos = transform.GetChild(0).position;
-                mPool.PrimaryShoot(pos, transform.rotation);
-                yield return new WaitForSeconds(cadence);
-            }
-            else
-                yield return null;
+            mPool.SpawnMinimeB(gap.position, transform.rotation);
         }
     }
 }

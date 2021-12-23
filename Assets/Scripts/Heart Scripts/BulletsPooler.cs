@@ -10,6 +10,10 @@ public class BulletsPooler : MonoBehaviour
     [SerializeField] private GameObject shapeBulletPref = null;
     [SerializeField] private int shapeBulletLenth = 0;
     [SerializeField] private Queue<GameObject> shapeBullets = new Queue<GameObject>();
+    [SerializeField] private GameObject minimeBulletPref = null;
+    [SerializeField] private int minimeBulletLenth = 0;
+    [SerializeField] private Queue<GameObject> minimeBullets = new Queue<GameObject>();
+
     void Awake()
     {
 
@@ -26,6 +30,21 @@ public class BulletsPooler : MonoBehaviour
             temporal.SetActive(false);
             shapeBullets.Enqueue(temporal);
         }
+
+        for (int i = 0; i < minimeBulletLenth; i++)
+        {
+            GameObject temporal = Instantiate(minimeBulletPref, transform.position, Quaternion.identity);
+            temporal.SetActive(false);
+            minimeBullets.Enqueue(temporal);
+        }
+    }
+
+    public bool QueueFilled()
+    {
+        if (minimeBullets.Count > 0)
+            return true;
+        else
+            return false;
     }
 
     public void SpawnPursuerB(Vector3 pos, Quaternion rot)
@@ -55,5 +74,18 @@ public class BulletsPooler : MonoBehaviour
         temp.SetActive(true);
         shapeBullets.Dequeue();
         shapeBullets.Enqueue(temp);
+    }
+
+    public void SpawnMinimeB(Vector3 pos, Quaternion rot)
+    {
+        GameObject temp = minimeBullets.Peek();
+        if (temp.activeSelf)
+            temp.SetActive(false);
+
+        temp.transform.position = pos;
+        temp.transform.rotation = rot;
+        temp.SetActive(true);
+        minimeBullets.Dequeue();
+        minimeBullets.Enqueue(temp);
     }
 }
