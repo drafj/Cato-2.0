@@ -12310,7 +12310,7 @@ MonoBehaviour:
   bulletCollision: {fileID: 8300000, guid: c80c7dbf82b41064d85318490de4d1a8, type: 3}
   shieldCollapse: {fileID: 8300000, guid: 56f5b6fa20679894d8658d743a03e1e4, type: 3}
   enemyDeath: {fileID: 8300000, guid: afd3450a0c95f3347afdb23602c3918c, type: 3}
-  playerShot: {fileID: 8300000, guid: 2ff593cda97c1de49b201010589c3edc, type: 3}
+  playerShot: {fileID: 8300000, guid: 558624356de633d409dbf28aa67e3be2, type: 3}
   loseClip: {fileID: 8300000, guid: adcbbbae313cb40978e30faf82938987, type: 3}
   ambientSound: {fileID: 3296993771116190788}
   m_pooler: {fileID: 516434593}

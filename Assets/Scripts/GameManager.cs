@@ -70,22 +70,22 @@ public class GameManager : MonoBehaviour
                 switch (enemyChooser)
                 {
                     case 0:
-                        m_pooler.Spawner127(new Vector3(Random.Range(-7.18f, 7.18f), 14.76f, -5), Quaternion.identity);
+                        m_pooler.Spawner127(new Vector3(Random.Range(-7.18f, 7.18f), 14.76f, 0), Quaternion.identity);
                         break;
                     case 1:
-                        m_pooler.PursuerSpawner(new Vector3(Random.Range(-7.18f, 7.18f), 14.76f, -5), Quaternion.identity);
+                        m_pooler.PursuerSpawner(new Vector3(Random.Range(-7.18f, 7.18f), 14.76f, 0), Quaternion.identity);
                         break;
                     case 2:
-                        m_pooler.MissileSpawner(new Vector3(Random.Range(-7.18f, 7.18f), 14.76f, -5), Quaternion.identity);
+                        m_pooler.MissileSpawner(new Vector3(Random.Range(-7.18f, 7.18f), 14.76f, 0), Quaternion.identity);
                         break;
                     case 3:
-                        m_pooler.BombSpawner(new Vector3(Random.Range(-7.18f, 7.18f), 14.76f, -5), Quaternion.identity);
+                        m_pooler.BombSpawner(new Vector3(Random.Range(-7.18f, 7.18f), 14.76f, 0), Quaternion.identity);
                         break;
                     case 4:
-                        m_pooler.BigSpawner(new Vector3(Random.Range(-7.18f, 7.18f), 14.76f, -5), Quaternion.identity);
+                        m_pooler.BigSpawner(new Vector3(Random.Range(-7.18f, 7.18f), 14.76f, 0), Quaternion.identity);
                         break;
                     case 5:
-                        m_pooler.HarpySpawner(new Vector3(Random.Range(-7.18f, 7.18f), 14.76f, -5), Quaternion.identity);
+                        m_pooler.HarpySpawner(new Vector3(Random.Range(-7.18f, 7.18f), 14.76f, 0), Quaternion.identity);
                         break;
                 }
                 yield return new WaitForSeconds(1.5f);

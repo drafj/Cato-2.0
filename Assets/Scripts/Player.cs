@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     private float velocity,
         life,
         lifeAmount,
-        timeShieldCC;
+        timeShieldCC = 0;
     [SerializeField] private int flashRange;
     private bool shieldColdDown,
         flashColdDown,
