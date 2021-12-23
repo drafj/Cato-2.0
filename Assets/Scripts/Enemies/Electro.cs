@@ -27,6 +27,7 @@ public class Electro : Enemies
             {
                 _collider.enabled = false;
                 anim.SetTrigger("Death");
+                AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);
                 transform.GetChild(0).gameObject.SetActive(false);
             }
         }

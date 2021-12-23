@@ -249,8 +249,9 @@ MonoBehaviour:
   onShooting: 0
   primaryWeapon: 0
   silenced: 0
+  inmobilized: 0
   gunz: 2
-  m_abilities: 2
+  m_abilities: 0
   config: []
   anim: {fileID: 1663258805614013474}
   rCAnim: {fileID: 2127573808792172692}

@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 7598237022814977168}
   - component: {fileID: 7598237022814977175}
   - component: {fileID: 7598237022814977174}
-  - component: {fileID: 3284497078042911331}
+  - component: {fileID: 2525154993796072329}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
@@ -128,7 +128,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47da82b05f6d8f449b197101f468718b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullets: []
   destroyLimit: 3
+  launchingBullets: 0
 --- !u!50 &7598237022814977174
 Rigidbody2D:
   serializedVersion: 4
@@ -150,8 +152,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &3284497078042911331
-CircleCollider2D:
+--- !u!60 &2525154993796072329
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -163,6 +165,22 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.008112669, y: -0.7422066}
-  serializedVersion: 2
-  m_Radius: 1.377399
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.67236674, y: 0.4516158}
+      - {x: -0.9722258, y: 0.14822102}
+      - {x: -1.117956, y: -0.3061272}
+      - {x: 1.1384325, y: -0.3464669}
+      - {x: 0.9563793, y: 0.21352386}
+      - {x: 0.5687113, y: 0.49279952}
+      - {x: 0.016419113, y: 0.6475849}

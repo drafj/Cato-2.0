@@ -36,6 +36,7 @@ public class Missile : Enemies
         if (collision.gameObject.TryGetComponent(out Player player))
         {
             anim.SetTrigger("Death");
+            AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);
             _collider.enabled = false;
         }
     }

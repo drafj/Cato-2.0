@@ -63,7 +63,6 @@ public class Enemies : MonoBehaviour
 
     public virtual void Die()
     {
-        AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);
         GameManager.instance.counterToBoss++;
         transform.position = new Vector3(1000, 1000);
         gameObject.SetActive(false);

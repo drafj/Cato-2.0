@@ -134,3 +134,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rgbd: {fileID: 6172938593275401480}
+  playerBullet: {fileID: 4212625900781113327, guid: 48549e089930e5d48b039bee3527eaa5,
+    type: 3}

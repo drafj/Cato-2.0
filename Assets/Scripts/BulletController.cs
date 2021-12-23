@@ -7,9 +7,9 @@ public class BulletController : MonoBehaviour
 {
     public bool onCourse;
     public bool flip;
-    private Animator anim;
     public BulletFlipDirection mFlipDirection;
     public Gunz gunz;
+    [HideInInspector] public bool oldEnemyBullet;
 
     private void OnEnable()
     {
@@ -20,16 +20,37 @@ public class BulletController : MonoBehaviour
     {
         onCourse = true;
         mFlipDirection = (BulletFlipDirection)Random.Range(0, 2);
-        anim = GetComponent<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out Enemies enemies) || collision.TryGetComponent(out HeartHealer heartHealer))
+        if (!oldEnemyBullet)
         {
-            Instantiate(GameManager.instance.shotPP, transform.position, Quaternion.identity);
-            transform.position = new Vector3(1000, 1000);
-            gameObject.SetActive(false);
+            if (collision.TryGetComponent(out Enemies enemies) || collision.TryGetComponent(out HeartHealer heartHealer))
+            {
+                Instantiate(GameManager.instance.shotPP, transform.position, Quaternion.identity);
+                transform.position = new Vector3(1000, 1000);
+                gameObject.SetActive(false);
+            }
+
+            if (collision.transform.tag == "Border")
+            {
+                transform.position = new Vector2(1000, 1000);
+                gameObject.SetActive(false);
+            }
+        }
+        else
+        {
+            if (collision.transform.tag == "Border")
+            {
+                Destroy(gameObject);
+            }
+            else if (collision.TryGetComponent(out Enemies enemies) || collision.TryGetComponent(out HeartHealer heartHealer))
+            {
+                Instantiate(GameManager.instance.shotPP, transform.position, Quaternion.identity);
+                transform.position = new Vector3(1000, 1000);
+                Destroy(gameObject);
+            }
         }
 
         /*if (transform.tag == "Enemy Bullet")
@@ -52,11 +73,8 @@ public class BulletController : MonoBehaviour
             }
         }*/
 
-        if (collision.transform.tag == "Border")
-        {
-            transform.position = new Vector2(1000, 1000);
-            gameObject.SetActive(false);
-        }
+
+
     }
 
     void FixedUpdate()
@@ -70,9 +88,9 @@ public class BulletController : MonoBehaviour
         if (flip && !onCourse && !GameManager.instance.pause)
         {
             if (mFlipDirection == BulletFlipDirection.Left)
-                transform.rotation = Quaternion.Lerp(transform.rotation, new Quaternion(0, 0, 0.00001f, 1f), 1.5f * Time.deltaTime);
+                transform.rotation = Quaternion.Lerp(transform.rotation, new Quaternion(0, 0, 0.00001f, 1f), 3f * Time.fixedDeltaTime);
             else if (mFlipDirection == BulletFlipDirection.Right)
-                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, 0), 1.5f * Time.deltaTime);
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, 0), 3f * Time.fixedDeltaTime);
         }
     }
 

@@ -46,6 +46,7 @@ public class Tank : Enemies
             if (life <= 0)
             {
                 GetComponent<Animator>().SetTrigger("Death");
+                AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);
                 _collider.enabled = false;
                 for (int i = 0; i < 3; i++)
                 {

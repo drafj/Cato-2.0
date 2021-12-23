@@ -210,7 +210,7 @@ public class Player : MonoBehaviour
         StartCoroutine(Silence());
     }
 
-    public void Starter()
+    public void StartShieldCC()
     {
         StartCoroutine("ShieldColdDown");
     }
