@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class GarbageRain : MonoBehaviour
 {
-    [SerializeField] private GameObject garbage = null;
-    [SerializeField] private int gLenth = 0;
+    [SerializeField] private GameObject[] garbage = new GameObject[] { };
     [SerializeField] private Queue<GameObject> gQueue = new Queue<GameObject>();
 
     void Start()
     {
-        for (int i = 0; i < gLenth; i++)
+        for (int i = 0; i < garbage.Length; i++)
         {
-            GameObject temporal = Instantiate(garbage, transform.position, Quaternion.identity);
+            GameObject temporal = Instantiate(garbage[i], transform.position, Quaternion.identity);
             temporal.SetActive(false);
             gQueue.Enqueue(temporal);
         }
@@ -25,11 +24,11 @@ public class GarbageRain : MonoBehaviour
         while (true)
         {
             SpawnGarbage(new Vector3(Random.Range(-7f, -2.75f), 14.76f, 0), Quaternion.identity);
-            yield return new WaitForSeconds(0.6f);
+            yield return new WaitForSeconds(0.3f);
             SpawnGarbage(new Vector3(Random.Range(-2.75f, 2.75f), 14.76f, 0), Quaternion.identity);
-            yield return new WaitForSeconds(0.6f);
+            yield return new WaitForSeconds(0.3f);
             SpawnGarbage(new Vector3(Random.Range(2.75f, 7f), 14.76f, 0), Quaternion.identity);
-            yield return new WaitForSeconds(0.6f);
+            yield return new WaitForSeconds(0.3f);
         }
     }
 
