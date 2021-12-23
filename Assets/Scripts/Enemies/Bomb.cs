@@ -75,6 +75,7 @@ public class Bomb : Enemies
             {
                 _collider.enabled = false;
                 anim.SetTrigger("Death");
+                AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);
                 distance = transform.position - GameManager.instance.player.transform.position;
                 if (distance.magnitude <= 3)
                 {

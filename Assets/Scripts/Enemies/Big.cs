@@ -36,6 +36,7 @@ public class Big : Enemies
             if (life <= 0)
             {
                 anim.SetTrigger("Death");
+                AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);
                 _collider.enabled = false;
             }
         }
