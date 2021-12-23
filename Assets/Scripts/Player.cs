@@ -10,7 +10,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float velocity,
         life,
-        lifeAmount;
+        lifeAmount,
+        timeShieldCC;
     [SerializeField] private int flashRange;
     private bool shieldColdDown,
         flashColdDown,
@@ -138,7 +139,7 @@ public class Player : MonoBehaviour
 
     public IEnumerator ShieldColdDown()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(timeShieldCC);
         shieldColdDown = false;
     }
 

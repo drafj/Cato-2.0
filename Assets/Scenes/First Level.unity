@@ -12307,10 +12307,10 @@ MonoBehaviour:
   winMessage: {fileID: 1829930634155129875}
   m_Joystick: {fileID: 3585977295790425373}
   life: {fileID: 1829930633314331228}
-  bulletCollision: {fileID: 8300000, guid: 8720072ae4d7e9c42b137210e7606b03, type: 3}
+  bulletCollision: {fileID: 8300000, guid: c80c7dbf82b41064d85318490de4d1a8, type: 3}
   shieldCollapse: {fileID: 8300000, guid: 56f5b6fa20679894d8658d743a03e1e4, type: 3}
-  enemyDeath: {fileID: 8300000, guid: 9ab7ac9f6e729457d8a8dfa89151ee30, type: 3}
-  playerShot: {fileID: 8300000, guid: e2a915bbc58734650bd17de4e87a001c, type: 3}
+  enemyDeath: {fileID: 8300000, guid: afd3450a0c95f3347afdb23602c3918c, type: 3}
+  playerShot: {fileID: 8300000, guid: 2ff593cda97c1de49b201010589c3edc, type: 3}
   loseClip: {fileID: 8300000, guid: adcbbbae313cb40978e30faf82938987, type: 3}
   ambientSound: {fileID: 3296993771116190788}
   m_pooler: {fileID: 516434593}

@@ -245,6 +245,7 @@ MonoBehaviour:
   velocity: 12
   life: 0
   lifeAmount: 0
+  timeShieldCC: 10
   flashRange: 0
   onShooting: 0
   primaryWeapon: 0
