@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1470540507727305809}
   - component: {fileID: 893398813149213031}
   - component: {fileID: 7168183816343425817}
+  - component: {fileID: -1435064995012120505}
   m_Layer: 0
   m_Name: Garbage 51
   m_TagString: Untagged
@@ -96,10 +97,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 4
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -134,3 +135,15 @@ PolygonCollider2D:
       - {x: -0.27499998, y: 0.096763134}
       - {x: 0.11108947, y: -0.30266833}
       - {x: 0.29634738, y: -0.07852125}
+--- !u!114 &-1435064995012120505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7573525881249496076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e2170f920cc216478dfc7a13e458182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

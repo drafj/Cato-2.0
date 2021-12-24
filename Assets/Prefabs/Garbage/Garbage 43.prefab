@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6594071294226477652}
   - component: {fileID: 396268695784836019}
   - component: {fileID: 3626630595230339011}
+  - component: {fileID: -1675952231038551354}
   m_Layer: 0
   m_Name: Garbage 43
   m_TagString: Untagged
@@ -112,12 +113,24 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 4
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-1675952231038551354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4529164563308063528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e2170f920cc216478dfc7a13e458182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

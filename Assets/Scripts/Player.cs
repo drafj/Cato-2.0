@@ -21,7 +21,9 @@ public class Player : MonoBehaviour
     public bool onShooting,
         primaryWeapon,
         silenced,
-        inmobilized;
+        inmobilized,
+        unleashed,
+        stuned;
     public static bool bossPhase;
     private CanyonOrder mOrder;
     public Gunz gunz;
@@ -97,7 +99,7 @@ public class Player : MonoBehaviour
     {
         while (true)
         {
-            if (!GameManager.instance.pause && !GameManager.instance.gameOver && onShooting)
+            if (!GameManager.instance.pause && !GameManager.instance.gameOver && onShooting && !stuned)
             {
                 switch (gunz)
                 {
@@ -251,7 +253,6 @@ public class Player : MonoBehaviour
                 else
                 rCAnim.SetTrigger("Piercing");
                 mOrder = CanyonOrder.Left;
-                //m_pooler.bulletsPool1[0].GetComponent<BulletController>().StartBullet();
             }
             else
             {
@@ -264,7 +265,6 @@ public class Player : MonoBehaviour
                 else
                 lCAnim.SetTrigger("Piercing");
                 mOrder = CanyonOrder.Right;
-                //m_pooler.bulletsPool1[0].GetComponent<BulletController>().StartBullet();
             }
         }
         else
@@ -277,7 +277,6 @@ public class Player : MonoBehaviour
             else
             m_pooler.SecondaryShoot(transform.localPosition + canyonPositions[2], Quaternion.identity);
             mCAnim.SetTrigger("Shoot");
-            //m_pooler.bulletsPool1[0].GetComponent<BulletController>().StartBullet();
         }
         AudioSource.PlayClipAtPoint(GameManager.instance.playerShot, Camera.main.transform.position);
     }
@@ -384,8 +383,11 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<Enemies>() != null && life > 0 && !invencible)
+        if (collision.gameObject.TryGetComponent(out Enemies enemie) && life > 0 && !invencible)
         {
+            if (enemie.TryGetComponent(out Poly poly))
+            TakeDamage(20);
+            else
             TakeDamage();
         }
     }
@@ -420,14 +422,17 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (transform.position.x > 6.85)
-            transform.position = new Vector3(6.85f, transform.position.y);
-        if (transform.position.x < -6.85)
-            transform.position = new Vector3(-6.85f, transform.position.y);
-        if (transform.position.y > 11.3)
-            transform.position = new Vector3(transform.position.x, 11.3f);
-        if (transform.position.y < -14)
-            transform.position = new Vector3(transform.position.x, -14f);
+        if (!unleashed)
+        {
+            if (transform.position.x > 6.85)
+                transform.position = new Vector3(6.85f, transform.position.y);
+            if (transform.position.x < -6.85)
+                transform.position = new Vector3(-6.85f, transform.position.y);
+            if (transform.position.y > 11.3)
+                transform.position = new Vector3(transform.position.x, 11.3f);
+            if (transform.position.y < -14)
+                transform.position = new Vector3(transform.position.x, -14f);
+        }
     }
 
     public void JoystickMoviment()

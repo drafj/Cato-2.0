@@ -24,11 +24,11 @@ public class GarbageRain : MonoBehaviour
         while (true)
         {
             SpawnGarbage(new Vector3(Random.Range(-7f, -2.75f), 14.76f, 0), Quaternion.identity);
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.15f);
             SpawnGarbage(new Vector3(Random.Range(-2.75f, 2.75f), 14.76f, 0), Quaternion.identity);
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.15f);
             SpawnGarbage(new Vector3(Random.Range(2.75f, 7f), 14.76f, 0), Quaternion.identity);
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.15f);
         }
     }
 

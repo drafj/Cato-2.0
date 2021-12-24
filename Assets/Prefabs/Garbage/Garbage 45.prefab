@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7406953680260762994}
   - component: {fileID: 7931803917993480291}
   - component: {fileID: 2323514959171521891}
+  - component: {fileID: -380815657326678105}
   m_Layer: 0
   m_Name: Garbage 45
   m_TagString: Untagged
@@ -96,10 +97,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 4
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -121,3 +122,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
+--- !u!114 &-380815657326678105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3221780239146940459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e2170f920cc216478dfc7a13e458182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

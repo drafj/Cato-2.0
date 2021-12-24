@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7777285013978886207}
   - component: {fileID: 8869445766141061604}
   - component: {fileID: 946889128792125686}
+  - component: {fileID: 5681201567127568190}
   m_Layer: 0
   m_Name: Garbage 48
   m_TagString: Untagged
@@ -96,10 +97,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 4
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -134,3 +135,15 @@ PolygonCollider2D:
       - {x: -0.922374, y: 0.70094466}
       - {x: 0.73644924, y: -0.88991594}
       - {x: 0.9372897, y: -0.65871906}
+--- !u!114 &5681201567127568190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268211843991877263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e2170f920cc216478dfc7a13e458182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
