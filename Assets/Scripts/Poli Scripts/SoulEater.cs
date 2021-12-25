@@ -34,6 +34,7 @@ public class SoulEater : MonoBehaviour
 
     void Eat(Player player)
     {
+        GameManager.instance.player.GetComponent<Player>().panelAnim.SetBool("Root", true);
         anim.SetBool("Catch", true);
         bellyFull = true;
         player.GetComponent<Collider2D>().enabled = false;
@@ -48,6 +49,7 @@ public class SoulEater : MonoBehaviour
 
     public void Spit()
     {
+        GameManager.instance.player.GetComponent<Player>().panelAnim.SetBool("Root", false);
         anim.SetBool("Catch", false);
         Player player = FindObjectOfType<Player>();
         player.transform.rotation = Quaternion.Euler(0, 0, 0);

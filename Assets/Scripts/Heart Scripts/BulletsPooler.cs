@@ -85,6 +85,7 @@ public class BulletsPooler : MonoBehaviour
         temp.transform.position = pos;
         temp.transform.rotation = rot;
         temp.SetActive(true);
+        temp.GetComponent<BulletController>().ShootSound();
         minimeBullets.Dequeue();
         minimeBullets.Enqueue(temp);
     }

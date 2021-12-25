@@ -251,6 +251,8 @@ MonoBehaviour:
   primaryWeapon: 0
   silenced: 0
   inmobilized: 0
+  unleashed: 0
+  stuned: 0
   gunz: 2
   m_abilities: 0
   config: []
@@ -258,6 +260,7 @@ MonoBehaviour:
   rCAnim: {fileID: 2127573808792172692}
   lCAnim: {fileID: 4721377483080016230}
   mCAnim: {fileID: 8077909717703600234}
+  panelAnim: {fileID: 7493078372254117574}
   rgbd: {fileID: 1663258805614013479}
   m_pooler: {fileID: 0}
   joyStickDir: {x: 0, y: 0}
@@ -674,6 +677,12 @@ PrefabInstance:
 --- !u!4 &8114965443549569201 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1468736381898010697, guid: 10818311e9b695e4b9cc5088e2823a00,
+    type: 3}
+  m_PrefabInstance: {fileID: 7277775106144637176}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7493078372254117574 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 217046833874140734, guid: 10818311e9b695e4b9cc5088e2823a00,
     type: 3}
   m_PrefabInstance: {fileID: 7277775106144637176}
   m_PrefabAsset: {fileID: 0}

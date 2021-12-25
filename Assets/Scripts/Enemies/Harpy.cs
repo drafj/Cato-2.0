@@ -64,6 +64,7 @@ public class Harpy : Enemies
 
     IEnumerator InmobilizePlayer(Player player)
     {
+        GameManager.instance.player.GetComponent<Player>().panelAnim.SetBool("Root", true);
         enganched = true;
         _collider.enabled = false;
         rgbd.velocity = Vector2.zero;
@@ -73,6 +74,7 @@ public class Harpy : Enemies
         player.inmobilized = true;
         player.rgbd.AddForce(Vector2.up * 2000);
         yield return new WaitForSeconds(1.5f);
+        GameManager.instance.player.GetComponent<Player>().panelAnim.SetBool("Root", false);
         player.inmobilized = false;
         transform.parent = null;
         rgbd.simulated = true;

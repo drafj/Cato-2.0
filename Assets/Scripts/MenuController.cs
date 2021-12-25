@@ -117,6 +117,12 @@ public class MenuController : MonoBehaviour
             points.text = " POINTS: " + PlayerPrefs.GetInt("Points");
     }
 
+    public void NextScene()
+    {
+        Player.bossPhase = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
     public void EnterPause()
     {
         if (!GameManager.instance.gameOver && !blockPause)
@@ -164,6 +170,7 @@ public class MenuController : MonoBehaviour
 
     public void BackToMenu()
     {
+        GameManager.instance.player.GetComponent<Collider2D>().enabled = false;
         Player.bossPhase = false;
         Time.timeScale = 1;
         StartCoroutine("MenuDelay");

@@ -43,6 +43,7 @@ public class Poly : Enemies
             if (life <= 0)
             {
                 healthBar.gameObject.SetActive(false);
+                GetComponent<Collider2D>().enabled = false;
                 anim.SetTrigger("Death");
             }
         }
@@ -76,6 +77,7 @@ public class Poly : Enemies
         }
         lastPos = actualPos;
         transform.position = positions[actualPos];
+        GameManager.instance.player.GetComponent<Player>().panelAnim.SetBool("Warning", true);
 
         if (actualPos < 3)
             transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -84,6 +86,7 @@ public class Poly : Enemies
         yield return new WaitForSeconds(2f);
 
         warning.SetActive(false);
+        GameManager.instance.player.GetComponent<Player>().panelAnim.SetBool("Warning", false);
         StartCoroutine(Move(transform.position));
     }
 

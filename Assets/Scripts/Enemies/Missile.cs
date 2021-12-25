@@ -52,6 +52,7 @@ public class Missile : Enemies
         goDown = true;
         warning.transform.parent = transform;
         warning.SetActive(false);
+        GameManager.instance.player.GetComponent<Player>().panelAnim.SetBool("Warning", false);
     }
 
     public override void LifeAndVelocityAsigner()

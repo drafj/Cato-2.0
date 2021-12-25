@@ -660,6 +660,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 672982628}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &672982631 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1628597575585116361, guid: 21aaa63760454564186935138b8b2752,
+    type: 3}
+  m_PrefabInstance: {fileID: 672982628}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &683999551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1490,7 +1496,6 @@ MonoBehaviour:
   bulletCollision: {fileID: 8300000, guid: 8720072ae4d7e9c42b137210e7606b03, type: 3}
   shieldCollapse: {fileID: 8300000, guid: 56f5b6fa20679894d8658d743a03e1e4, type: 3}
   enemyDeath: {fileID: 8300000, guid: afd3450a0c95f3347afdb23602c3918c, type: 3}
-  playerShot: {fileID: 8300000, guid: 558624356de633d409dbf28aa67e3be2, type: 3}
   loseClip: {fileID: 8300000, guid: adcbbbae313cb40978e30faf82938987, type: 3}
   ambientSound: {fileID: 3296993771116190788}
   m_pooler: {fileID: 516434593}
@@ -4521,7 +4526,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25583327, y: 0.34943715}
   m_AnchorMax: {x: 0.3036312, y: 0.41369066}
-  m_AnchoredPosition: {x: -34.800163, y: 22.195007}
+  m_AnchoredPosition: {x: -34.80017, y: 22.195007}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3426466378248191596
@@ -5645,7 +5650,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.38000003}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -12.7750025}
+  m_AnchoredPosition: {x: 0, y: -12.775003}
   m_SizeDelta: {x: 0, y: 25.549}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3426466378876815751
@@ -6743,7 +6748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 3426466377676049982}
-  zoomCamera: {fileID: 0}
+  zoomCamera: {fileID: 672982631}
   SceneToLoadGO: {fileID: 0}
   musicToggle: {fileID: 3426466377724506568}
   dropdown: {fileID: 0}
@@ -49962,7 +49967,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 9
+  m_SortingOrder: 8
   m_Sprite: {fileID: -4554317928548726557, guid: 4b5f3a367819ceb429384650d4e6f000,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -76,6 +76,7 @@ public class Heart : Enemies
                     {
                         leftCannon.parent.gameObject.SetActive(false);
                         rightCannon.parent.gameObject.SetActive(false);
+                        GetComponent<Collider2D>().enabled = false;
                         dontShoot = true;
                         Stop();
                         anim.SetTrigger("Death");
@@ -132,11 +133,16 @@ public class Heart : Enemies
         Stop();
         counterToMoveAgain = 0;
         yield return new WaitForSeconds(0.05f);
-        for (int i = 0; i < 2; i++)
+        if (life > 0)
         {
-            Instantiate(miniHearPref, new Vector2(-6, -15), Quaternion.identity);
-            Instantiate(miniHearPref, new Vector2(7, -15), Quaternion.identity);
-            yield return new WaitForSeconds(3f);
+            for (int i = 0; i < 2; i++)
+            {
+                Instantiate(miniHearPref, new Vector2(-6, -15), Quaternion.identity);
+                Instantiate(miniHearPref, new Vector2(7, -15), Quaternion.identity);
+                yield return new WaitForSeconds(3f);
+                if (life >= 0)
+                    break;
+            }
         }
     }
 
@@ -245,6 +251,8 @@ public class Heart : Enemies
     public void Death()
     {
         healthBar.gameObject.SetActive(false);
+        GameManager.instance.winMessage.SetActive(true);
+        PlayerPrefs.SetInt("actualLevel", 2);
         gameObject.SetActive(false);
     }
 

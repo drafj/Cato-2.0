@@ -32,7 +32,8 @@ public class Player : MonoBehaviour
     public Animator anim,
         rCAnim,
         lCAnim,
-        mCAnim;
+        mCAnim,
+        panelAnim;
     public Rigidbody2D rgbd;
     public Pooler m_pooler;
     public Vector2 joyStickDir;
@@ -198,12 +199,14 @@ public class Player : MonoBehaviour
 
     public IEnumerator Silence()
     {
+        panelAnim.SetBool("Silenced", true);
         silenceCounter++;
         silenced = true;
         yield return new WaitForSeconds(5f);
         if (silenceCounter <= 1)
         {
             silenced = false;
+            panelAnim.SetBool("Silenced", false);
         }
         silenceCounter--;
     }
