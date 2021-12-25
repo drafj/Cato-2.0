@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7635161479487333822}
   - component: {fileID: 7635161479487333823}
   - component: {fileID: 7635161479487333808}
-  - component: {fileID: 8721822262957175676}
+  - component: {fileID: 3804021403733507021}
   m_Layer: 0
   m_Name: Laser
   m_TagString: Player Bullet
@@ -115,12 +115,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10700fecb3a83ed4fb1e99029b5e272d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioShot: {fileID: 8300000, guid: 17503379102684d4590b7095a3a9e2dc, type: 3}
   onCourse: 0
   flip: 0
   mFlipDirection: 0
   gunz: 1
---- !u!58 &8721822262957175676
-CircleCollider2D:
+  oldEnemyBullet: 0
+--- !u!70 &3804021403733507021
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -132,6 +134,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.17980294}
-  serializedVersion: 2
-  m_Radius: 0.061466232
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.17481038, y: 3.1134691}
+  m_Direction: 0

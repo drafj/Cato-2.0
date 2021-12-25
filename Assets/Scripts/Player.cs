@@ -278,7 +278,6 @@ public class Player : MonoBehaviour
             m_pooler.SecondaryShoot(transform.localPosition + canyonPositions[2], Quaternion.identity);
             mCAnim.SetTrigger("Shoot");
         }
-        AudioSource.PlayClipAtPoint(GameManager.instance.playerShot, Camera.main.transform.position);
     }
 
     public void UseAbility()

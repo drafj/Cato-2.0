@@ -5,6 +5,7 @@ using UnityEngine.Analytics;
 
 public class BulletController : MonoBehaviour
 {
+    [SerializeField] private AudioClip audioShot = null;
     public bool onCourse;
     public bool flip;
     public BulletFlipDirection mFlipDirection;
@@ -20,6 +21,11 @@ public class BulletController : MonoBehaviour
     {
         onCourse = true;
         mFlipDirection = (BulletFlipDirection)Random.Range(0, 2);
+    }
+
+    public void ShootSound()
+    {
+        AudioSource.PlayClipAtPoint(audioShot, Camera.main.transform.position);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -52,29 +58,6 @@ public class BulletController : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-
-        /*if (transform.tag == "Enemy Bullet")
-        {
-            if (collision.transform.tag == "Player")
-            {
-                Player m_player = collision.gameObject.GetComponent<Player>();
-                m_player.SetLife(m_player.GetLife() - 5);
-                GameManager.instance.StartDealDamage();
-                GameManager.instance.player.GetComponent<Player>().UpdateLife();
-
-                if (m_player.GetLife() <= 0)
-                {
-                    GameManager.instance.gameOver = true;
-                    StartCoroutine(GameManager.instance.player.GetComponent<Player>().Die());
-                }
-                Instantiate(GameManager.instance.shotEP, transform.position, Quaternion.identity);
-                transform.position = new Vector3(1000, 1000);
-                gameObject.SetActive(false);
-            }
-        }*/
-
-
-
     }
 
     void FixedUpdate()

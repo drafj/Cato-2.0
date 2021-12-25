@@ -115,9 +115,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10700fecb3a83ed4fb1e99029b5e272d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioShot: {fileID: 8300000, guid: 558624356de633d409dbf28aa67e3be2, type: 3}
   onCourse: 0
   flip: 0
   mFlipDirection: 0
+  gunz: 0
+  oldEnemyBullet: 0
 --- !u!58 &3065237366686505263
 CircleCollider2D:
   m_ObjectHideFlags: 0

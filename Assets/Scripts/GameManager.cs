@@ -29,7 +29,6 @@ public class GameManager : MonoBehaviour
     public AudioClip bulletCollision;
     public AudioClip shieldCollapse;
     public AudioClip enemyDeath;
-    public AudioClip playerShot;
     public AudioClip loseClip;
     public AudioSource ambientSound;
     public Pooler m_pooler;
