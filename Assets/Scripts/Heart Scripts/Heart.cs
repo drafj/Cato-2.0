@@ -25,7 +25,8 @@ public class Heart : Enemies
     private GameObject actualChargedB = null;
     private bool stopMoving = false,
         pursuerRot = false,
-        dontShoot = false;
+        dontShoot = false,
+        entering = true;
     public bool healing;
     public bool stopHealAbility;
     public bool alreadyHealed;
@@ -34,10 +35,9 @@ public class Heart : Enemies
     {
         healthBar.gameObject.SetActive(true);
         armor = true;
+        entering = true;
         LifeAndVelocityAsigner();
         SetMaxHealth();
-        Continue();
-        StartCoroutine(Shoot());
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -264,13 +264,29 @@ public class Heart : Enemies
 
     void BossDisplacement()
     {
-        if (transform.position.x >= 3f)
+        if (entering)
         {
-            rgbd.AddForce(transform.right * -velocity * Time.fixedDeltaTime);
+            if (transform.position.y > 7.5f)
+            {
+                transform.position = Vector2.Lerp(transform.position, new Vector2(0, 7.4f), 2 * Time.fixedDeltaTime);
+            }
+            else
+            {
+                entering = false;
+                Continue();
+                StartCoroutine(Shoot());
+            }
         }
-        else if (transform.position.x <= -3f)
+        else
         {
-            rgbd.AddForce(transform.right * velocity * Time.fixedDeltaTime);
+            if (transform.position.x >= 3f)
+            {
+                rgbd.AddForce(transform.right * -velocity * Time.fixedDeltaTime);
+            }
+            else if (transform.position.x <= -3f)
+            {
+                rgbd.AddForce(transform.right * velocity * Time.fixedDeltaTime);
+            }
         }
     }
 }
