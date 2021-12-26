@@ -11,6 +11,9 @@ public class Poly : Enemies
     [SerializeField] private SoulEater eater = null;
     [SerializeField] private Slider healthBar = null;
     [SerializeField] private Animator anim = null;
+    [SerializeField] private AudioSource warninAudio = null,
+        polyDragAudio = null,
+        closeJawAudio = null;
     private int lastPos = 0;
 
     private void OnEnable()
@@ -19,7 +22,7 @@ public class Poly : Enemies
         LifeAndVelocityAsigner();
         SetMaxHealth();
         healthBar.gameObject.SetActive(true);
-        StartCoroutine(MoveBehaviour());
+        StartCoroutine(Entering());
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -60,15 +63,45 @@ public class Poly : Enemies
         healthBar.value = life;
     }
 
+    public void CloseJawAudio()
+    {
+        closeJawAudio.Play();
+    }
+
     public override void Die()
     {
         base.Die();
         winMessage.SetActive(true);
     }
 
+    IEnumerator Entering()
+    {
+        warning.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        warning.SetActive(false);
+        warninAudio.Stop();
+        while (transform.position.y > 9.5f)
+        {
+            transform.position = Vector2.Lerp(transform.position, new Vector2(0, 9f), 2 * Time.fixedDeltaTime);
+            yield return new WaitForFixedUpdate();
+        }
+        yield return new WaitForSeconds(2f);
+        while (transform.position.y < 16.5f)
+        {
+            transform.position = Vector2.Lerp(transform.position, new Vector2(0, 17f), 2 * Time.fixedDeltaTime);
+            yield return new WaitForFixedUpdate();
+        }
+        StartCoroutine(MoveBehaviour());
+    }
+
     IEnumerator MoveBehaviour()
     {
+        GetComponent<Collider2D>().enabled = true;
+        eater.gameObject.SetActive(true);
+        transform.GetChild(4).gameObject.SetActive(true);
         anim.SetBool("Attack", false);
+        warninAudio.loop = false;
+        warninAudio.Play();
         warning.SetActive(true);
         int actualPos = Random.Range(0, 6);
         while (actualPos == lastPos)
@@ -107,6 +140,7 @@ public class Poly : Enemies
                     if (eater.bellyFull)
                         eater.Spit();
                     yield return new WaitForSeconds(1.5f);
+                    polyDragAudio.Play();
                     anim.SetBool("Attack", true);
                 }
                 else
@@ -131,6 +165,7 @@ public class Poly : Enemies
                     if (eater.bellyFull)
                         eater.Spit();
                     yield return new WaitForSeconds(1.5f);
+                    polyDragAudio.Play();
                     anim.SetBool("Attack", true);
                 }
                 else

@@ -14,7 +14,6 @@ public class SoulEater : MonoBehaviour
     {
         if (collision.TryGetComponent(out Player player) && !bellyFull)
         {
-            pushers.SetActive(false);
             Eat(player);
         }
     }
@@ -34,17 +33,21 @@ public class SoulEater : MonoBehaviour
 
     void Eat(Player player)
     {
-        GameManager.instance.player.GetComponent<Player>().panelAnim.SetBool("Root", true);
-        anim.SetBool("Catch", true);
-        bellyFull = true;
-        player.GetComponent<Collider2D>().enabled = false;
-        player.unleashed = true;
-        player.silenced = true;
-        player.stuned = true;
-        player.inmobilized = true;
-        player.rgbd.simulated = false;
-        player.transform.parent = transform;
-        player.transform.localPosition = new Vector2();
+        if (anim.GetBool("Attack"))
+        {
+            pushers.SetActive(false);
+            GameManager.instance.player.GetComponent<Player>().panelAnim.SetBool("Root", true);
+            anim.SetBool("Catch", true);
+            bellyFull = true;
+            player.GetComponent<Collider2D>().enabled = false;
+            player.unleashed = true;
+            player.silenced = true;
+            player.stuned = true;
+            player.inmobilized = true;
+            player.rgbd.simulated = false;
+            player.transform.parent = transform;
+            player.transform.localPosition = new Vector2();
+        }
     }
 
     public void Spit()
