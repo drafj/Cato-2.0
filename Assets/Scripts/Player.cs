@@ -449,7 +449,7 @@ public class Player : MonoBehaviour
 
     public void JoystickMoviment()
     {
-        joyStickDir = GameManager.instance.m_Joystick.Direction * velocity * Time.deltaTime;
+        joyStickDir = GameManager.instance.m_Joystick.Direction * velocity * Time.fixedDeltaTime;
 
         rgbd.velocity += new Vector2(joyStickDir.x, joyStickDir.y);
 
@@ -459,7 +459,7 @@ public class Player : MonoBehaviour
     void KeyboardMoviment()
     {
         axis = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        axis = axis * velocity * Time.deltaTime;
+        axis = axis * velocity * Time.fixedDeltaTime;
 
         rgbd.velocity += new Vector2(axis.x, axis.y);
         anim.SetFloat("VelX", Input.GetAxis("Horizontal"));

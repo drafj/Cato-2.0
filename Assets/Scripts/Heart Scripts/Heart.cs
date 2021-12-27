@@ -86,6 +86,7 @@ public class Heart : Enemies
                         dontShoot = true;
                         Stop();
                         anim.SetTrigger("Death");
+                        PlayerPrefs.SetInt("actualLevel", 2);
                     }
                 }
             }

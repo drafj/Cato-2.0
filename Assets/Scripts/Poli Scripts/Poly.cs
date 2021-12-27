@@ -47,6 +47,7 @@ public class Poly : Enemies
             {
                 healthBar.gameObject.SetActive(false);
                 GetComponent<Collider2D>().enabled = false;
+                PlayerPrefs.SetInt("actualLevel", 1);
                 anim.SetTrigger("Death");
             }
         }

@@ -135,7 +135,7 @@ Transform:
   m_LocalPosition: {x: -0.47, y: -10.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3270552302606748853}
+  - {fileID: 1663258805705441368}
   - {fileID: 8861150999074462864}
   - {fileID: 8114965443549569201}
   m_Father: {fileID: 0}
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5415db34baa30b4438ff1e8d9794e5af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 12
+  velocity: 18
   life: 0
   lifeAmount: 0
   timeShieldCC: 10
@@ -698,7 +698,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48549e089930e5d48b039bee3527eaa5, type: 3}
---- !u!4 &3270552302606748853 stripped
+--- !u!4 &1663258805705441368 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4212625900781113314, guid: 48549e089930e5d48b039bee3527eaa5,
     type: 3}
