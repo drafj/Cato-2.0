@@ -130,7 +130,7 @@ MonoBehaviour:
   velocity: 2
   background: {fileID: 0}
   pos: {fileID: 6426044495250595149}
-  myType: 1
+  myType: 3
 --- !u!61 &6426044494914486765
 BoxCollider2D:
   m_ObjectHideFlags: 0

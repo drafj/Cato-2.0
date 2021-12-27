@@ -32,7 +32,9 @@ public class GameManager : MonoBehaviour
     public AudioClip loseClip;
     public AudioSource ambientSound;
     public Pooler m_pooler;
-    public Background tileBG;
+    public Background topTileBG;
+    public Background midTileBG;
+    public Background bottomTileBG;
     public Background spaceBG;
     public int counterToBoss;
     public int arrivalBoss;
@@ -126,7 +128,9 @@ public class GameManager : MonoBehaviour
 
     public void InvokeBoss()
     {
-        tileBG.instanceBackgrounds = false;
+        topTileBG.instanceBackgrounds = false;
+        midTileBG.instanceBackgrounds = false;
+        bottomTileBG.instanceBackgrounds = false;
         Boss.SetActive(true);
     }
 
