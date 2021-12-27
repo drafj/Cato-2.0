@@ -2686,12 +2686,17 @@ PrefabInstance:
     - target: {fileID: 2383156791716914631, guid: 0c6ee64b7e276214690d81fcf989486f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 108.76001
+      value: 108.760025
       objectReference: {fileID: 0}
     - target: {fileID: 2383156791716914631, guid: 0c6ee64b7e276214690d81fcf989486f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -12.850098
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068883853448483903, guid: 0c6ee64b7e276214690d81fcf989486f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -12.7750025
       objectReference: {fileID: 0}
     - target: {fileID: 4068883854713191769, guid: 0c6ee64b7e276214690d81fcf989486f,
         type: 3}
@@ -2808,10 +2813,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4068883855145100121, guid: 0c6ee64b7e276214690d81fcf989486f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -12.7750025
+      objectReference: {fileID: 0}
     - target: {fileID: 4068883855243718346, guid: 0c6ee64b7e276214690d81fcf989486f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -34.80014
+      value: -34.800133
       objectReference: {fileID: 0}
     - target: {fileID: 7662841893730345311, guid: 0c6ee64b7e276214690d81fcf989486f,
         type: 3}
@@ -2886,6 +2896,8 @@ GameObject:
   - component: {fileID: 2685958029521773569}
   - component: {fileID: 2685958029521773568}
   - component: {fileID: 2685958029521773584}
+  - component: {fileID: 2685958029521773587}
+  - component: {fileID: 2685958029521773586}
   - component: {fileID: 2685958029521773585}
   m_Layer: 0
   m_Name: GameManager
@@ -2907,19 +2919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabs:
-  - {fileID: 5098898627195783669, guid: 2d9de9f63e618264b97083baa9dfc366, type: 3}
-  - {fileID: 7931989812968828949, guid: 949d0cb429333f34bb4897ee9068933b, type: 3}
-  - {fileID: 2150682334584884067, guid: d3de9c66b59ccf142a67d5c568ca5a92, type: 3}
-  - {fileID: 3188535002137377699, guid: 3f8dcf3cf86f75a47a559b7b1297ed4c, type: 3}
-  - {fileID: 4978262739814357339, guid: b70065b09852859489cda6343d21ac8f, type: 3}
-  - {fileID: 8050248939953139178, guid: 6c7e1487046729b4f95eaf166dee1509, type: 3}
-  - {fileID: 5544723016063034432, guid: a2a745aec15a61c47954b4290010706c, type: 3}
-  - {fileID: 6038976385678086597, guid: 590fcad640904de46ba7648d27658ac0, type: 3}
-  - {fileID: 8215918266801930272, guid: 97958b161983c3d4ca76bf7c9d870406, type: 3}
-  - {fileID: 7048662439335996034, guid: 20dd23c3ad498e54fb6605e3f2a16f36, type: 3}
-  - {fileID: 4719877485037150456, guid: 6b5c84212dde7584f921bfc6b703ad18, type: 3}
-  - {fileID: 2457764033754611349, guid: 0571431a3f7847b4d9c8cb27555482d7, type: 3}
-  - {fileID: 5663773447590210192, guid: 26a6c91bb63f2b64a868ef8812e28a44, type: 3}
+  - {fileID: 6927562059102168688, guid: 5b182caf55e3f9a43bfd07e094a8a3f3, type: 3}
   instanceBackgrounds: 1
 --- !u!114 &2685958029521773585
 MonoBehaviour:
@@ -2937,6 +2937,36 @@ MonoBehaviour:
   - {fileID: 6426044494914486767, guid: 24def1d2b56c21244a35e1445294bb7e, type: 3}
   - {fileID: 4913405162386725022, guid: 861516080d7b01c44b3b147d3db7e6b1, type: 3}
   - {fileID: 7433419699415982909, guid: 0a750b5c55be03a459bbe422962736f5, type: 3}
+  instanceBackgrounds: 1
+--- !u!114 &2685958029521773586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2685958029521773583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9341f50eb9eb8b747a42179189994451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 496574711638214628, guid: d0247344f15c04848877d783a02d40be, type: 3}
+  instanceBackgrounds: 1
+--- !u!114 &2685958029521773587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2685958029521773583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9341f50eb9eb8b747a42179189994451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 2184493933080629738, guid: ec98f3c2c75b6744090040a47f2de093, type: 3}
   instanceBackgrounds: 1
 --- !u!82 &3296993771116190788
 AudioSource:
