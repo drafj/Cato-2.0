@@ -47,7 +47,7 @@ public class BulletsPooler : MonoBehaviour
             return false;
     }
 
-    public void SpawnPursuerB(Vector3 pos, Quaternion rot)
+    public void SpawnPursuerB(Vector3 pos, Quaternion rot, int size = 1)
     {
         if (pursuerBullets.Count > 0)
         {
@@ -57,6 +57,7 @@ public class BulletsPooler : MonoBehaviour
 
             temp.transform.position = pos;
             temp.transform.rotation = rot;
+            temp.transform.localScale = new Vector2(size, size);
             temp.SetActive(true);
             pursuerBullets.Dequeue();
             pursuerBullets.Enqueue(temp);

@@ -65,6 +65,7 @@ public class Harpy : Enemies
     IEnumerator InmobilizePlayer(Player player)
     {
         GameManager.instance.player.GetComponent<Player>().panelAnim.SetBool("Root", true);
+        goDown = false;
         enganched = true;
         _collider.enabled = false;
         rgbd.velocity = Vector2.zero;

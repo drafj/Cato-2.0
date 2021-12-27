@@ -5,27 +5,41 @@ using UnityEngine.SceneManagement;
 
 public class Tutorial : MonoBehaviour
 {
-    int counter;
+    int counter = 1;
 
     public List<GameObject> arrows = new List<GameObject>();
     public List<GameObject> text = new List<GameObject>();
 
-    public TutoState m_tuto;
-
-    private void Start()
-    {
-        MenuController.blockPause = true;
-    }
+    //public TutoState m_tuto;
 
     public void TutoPass()
     {
-        if (counter >= 6)
+        if (counter >= text.Count)
         {
-            MenuController.blockPause = false;
             SceneManager.LoadScene(1);
         }
+        else
+        {
+            text[counter].SetActive(true);
+            arrows[counter].SetActive(true);
 
-        m_tuto = (TutoState) counter;
+            for (int i = 0; i < text.Count; i++)
+            {
+                if (i != counter)
+                {
+                    text[i].SetActive(false);
+                }
+            }
+            for (int i = 0; i < arrows.Count; i++)
+            {
+                if (i != counter && arrows[i] != null)
+                {
+                    arrows[i].SetActive(false);
+                }
+            }
+            counter++;
+        }
+        /*m_tuto = (TutoState) counter;
 
         text[0].SetActive(false);
 
@@ -87,15 +101,8 @@ public class Tutorial : MonoBehaviour
                 break;
             default:
                 break;
-        }
-
-        counter++;
-    }
-
-    void Update()
-    {
-        
+        }*/
     }
 }
 
-public enum TutoState {pointLife, pointFood, pointPause, pointJoystick, pointShotB, pointAbilityB }
+//public enum TutoState {pointLife, pointFood, pointPause, pointJoystick, pointShotB, pointAbilityB }

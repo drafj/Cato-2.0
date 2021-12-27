@@ -77,7 +77,9 @@ public class Poly : Enemies
     IEnumerator Entering()
     {
         warning.SetActive(true);
+        GameManager.instance.player.GetComponent<Player>().panelAnim.SetBool("Warning", true);
         yield return new WaitForSeconds(1.5f);
+        GameManager.instance.player.GetComponent<Player>().panelAnim.SetBool("Warning", false);
         warning.SetActive(false);
         warninAudio.Stop();
         while (transform.position.y > 9.5f)

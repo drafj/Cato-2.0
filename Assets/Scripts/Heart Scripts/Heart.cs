@@ -21,12 +21,18 @@ public class Heart : Enemies
     [SerializeField] private Animator anim = null;
     [HideInInspector] public int counterToMoveAgain,
         counterToRay;
+    [SerializeField]
+    private AudioSource warninAudio = null,
+        shieldAudio = null,
+        healAudio = null;
+    [SerializeField] private AudioClip audioShot = null;
+    [SerializeField]
+    private AudioClip beanAudio = null;
     private int actualShield = 0;
     private GameObject actualChargedB = null;
     private bool stopMoving = false,
         pursuerRot = false,
-        dontShoot = false,
-        entering = true;
+        dontShoot = false;
     public bool healing;
     public bool stopHealAbility;
     public bool alreadyHealed;
@@ -35,9 +41,9 @@ public class Heart : Enemies
     {
         healthBar.gameObject.SetActive(true);
         armor = true;
-        entering = true;
         LifeAndVelocityAsigner();
         SetMaxHealth();
+        StartCoroutine(Entering());
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -111,7 +117,10 @@ public class Heart : Enemies
                     StartCoroutine(ShootPursuer(leftCannon.position, Quaternion.Euler(0, 0, -135)));
                 yield return new WaitForSeconds(2f);
                 if (!dontShoot)
-                bulletsPooler.SpawnShapeB(rightCannon.position, Quaternion.identity);
+                {
+                    AudioSource.PlayClipAtPoint(audioShot, Camera.main.transform.position);
+                    bulletsPooler.SpawnShapeB(rightCannon.position, Quaternion.identity);
+                }
                 yield return new WaitForSeconds(2f);
                 pursuerRot = !pursuerRot;
             }
@@ -121,6 +130,7 @@ public class Heart : Enemies
 
     IEnumerator ShootPursuer(Vector2 pos, Quaternion rot)
     {
+        AudioSource.PlayClipAtPoint(audioShot, Camera.main.transform.position);
         for (int i = 0; i < 6; i++)
         {
             bulletsPooler.SpawnPursuerB(pos, rot);
@@ -156,15 +166,18 @@ public class Heart : Enemies
         shieldParticle.SetActive(true);
         healing = true;
         dontShoot = true;
+        shieldAudio.Play();
         while (true)
         {
             if (healing)
             {
-                if (life <= 78)
-                life += 2;
+                healAudio.Play();
+                if (life <= (lifeReference - 2))
+                life += 5;
             }
             else if (stopHealAbility)
             {
+                shieldAudio.Stop();
                 shieldParticle.SetActive(false);
                 if (actualChargedB != null)
                     actualChargedB.GetComponent<ChargedBullet>().ChargeStarter();
@@ -175,7 +188,7 @@ public class Heart : Enemies
                 break;
             }
             SetHealth();
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.5f);
         }
         dontShoot = false;
     }
@@ -187,6 +200,24 @@ public class Heart : Enemies
             StartCoroutine(HeartAttack());
             yield return new WaitForSeconds(15);
         }
+    }
+
+    IEnumerator Entering()
+    {
+        GetComponent<Collider2D>().enabled = false;
+        GameManager.instance.player.GetComponent<Player>().panelAnim.SetBool("Warning", true);
+        yield return new WaitForSeconds(4.5f);
+        GameManager.instance.player.GetComponent<Player>().panelAnim.SetBool("Warning", false);
+        warninAudio.Stop();
+        while (transform.position.y > 7.5f)
+        {
+            transform.position = Vector2.Lerp(transform.position, new Vector2(0, 7.4f), 2 * Time.fixedDeltaTime);
+            yield return new WaitForFixedUpdate();
+        }
+        GetComponent<Collider2D>().enabled = true;
+        Continue();
+        StartCoroutine(Shoot());
+        StartCoroutine(BossDisplacement());
     }
 
     public void CheckIfStopHeal()
@@ -229,6 +260,7 @@ public class Heart : Enemies
 
     public void IncapacitatingBeam()
     {
+        AudioSource.PlayClipAtPoint(beanAudio, Camera.main.transform.position);
         Instantiate(rayPref, rayCannon.position, Quaternion.identity);
         GameManager.instance.player.GetComponent<Player>().SilenceStarter();
     }
@@ -256,37 +288,22 @@ public class Heart : Enemies
         gameObject.SetActive(false);
     }
 
-    private void FixedUpdate()
+    IEnumerator BossDisplacement()
     {
-        if (!stopMoving)
-            BossDisplacement();
-    }
-
-    void BossDisplacement()
-    {
-        if (entering)
+        while (true)
         {
-            if (transform.position.y > 7.5f)
+            if (!stopMoving)
             {
-                transform.position = Vector2.Lerp(transform.position, new Vector2(0, 7.4f), 2 * Time.fixedDeltaTime);
+                if (transform.position.x >= 3f)
+                {
+                    rgbd.AddForce(transform.right * -velocity * Time.fixedDeltaTime);
+                }
+                else if (transform.position.x <= -3f)
+                {
+                    rgbd.AddForce(transform.right * velocity * Time.fixedDeltaTime);
+                }
             }
-            else
-            {
-                entering = false;
-                Continue();
-                StartCoroutine(Shoot());
-            }
-        }
-        else
-        {
-            if (transform.position.x >= 3f)
-            {
-                rgbd.AddForce(transform.right * -velocity * Time.fixedDeltaTime);
-            }
-            else if (transform.position.x <= -3f)
-            {
-                rgbd.AddForce(transform.right * velocity * Time.fixedDeltaTime);
-            }
+            yield return new WaitForFixedUpdate();
         }
     }
 }

@@ -273,6 +273,7 @@ MonoBehaviour:
   - {x: 0, y: 2, z: 0}
   minime: {fileID: 8911716245586808426, guid: ac7077e73c8e5da42af53af7fd0c314c, type: 3}
   minimeList: []
+  flashAudio: {fileID: 8300000, guid: 45f4b810432ce7745a58c73f5e7baeca, type: 3}
   visualCcImage: {fileID: 0}
 --- !u!70 &3715015624037762497
 CapsuleCollider2D:

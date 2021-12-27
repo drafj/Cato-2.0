@@ -23,6 +23,9 @@ public class MenuController : MonoBehaviour
     public List<string> primary;
     public List<string> secondary;
     [SerializeField] private Dropdown.OptionData tempValue;
+    [SerializeField]
+    private AudioClip pauseAudio = null,
+        buttonAudio = null;
 
 
     void Start()
@@ -127,6 +130,7 @@ public class MenuController : MonoBehaviour
     {
         if (!GameManager.instance.gameOver && !blockPause)
         {
+            AudioSource.PlayClipAtPoint(pauseAudio, Camera.main.transform.position);
             Time.timeScale = 0;
             GameManager.instance.player.GetComponent<Player>().anim.enabled = false;
             GameManager.instance.pauseMenu.SetActive(true);
@@ -137,6 +141,7 @@ public class MenuController : MonoBehaviour
     public void ExitPause()
     {
         Time.timeScale = 1;
+        AudioSource.PlayClipAtPoint(pauseAudio, Camera.main.transform.position);
         GameManager.instance.player.GetComponent<Player>().anim.enabled = true;
         GameManager.instance.pause = false;
     }
@@ -144,6 +149,18 @@ public class MenuController : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+    }
+
+    public void ButtonSound()
+    {
+        if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+            AudioSource.PlayClipAtPoint(buttonAudio, Camera.main.transform.position);
+            Time.timeScale = 0;
+        }
+        else
+            AudioSource.PlayClipAtPoint(buttonAudio, Camera.main.transform.position);
     }
 
     public void TutorialButton()
@@ -170,6 +187,7 @@ public class MenuController : MonoBehaviour
 
     public void BackToMenu()
     {
+        ButtonSound();
         GameManager.instance.player.GetComponent<Collider2D>().enabled = false;
         Player.bossPhase = false;
         Time.timeScale = 1;

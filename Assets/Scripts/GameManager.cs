@@ -32,9 +32,12 @@ public class GameManager : MonoBehaviour
     public AudioClip loseClip;
     public AudioSource ambientSound;
     public Pooler m_pooler;
+    public Background tileBG;
+    public Background spaceBG;
     public int counterToBoss;
     public int arrivalBoss;
     private int enemyChooser;
+    private int previousEnemy;
 
     private void Awake()
     {
@@ -66,6 +69,11 @@ public class GameManager : MonoBehaviour
             if (!pause)
             {
                 enemyChooser = Random.Range(0, 6);
+                while (enemyChooser == previousEnemy)
+                {
+                    enemyChooser = Random.Range(0, 6);
+                }
+                previousEnemy = enemyChooser;
                 switch (enemyChooser)
                 {
                     case 0:
@@ -118,6 +126,7 @@ public class GameManager : MonoBehaviour
 
     public void InvokeBoss()
     {
+        tileBG.instanceBackgrounds = false;
         Boss.SetActive(true);
     }
 

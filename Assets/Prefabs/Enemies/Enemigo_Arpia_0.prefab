@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 9
+  m_SortingOrder: 7
   m_Sprite: {fileID: 6365856846184052674, guid: f68802cf810afa64989bf23ebc562151,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -110,6 +110,9 @@ MonoBehaviour:
   anim: {fileID: 6672906891073829551}
   _collider: {fileID: 6522340273292348197}
   rgbd: {fileID: 7495570081448759046}
+  chasing: 0
+  enganched: 0
+  goDown: 1
 --- !u!95 &6672906891073829551
 Animator:
   serializedVersion: 3

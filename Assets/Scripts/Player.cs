@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
     public GameObject minime;
     [SerializeField] private List<GameObject> minimeList = new List<GameObject>();
     private int silenceCounter;
+    [SerializeField] private AudioClip flashAudio = null;
     [SerializeField] private Image visualCcImage = null;
 
     private void Awake()
@@ -300,6 +301,7 @@ public class Player : MonoBehaviour
                 abilityColdDown = true;
                 StartCoroutine(AbilityColdDown());
                 Instantiate(GameManager.instance.flashParticles, transform.position + new Vector3(0, 0, -5), Quaternion.identity);
+                AudioSource.PlayClipAtPoint(flashAudio, Camera.main.transform.position);
                 if (anim.GetBool("OnTouch"))
                     transform.Translate(joyStickDir * 30);
                 else

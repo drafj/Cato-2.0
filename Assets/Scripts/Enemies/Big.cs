@@ -63,7 +63,7 @@ public class Big : Enemies
     {
         while (life > 0)
         {
-            bPool.SpawnPursuerB(gap.transform.position, Quaternion.Euler(0, 0, 180));
+            bPool.SpawnPursuerB(gap.transform.position, Quaternion.Euler(0, 0, 180), 2);
             yield return new WaitForSeconds(cadence);
             if (life <= 0)
                 break;
