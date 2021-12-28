@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BGMovement : MonoBehaviour
 {
-    [SerializeField] private float velocity = 0;
     [SerializeField] private Background background = null;
     [SerializeField] private Transform pos = null;
     [SerializeField] private BackgroundType myType = BackgroundType.TopTile;
@@ -52,7 +51,7 @@ public class BGMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.position -= transform.up * velocity * Time.fixedDeltaTime;
+        transform.position -= transform.up * background.velocity * Time.fixedDeltaTime;
     }
 }
 

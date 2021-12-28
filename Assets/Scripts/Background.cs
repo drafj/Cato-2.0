@@ -6,6 +6,7 @@ public class Background : MonoBehaviour
 {
     [SerializeField] private List<GameObject> prefabs = new List<GameObject>();
     public bool instanceBackgrounds;
+    public float velocity;
     private int actualObj = 0;
     private int previousObj;
 

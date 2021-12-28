@@ -3073,7 +3073,7 @@ PrefabInstance:
     - target: {fileID: 4068883855243718346, guid: 0c6ee64b7e276214690d81fcf989486f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -34.800133
+      value: -34.80014
       objectReference: {fileID: 0}
     - target: {fileID: 4068883855372623930, guid: 0c6ee64b7e276214690d81fcf989486f,
         type: 3}
@@ -3180,6 +3180,7 @@ MonoBehaviour:
   prefabs:
   - {fileID: 6927562059102168688, guid: 5b182caf55e3f9a43bfd07e094a8a3f3, type: 3}
   instanceBackgrounds: 1
+  velocity: 5
 --- !u!114 &2685958029521773585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3197,6 +3198,7 @@ MonoBehaviour:
   - {fileID: 4913405162386725022, guid: 861516080d7b01c44b3b147d3db7e6b1, type: 3}
   - {fileID: 7433419699415982909, guid: 0a750b5c55be03a459bbe422962736f5, type: 3}
   instanceBackgrounds: 1
+  velocity: 1
 --- !u!114 &2685958029521773586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3212,6 +3214,7 @@ MonoBehaviour:
   prefabs:
   - {fileID: 496574711638214628, guid: d0247344f15c04848877d783a02d40be, type: 3}
   instanceBackgrounds: 1
+  velocity: 2
 --- !u!114 &2685958029521773587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3227,6 +3230,7 @@ MonoBehaviour:
   prefabs:
   - {fileID: 2184493933080629738, guid: ec98f3c2c75b6744090040a47f2de093, type: 3}
   instanceBackgrounds: 1
+  velocity: 3.5
 --- !u!82 &3296993771116190788
 AudioSource:
   m_ObjectHideFlags: 0
