@@ -3183,6 +3183,7 @@ MonoBehaviour:
   - {fileID: 8034803178807628833, guid: 0ad4ac53c96e4e14eb5b98033187efa2, type: 3}
   - {fileID: 3228870812592097851, guid: a7784398aa18f264d9fd4d385a69baa7, type: 3}
   instanceBackgrounds: 1
+  velocity: 5
 --- !u!114 &2685958029521773585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3200,6 +3201,7 @@ MonoBehaviour:
   - {fileID: 4913405162386725022, guid: 861516080d7b01c44b3b147d3db7e6b1, type: 3}
   - {fileID: 7433419699415982909, guid: 0a750b5c55be03a459bbe422962736f5, type: 3}
   instanceBackgrounds: 1
+  velocity: 1
 --- !u!114 &2685958029521773586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3218,6 +3220,7 @@ MonoBehaviour:
   - {fileID: 6081476021483992923, guid: fc8456c8b9a25b14da523de0e342f842, type: 3}
   - {fileID: 927401216532780206, guid: 1d1bd32ef3033eb468d864603ac7b77e, type: 3}
   instanceBackgrounds: 1
+  velocity: 2
 --- !u!114 &2685958029521773587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3236,6 +3239,7 @@ MonoBehaviour:
   - {fileID: 6987528300138057468, guid: c739321f07674324ab883ea07d85bbd1, type: 3}
   - {fileID: 8401922779890704329, guid: 790c2cfcaf440054994cd5fe6556cd46, type: 3}
   instanceBackgrounds: 1
+  velocity: 3.5
 --- !u!82 &3296993771116190788
 AudioSource:
   m_ObjectHideFlags: 0
