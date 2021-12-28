@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2fd17abf5c6f0c42b7eef142e14ecc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 2
+  velocity: 0.5
   background: {fileID: 0}
   pos: {fileID: 6307671637068137355}
   myType: 3
