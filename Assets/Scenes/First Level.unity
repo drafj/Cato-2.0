@@ -1939,7 +1939,7 @@ PrefabInstance:
     - target: {fileID: 496574711638214554, guid: d0247344f15c04848877d783a02d40be,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.55
+      value: -11.17
       objectReference: {fileID: 0}
     - target: {fileID: 496574711638214554, guid: d0247344f15c04848877d783a02d40be,
         type: 3}
@@ -2097,7 +2097,7 @@ PrefabInstance:
     - target: {fileID: 6927562059102168700, guid: 5b182caf55e3f9a43bfd07e094a8a3f3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.18
+      value: 5.31
       objectReference: {fileID: 0}
     - target: {fileID: 6927562059102168700, guid: 5b182caf55e3f9a43bfd07e094a8a3f3,
         type: 3}
@@ -2147,7 +2147,7 @@ PrefabInstance:
     - target: {fileID: 6927562060078367988, guid: 5b182caf55e3f9a43bfd07e094a8a3f3,
         type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: -3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b182caf55e3f9a43bfd07e094a8a3f3, type: 3}
@@ -2493,7 +2493,7 @@ PrefabInstance:
     - target: {fileID: 2184493933080629736, guid: ec98f3c2c75b6744090040a47f2de093,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.02
+      value: -2.82
       objectReference: {fileID: 0}
     - target: {fileID: 2184493933080629736, guid: ec98f3c2c75b6744090040a47f2de093,
         type: 3}
@@ -2918,7 +2918,7 @@ PrefabInstance:
     - target: {fileID: 2383156791716914631, guid: 0c6ee64b7e276214690d81fcf989486f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 108.760025
+      value: 108.76001
       objectReference: {fileID: 0}
     - target: {fileID: 2383156791716914631, guid: 0c6ee64b7e276214690d81fcf989486f,
         type: 3}
@@ -2938,7 +2938,7 @@ PrefabInstance:
     - target: {fileID: 4068883853448483903, guid: 0c6ee64b7e276214690d81fcf989486f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -12.7750025
+      value: -12.775002
       objectReference: {fileID: 0}
     - target: {fileID: 4068883853518231011, guid: 0c6ee64b7e276214690d81fcf989486f,
         type: 3}
@@ -3068,12 +3068,12 @@ PrefabInstance:
     - target: {fileID: 4068883855145100121, guid: 0c6ee64b7e276214690d81fcf989486f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -12.7750025
+      value: -12.775002
       objectReference: {fileID: 0}
     - target: {fileID: 4068883855243718346, guid: 0c6ee64b7e276214690d81fcf989486f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -34.800133
+      value: -34.80014
       objectReference: {fileID: 0}
     - target: {fileID: 4068883855372623930, guid: 0c6ee64b7e276214690d81fcf989486f,
         type: 3}
@@ -3179,6 +3179,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 6927562059102168688, guid: 5b182caf55e3f9a43bfd07e094a8a3f3, type: 3}
+  - {fileID: 7268913940998222892, guid: 4a8970476be8cd345bb72df348ce56b5, type: 3}
+  - {fileID: 8034803178807628833, guid: 0ad4ac53c96e4e14eb5b98033187efa2, type: 3}
+  - {fileID: 3228870812592097851, guid: a7784398aa18f264d9fd4d385a69baa7, type: 3}
   instanceBackgrounds: 1
 --- !u!114 &2685958029521773585
 MonoBehaviour:
@@ -3211,6 +3214,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 496574711638214628, guid: d0247344f15c04848877d783a02d40be, type: 3}
+  - {fileID: 6816831355322709821, guid: 2170751f21331984c90abe499b41cdb9, type: 3}
+  - {fileID: 6081476021483992923, guid: fc8456c8b9a25b14da523de0e342f842, type: 3}
+  - {fileID: 927401216532780206, guid: 1d1bd32ef3033eb468d864603ac7b77e, type: 3}
   instanceBackgrounds: 1
 --- !u!114 &2685958029521773587
 MonoBehaviour:
@@ -3226,6 +3232,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 2184493933080629738, guid: ec98f3c2c75b6744090040a47f2de093, type: 3}
+  - {fileID: 5042186029954217360, guid: 17cd3ec1e9c782648aa1178428a20342, type: 3}
+  - {fileID: 6987528300138057468, guid: c739321f07674324ab883ea07d85bbd1, type: 3}
+  - {fileID: 8401922779890704329, guid: 790c2cfcaf440054994cd5fe6556cd46, type: 3}
   instanceBackgrounds: 1
 --- !u!82 &3296993771116190788
 AudioSource:
