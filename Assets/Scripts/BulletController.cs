@@ -5,10 +5,12 @@ using UnityEngine.Analytics;
 
 public class BulletController : MonoBehaviour
 {
+    [SerializeField] private float velocity = 15;
     [SerializeField] private AudioClip audioShot = null;
     public bool onCourse;
     public bool flip;
     public BulletFlipDirection mFlipDirection;
+    [SerializeField] private GameObject hitParticles = null;
     public Gunz gunz;
     [HideInInspector] public bool oldEnemyBullet;
 
@@ -34,7 +36,7 @@ public class BulletController : MonoBehaviour
         {
             if (collision.TryGetComponent(out Enemies enemies) || collision.TryGetComponent(out HeartHealer heartHealer))
             {
-                Instantiate(GameManager.instance.shotPP, transform.position, Quaternion.identity);
+                Instantiate(hitParticles, transform.position, Quaternion.identity);
                 transform.position = new Vector3(1000, 1000);
                 gameObject.SetActive(false);
             }
@@ -53,7 +55,7 @@ public class BulletController : MonoBehaviour
             }
             else if (collision.TryGetComponent(out Enemies enemies) || collision.TryGetComponent(out HeartHealer heartHealer))
             {
-                Instantiate(GameManager.instance.shotPP, transform.position, Quaternion.identity);
+                Instantiate(hitParticles, transform.position, Quaternion.identity);
                 transform.position = new Vector3(1000, 1000);
                 Destroy(gameObject);
             }
@@ -80,7 +82,7 @@ public class BulletController : MonoBehaviour
     void NormalBullet()
     {
         if (onCourse)
-        transform.position += transform.up * 15 * Time.fixedDeltaTime;
+        transform.position += transform.up * velocity * Time.fixedDeltaTime;
     }
 }
 

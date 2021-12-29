@@ -119,6 +119,8 @@ MonoBehaviour:
   onCourse: 0
   flip: 0
   mFlipDirection: 0
+  hitParticles: {fileID: 6318473394015924005, guid: 83f0c4b70ad2e5b4ab96df5456453c04,
+    type: 3}
   gunz: 0
   oldEnemyBullet: 0
 --- !u!58 &3065237366686505263

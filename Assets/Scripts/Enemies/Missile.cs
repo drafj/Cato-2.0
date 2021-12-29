@@ -22,10 +22,20 @@ public class Missile : Enemies
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.TryGetComponent(out BulletController bullet))
+        {
+            TakeDamage(bullet);
+            if (life <= 0)
+            {
+                GameManager.instance.counterToBoss++;
+                anim.SetTrigger("Death");
+                AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);
+                _collider.enabled = false;
+            }
+        }
+
         if (collision.transform.tag == "Border")
         {
-            warning.transform.parent = transform;
-            GameManager.instance.counterToBoss++;
             transform.position = new Vector3(1000, 1000);
             gameObject.SetActive(false);
         }
@@ -44,7 +54,7 @@ public class Missile : Enemies
     public override void Die()
     {
         base.Die();
-        _collider.enabled = true;
+        warning.transform.parent = transform;
     }
 
     void GoDown()

@@ -116,10 +116,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10700fecb3a83ed4fb1e99029b5e272d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocity: 13
   audioShot: {fileID: 8300000, guid: d82f0e303d4fc4c41ba347df447e6926, type: 3}
   onCourse: 0
   flip: 0
   mFlipDirection: 0
+  hitParticles: {fileID: 1927695892920333356, guid: 6daf04493fa10ab47ba7525141bfd09b,
+    type: 3}
   gunz: 2
   oldEnemyBullet: 0
 --- !u!58 &5205665826157918780

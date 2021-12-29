@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 910807058098881355}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 475e19faa1cc3984281fa514586521b6, type: 3}
-  m_Color: {r: 0.20392159, g: 0.89019614, b: 0, a: 1}
+  m_Color: {r: 0.74613696, g: 0, b: 0.8901961, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -115,10 +115,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10700fecb3a83ed4fb1e99029b5e272d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocity: 15
   audioShot: {fileID: 8300000, guid: 558624356de633d409dbf28aa67e3be2, type: 3}
   onCourse: 0
   flip: 0
   mFlipDirection: 0
+  hitParticles: {fileID: 4350767265497196067, guid: 2ae2f46b4b7354e45986d0199fbda7fe,
+    type: 3}
   gunz: 3
   oldEnemyBullet: 0
 --- !u!58 &2043649048792421771

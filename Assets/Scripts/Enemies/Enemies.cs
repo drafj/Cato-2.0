@@ -25,37 +25,41 @@ public class Enemies : MonoBehaviour
         {
             case Gunz.PIERCING:
                 if (!armor && !shield)
-                life -= 5;
+                life -= 7;
+                else if (!armor && shield)
+                life -= 14;
                 else
-                life -= 1;
+                life -= 9;
                 break;
             case Gunz.LASER:
                 if (shield && !armor)
                 life -= 10;
                 else if (armor)
-                life -= 1;
-                else
-                life -= 3;
-                break;
-            case Gunz.PLASMA:
-                if (armor && !shield)
-                life -= 12;
-                else if (shield)
-                life -= 3;
+                life -= 14;
                 else
                 life -= 7;
                 break;
+            case Gunz.PLASMA:
+                if (armor && !shield)
+                life -= 20;
+                else if (shield)
+                life -= 12;
+                else
+                life -= 17;
+                break;
             case Gunz.VENOM:
                 if (!shield && !armor)
-                life -= 1f;
-                Poison();
+                {
+                    life -= 4f;
+                    Poison();
+                }
                 break;
         }
     }
 
     public void Poison()
     {
-        if (!poisonCD && poisonMeter >= 50)
+        if (!poisonCD && poisonMeter >= 10)
             StartCoroutine(PoisonCR());
         else if (!poisonCD)
             poisonMeter++;
