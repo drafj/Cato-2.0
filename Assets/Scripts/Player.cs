@@ -436,10 +436,10 @@ public class Player : MonoBehaviour
     {
         if (!unleashed)
         {
-            if (transform.position.x > 6.85)
-                transform.position = new Vector3(6.85f, transform.position.y);
-            if (transform.position.x < -6.85)
-                transform.position = new Vector3(-6.85f, transform.position.y);
+            if (transform.position.x > 6)
+                transform.position = new Vector3(6f, transform.position.y);
+            if (transform.position.x < -6)
+                transform.position = new Vector3(-6f, transform.position.y);
             if (transform.position.y > 11.3)
                 transform.position = new Vector3(transform.position.x, 11.3f);
             if (transform.position.y < -14)

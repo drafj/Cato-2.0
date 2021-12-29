@@ -14,7 +14,11 @@ public class Background : MonoBehaviour
     {
         if (instanceBackgrounds)
         {
-            actualObj = actualObj == previousObj ? Random.Range(0, prefabs.Count) : actualObj;
+            actualObj = Random.Range(0, prefabs.Count);
+            while (actualObj == previousObj)
+            {
+                actualObj = Random.Range(0, prefabs.Count);
+            }
             GameObject temp = Instantiate(prefabs[actualObj], pos, Quaternion.identity);
             previousObj = actualObj;
         }
