@@ -33,7 +33,7 @@ public class Enemies : MonoBehaviour
                 break;
             case Gunz.LASER:
                 if (shield && !armor)
-                life -= 10;
+                life -= 9;
                 else if (armor)
                 life -= 14;
                 else

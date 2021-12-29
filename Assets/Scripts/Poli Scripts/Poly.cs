@@ -32,13 +32,13 @@ public class Poly : Enemies
             switch (bullet.gunz)
             {
                 case Gunz.PIERCING:
-                        life -= 0.5f;
+                        life -= 3f;
                     break;
                 case Gunz.LASER:
-                        life -= 1;
+                        life -= 4;
                     break;
                 case Gunz.PLASMA:
-                        life -= 3;
+                        life -= 6;
                     break;
             }
             SetMaxHealth();
