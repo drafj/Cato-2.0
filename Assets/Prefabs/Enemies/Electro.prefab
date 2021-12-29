@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velReference: 4
-  lifeReference: 12
+  lifeReference: 30
   velocity: 0
   life: 0
   poisonMeter: 0
@@ -340,7 +340,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6078050825999903072}
   serializedVersion: 6
-  lengthInSec: 5
+  lengthInSec: 2
   simulationSpeed: 3
   stopAction: 0
   cullingMode: 0

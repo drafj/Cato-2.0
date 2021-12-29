@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velReference: 10000
-  lifeReference: 10
+  lifeReference: 18
   velocity: 0
   life: 0
   poisonMeter: 0
