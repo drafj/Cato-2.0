@@ -13,12 +13,10 @@ public class Pushers : MonoBehaviour
             player.rgbd.velocity = Vector2.zero;
             if (player.transform.position.x > transform.position.x)
             {
-                Debug.Log("empuja a la derecha");
                 player.rgbd.AddForce(Vector2.right * force * Time.fixedDeltaTime);
             }
             else
             {
-                Debug.Log("empuja a la izquierda");
                 player.rgbd.AddForce(Vector2.right * -force * Time.fixedDeltaTime);
             }
             player.inmobilized = false;

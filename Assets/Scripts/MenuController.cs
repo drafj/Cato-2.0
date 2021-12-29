@@ -153,7 +153,6 @@ public class MenuController : MonoBehaviour
 
     public void ButtonSound()
     {
-        Debug.Log("sound sonado");
         if (Time.timeScale == 0)
         {
             Time.timeScale = 1;
