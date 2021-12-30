@@ -55,11 +55,8 @@ public class Heart : Enemies
                 TakeDamage(bullet);
                 if (life <= (lifeReference / 2) && !alreadyHealed)
                 {
-                   // if (Random.Range(0, 2) == 1)
-                   // {
-                        Stop();
-                        StartCoroutine(GoToCenter());
-                   // }
+                    Stop();
+                    StartCoroutine(GoToCenter());
                     alreadyHealed = true;
                 }
                 if (life <= 0)
@@ -163,7 +160,7 @@ public class Heart : Enemies
     IEnumerator Heal()
     {
         stopHealAbility = false;
-        Invoke(nameof(StopHealAbility), 10);
+        StartCoroutine(StopHealAbility());
         leftHeart.SetActive(true);
         rightHeart.SetActive(true);
         shieldParticle.SetActive(true);
@@ -187,6 +184,7 @@ public class Heart : Enemies
                 leftHeart.SetActive(false);
                 rightHeart.SetActive(false);
                 dontShoot = false;
+                StopCoroutine(nameof(StopHealAbility));
                 StartCoroutine(BossDisplacement());
                 break;
             }
@@ -237,7 +235,7 @@ public class Heart : Enemies
 
     public void CheckIfStopHeal()
     {
-        if (!leftHeart.activeSelf || !rightHeart.activeSelf)
+        if (leftHeart.GetComponent<HeartHealer>().life <= 0 && rightHeart.GetComponent<HeartHealer>().life <= 0)
         {
             StopHealing();
         }
@@ -245,14 +243,15 @@ public class Heart : Enemies
 
     public void CheckIfStopHealAbility()
     {
-        if (!leftHeart.activeSelf || !rightHeart.activeSelf)
+        if (leftHeart.GetComponent<HeartHealer>().life <= 0 && rightHeart.GetComponent<HeartHealer>().life <= 0)
         {
             stopHealAbility = true;
         }
     }
 
-    void StopHealAbility()
+    IEnumerator StopHealAbility()
     {
+        yield return new WaitForSeconds(10f);
         healing = false;
         stopHealAbility = true;
     }
@@ -303,7 +302,7 @@ public class Heart : Enemies
         gameObject.SetActive(false);
     }
 
-    IEnumerator BossDisplacement()
+    public IEnumerator BossDisplacement()
     {
         Continue();
         while (!stopMoving)

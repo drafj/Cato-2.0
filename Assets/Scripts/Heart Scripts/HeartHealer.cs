@@ -6,11 +6,12 @@ public class HeartHealer : MonoBehaviour
 {
     [SerializeField] private int lifeRef = 0;
     [SerializeField] private Animator anim = new Animator();
-    private int life;
+    public int life;
 
     private void OnEnable()
     {
         life = lifeRef;
+        GetComponent<Collider2D>().enabled = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,6 +22,7 @@ public class HeartHealer : MonoBehaviour
             if (life <= 0)
             {
                 transform.parent.GetComponent<Heart>().CheckIfStopHeal();
+                GetComponent<Collider2D>().enabled = false;
                 anim.SetTrigger("Death");
             }
         }

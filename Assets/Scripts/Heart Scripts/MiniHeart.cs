@@ -30,10 +30,7 @@ public class MiniHeart : Bullet
             if (boss.counterToMoveAgain >= 4)
             {
                 boss.counterToRay = 0;
-                if (boss.healing)
-                    boss.StopHealing();
-                else
-                    boss.Continue();
+                boss.StartCoroutine(boss.BossDisplacement());
             }
             Destroy(gameObject);
         }
@@ -41,7 +38,10 @@ public class MiniHeart : Bullet
         {
             boss.counterToMoveAgain++;
             if (boss.counterToMoveAgain >= 4)
-                boss.Continue();
+            {
+                boss.counterToRay = 0;
+                boss.StartCoroutine(boss.BossDisplacement());
+            }
             Destroy(gameObject);
         }
     }
