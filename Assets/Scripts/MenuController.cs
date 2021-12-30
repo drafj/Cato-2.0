@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class MenuController : MonoBehaviour
 {
@@ -11,8 +12,8 @@ public class MenuController : MonoBehaviour
     public GameObject SceneToLoadGO;
     public Toggle musicToggle;
     public Dropdown dropdown;
-    public Dropdown primaryDropdown;
-    public Dropdown secondaryDropdown;
+    public TMP_Dropdown primaryDropdown;
+    public TMP_Dropdown secondaryDropdown;
     public Text points;
     public static int selection;
     public int index;
@@ -22,7 +23,7 @@ public class MenuController : MonoBehaviour
     public List<string> gunListReference;
     public List<string> primary;
     public List<string> secondary;
-    [SerializeField] private Dropdown.OptionData tempValue;
+    [SerializeField] private TMP_Dropdown.OptionData tempValue;
     [SerializeField]
     private AudioClip pauseAudio = null,
         buttonAudio = null;
@@ -33,7 +34,7 @@ public class MenuController : MonoBehaviour
         SetPoints();
         blockPause = false;
         abilitiesString = new List<string>() { "Shield", "Flash", "Minime"};
-        gunListReference = new List<string>() { "PIERCING", "LASER", "PLASMA", "VENOM" };
+        gunListReference = new List<string>() { "PERFORANTE", "LASER", "PLASMA", "VENENO" };
         primary = new List<string>();
         secondary = new List<string>();
 
@@ -74,7 +75,7 @@ public class MenuController : MonoBehaviour
                 secondary.Clear();
                 for (int i = 0; i < gunListReference.Count; i++)
                 {
-                    if (gunListReference[i] != primaryDropdown.transform.GetChild(0).GetComponent<Text>().text)
+                    if (gunListReference[i] != primaryDropdown.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text)
                         secondary.Add(gunListReference[i]);
                 }
                 secondaryDropdown.AddOptions(secondary);
@@ -91,7 +92,7 @@ public class MenuController : MonoBehaviour
                 primary.Clear();
                 for (int i = 0; i < gunListReference.Count; i++)///                               comparar si el label del primer dropdown es igual al del segundo dropdown
                 {
-                    if (gunListReference[i] != secondaryDropdown.transform.GetChild(0).GetComponent<Text>().text)
+                    if (gunListReference[i] != secondaryDropdown.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text)
                         primary.Add(gunListReference[i]);
                 }
                 primaryDropdown.AddOptions(primary);
@@ -110,8 +111,41 @@ public class MenuController : MonoBehaviour
 
     public void GunsSelected()
     {
-        PlayerPrefs.SetString("Primary", primaryDropdown.transform.GetChild(0).GetComponent<Text>().text);
-        PlayerPrefs.SetString("Secondary", secondaryDropdown.transform.GetChild(0).GetComponent<Text>().text);
+        switch (primaryDropdown.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text)
+        {
+            case "PERFORANTE":
+                PlayerPrefs.SetString("Primary", "PIERCING");
+                break;
+            case "LASER":
+                PlayerPrefs.SetString("Primary", "LASER");
+                break;
+            case "PLASMA":
+                PlayerPrefs.SetString("Primary", "PLASMA");
+                break;
+            case "VENENO":
+                PlayerPrefs.SetString("Primary", "VENOM");
+                break;
+            default:
+                break;
+        }
+
+        switch (secondaryDropdown.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text)
+        {
+            case "PERFORANTE":
+                PlayerPrefs.SetString("Secondary", "PIERCING");
+                break;
+            case "LASER":
+                PlayerPrefs.SetString("Secondary", "LASER");
+                break;
+            case "PLASMA":
+                PlayerPrefs.SetString("Secondary", "PLASMA");
+                break;
+            case "VENENO":
+                PlayerPrefs.SetString("Secondary", "VENOM");
+                break;
+            default:
+                break;
+        }
     }
 
     public void SetPoints()
