@@ -2773,7 +2773,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &629873575
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2812,9 +2812,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CON ESTE BOTON ACTIVAS LA HABILIDAD QUE SE SELECCIONA EN EL MENU PRINCIPAL,
-    TEN EN CUENTA QUE CUANDO LANZAS HABILIDADES TIENEN UN TIEMPO DE ESPERA PARA VOLVERLAS
-    A USAR
+  m_text: 'CON ESTE BOTON ACTIVAS LA HABILIDAD.
+
+    LAS HABILIDADES SE SELECCIONAN
+    EN EL MENU DE ARMAS, LAS HABILIDADES TIENEN UN TIEMPO DE ESPERA TRAS SU USO'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 22281ce880da13c4692cb72b54d8c9ba, type: 2}
   m_sharedMaterial: {fileID: 1910425626284946234, guid: 22281ce880da13c4692cb72b54d8c9ba,
@@ -2843,7 +2844,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 46.6
+  m_fontSize: 50.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2884,12 +2885,12 @@ MonoBehaviour:
   m_margin: {x: 22.57215, y: 72.699234, z: 24.453243, w: 171.73268}
   m_textInfo:
     textComponent: {fileID: 629873576}
-    characterCount: 168
+    characterCount: 143
     spriteCount: 0
-    spaceCount: 28
-    wordCount: 29
+    spaceCount: 24
+    wordCount: 25
     linkCount: 0
-    lineCount: 10
+    lineCount: 9
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -4759,7 +4760,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855246861}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -6023,7 +6024,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183483731}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -7284,7 +7285,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1744855067
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11312,7 +11313,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.38000003}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -12.7750025}
+  m_AnchoredPosition: {x: 0, y: -12.775002}
   m_SizeDelta: {x: 0, y: 25.549}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4068883853853079553
@@ -13094,7 +13095,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25583327, y: 0.34943715}
   m_AnchorMax: {x: 0.3036312, y: 0.41369066}
-  m_AnchoredPosition: {x: -34.800133, y: 22.195007}
+  m_AnchoredPosition: {x: -34.80014, y: 22.195007}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4068883854574551799
@@ -13310,7 +13311,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.38000003}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -12.7750025}
+  m_AnchoredPosition: {x: 0, y: -12.775002}
   m_SizeDelta: {x: 0, y: 25.549}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4068883854740180839
@@ -14672,7 +14673,6 @@ MonoBehaviour:
   zoomCamera: {fileID: 672982631}
   SceneToLoadGO: {fileID: 0}
   musicToggle: {fileID: 4068883854057196910}
-  dropdown: {fileID: 0}
   primaryDropdown: {fileID: 0}
   secondaryDropdown: {fileID: 0}
   points: {fileID: 5768219402571939976}
