@@ -43,7 +43,7 @@ public class Enemies : MonoBehaviour
                 if (armor && !shield)
                 life -= 20;
                 else if (shield)
-                life -= 12;
+                life -= 10;
                 else
                 life -= 17;
                 break;
