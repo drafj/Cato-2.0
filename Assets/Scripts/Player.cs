@@ -317,9 +317,9 @@ public class Player : MonoBehaviour
                 Instantiate(GameManager.instance.flashParticles, transform.position + new Vector3(0, 0, -5), Quaternion.identity);
                 AudioSource.PlayClipAtPoint(flashAudio, Camera.main.transform.position);
                 if (anim.GetBool("OnTouch"))
-                    transform.Translate(joyStickDir * 30);
+                    transform.Translate(joyStickDir * 7);
                 else
-                    transform.Translate(axis * 30);
+                    transform.Translate(axis * 7);
                 Instantiate(GameManager.instance.flashParticles, transform.position + new Vector3(0, 0, -5), Quaternion.identity);
                 StartCoroutine(Invencible(PlayerPrefs.GetFloat("flashInv", 0.3f)));
             }
