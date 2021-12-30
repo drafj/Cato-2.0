@@ -144,7 +144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &94631278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2930,11 +2930,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2383156791570572528, guid: 0c6ee64b7e276214690d81fcf989486f,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 73.000046
-      objectReference: {fileID: 0}
     - target: {fileID: 4068883853276283817, guid: 0c6ee64b7e276214690d81fcf989486f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3109,7 +3104,7 @@ PrefabInstance:
     - target: {fileID: 4068883855243718346, guid: 0c6ee64b7e276214690d81fcf989486f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -34.80014
+      value: -34.80011
       objectReference: {fileID: 0}
     - target: {fileID: 4068883855372623930, guid: 0c6ee64b7e276214690d81fcf989486f,
         type: 3}
@@ -3137,7 +3132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOver: 0
   pause: 0
-  spawnEnemies: 1
+  spawnEnemies: 0
   Boss: {fileID: 94631277}
   shotPP: {fileID: 1315859113182170770, guid: b2c296464e5377249be4436afa0e0eb4, type: 3}
   player: {fileID: 821655108}

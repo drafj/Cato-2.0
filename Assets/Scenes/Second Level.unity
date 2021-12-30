@@ -166,7 +166,7 @@ PrefabInstance:
     - target: {fileID: 6426044494914486766, guid: 24def1d2b56c21244a35e1445294bb7e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6426044494914486766, guid: 24def1d2b56c21244a35e1445294bb7e,
         type: 3}
@@ -843,7 +843,7 @@ PrefabInstance:
     - target: {fileID: 1663258805614013472, guid: 62f510d2b0d42ed4b9e706c6e018ce56,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1663258805614013472, guid: 62f510d2b0d42ed4b9e706c6e018ce56,
         type: 3}
@@ -1837,7 +1837,7 @@ MonoBehaviour:
   - {fileID: 4913405162386725022, guid: 861516080d7b01c44b3b147d3db7e6b1, type: 3}
   - {fileID: 7433419699415982909, guid: 0a750b5c55be03a459bbe422962736f5, type: 3}
   instanceBackgrounds: 1
-  velocity: 0
+  velocity: 1
 --- !u!114 &2685958029521773586
 MonoBehaviour:
   m_ObjectHideFlags: 0

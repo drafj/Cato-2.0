@@ -55,8 +55,11 @@ public class Heart : Enemies
                 TakeDamage(bullet);
                 if (life <= (lifeReference / 2) && !alreadyHealed)
                 {
-                    if (Random.Range(0, 2) == 1)
-                    StartCoroutine(Heal());
+                   // if (Random.Range(0, 2) == 1)
+                   // {
+                        Stop();
+                        StartCoroutine(GoToCenter());
+                   // }
                     alreadyHealed = true;
                 }
                 if (life <= 0)
@@ -161,7 +164,6 @@ public class Heart : Enemies
     {
         stopHealAbility = false;
         Invoke(nameof(StopHealAbility), 10);
-        Stop();
         leftHeart.SetActive(true);
         rightHeart.SetActive(true);
         shieldParticle.SetActive(true);
@@ -185,7 +187,7 @@ public class Heart : Enemies
                 leftHeart.SetActive(false);
                 rightHeart.SetActive(false);
                 dontShoot = false;
-                Continue();
+                StartCoroutine(BossDisplacement());
                 break;
             }
             SetHealth();
@@ -216,9 +218,21 @@ public class Heart : Enemies
             yield return new WaitForFixedUpdate();
         }
         GetComponent<Collider2D>().enabled = true;
-        Continue();
         StartCoroutine(Shoot());
         StartCoroutine(BossDisplacement());
+    }
+
+    IEnumerator GoToCenter()
+    {
+        while (stopMoving)
+        {
+            transform.position = Vector2.Lerp(transform.position, new Vector2(0, transform.position.y), 4 * Time.fixedDeltaTime);
+
+            if (transform.position.x > -0.3f && transform.position.x < 0.3f)
+                break;
+            yield return new WaitForFixedUpdate();
+        }
+        StartCoroutine(Heal());
     }
 
     public void CheckIfStopHeal()
@@ -272,10 +286,10 @@ public class Heart : Enemies
         rgbd.velocity = Vector3.zero;
     }
 
-    public void Continue(string direction = "right")
+    public void Continue()
     {
         stopMoving = false;
-        if (direction == "right")
+        if (transform.position.x < 0)
             rgbd.AddForce(transform.right * velocity * Time.fixedDeltaTime);
         else
             rgbd.AddForce(transform.right * -velocity * Time.fixedDeltaTime);
@@ -291,9 +305,10 @@ public class Heart : Enemies
 
     IEnumerator BossDisplacement()
     {
-        while (true)
+        Continue();
+        while (!stopMoving)
         {
-            if (!stopMoving)
+            if (!GameManager.instance.pause)
             {
                 if (transform.position.x >= 3f)
                 {
