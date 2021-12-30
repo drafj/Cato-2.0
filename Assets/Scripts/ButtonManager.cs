@@ -75,6 +75,8 @@ public class ButtonManager : MonoBehaviour
         {
             player.rCAnim.GetComponent<SpriteRenderer>().sprite = laser;
             player.lCAnim.GetComponent<SpriteRenderer>().sprite = laser;
+            player.rCAnim.GetComponent<SpriteRenderer>().flipX = true;
+            player.lCAnim.GetComponent<SpriteRenderer>().flipX = false;
         }
         else if (player.config[chose] == "PLASMA")
         {
@@ -85,6 +87,7 @@ public class ButtonManager : MonoBehaviour
             player.rCAnim.GetComponent<SpriteRenderer>().sprite = venom;
             player.lCAnim.GetComponent<SpriteRenderer>().sprite = venom;
             player.lCAnim.GetComponent<SpriteRenderer>().flipX = true;
+            player.rCAnim.GetComponent<SpriteRenderer>().flipX = false;
         }
     }
 

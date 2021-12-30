@@ -9,6 +9,7 @@ public class Poly : Enemies
     [SerializeField] private GameObject warning = null,
         winMessage = null;
     [SerializeField] private SoulEater eater = null;
+    [SerializeField] private GameObject pushers = null;
     [SerializeField] private Slider healthBar = null;
     [SerializeField] private Animator anim = null;
     [SerializeField] private AudioSource warninAudio = null,
@@ -45,8 +46,12 @@ public class Poly : Enemies
 
             if (life <= 0)
             {
+                PlayerPrefs.SetInt("Points", PlayerPrefs.GetInt("Points", 0) + 1000);
+                FindObjectOfType<MenuController>().SetPoints();
                 healthBar.gameObject.SetActive(false);
                 GetComponent<Collider2D>().enabled = false;
+                pushers.GetComponent<Collider2D>().enabled = false;
+                eater.GetComponent<Collider2D>().enabled = false;
                 PlayerPrefs.SetInt("actualLevel", 1);
                 anim.SetTrigger("Death");
             }
@@ -99,31 +104,34 @@ public class Poly : Enemies
 
     IEnumerator MoveBehaviour()
     {
-        GetComponent<Collider2D>().enabled = true;
-        eater.gameObject.SetActive(true);
-        transform.GetChild(4).gameObject.SetActive(true);
-        anim.SetBool("Attack", false);
-        warninAudio.loop = false;
-        warninAudio.Play();
-        warning.SetActive(true);
-        int actualPos = Random.Range(0, 6);
-        while (actualPos == lastPos)
+        if (life > 0)
         {
-            actualPos = Random.Range(0, 6);
+            GetComponent<Collider2D>().enabled = true;
+            eater.gameObject.SetActive(true);
+            transform.GetChild(4).gameObject.SetActive(true);
+            anim.SetBool("Attack", false);
+            warninAudio.loop = false;
+            warninAudio.Play();
+            warning.SetActive(true);
+            int actualPos = Random.Range(0, 6);
+            while (actualPos == lastPos)
+            {
+                actualPos = Random.Range(0, 6);
+            }
+            lastPos = actualPos;
+            transform.position = positions[actualPos];
+            GameManager.instance.player.GetComponent<Player>().panelAnim.SetBool("Warning", true);
+
+            if (actualPos < 3)
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            else
+                transform.rotation = Quaternion.Euler(0, 0, 180);
+            yield return new WaitForSeconds(2f);
+
+            warning.SetActive(false);
+            GameManager.instance.player.GetComponent<Player>().panelAnim.SetBool("Warning", false);
+            StartCoroutine(Move(transform.position));
         }
-        lastPos = actualPos;
-        transform.position = positions[actualPos];
-        GameManager.instance.player.GetComponent<Player>().panelAnim.SetBool("Warning", true);
-
-        if (actualPos < 3)
-            transform.rotation = Quaternion.Euler(0, 0, 0);
-        else
-            transform.rotation = Quaternion.Euler(0, 0, 180);
-        yield return new WaitForSeconds(2f);
-
-        warning.SetActive(false);
-        GameManager.instance.player.GetComponent<Player>().panelAnim.SetBool("Warning", false);
-        StartCoroutine(Move(transform.position));
     }
 
     IEnumerator Move(Vector3 pos)

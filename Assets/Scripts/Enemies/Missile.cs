@@ -27,6 +27,8 @@ public class Missile : Enemies
             TakeDamage(bullet);
             if (life <= 0)
             {
+                PlayerPrefs.SetInt("Points", PlayerPrefs.GetInt("Points", 0) + 8);
+                FindObjectOfType<MenuController>().SetPoints();
                 GameManager.instance.counterToBoss++;
                 anim.SetTrigger("Death");
                 AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);

@@ -296,6 +296,8 @@ public class Heart : Enemies
 
     public void Death()
     {
+        PlayerPrefs.SetInt("Points", PlayerPrefs.GetInt("Points", 0) + 1000);
+        FindObjectOfType<MenuController>().SetPoints();
         healthBar.gameObject.SetActive(false);
         GameManager.instance.winMessage.SetActive(true);
         PlayerPrefs.SetInt("actualLevel", 2);

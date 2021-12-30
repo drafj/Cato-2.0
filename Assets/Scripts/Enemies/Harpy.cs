@@ -24,6 +24,8 @@ public class Harpy : Enemies
             TakeDamage(bullet);
             if (life <= 0)
             {
+                PlayerPrefs.SetInt("Points", PlayerPrefs.GetInt("Points", 0) + 10);
+                FindObjectOfType<MenuController>().SetPoints();
                 anim.SetTrigger("Death");
                 AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);
                 chasing = false;

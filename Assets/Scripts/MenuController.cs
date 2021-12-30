@@ -14,9 +14,8 @@ public class MenuController : MonoBehaviour
     public Dropdown dropdown;
     public TMP_Dropdown primaryDropdown;
     public TMP_Dropdown secondaryDropdown;
-    public Text points;
+    public TextMeshProUGUI points;
     public static int selection;
-    public int index;
     public static bool blockPause;
     public bool firstValueChaged;
     public List<string> abilitiesString;
@@ -27,6 +26,7 @@ public class MenuController : MonoBehaviour
     [SerializeField]
     private AudioClip pauseAudio = null,
         buttonAudio = null;
+    [SerializeField] private List<GameObject> visualGuns = new List<GameObject>();
 
 
     void Start()
@@ -106,6 +106,87 @@ public class MenuController : MonoBehaviour
         else
         {
             firstValueChaged = false;
+        }
+
+        if (type == 1)
+        {
+            switch (primaryDropdown.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text)
+            {
+                case "PERFORANTE":
+                    for (int i = 0; i < visualGuns.Count; i++)
+                    {
+                        visualGuns[0].SetActive(true);
+                        if (i != 0)
+                            visualGuns[i].SetActive(false);
+                    }
+                    break;
+                case "LASER":
+                    for (int i = 0; i < visualGuns.Count; i++)
+                    {
+                        visualGuns[1].SetActive(true);
+                        if (i != 1)
+                            visualGuns[i].SetActive(false);
+                    }
+                    break;
+                case "PLASMA":
+                    for (int i = 0; i < visualGuns.Count; i++)
+                    {
+                        visualGuns[2].SetActive(true);
+                        if (i != 2)
+                            visualGuns[i].SetActive(false);
+                    }
+                    break;
+                case "VENENO":
+                    for (int i = 0; i < visualGuns.Count; i++)
+                    {
+                        visualGuns[3].SetActive(true);
+                        if (i != 3)
+                            visualGuns[i].SetActive(false);
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            switch (secondaryDropdown.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text)
+            {
+                case "PERFORANTE":
+                    for (int i = 0; i < visualGuns.Count; i++)
+                    {
+                        visualGuns[0].SetActive(true);
+                        if (i != 0)
+                            visualGuns[i].SetActive(false);
+                    }
+                    break;
+                case "LASER":
+                    for (int i = 0; i < visualGuns.Count; i++)
+                    {
+                        visualGuns[1].SetActive(true);
+                        if (i != 1)
+                            visualGuns[i].SetActive(false);
+                    }
+                    break;
+                case "PLASMA":
+                    for (int i = 0; i < visualGuns.Count; i++)
+                    {
+                        visualGuns[2].SetActive(true);
+                        if (i != 2)
+                            visualGuns[i].SetActive(false);
+                    }
+                    break;
+                case "VENENO":
+                    for (int i = 0; i < visualGuns.Count; i++)
+                    {
+                        visualGuns[3].SetActive(true);
+                        if (i != 3)
+                            visualGuns[i].SetActive(false);
+                    }
+                    break;
+                default:
+                    break;
+            }
         }
     }
 

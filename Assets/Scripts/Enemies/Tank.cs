@@ -45,6 +45,8 @@ public class Tank : Enemies
 
             if (life <= 0)
             {
+                PlayerPrefs.SetInt("Points", PlayerPrefs.GetInt("Points", 0) + 15);
+                FindObjectOfType<MenuController>().SetPoints();
                 GetComponent<Animator>().SetTrigger("Death");
                 AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);
                 _collider.enabled = false;

@@ -35,6 +35,8 @@ public class Big : Enemies
             TakeDamage(bullet);
             if (life <= 0)
             {
+                PlayerPrefs.SetInt("Points", PlayerPrefs.GetInt("Points", 0) + 20);
+                FindObjectOfType<MenuController>().SetPoints();
                 anim.SetTrigger("Death");
                 AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);
                 _collider.enabled = false;

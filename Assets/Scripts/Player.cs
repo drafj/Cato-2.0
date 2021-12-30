@@ -38,7 +38,8 @@ public class Player : MonoBehaviour
     public Vector2 axis;
     public GameObject actualShield;
     public Vector3[] canyonPositions = new Vector3[3];
-    public GameObject minime;
+    public GameObject minime,
+        damageParticle;
     [SerializeField] private List<GameObject> minimeList = new List<GameObject>();
     private int silenceCounter;
     [SerializeField] private AudioClip flashAudio = null;
@@ -245,6 +246,19 @@ public class Player : MonoBehaviour
         life -= damage;
         UpdateLife();
         GameManager.instance.StartDealDamage();
+        StartCoroutine(DamageParticles());
+    }
+
+    int damageInflcted = 0;
+    IEnumerator DamageParticles()
+    {
+        damageInflcted++;
+        damageParticle.SetActive(false);
+        damageParticle.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        if (damageInflcted == 1)
+        damageParticle.SetActive(false);
+        damageInflcted--;
     }
 
     private void Shoot(string bullet, string type = "Double")

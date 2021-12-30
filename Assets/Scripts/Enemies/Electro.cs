@@ -25,6 +25,8 @@ public class Electro : Enemies
 
             if (life <= 0)
             {
+                PlayerPrefs.SetInt("Points", PlayerPrefs.GetInt("Points", 0) + 15);
+                FindObjectOfType<MenuController>().SetPoints();
                 _collider.enabled = false;
                 anim.SetTrigger("Death");
                 AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);
