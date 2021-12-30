@@ -65,167 +65,173 @@ public class MenuController : MonoBehaviour
 
     public void GunSelection(int type = 1)
     {
-        if (!firstValueChaged)
+        if (primaryDropdown != null && secondaryDropdown != null)
         {
-            firstValueChaged = true;
-            if (type == 1)
+            if (!firstValueChaged)
             {
-                tempValue = secondaryDropdown.options[secondaryDropdown.value];
-                secondaryDropdown.ClearOptions();
-                secondary.Clear();
-                for (int i = 0; i < gunListReference.Count; i++)
+                firstValueChaged = true;
+                if (type == 1)
                 {
-                    if (gunListReference[i] != primaryDropdown.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text)
-                        secondary.Add(gunListReference[i]);
+                    tempValue = secondaryDropdown.options[secondaryDropdown.value];
+                    secondaryDropdown.ClearOptions();
+                    secondary.Clear();
+                    for (int i = 0; i < gunListReference.Count; i++)
+                    {
+                        if (gunListReference[i] != primaryDropdown.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text)
+                            secondary.Add(gunListReference[i]);
+                    }
+                    secondaryDropdown.AddOptions(secondary);
+                    for (int i = 0; i < secondaryDropdown.options.Count; i++)
+                    {
+                        if (secondaryDropdown.options[i].text == tempValue.text)
+                            secondaryDropdown.value = i;
+                    }
                 }
-                secondaryDropdown.AddOptions(secondary);
-                for (int i = 0; i < secondaryDropdown.options.Count; i++)
+                else
                 {
-                    if (secondaryDropdown.options[i].text == tempValue.text)
-                        secondaryDropdown.value = i;
+                    tempValue = primaryDropdown.options[primaryDropdown.value];
+                    primaryDropdown.ClearOptions();
+                    primary.Clear();
+                    for (int i = 0; i < gunListReference.Count; i++)///                               comparar si el label del primer dropdown es igual al del segundo dropdown
+                    {
+                        if (gunListReference[i] != secondaryDropdown.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text)
+                            primary.Add(gunListReference[i]);
+                    }
+                    primaryDropdown.AddOptions(primary);
+                    for (int i = 0; i < primaryDropdown.options.Count; i++)
+                    {
+                        if (primaryDropdown.options[i].text == tempValue.text)
+                            primaryDropdown.value = i;
+                    }
                 }
             }
             else
             {
-                tempValue = primaryDropdown.options[primaryDropdown.value];
-                primaryDropdown.ClearOptions();
-                primary.Clear();
-                for (int i = 0; i < gunListReference.Count; i++)///                               comparar si el label del primer dropdown es igual al del segundo dropdown
-                {
-                    if (gunListReference[i] != secondaryDropdown.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text)
-                        primary.Add(gunListReference[i]);
-                }
-                primaryDropdown.AddOptions(primary);
-                for (int i = 0; i < primaryDropdown.options.Count; i++)
-                {
-                    if (primaryDropdown.options[i].text == tempValue.text)
-                        primaryDropdown.value = i;
-                }
+                firstValueChaged = false;
             }
-        }
-        else
-        {
-            firstValueChaged = false;
-        }
 
-        if (type == 1)
-        {
-            switch (primaryDropdown.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text)
+            if (type == 1)
             {
-                case "PERFORANTE":
-                    for (int i = 0; i < visualGuns.Count; i++)
-                    {
-                        visualGuns[0].SetActive(true);
-                        if (i != 0)
-                            visualGuns[i].SetActive(false);
-                    }
-                    break;
-                case "LASER":
-                    for (int i = 0; i < visualGuns.Count; i++)
-                    {
-                        visualGuns[1].SetActive(true);
-                        if (i != 1)
-                            visualGuns[i].SetActive(false);
-                    }
-                    break;
-                case "PLASMA":
-                    for (int i = 0; i < visualGuns.Count; i++)
-                    {
-                        visualGuns[2].SetActive(true);
-                        if (i != 2)
-                            visualGuns[i].SetActive(false);
-                    }
-                    break;
-                case "VENENO":
-                    for (int i = 0; i < visualGuns.Count; i++)
-                    {
-                        visualGuns[3].SetActive(true);
-                        if (i != 3)
-                            visualGuns[i].SetActive(false);
-                    }
-                    break;
-                default:
-                    break;
+                switch (primaryDropdown.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text)
+                {
+                    case "PERFORANTE":
+                        for (int i = 0; i < visualGuns.Count; i++)
+                        {
+                            visualGuns[0].SetActive(true);
+                            if (i != 0)
+                                visualGuns[i].SetActive(false);
+                        }
+                        break;
+                    case "LASER":
+                        for (int i = 0; i < visualGuns.Count; i++)
+                        {
+                            visualGuns[1].SetActive(true);
+                            if (i != 1)
+                                visualGuns[i].SetActive(false);
+                        }
+                        break;
+                    case "PLASMA":
+                        for (int i = 0; i < visualGuns.Count; i++)
+                        {
+                            visualGuns[2].SetActive(true);
+                            if (i != 2)
+                                visualGuns[i].SetActive(false);
+                        }
+                        break;
+                    case "VENENO":
+                        for (int i = 0; i < visualGuns.Count; i++)
+                        {
+                            visualGuns[3].SetActive(true);
+                            if (i != 3)
+                                visualGuns[i].SetActive(false);
+                        }
+                        break;
+                    default:
+                        break;
+                }
             }
-        }
-        else
-        {
-            switch (secondaryDropdown.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text)
+            else
             {
-                case "PERFORANTE":
-                    for (int i = 0; i < visualGuns.Count; i++)
-                    {
-                        visualGuns[0].SetActive(true);
-                        if (i != 0)
-                            visualGuns[i].SetActive(false);
-                    }
-                    break;
-                case "LASER":
-                    for (int i = 0; i < visualGuns.Count; i++)
-                    {
-                        visualGuns[1].SetActive(true);
-                        if (i != 1)
-                            visualGuns[i].SetActive(false);
-                    }
-                    break;
-                case "PLASMA":
-                    for (int i = 0; i < visualGuns.Count; i++)
-                    {
-                        visualGuns[2].SetActive(true);
-                        if (i != 2)
-                            visualGuns[i].SetActive(false);
-                    }
-                    break;
-                case "VENENO":
-                    for (int i = 0; i < visualGuns.Count; i++)
-                    {
-                        visualGuns[3].SetActive(true);
-                        if (i != 3)
-                            visualGuns[i].SetActive(false);
-                    }
-                    break;
-                default:
-                    break;
+                switch (secondaryDropdown.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text)
+                {
+                    case "PERFORANTE":
+                        for (int i = 0; i < visualGuns.Count; i++)
+                        {
+                            visualGuns[0].SetActive(true);
+                            if (i != 0)
+                                visualGuns[i].SetActive(false);
+                        }
+                        break;
+                    case "LASER":
+                        for (int i = 0; i < visualGuns.Count; i++)
+                        {
+                            visualGuns[1].SetActive(true);
+                            if (i != 1)
+                                visualGuns[i].SetActive(false);
+                        }
+                        break;
+                    case "PLASMA":
+                        for (int i = 0; i < visualGuns.Count; i++)
+                        {
+                            visualGuns[2].SetActive(true);
+                            if (i != 2)
+                                visualGuns[i].SetActive(false);
+                        }
+                        break;
+                    case "VENENO":
+                        for (int i = 0; i < visualGuns.Count; i++)
+                        {
+                            visualGuns[3].SetActive(true);
+                            if (i != 3)
+                                visualGuns[i].SetActive(false);
+                        }
+                        break;
+                    default:
+                        break;
+                }
             }
         }
     }
 
     public void GunsSelected()
     {
-        switch (primaryDropdown.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text)
+        if (primaryDropdown != null && secondaryDropdown != null)
         {
-            case "PERFORANTE":
-                PlayerPrefs.SetString("Primary", "PIERCING");
-                break;
-            case "LASER":
-                PlayerPrefs.SetString("Primary", "LASER");
-                break;
-            case "PLASMA":
-                PlayerPrefs.SetString("Primary", "PLASMA");
-                break;
-            case "VENENO":
-                PlayerPrefs.SetString("Primary", "VENOM");
-                break;
-            default:
-                break;
-        }
+            switch (primaryDropdown.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text)
+            {
+                case "PERFORANTE":
+                    PlayerPrefs.SetString("Primary", "PIERCING");
+                    break;
+                case "LASER":
+                    PlayerPrefs.SetString("Primary", "LASER");
+                    break;
+                case "PLASMA":
+                    PlayerPrefs.SetString("Primary", "PLASMA");
+                    break;
+                case "VENENO":
+                    PlayerPrefs.SetString("Primary", "VENOM");
+                    break;
+                default:
+                    break;
+            }
 
-        switch (secondaryDropdown.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text)
-        {
-            case "PERFORANTE":
-                PlayerPrefs.SetString("Secondary", "PIERCING");
-                break;
-            case "LASER":
-                PlayerPrefs.SetString("Secondary", "LASER");
-                break;
-            case "PLASMA":
-                PlayerPrefs.SetString("Secondary", "PLASMA");
-                break;
-            case "VENENO":
-                PlayerPrefs.SetString("Secondary", "VENOM");
-                break;
-            default:
-                break;
+            switch (secondaryDropdown.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text)
+            {
+                case "PERFORANTE":
+                    PlayerPrefs.SetString("Secondary", "PIERCING");
+                    break;
+                case "LASER":
+                    PlayerPrefs.SetString("Secondary", "LASER");
+                    break;
+                case "PLASMA":
+                    PlayerPrefs.SetString("Secondary", "PLASMA");
+                    break;
+                case "VENENO":
+                    PlayerPrefs.SetString("Secondary", "VENOM");
+                    break;
+                default:
+                    break;
+            }
         }
     }
 

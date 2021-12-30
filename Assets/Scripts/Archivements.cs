@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Archivements : MonoBehaviour
@@ -14,15 +15,24 @@ public class Archivements : MonoBehaviour
     void CheckTrophies()
     {
         if (PlayerPrefs.GetInt("Heart", 0) == 1)
-            trophies[0].SetActive(true);
+        {
+            trophies[0].GetComponent<Image>().color = Color.white;
+        }
         if (PlayerPrefs.GetInt("Poly", 0) == 1)
-            trophies[1].SetActive(true);
+        {
+            trophies[1].GetComponent<Image>().color = Color.white;
+        }
         if (PlayerPrefs.GetInt("Harpy", 0) == 1)
-            trophies[2].SetActive(true);
-        if (PlayerPrefs.GetInt("Laser", 0) == 1000)
-            trophies[3].SetActive(true);
+        {
+            trophies[2].GetComponent<Image>().color = Color.white;
+        }
+        if (PlayerPrefs.GetInt("Laser", 0) == 100)
+        {
+            trophies[3].GetComponent<Image>().color = Color.white;
+        }
         if (PlayerPrefs.GetInt("Win", 0) == 1)
-            trophies[4].SetActive(true);
-
+        {
+            trophies[4].GetComponent<Image>().color = Color.white;
+        }
     }
 }
