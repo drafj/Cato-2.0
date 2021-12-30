@@ -86,7 +86,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        m_abilities = (Abilities)MenuController.selection;//----------------descomentar para que funcione la seleccion de habilidad------------------------------------------
+        m_abilities = (Abilities)PlayerPrefs.GetInt("Ability", 0);//----------------descomentar para que funcione la seleccion de habilidad------------------------------------------
 
         gunz = (Gunz)System.Enum.Parse(typeof(Gunz), GameManager.instance.player.GetComponent<Player>().config[0]);
 

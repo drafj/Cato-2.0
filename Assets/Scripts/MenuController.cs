@@ -11,11 +11,9 @@ public class MenuController : MonoBehaviour
     public GameObject zoomCamera;
     public GameObject SceneToLoadGO;
     public Toggle musicToggle;
-    public Dropdown dropdown;
     public TMP_Dropdown primaryDropdown;
     public TMP_Dropdown secondaryDropdown;
     public TextMeshProUGUI points;
-    public static int selection;
     public static bool blockPause;
     public bool firstValueChaged;
     public List<string> abilitiesString;
@@ -37,13 +35,6 @@ public class MenuController : MonoBehaviour
         gunListReference = new List<string>() { "PERFORANTE", "LASER", "PLASMA", "VENENO" };
         primary = new List<string>();
         secondary = new List<string>();
-
-        if (dropdown != null)
-        {
-            dropdown.ClearOptions();
-            dropdown.AddOptions(abilitiesString);
-            dropdown.value = selection;
-        }
 
         if (SceneToLoadGO != null)
         SceneToLoadGO.GetComponent<Loading>().sceneToLoad = PlayerPrefs.GetInt("actualLevel", 1);
@@ -238,7 +229,7 @@ public class MenuController : MonoBehaviour
     public void SetPoints()
     {
         if (points != null)
-            points.text = " POINTS: " + PlayerPrefs.GetInt("Points");
+            points.text = " PUNTOS: " + PlayerPrefs.GetInt("Points");
     }
 
     public void NextScene()
@@ -303,7 +294,7 @@ public class MenuController : MonoBehaviour
 
     public void AbilitySelector(int index)
     {
-        selection = index;
+        PlayerPrefs.SetInt("Ability", index);
     }
 
     public void BackToMenu()
