@@ -77,6 +77,10 @@ public class Pooler : MonoBehaviour
     public void PrimaryShoot(Vector3 pos, Quaternion rot)
     {
         GameObject temp = bulletsPool1.Peek();
+
+        if (temp.GetComponent<BulletController>().gunz == Gunz.LASER)
+            PlayerPrefs.SetInt("Laser", PlayerPrefs.GetInt("Laser", 0) + 1);
+
         temp.transform.position = pos;
         temp.transform.rotation = rot;
         temp.SetActive(true);
@@ -88,6 +92,10 @@ public class Pooler : MonoBehaviour
     public void SecondaryShoot(Vector3 pos, Quaternion rot)
     {
         GameObject temp = bulletsPool2.Peek();
+
+        if (temp.GetComponent<BulletController>().gunz == Gunz.LASER)
+            PlayerPrefs.SetInt("Laser", PlayerPrefs.GetInt("Laser", 0) + 1);
+
         temp.transform.position = pos;
         temp.transform.rotation = rot;
         temp.SetActive(true);

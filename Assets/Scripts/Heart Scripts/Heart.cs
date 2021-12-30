@@ -80,6 +80,7 @@ public class Heart : Enemies
                     }
                     else
                     {
+                        PlayerPrefs.SetInt("Heart", 1);
                         leftCannon.parent.gameObject.SetActive(false);
                         rightCannon.parent.gameObject.SetActive(false);
                         GetComponent<Collider2D>().enabled = false;

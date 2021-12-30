@@ -36,6 +36,8 @@ public class Big : Enemies
             if (life <= 0)
             {
                 PlayerPrefs.SetInt("Points", PlayerPrefs.GetInt("Points", 0) + 20);
+                if (PlayerPrefs.GetInt("Harpy", 0) < 3 && GameManager.instance.player.GetComponent<Player>().inmobilized)
+                    PlayerPrefs.SetInt("Harpy", PlayerPrefs.GetInt("Harpy", 0) + 1);
                 FindObjectOfType<MenuController>().SetPoints();
                 anim.SetTrigger("Death");
                 AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);

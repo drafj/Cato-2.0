@@ -28,6 +28,8 @@ public class Missile : Enemies
             if (life <= 0)
             {
                 PlayerPrefs.SetInt("Points", PlayerPrefs.GetInt("Points", 0) + 8);
+                if (PlayerPrefs.GetInt("Harpy", 0) < 3 && GameManager.instance.player.GetComponent<Player>().inmobilized)
+                    PlayerPrefs.SetInt("Harpy", PlayerPrefs.GetInt("Harpy", 0) + 1);
                 FindObjectOfType<MenuController>().SetPoints();
                 GameManager.instance.counterToBoss++;
                 anim.SetTrigger("Death");

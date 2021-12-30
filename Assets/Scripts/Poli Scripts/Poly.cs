@@ -46,6 +46,8 @@ public class Poly : Enemies
 
             if (life <= 0)
             {
+                PlayerPrefs.SetInt("Poly", 1);
+                PlayerPrefs.SetInt("Win", 1);
                 PlayerPrefs.SetInt("Points", PlayerPrefs.GetInt("Points", 0) + 1000);
                 FindObjectOfType<MenuController>().SetPoints();
                 healthBar.gameObject.SetActive(false);

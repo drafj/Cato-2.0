@@ -25,6 +25,8 @@ public class Harpy : Enemies
             if (life <= 0)
             {
                 PlayerPrefs.SetInt("Points", PlayerPrefs.GetInt("Points", 0) + 10);
+                if (PlayerPrefs.GetInt("Harpy", 0) < 3 && GameManager.instance.player.GetComponent<Player>().inmobilized)
+                    PlayerPrefs.SetInt("Harpy", PlayerPrefs.GetInt("Harpy", 0) + 1);
                 FindObjectOfType<MenuController>().SetPoints();
                 anim.SetTrigger("Death");
                 AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);
@@ -77,6 +79,8 @@ public class Harpy : Enemies
         player.inmobilized = true;
         player.rgbd.AddForce(Vector2.up * 2000);
         yield return new WaitForSeconds(1.5f);
+        if (PlayerPrefs.GetInt("Harpy", 0) < 3)
+            PlayerPrefs.SetInt("Harpy", 0);
         GameManager.instance.player.GetComponent<Player>().panelAnim.SetBool("Root", false);
         player.inmobilized = false;
         transform.parent = null;

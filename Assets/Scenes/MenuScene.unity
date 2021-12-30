@@ -8980,6 +8980,7 @@ GameObject:
   - component: {fileID: 1482503867}
   - component: {fileID: 1482503866}
   - component: {fileID: 1482503870}
+  - component: {fileID: 1482503871}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -9106,6 +9107,24 @@ MonoBehaviour:
   - {fileID: 95598235}
   - {fileID: 1384529478}
   - {fileID: 39224999}
+--- !u!114 &1482503871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482503865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e095df4e682b9734daba4c637a50d1f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trophies:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1487934342
 GameObject:
   m_ObjectHideFlags: 0

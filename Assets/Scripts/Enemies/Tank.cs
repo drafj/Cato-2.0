@@ -46,6 +46,8 @@ public class Tank : Enemies
             if (life <= 0)
             {
                 PlayerPrefs.SetInt("Points", PlayerPrefs.GetInt("Points", 0) + 15);
+                if (PlayerPrefs.GetInt("Harpy", 0) < 3 && GameManager.instance.player.GetComponent<Player>().inmobilized)
+                    PlayerPrefs.SetInt("Harpy", PlayerPrefs.GetInt("Harpy", 0) + 1);
                 FindObjectOfType<MenuController>().SetPoints();
                 GetComponent<Animator>().SetTrigger("Death");
                 AudioSource.PlayClipAtPoint(GameManager.instance.enemyDeath, Camera.main.transform.position);
