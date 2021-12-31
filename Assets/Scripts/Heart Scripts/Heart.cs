@@ -36,6 +36,7 @@ public class Heart : Enemies
     public bool healing;
     public bool stopHealAbility;
     public bool alreadyHealed;
+    private Coroutine stopThis = null;
 
     void Start()
     {
@@ -161,7 +162,7 @@ public class Heart : Enemies
     IEnumerator Heal()
     {
         stopHealAbility = false;
-        StartCoroutine(StopHealAbility());
+        stopThis = StartCoroutine(StopHealAbility());
         leftHeart.SetActive(true);
         rightHeart.SetActive(true);
         shieldParticle.SetActive(true);
@@ -185,7 +186,6 @@ public class Heart : Enemies
                 leftHeart.SetActive(false);
                 rightHeart.SetActive(false);
                 dontShoot = false;
-                StopCoroutine(nameof(StopHealAbility));
                 StartCoroutine(BossDisplacement());
                 break;
             }
@@ -238,7 +238,7 @@ public class Heart : Enemies
     {
         if (leftHeart.GetComponent<HeartHealer>().life <= 0 && rightHeart.GetComponent<HeartHealer>().life <= 0)
         {
-            StopHealing();
+            healing = false;
         }
     }
 
@@ -247,19 +247,18 @@ public class Heart : Enemies
         if (leftHeart.GetComponent<HeartHealer>().life <= 0 && rightHeart.GetComponent<HeartHealer>().life <= 0)
         {
             stopHealAbility = true;
+            StopCoroutine(stopThis);
         }
     }
-
     IEnumerator StopHealAbility()
     {
         yield return new WaitForSeconds(10f);
-        healing = false;
-        stopHealAbility = true;
-    }
-
-    public void StopHealing()
-    {
-        healing = false;
+        //if (leftHeart.GetComponent<HeartHealer>().life > 0 || rightHeart.GetComponent<HeartHealer>().life > 0)
+        //{
+            Debug.Log("heal stoped");
+            healing = false;
+            stopHealAbility = true;
+        //}
     }
 
     void SetMaxHealth()
