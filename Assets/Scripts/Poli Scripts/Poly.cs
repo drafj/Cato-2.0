@@ -52,8 +52,8 @@ public class Poly : Enemies
                 FindObjectOfType<MenuController>().SetPoints();
                 healthBar.gameObject.SetActive(false);
                 GetComponent<Collider2D>().enabled = false;
-                pushers.GetComponent<Collider2D>().enabled = false;
-                eater.GetComponent<Collider2D>().enabled = false;
+                pushers.SetActive(false);
+                eater.gameObject.SetActive(false);
                 PlayerPrefs.SetInt("actualLevel", 1);
                 anim.SetTrigger("Death");
             }
@@ -102,6 +102,7 @@ public class Poly : Enemies
             yield return new WaitForFixedUpdate();
         }
         StartCoroutine(MoveBehaviour());
+        pushers.gameObject.SetActive(true);
     }
 
     IEnumerator MoveBehaviour()
@@ -110,7 +111,6 @@ public class Poly : Enemies
         {
             GetComponent<Collider2D>().enabled = true;
             eater.gameObject.SetActive(true);
-            transform.GetChild(4).gameObject.SetActive(true);
             anim.SetBool("Attack", false);
             warninAudio.loop = false;
             warninAudio.Play();
