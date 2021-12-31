@@ -52,22 +52,26 @@ public class SoulEater : MonoBehaviour
 
     public void Spit()
     {
-        GameManager.instance.player.GetComponent<Player>().panelAnim.SetBool("Root", false);
-        anim.SetBool("Catch", false);
-        Player player = FindObjectOfType<Player>();
-        player.transform.rotation = Quaternion.Euler(0, 0, 0);
-        player.transform.localPosition = new Vector2(0, -1);
-        player.transform.parent = null;
-        player.rgbd.simulated = true;
-        if (transform.parent.rotation.eulerAngles.z == 0)
-            player.rgbd.AddForce(Vector2.down * force * Time.fixedDeltaTime);
-        else
-            player.rgbd.AddForce(Vector2.up * force * Time.fixedDeltaTime);
-        player.inmobilized = false;
-        player.silenced = false;
-        player.stuned = false;
-        player.unleashed = false;
-        player.GetComponent<Collider2D>().enabled = true;
-        pushers.SetActive(true);
+        Debug.Log(transform.parent.GetComponent<Poly>().life);
+        if (transform.parent.GetComponent<Poly>().life > 0)
+        {
+            GameManager.instance.player.GetComponent<Player>().panelAnim.SetBool("Root", false);
+            anim.SetBool("Catch", false);
+            Player player = FindObjectOfType<Player>();
+            player.transform.rotation = Quaternion.Euler(0, 0, 0);
+            player.transform.localPosition = new Vector2(0, -1);
+            player.transform.parent = null;
+            player.rgbd.simulated = true;
+            if (transform.parent.rotation.eulerAngles.z == 0)
+                player.rgbd.AddForce(Vector2.down * force * Time.fixedDeltaTime);
+            else
+                player.rgbd.AddForce(Vector2.up * force * Time.fixedDeltaTime);
+            player.inmobilized = false;
+            player.silenced = false;
+            player.stuned = false;
+            player.unleashed = false;
+            player.GetComponent<Collider2D>().enabled = true;
+            pushers.SetActive(true);
+        }
     }
 }
